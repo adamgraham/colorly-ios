@@ -1,9 +1,9 @@
 //
 //  UIColor+HSL.swift
-//  ColorPalette
+//  Hue
 //
-//  Created by Adam Graham on 12/18/18.
-//  Copyright © 2018 Adam Graham. All rights reserved.
+//  Created by Adam Graham on 3/22/19.
+//  Copyright © 2019 Adam Graham. All rights reserved.
 //
 
 import UIKit

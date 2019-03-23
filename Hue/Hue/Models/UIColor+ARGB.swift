@@ -1,8 +1,8 @@
 //
 //  UIColor+ARGB.swift
-//  ColorPalette
+//  Hue
 //
-//  Created by Adam Graham on 1/14/19.
+//  Created by Adam Graham on 3/22/19.
 //  Copyright © 2019 Adam Graham. All rights reserved.
 //
 
