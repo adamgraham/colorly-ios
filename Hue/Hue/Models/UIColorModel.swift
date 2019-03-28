@@ -10,6 +10,8 @@ import UIKit
 
 public extension UIColor {
 
+    /// An abstract mathematical model describing the ways colors can be represented as
+    /// tuples of numbers, typically as three or four values or color components.
     public enum Model {
 
         /// A representation of the RGB color model using hexadecimal numbers, i.e., `#0080ff`.

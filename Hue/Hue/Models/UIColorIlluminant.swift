@@ -10,6 +10,9 @@ import UIKit
 
 public extension UIColor {
 
+    /// A standard illuminat defined by the International Commission on Illumination (CIE)
+    /// which provides a basis for comparing images or colors recorded under different
+    /// lighting.
     public enum Illuminant {
 
         /// Incandescent/Tungsten
