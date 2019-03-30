@@ -1,5 +1,5 @@
 //
-//  UIColor+Accessibility.swift
+//  UIColor+AccessibilityTest.swift
 //  Hue
 //
 //  Created by Adam Graham on 3/24/19.

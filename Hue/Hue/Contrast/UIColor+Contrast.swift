@@ -18,8 +18,8 @@ public extension UIColor {
         }
 
         return 0.2126 * adjust(colorComponent: ciColor.red) +
-            0.7152 * adjust(colorComponent: ciColor.green) +
-            0.0722 * adjust(colorComponent: ciColor.blue)
+               0.7152 * adjust(colorComponent: ciColor.green) +
+               0.0722 * adjust(colorComponent: ciColor.blue)
     }
 
     static func contrastRatio(between color1: UIColor, and color2: UIColor) -> CGFloat {

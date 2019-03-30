@@ -1,5 +1,5 @@
 //
-//  UIColorMixingModel.swift
+//  UIColor+MixingModel.swift
 //  Hue
 //
 //  Created by Adam Graham on 3/27/19.
