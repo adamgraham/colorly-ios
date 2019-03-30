@@ -21,6 +21,10 @@ public extension UIColor {
         /// model used mainly for the representation and display of images in digital formats.
         case RGB
 
+        /// The RYB (red, yellow, blue) color model, a traditional model used in a standard artist's
+        /// color wheel, particularly in painting.
+        case RYB
+
         /// The HSB (hue, saturation, brightness) color model - also referred to as HSV - is an
         /// alternative representation to the RGB color model designed to more closely align with
         /// the way human vision perceives color-making attributes.
