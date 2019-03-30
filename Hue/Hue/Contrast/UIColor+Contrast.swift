@@ -10,6 +10,7 @@ import UIKit
 
 public extension UIColor {
 
+    /// The perceived brightness of the color, measured by its hue, saturation, and lightness.
     var luminance: CGFloat {
         let ciColor = CIColor(color: self)
 
@@ -22,6 +23,14 @@ public extension UIColor {
                0.0722 * adjust(colorComponent: ciColor.blue)
     }
 
+    /**
+     Returns the contrast ratio between two colors based on their luminance values.
+
+     - parameter color1: The first color to compare to the second.
+     - parameter color2: The second color to compare to the first.
+
+     - returns: The contrast ratio between the two colors.
+     */
     static func contrastRatio(between color1: UIColor, and color2: UIColor) -> CGFloat {
         let luminance1 = color1.luminance
         let luminance2 = color2.luminance
@@ -32,16 +41,40 @@ public extension UIColor {
         return (luminanceLighter + 0.05) / (luminanceDarker + 0.05)
     }
 
+    /**
+     Returns the contrast ratio between the color and another based on their luminance values.
+
+     - parameter color: The other color to compare.
+     - returns: The contrast ratio between the two colors.
+     */
     func contrastRatio(to color: UIColor) -> CGFloat {
         return UIColor.contrastRatio(between: self, and: color)
     }
 
+    /**
+     Compares the contrast ratio of the color and two others and returns the one with the
+     higher ratio.
+
+     - parameter color1: The first color to compare to the base color.
+     - parameter color2: The second color to compare to the base color.
+
+     - returns: The color with the highest contrast ratio compared to the base color.
+     */
     func highestContrastRatio(between color1: UIColor, and color2: UIColor) -> UIColor {
         let contrastRatio1 = contrastRatio(to: color1)
         let contrastRatio2 = contrastRatio(to: color2)
         return contrastRatio1 > contrastRatio2 ? color1 : color2
     }
 
+    /**
+     Compares the contrast ratio of the color and two others and returns the one with the
+     lowest ratio.
+
+     - parameter color1: The first color to compare to the base color.
+     - parameter color2: The second color to compare to the base color.
+
+     - returns: The color with the lowest contrast ratio compared to the base color.
+     */
     func lowestContrastRatio(between color1: UIColor, and color2: UIColor) -> UIColor {
         let contrastRatio1 = contrastRatio(to: color1)
         let contrastRatio2 = contrastRatio(to: color2)

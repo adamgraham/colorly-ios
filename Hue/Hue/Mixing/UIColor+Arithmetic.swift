@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Returns the result of adding two colors together.
 public func +(lhs: UIColor, rhs: UIColor) -> UIColor {
     var (r1, g1, b1, a1) = (CGFloat(0.0), CGFloat(0.0), CGFloat(0.0), CGFloat(0.0))
     lhs.getRed(&r1, green: &g1, blue: &b1, alpha: &a1)
@@ -21,6 +22,7 @@ public func +(lhs: UIColor, rhs: UIColor) -> UIColor {
                    alpha: clamp((a1 + a2) * 0.5, 0.0, 1.0))
 }
 
+/// Returns the result of multiplying a color by a multiplier.
 public func *(color: UIColor, multiplier: CGFloat) -> UIColor {
     var (r, g, b, a) = (CGFloat(0.0), CGFloat(0.0), CGFloat(0.0), CGFloat(0.0))
     color.getRed(&r, green: &g, blue: &b, alpha: &a)
