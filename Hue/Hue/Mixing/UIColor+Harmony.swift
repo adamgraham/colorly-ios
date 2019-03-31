@@ -35,33 +35,33 @@ public extension UIColor {
         public typealias Tetradic = (UIColor, UIColor, UIColor, UIColor)
 
         /// The opposite color on the color wheel (hue+180).
-        var complementary: Complementary {
+        public var complementary: Complementary {
             return self.color.adjustingHue(by: 180.0)
         }
 
         /// The base color and two adjacent colors of the complement (base, hue+180-30, hue+180+30).
-        var splitComplementary: SplitComplementary {
+        public var splitComplementary: SplitComplementary {
             return (self.color,
                     self.color.adjustingHue(by: 150.0),
                     self.color.adjustingHue(by: 210.0))
         }
 
         /// The base color and two adjacent colors (base, hue+30, hue-30).
-        var analogous: Analogous {
+        public var analogous: Analogous {
             return (self.color,
                     self.color.adjustingHue(by: 30.0),
                     self.color.adjustingHue(by: -30.0))
         }
 
         /// The base color and two evenly spaced colors (base, hue+120, hue-120).
-        var triadic: Triadic {
+        public var triadic: Triadic {
             return (self.color,
                     self.color.adjustingHue(by: 120.0),
                     self.color.adjustingHue(by: -120.0))
         }
 
         /// The base color and its complement and another complement pair (base, hue+180, hue+60, hue+60+180).
-        var tetradic: Tetradic {
+        public var tetradic: Tetradic {
             return (self.color,
                     self.color.adjustingHue(by: 180.0),
                     self.color.adjustingHue(by: 60.0),

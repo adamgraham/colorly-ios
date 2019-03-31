@@ -49,21 +49,40 @@ public extension UIColor {
             case .subtractive:
                 return (.red, .green, .blue)
             case .traditional:
-                return (.purple, .orange, .green)
+                return (.green, .magenta, .orange)
             }
         }
 
         /// The tertiary colors of the mixing model, created by mixing the primary colors with the
         /// secondary colors.
-        public var tertiaryColors: (UIColor, UIColor, UIColor, UIColor, UIColor, UIColor) {
+        public var tertiaryColors: (UIColor, UIColor, UIColor,
+                                    UIColor, UIColor, UIColor) {
+
             let primary = self.primaryColors
             let secondary = self.secondaryColors
+
             return (primary.0.mixed(with: secondary.1),
                     primary.0.mixed(with: secondary.2),
                     primary.1.mixed(with: secondary.0),
                     primary.1.mixed(with: secondary.2),
                     primary.2.mixed(with: secondary.0),
                     primary.2.mixed(with: secondary.1))
+        }
+
+        /// The primary, secondary, and tertiary colors of the mixing model, together forming a
+        /// complete color wheel.
+        public var colorWheel: (UIColor, UIColor, UIColor,
+                                UIColor, UIColor, UIColor,
+                                UIColor, UIColor, UIColor,
+                                UIColor, UIColor, UIColor) {
+
+            let primary = self.primaryColors
+            let secondary = self.secondaryColors
+            let tertiary = self.tertiaryColors
+
+            return (primary.0, tertiary.1, secondary.2, tertiary.3,
+                    primary.1, tertiary.2, secondary.0, tertiary.4,
+                    primary.2, tertiary.5, secondary.1, tertiary.0)
         }
 
     }
