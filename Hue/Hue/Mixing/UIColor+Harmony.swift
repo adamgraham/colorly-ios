@@ -81,9 +81,9 @@ public extension UIColor {
      - parameter amount: The amount of degrees to adjust the hue, in the range -360° to 360°.
      - returns: The hue adjusted color.
      */
-    func adjustingHue(by amount: CGFloat) -> UIColor {
+    func adjustingHue(by degrees: CGFloat) -> UIColor {
         var hsl = self.hsl
-        hsl.hue = (hsl.hue + (amount / 360.0)).truncatingRemainder(dividingBy: 1.0)
+        hsl.hue = (hsl.hue + degrees).truncatingRemainder(dividingBy: 360.0)
         return UIColor(hsl: hsl)
     }
 

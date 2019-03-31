@@ -13,24 +13,27 @@ public extension UIColor {
 
     /// The components of a color in the RGB color model.
     typealias RGB = (
-        red: CGFloat,   // 0 to 1 (% of 255)
-        green: CGFloat, // 0 to 1 (% of 255)
-        blue: CGFloat   // 0 to 1 (% of 255)
+        red: CGFloat,   // 0 to 255
+        green: CGFloat, // 0 to 255
+        blue: CGFloat   // 0 to 255
     )
 
     /// The components of the color in the RGB color model.
     var rgb: RGB {
-        var r: CGFloat = 0.0
-        var g: CGFloat = 0.0
-        var b: CGFloat = 0.0
-
+        var (r, g, b) = (CGFloat(), CGFloat(), CGFloat())
         getRed(&r, green: &g, blue: &b, alpha: nil)
-        return RGB(red: r, green: g, blue: b)
+
+        return RGB(red: r * 255.0,
+                   green: g * 255.0,
+                   blue: b * 255.0)
     }
 
     /// Initializes a color from the components of a RGB color model.
     convenience init(rgb: RGB, alpha: CGFloat = 1.0) {
-        self.init(red: rgb.red, green: rgb.green, blue: rgb.blue, alpha: alpha)
+        self.init(red: rgb.red / 255.0,
+                  green: rgb.green / 255.0,
+                  blue: rgb.blue / 255.0,
+                  alpha: alpha)
     }
 
 }

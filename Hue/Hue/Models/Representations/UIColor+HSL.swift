@@ -13,17 +13,14 @@ public extension UIColor {
 
     /// The components of a color in the HSL color model.
     typealias HSL = (
-        hue: CGFloat,        // 0 to 1 (% of 360°)
-        saturation: CGFloat, // 0 to 1 (% of 100)
-        lightness: CGFloat   // 0 to 1 (% of 100)
+        hue: CGFloat,        // 0 to 360°
+        saturation: CGFloat, // 0 to 1
+        lightness: CGFloat   // 0 to 1
     )
 
     /// The components of the color in the HSL color model.
     var hsl: HSL {
-        var h: CGFloat = 0.0
-        var s: CGFloat = 0.0
-        var b: CGFloat = 0.0
-
+        var (h, s, b) = (CGFloat(), CGFloat(), CGFloat())
         getHue(&h, saturation: &s, brightness: &b, alpha: nil)
 
         let l = ((2.0 - s) * b) / 2.0
@@ -39,7 +36,9 @@ public extension UIColor {
             s = (s * b) / (2.0 - l * 2.0)
         }
 
-        return HSL(hue: h, saturation: s, lightness: l)
+        return HSL(hue: h * 360.0,
+                   saturation: s,
+                   lightness: l)
     }
 
     /// Initializes a color from the components of a HSL color model.
@@ -49,7 +48,10 @@ public extension UIColor {
         let b = hsl.lightness + t
         let s = (hsl.lightness > 0.0) ? (2.0 * t / b) : 0.0
 
-        self.init(hue: h, saturation: s, brightness: b, alpha: alpha)
+        self.init(hue: h / 360.0,
+                  saturation: s,
+                  brightness: b,
+                  alpha: alpha)
     }
 
 }

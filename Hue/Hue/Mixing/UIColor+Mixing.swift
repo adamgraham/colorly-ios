@@ -22,13 +22,17 @@ public extension UIColor {
      */
     func mixed(with color: UIColor, weight: CGFloat = 0.5) -> UIColor {
         let weight = clamp(weight, 0.0, 1.0)
-        let c1 = self.rgba
-        let c2 = color.rgba
 
-        let red   = c1.red   + ((c2.red   - c1.red)   * weight)
-        let green = c1.green + ((c2.green - c1.green) * weight)
-        let blue  = c1.blue  + ((c2.blue  - c1.blue)  * weight)
-        let alpha = c1.alpha + ((c2.alpha - c1.alpha) * weight)
+        var (r1, g1, b1, a1) = (CGFloat(), CGFloat(), CGFloat(), CGFloat())
+        self.getRed(&r1, green: &g1, blue: &b1, alpha: &a1)
+
+        var (r2, g2, b2, a2) = (CGFloat(), CGFloat(), CGFloat(), CGFloat())
+        color.getRed(&r2, green: &g2, blue: &b2, alpha: &a2)
+
+        let red   = r1 + ((r2 - r1) * weight)
+        let green = g1 + ((g2 - g1) * weight)
+        let blue  = b1 + ((b2 - b1) * weight)
+        let alpha = a1 + ((a2 - a1) * weight)
 
         return UIColor(red: clamp(red, 0.0, 1.0),
                        green: clamp(green, 0.0, 1.0),

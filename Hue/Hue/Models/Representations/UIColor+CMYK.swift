@@ -13,18 +13,15 @@ public extension UIColor {
 
     /// The components of a color in the CMYK color model.
     typealias CMYK = (
-        cyan: CGFloat,    // 0 to 1 (% of 100)
-        magenta: CGFloat, // 0 to 1 (% of 100)
-        yellow: CGFloat,  // 0 to 1 (% of 100)
-        black: CGFloat    // 0 to 1 (% of 100)
+        cyan: CGFloat,    // 0 to 1
+        magenta: CGFloat, // 0 to 1
+        yellow: CGFloat,  // 0 to 1
+        black: CGFloat    // 0 to 1
     )
 
     /// The components of the color in the CMYK color model.
     var cmyk: CMYK {
-        var r: CGFloat = 0.0
-        var g: CGFloat = 0.0
-        var b: CGFloat = 0.0
-
+        var (r, g, b) = (CGFloat(), CGFloat(), CGFloat())
         getRed(&r, green: &g, blue: &b, alpha: nil)
 
         let k = 1.0 - max(r, g, b)

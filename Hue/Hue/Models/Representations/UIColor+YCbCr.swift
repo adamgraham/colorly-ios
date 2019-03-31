@@ -43,10 +43,7 @@ public extension UIColor {
 
     /// The components of the color in the YCbCr color model using a given encoding.
     func yCbCr(_ encoding: YCbCr.Encoding) -> YCbCr {
-        var r: CGFloat = 0.0
-        var g: CGFloat = 0.0
-        var b: CGFloat = 0.0
-
+        var (r, g, b) = (CGFloat(), CGFloat(), CGFloat())
         getRed(&r, green: &g, blue: &b, alpha: nil)
 
         let Y: CGFloat
