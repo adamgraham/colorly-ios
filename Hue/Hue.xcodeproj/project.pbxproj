@@ -121,7 +121,6 @@
 			isa = PBXGroup;
 			children = (
 				9D023DBB22488F9F00BCA208 /* UIColor+Arithmetic.swift */,
-				9D5E3546224DCDC20076A7EC /* UIColor+Harmony.swift */,
 				9D023DC022488FF600BCA208 /* UIColor+Mixing.swift */,
 				9D6BCABE224C725D00B3047C /* UIColor+MixingModel.swift */,
 				9D023DC22248905F00BCA208 /* UIColor+TintAndShade.swift */,
@@ -182,6 +181,7 @@
 		9DB19F9B225596BF00C3A6C7 /* Adjustment */ = {
 			isa = PBXGroup;
 			children = (
+				9D5E3546224DCDC20076A7EC /* UIColor+Harmony.swift */,
 				9DA45A8B2255811000E51EEE /* UIColor+Lightness.swift */,
 				9DA45A8722557BB200E51EEE /* UIColor+Saturation.swift */,
 			);
