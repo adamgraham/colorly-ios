@@ -31,6 +31,7 @@
 		9D943E3C22375DA3009C0F04 /* Hue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D943E3222375DA2009C0F04 /* Hue.framework */; };
 		9D943E4122375DA3009C0F04 /* HueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D943E4022375DA3009C0F04 /* HueTests.swift */; };
 		9D943E4322375DA3009C0F04 /* Hue.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D943E3522375DA2009C0F04 /* Hue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9DA45A8A22557CE600E51EEE /* UIColor+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA45A8922557CE600E51EEE /* UIColor+Components.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		9D943E3B22375DA3009C0F04 /* HueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D943E4022375DA3009C0F04 /* HueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HueTests.swift; sourceTree = "<group>"; };
 		9D943E4222375DA3009C0F04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DA45A8922557CE600E51EEE /* UIColor+Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Components.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				9DDFC3F1224EFB3700634D40 /* Representations */,
+				9DA45A8922557CE600E51EEE /* UIColor+Components.swift */,
 				9D023DAD2245BBBE00BCA208 /* UIColor+Illuminant.swift */,
 				9D023DAB2245BB7B00BCA208 /* UIColor+Model.swift */,
 			);
@@ -299,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D023DB822488F2300BCA208 /* Functions.swift in Sources */,
+				9DA45A8A22557CE600E51EEE /* UIColor+Components.swift in Sources */,
 				9D023DAE2245BBBE00BCA208 /* UIColor+Illuminant.swift in Sources */,
 				9D6BCABF224C725D00B3047C /* UIColor+MixingModel.swift in Sources */,
 				9D023DAC2245BB7B00BCA208 /* UIColor+Model.swift in Sources */,
