@@ -12,10 +12,10 @@ import UIKit
 public extension UIColor {
 
     /**
-     Returns a new color after increasing the lightness value by a given percent.
+     Returns a new color by increasing the color's lightness value by a given amount.
 
-     - parameter percent: The amount to lighten the color.
-     - returns: The new lighter color after increasing the lightness value.
+     - parameter percent: The amount to lighten the color, in the range 0.0 to 1.0.
+     - returns: The lighter color.
      */
     func lighter(percent: CGFloat = 0.1) -> UIColor {
         var hsl = self.hsl
@@ -24,10 +24,10 @@ public extension UIColor {
     }
 
     /**
-     Returns a new color after decreasing the lightness value by a given percent.
+     Returns a new color by decreasing the color's lightness value by a given amount.
 
-     - parameter percent: The amount to darken the color.
-     - returns: The new darker color after decreasing the lightness value.
+     - parameter percent: The amount to darken the color, in the range 0.0 to 1.0.
+     - returns: The darker color.
      */
     func darker(percent: CGFloat = 0.1) -> UIColor {
         var hsl = self.hsl
