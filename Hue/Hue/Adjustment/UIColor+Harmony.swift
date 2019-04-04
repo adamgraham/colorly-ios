@@ -24,7 +24,7 @@ public extension UIColor {
         /// Monochromatic color schemes use different values of the same color.
         public typealias Monochromatic = (UIColor, UIColor, UIColor, UIColor, UIColor, UIColor, UIColor)
         /// Complementary color schemes use two opposite colors on the color wheel.
-        public typealias Complementary = (UIColor)
+        public typealias Complementary = (UIColor, UIColor)
         /// Split complements use a color and the two adjacent tertiary colors of its complement.
         public typealias SplitComplementary = (UIColor, UIColor, UIColor)
         /// Analogous color schemes use three adjacent colors on the color wheel.
@@ -34,9 +34,10 @@ public extension UIColor {
         /// Tetradic color schemes use two complementary pairs in a rectangular pattern on the color wheel.
         public typealias Tetradic = (UIColor, UIColor, UIColor, UIColor)
 
-        /// The opposite color on the color wheel (hue+180).
+        /// The base color and the opposite color on the color wheel (base, hue+180).
         public var complementary: Complementary {
-            return self.color.adjustingHue(by: 180.0)
+            return (self.color,
+                    self.color.adjustingHue(by: 180.0))
         }
 
         /// The base color and two adjacent colors of the complement (base, hue+180-30, hue+180+30).
@@ -71,7 +72,7 @@ public extension UIColor {
     }
 
     /// A set of harmonized color schemes based on the base color.
-    var harmony: Harmony {
+    var harmonies: Harmony {
         return Harmony(self)
     }
 
