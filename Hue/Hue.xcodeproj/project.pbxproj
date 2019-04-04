@@ -160,8 +160,8 @@
 		9D943E3422375DA2009C0F04 /* Hue */ = {
 			isa = PBXGroup;
 			children = (
-				9DB19F9B225596BF00C3A6C7 /* Adjustment */,
 				9D023DC42248908E00BCA208 /* Contrast */,
+				9DB19F9B225596BF00C3A6C7 /* Deriving */,
 				9D023DB922488F9F00BCA208 /* Mixing */,
 				9D023D7A2245B78C00BCA208 /* Models */,
 				9D023DB622488F2300BCA208 /* Utils */,
@@ -180,7 +180,7 @@
 			path = HueTests;
 			sourceTree = "<group>";
 		};
-		9DB19F9B225596BF00C3A6C7 /* Adjustment */ = {
+		9DB19F9B225596BF00C3A6C7 /* Deriving */ = {
 			isa = PBXGroup;
 			children = (
 				9D5E3546224DCDC20076A7EC /* UIColor+Harmony.swift */,
@@ -188,7 +188,7 @@
 				9DA45A8B2255811000E51EEE /* UIColor+Lightness.swift */,
 				9DA45A8722557BB200E51EEE /* UIColor+Saturation.swift */,
 			);
-			path = Adjustment;
+			path = Deriving;
 			sourceTree = "<group>";
 		};
 		9DDFC3F1224EFB3700634D40 /* Representations */ = {
