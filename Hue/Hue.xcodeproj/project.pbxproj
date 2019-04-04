@@ -34,6 +34,7 @@
 		9DA45A8822557BB200E51EEE /* UIColor+Saturation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA45A8722557BB200E51EEE /* UIColor+Saturation.swift */; };
 		9DA45A8A22557CE600E51EEE /* UIColor+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA45A8922557CE600E51EEE /* UIColor+Components.swift */; };
 		9DA45A8C2255811000E51EEE /* UIColor+Lightness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA45A8B2255811000E51EEE /* UIColor+Lightness.swift */; };
+		9DB19F9E2255B3BD00C3A6C7 /* UIColor+HueAdjustment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB19F9D2255B3BD00C3A6C7 /* UIColor+HueAdjustment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		9DA45A8722557BB200E51EEE /* UIColor+Saturation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Saturation.swift"; sourceTree = "<group>"; };
 		9DA45A8922557CE600E51EEE /* UIColor+Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Components.swift"; sourceTree = "<group>"; };
 		9DA45A8B2255811000E51EEE /* UIColor+Lightness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Lightness.swift"; sourceTree = "<group>"; };
+		9DB19F9D2255B3BD00C3A6C7 /* UIColor+HueAdjustment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HueAdjustment.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				9D5E3546224DCDC20076A7EC /* UIColor+Harmony.swift */,
+				9DB19F9D2255B3BD00C3A6C7 /* UIColor+HueAdjustment.swift */,
 				9DA45A8B2255811000E51EEE /* UIColor+Lightness.swift */,
 				9DA45A8722557BB200E51EEE /* UIColor+Saturation.swift */,
 			);
@@ -323,6 +326,7 @@
 				9D023DCA2248930700BCA208 /* UIColor+AccessibilityTest.swift in Sources */,
 				9D023D9A2245B7EF00BCA208 /* UIColor+ARGB.swift in Sources */,
 				9D023DBE22488F9F00BCA208 /* UIColor+Arithmetic.swift in Sources */,
+				9DB19F9E2255B3BD00C3A6C7 /* UIColor+HueAdjustment.swift in Sources */,
 				9DA45A8822557BB200E51EEE /* UIColor+Saturation.swift in Sources */,
 				9D023D9E2245B8DB00BCA208 /* UIColor+CMYK.swift in Sources */,
 				9D023DC72248908E00BCA208 /* UIColor+Contrast.swift in Sources */,

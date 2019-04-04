@@ -75,16 +75,4 @@ public extension UIColor {
         return Harmony(self)
     }
 
-    /**
-     Returns a new color by adjusting the color's hue by a given amount.
-
-     - parameter amount: The amount of degrees to adjust the hue, in the range -360° to 360°.
-     - returns: The hue adjusted color.
-     */
-    func adjustingHue(by degrees: CGFloat) -> UIColor {
-        var hsl = self.hsl
-        hsl.hue = (hsl.hue + degrees).truncatingRemainder(dividingBy: 360.0)
-        return UIColor(hsl: hsl)
-    }
-
 }
