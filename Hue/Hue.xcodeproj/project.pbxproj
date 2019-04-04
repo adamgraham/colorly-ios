@@ -31,6 +31,7 @@
 		9D943E3C22375DA3009C0F04 /* Hue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D943E3222375DA2009C0F04 /* Hue.framework */; };
 		9D943E4122375DA3009C0F04 /* HueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D943E4022375DA3009C0F04 /* HueTests.swift */; };
 		9D943E4322375DA3009C0F04 /* Hue.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D943E3522375DA2009C0F04 /* Hue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9DA45A8822557BB200E51EEE /* UIColor+Saturation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA45A8722557BB200E51EEE /* UIColor+Saturation.swift */; };
 		9DA45A8A22557CE600E51EEE /* UIColor+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA45A8922557CE600E51EEE /* UIColor+Components.swift */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,7 @@
 		9D943E3B22375DA3009C0F04 /* HueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D943E4022375DA3009C0F04 /* HueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HueTests.swift; sourceTree = "<group>"; };
 		9D943E4222375DA3009C0F04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DA45A8722557BB200E51EEE /* UIColor+Saturation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Saturation.swift"; sourceTree = "<group>"; };
 		9DA45A8922557CE600E51EEE /* UIColor+Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Components.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,6 +157,7 @@
 		9D943E3422375DA2009C0F04 /* Hue */ = {
 			isa = PBXGroup;
 			children = (
+				9DB19F9B225596BF00C3A6C7 /* Adjustment */,
 				9D023DC42248908E00BCA208 /* Contrast */,
 				9D023DB922488F9F00BCA208 /* Mixing */,
 				9D023D7A2245B78C00BCA208 /* Models */,
@@ -172,6 +175,14 @@
 				9D943E4222375DA3009C0F04 /* Info.plist */,
 			);
 			path = HueTests;
+			sourceTree = "<group>";
+		};
+		9DB19F9B225596BF00C3A6C7 /* Adjustment */ = {
+			isa = PBXGroup;
+			children = (
+				9DA45A8722557BB200E51EEE /* UIColor+Saturation.swift */,
+			);
+			path = Adjustment;
 			sourceTree = "<group>";
 		};
 		9DDFC3F1224EFB3700634D40 /* Representations */ = {
@@ -309,6 +320,7 @@
 				9D023DCA2248930700BCA208 /* UIColor+AccessibilityTest.swift in Sources */,
 				9D023D9A2245B7EF00BCA208 /* UIColor+ARGB.swift in Sources */,
 				9D023DBE22488F9F00BCA208 /* UIColor+Arithmetic.swift in Sources */,
+				9DA45A8822557BB200E51EEE /* UIColor+Saturation.swift in Sources */,
 				9D023D9E2245B8DB00BCA208 /* UIColor+CMYK.swift in Sources */,
 				9D023DC72248908E00BCA208 /* UIColor+Contrast.swift in Sources */,
 				9D5E3547224DCDC20076A7EC /* UIColor+Harmony.swift in Sources */,
