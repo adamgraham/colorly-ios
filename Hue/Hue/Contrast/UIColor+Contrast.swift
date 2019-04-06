@@ -11,19 +11,6 @@ import UIKit
 /// An extension to retrieve luminance and contrast ratio values between colors.
 public extension UIColor {
 
-    /// The perceived brightness of the color, measured by its hue, saturation, and lightness.
-    var luminance: CGFloat {
-        let ciColor = CIColor(color: self)
-
-        func adjust(colorComponent: CGFloat) -> CGFloat {
-            return (colorComponent < 0.03928) ? (colorComponent / 12.92) : pow((colorComponent + 0.055) / 1.055, 2.4)
-        }
-
-        return 0.2126 * adjust(colorComponent: ciColor.red) +
-               0.7152 * adjust(colorComponent: ciColor.green) +
-               0.0722 * adjust(colorComponent: ciColor.blue)
-    }
-
     /**
      Returns the contrast ratio between two colors based on their luminance values.
 
