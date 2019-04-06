@@ -11,23 +11,24 @@ import UIKit
 public extension UIColor {
 
     /**
-     Returns a mixture of the source color with another color.
+     Returns a mixture of two colors with a given weight.
 
-     - parameter color: The color to be mixed with the source color.
-     - parameter weight: The ratio of the color mixed with the source color. The default value of 0.5
-                         indicates half of each color is mixed together. A value of 0.25 indicates
-                         one quarter of the color is mixed with three quarters of the source color.
+     - parameter first: The first color to be mixed with the second color.
+     - parameter second: The second color to be mixed with the first color.
+     - parameter weight: The ratio of the second color mixed with the first color. The default value
+                         of 0.5 indicates 50% of each color is mixed together. A value of 0.25
+                         indicates 25% of the second color is mixed with 75% of the first color.
 
      - returns: The newly mixed color.
      */
-    func mixed(with color: UIColor, weight: CGFloat = 0.5) -> UIColor {
+    static func mixing(_ first: UIColor, with second: UIColor, weight: CGFloat = 0.5) -> UIColor {
         let weight = clamp(weight, 0.0, 1.0)
 
         var (r1, g1, b1, a1) = (CGFloat(), CGFloat(), CGFloat(), CGFloat())
-        self.getRed(&r1, green: &g1, blue: &b1, alpha: &a1)
+        first.getRed(&r1, green: &g1, blue: &b1, alpha: &a1)
 
         var (r2, g2, b2, a2) = (CGFloat(), CGFloat(), CGFloat(), CGFloat())
-        color.getRed(&r2, green: &g2, blue: &b2, alpha: &a2)
+        second.getRed(&r2, green: &g2, blue: &b2, alpha: &a2)
 
         let red   = r1 + ((r2 - r1) * weight)
         let green = g1 + ((g2 - g1) * weight)
@@ -38,6 +39,21 @@ public extension UIColor {
                        green: clamp(green, 0.0, 1.0),
                        blue: clamp(blue, 0.0, 1.0),
                        alpha: clamp(alpha, 0.0, 1.0))
+    }
+
+    /**
+     Returns a mixture of the source color with another color.
+
+     - parameter color: The other color to be mixed with the source color.
+     - parameter weight: The ratio of the second color (other) mixed with the first color (source).
+                         The default value of 0.5 indicates 50% of each color is mixed together. A
+                         value of 0.25 indicates 25% of the second color is mixed with 75% of the
+                         first color.
+
+     - returns: The newly mixed color.
+     */
+    func mixed(with color: UIColor, weight: CGFloat = 0.5) -> UIColor {
+        return UIColor.mixing(self, with: color, weight: weight)
     }
 
 }
