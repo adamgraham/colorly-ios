@@ -18,6 +18,8 @@ public extension UIColor {
      - returns: The hue adjusted color.
      */
     func adjustingHue(by degrees: CGFloat) -> UIColor {
+        var degrees = degrees
+        while degrees < 0 { degrees += 360.0 }
         var hsl = self.hsl
         hsl.hue = (hsl.hue + degrees).truncatingRemainder(dividingBy: 360.0)
         return UIColor(hsl: hsl)
