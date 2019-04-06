@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// An extension to define color illuminants.
 public extension UIColor {
 
     /// A standard illuminat defined by the International Commission on Illumination (CIE)

@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// An extension to describe different color mixing models.
 public extension UIColor {
 
     /// A model that describes how colors are mixed together to form all other colors.

@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// An extension to retrieve luminance and contrast ratio values between colors.
 public extension UIColor {
 
     /// The perceived brightness of the color, measured by its hue, saturation, and lightness.

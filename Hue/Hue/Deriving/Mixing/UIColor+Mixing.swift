@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// An extension to mix colors together.
 public extension UIColor {
 
     /**

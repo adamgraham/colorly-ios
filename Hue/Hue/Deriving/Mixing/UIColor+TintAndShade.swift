@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// An extension to mix colors with black (shade), white (tint), and gray (tone).
 public extension UIColor {
 
     /**

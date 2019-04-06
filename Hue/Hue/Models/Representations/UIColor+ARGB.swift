@@ -8,7 +8,7 @@
 
 import UIKit
 
-/// An extension to instantiate and represent colors as ARGB (alpha, red, green, blue).
+/// An extension to provide conversion to and from ARGB (alpha, red, green, blue) colors.
 public extension UIColor {
 
     /// The components of a color in the RGB color model using the ARGB format.

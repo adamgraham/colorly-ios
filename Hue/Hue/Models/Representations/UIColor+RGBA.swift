@@ -8,7 +8,7 @@
 
 import UIKit
 
-/// An extension to instantiate and represent colors as RGBA (red, green, blue, alpha).
+/// An extension to provide conversion to and from RGBA (red, green, blue, alpha) colors.
 public extension UIColor {
 
     /// The components of a color in the RGB color model using the RGBA format.

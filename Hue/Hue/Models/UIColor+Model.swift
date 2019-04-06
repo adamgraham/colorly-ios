@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// An extension to describe various color models.
 public extension UIColor {
 
     /// An abstract mathematical model describing the ways colors can be represented as
@@ -25,9 +26,9 @@ public extension UIColor {
         /// color wheel, particularly in painting.
         case RYB
 
-        /// The HSB (hue, saturation, brightness) color model - also referred to as HSV - is an
-        /// alternative representation to the RGB color model designed to more closely align with
-        /// the way human vision perceives color-making attributes.
+        /// The HSB (hue, saturation, brightness) color model is an alternative representation to
+        /// the RGB color model designed to more closely align with the way human vision
+        /// perceives color-making attributes. HSB is the same as HSV.
         ///
         /// The HSB representation models the way paints of different colors mix together, with the
         /// _saturation_ dimension resembling various shades of brightly colored paint, and the
@@ -35,9 +36,9 @@ public extension UIColor {
         /// black or white paint
         case HSB
 
-        /// The HSV (hue, saturation, value) color model - also referred to as HSB - is an
-        /// alternative representation to the RGB color model designed to more closely align with
-        /// the way human vision perceives color-making attributes.
+        /// The HSV (hue, saturation, value) color model is an alternative representation to the
+        /// RGB color model designed to more closely align with the way human vision perceives
+        /// color-making attributes. HSV is the same as HSB.
         ///
         /// The HSV representation models the way paints of different colors mix together, with the
         /// _saturation_ dimension resembling various shades of brightly colored paint, and the
