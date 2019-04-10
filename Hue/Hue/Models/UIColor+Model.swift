@@ -26,6 +26,10 @@ public extension UIColor {
         /// color wheel, particularly in painting.
         case RYB
 
+        /// The CMYK (cyan, magenta, yellow, black) color model, a subtractive color mixing model
+        /// used in color printing.
+        case CMYK
+
         /// The HSB (hue, saturation, brightness) color model is an alternative representation to
         /// the RGB color model designed to more closely align with the way human vision
         /// perceives color-making attributes. HSB is the same as HSV.
@@ -67,10 +71,6 @@ public extension UIColor {
         /// respect to human color vision, meaning that the same amount of numerical change in
         /// these values corresponds to about the same amount of visually perceived change.
         case LAB
-
-        /// The CMYK (cyan, magenta, yellow, black) color model, a subtractive color mixing model
-        /// used in color printing.
-        case CMYK
 
         /// The YCbCr color model used as a part of the color image pipeline in video and digital
         /// photography systems. _Y_ is the luminance (luma) component and _Cb_ and _Cr_ are the
