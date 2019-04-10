@@ -38,6 +38,7 @@
 		9DE0381522582813006638E4 /* UIColor+Inversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE0381422582813006638E4 /* UIColor+Inversion.swift */; };
 		9DE03819225862F0006638E4 /* UIColor+Luminance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE03818225862F0006638E4 /* UIColor+Luminance.swift */; };
 		9DE0381B2258E81C006638E4 /* UIColor+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE0381A2258E81C006638E4 /* UIColor+Gradient.swift */; };
+		9DE0381E225D723F006638E4 /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE0381D225D723E006638E4 /* UIColor+Random.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		9DE0381422582813006638E4 /* UIColor+Inversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Inversion.swift"; sourceTree = "<group>"; };
 		9DE03818225862F0006638E4 /* UIColor+Luminance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Luminance.swift"; sourceTree = "<group>"; };
 		9DE0381A2258E81C006638E4 /* UIColor+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Gradient.swift"; sourceTree = "<group>"; };
+		9DE0381D225D723E006638E4 /* UIColor+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 			children = (
 				9DB19F9F2255BF0600C3A6C7 /* Adjusting */,
 				9D023DB922488F9F00BCA208 /* Mixing */,
+				9DE0381D225D723E006638E4 /* UIColor+Random.swift */,
 			);
 			path = Deriving;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				9D023D962245B79800BCA208 /* UIColor+RGB.swift in Sources */,
 				9DA45A8C2255811000E51EEE /* UIColor+Lightness.swift in Sources */,
 				9D023D982245B7D500BCA208 /* UIColor+RGBA.swift in Sources */,
+				9DE0381E225D723F006638E4 /* UIColor+Random.swift in Sources */,
 				9D023DC32248905F00BCA208 /* UIColor+TintAndShade.swift in Sources */,
 				9D023DA82245BAC200BCA208 /* UIColor+XYZ.swift in Sources */,
 				9D023DAA2245BB2200BCA208 /* UIColor+YCbCr.swift in Sources */,
