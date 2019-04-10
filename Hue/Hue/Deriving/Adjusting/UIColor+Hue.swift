@@ -30,4 +30,17 @@ public extension UIColor {
         return adjustingHue(by: 180.0)
     }
 
+    /// Returns `true` if the color falls on the cool side of the color wheel
+    /// (90° ≤ hue < 270°).
+    var isCool: Bool {
+        let hue = self.hsl.hue
+        return hue >= 90.0 && hue < 270.0
+    }
+
+    /// Returns `true` if the color falls on the warm side of the color wheel
+    /// (90° > hue ≥ 270°).
+    var isWarm: Bool {
+        return !self.isCool
+    }
+
 }
