@@ -12,8 +12,8 @@ import UIKit
 public extension UIColor {
 
     /**
-     Generates an array of colors between a start color and an end color. The colors are
-     produced by mixing the start color with the end color with evenly distanced stops.
+     Generates an array of colors between a start and end color. The colors are produced by
+     mixing the start color with the end color with evenly distributed stops.
 
      - parameter start: The starting color of the gradient.
      - parameter end: The ending color of the gradient.
@@ -29,6 +29,29 @@ public extension UIColor {
         for i in 1...stops {
             let ratio = CGFloat(i-1) / CGFloat(stops-1)
             colors.append(start.mixed(with: end, weight: ratio))
+        }
+
+        return colors
+    }
+
+    /**
+     Generates an array of colors between a start and end color. The colors are produced by
+     mixing the start color with the end color with a custom array of distributed stops. This
+     function can be used to generate a gradient that is not evenly distributed.
+
+     - parameter start: The color with a stop of `0%`.
+     - parameter end: The color with a stop of `100%`.
+     - parameter customStops: The array of custom stop percentages. The start and end color are
+                              not included by default; therefore, a value of `0.0` and `1.0` should
+                              be included in the array, if desired.
+
+     - returns: The array of colors forming the gradient.
+     */
+    static func gradient(between start: UIColor, and end: UIColor, customStops: [CGFloat]) -> [UIColor] {
+        var colors = [UIColor]()
+
+        for stop in customStops {
+            colors.append(start.mixed(with: end, weight: stop))
         }
 
         return colors
