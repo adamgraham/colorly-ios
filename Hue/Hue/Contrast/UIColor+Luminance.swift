@@ -8,14 +8,14 @@
 
 import UIKit
 
-/// An extension to retieve relative luminance values of a color.
+/// An extension to retieve relative luminance and perceived brightness values of a color.
 public extension UIColor {
 
     /// The relative luminance of the color, measured according to the HSL color model.
     var luminance: CGFloat {
         let rgb = self.rgb
 
-        // converts RGB component to Linear RGB
+        // converts an RGB component to Linear RGB
         func linear(_ component: CGFloat) -> CGFloat {
             return (component > 0.03928) ? pow((component + 0.055) / 1.055, 2.4) : (component / 12.92)
         }
