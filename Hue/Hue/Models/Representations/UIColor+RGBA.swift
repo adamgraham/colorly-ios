@@ -16,7 +16,7 @@ public extension UIColor {
         red: CGFloat,   // 0 to 255
         green: CGFloat, // 0 to 255
         blue: CGFloat,  // 0 to 255
-        alpha: CGFloat  // 0 to 1
+        alpha: CGFloat  // 0 to 255
     )
 
     /// The components of the color in the RGB color model using the RGBA format.
@@ -27,7 +27,7 @@ public extension UIColor {
         return RGBA(red: r * 255.0,
                     green: g * 255.0,
                     blue: b * 255.0,
-                    alpha: a)
+                    alpha: a * 255.0)
     }
 
     /// Initializes a color from the components of a RGB color model using the RGBA format.
@@ -35,7 +35,7 @@ public extension UIColor {
         self.init(red: rgba.red / 255.0,
                   green: rgba.green / 255.0,
                   blue: rgba.blue / 255.0,
-                  alpha: rgba.alpha)
+                  alpha: rgba.alpha / 255.0)
     }
 
 }
