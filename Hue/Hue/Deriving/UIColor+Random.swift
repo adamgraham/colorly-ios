@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// An extension to generate random colors.
 public extension UIColor {
 
     /**
