@@ -28,6 +28,7 @@
 		9D023DCA2248930700BCA208 /* UIColor+Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D023DC92248930700BCA208 /* UIColor+Accessibility.swift */; };
 		9D5E3547224DCDC20076A7EC /* UIColor+Harmony.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5E3546224DCDC20076A7EC /* UIColor+Harmony.swift */; };
 		9D6BCABF224C725D00B3047C /* UIColor+MixingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BCABE224C725D00B3047C /* UIColor+MixingModel.swift */; };
+		9D89FFCA225F008B00FE58C2 /* UIColor+Averaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D89FFC9225F008B00FE58C2 /* UIColor+Averaging.swift */; };
 		9D943E3C22375DA3009C0F04 /* Hue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D943E3222375DA2009C0F04 /* Hue.framework */; };
 		9D943E4122375DA3009C0F04 /* HueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D943E4022375DA3009C0F04 /* HueTests.swift */; };
 		9D943E4322375DA3009C0F04 /* Hue.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D943E3522375DA2009C0F04 /* Hue.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -73,6 +74,7 @@
 		9D023DC92248930700BCA208 /* UIColor+Accessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Accessibility.swift"; sourceTree = "<group>"; };
 		9D5E3546224DCDC20076A7EC /* UIColor+Harmony.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Harmony.swift"; sourceTree = "<group>"; };
 		9D6BCABE224C725D00B3047C /* UIColor+MixingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+MixingModel.swift"; sourceTree = "<group>"; };
+		9D89FFC9225F008B00FE58C2 /* UIColor+Averaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Averaging.swift"; sourceTree = "<group>"; };
 		9D943E3222375DA2009C0F04 /* Hue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Hue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D943E3522375DA2009C0F04 /* Hue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Hue.h; sourceTree = "<group>"; };
 		9D943E3622375DA2009C0F04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -149,6 +151,14 @@
 			path = Contrast;
 			sourceTree = "<group>";
 		};
+		9D89FFCB225F009800FE58C2 /* Averaging */ = {
+			isa = PBXGroup;
+			children = (
+				9D89FFC9225F008B00FE58C2 /* UIColor+Averaging.swift */,
+			);
+			path = Averaging;
+			sourceTree = "<group>";
+		};
 		9D943E2822375DA2009C0F04 = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +202,7 @@
 		9DB19F9B225596BF00C3A6C7 /* Deriving */ = {
 			isa = PBXGroup;
 			children = (
+				9D89FFCB225F009800FE58C2 /* Averaging */,
 				9DB19F9F2255BF0600C3A6C7 /* Adjusting */,
 				9D023DB922488F9F00BCA208 /* Mixing */,
 				9DE0381D225D723E006638E4 /* UIColor+Random.swift */,
@@ -367,6 +378,7 @@
 				9D023DA82245BAC200BCA208 /* UIColor+XYZ.swift in Sources */,
 				9D023DAA2245BB2200BCA208 /* UIColor+YCbCr.swift in Sources */,
 				9DE0381B2258E81C006638E4 /* UIColor+Gradient.swift in Sources */,
+				9D89FFCA225F008B00FE58C2 /* UIColor+Averaging.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
