@@ -159,6 +159,14 @@
 			path = Averaging;
 			sourceTree = "<group>";
 		};
+		9D89FFD02260245C00FE58C2 /* Randomizing */ = {
+			isa = PBXGroup;
+			children = (
+				9DE0381D225D723E006638E4 /* UIColor+Random.swift */,
+			);
+			path = Randomizing;
+			sourceTree = "<group>";
+		};
 		9D943E2822375DA2009C0F04 = {
 			isa = PBXGroup;
 			children = (
@@ -202,10 +210,10 @@
 		9DB19F9B225596BF00C3A6C7 /* Deriving */ = {
 			isa = PBXGroup;
 			children = (
-				9D89FFCB225F009800FE58C2 /* Averaging */,
 				9DB19F9F2255BF0600C3A6C7 /* Adjusting */,
+				9D89FFCB225F009800FE58C2 /* Averaging */,
 				9D023DB922488F9F00BCA208 /* Mixing */,
-				9DE0381D225D723E006638E4 /* UIColor+Random.swift */,
+				9D89FFD02260245C00FE58C2 /* Randomizing */,
 			);
 			path = Deriving;
 			sourceTree = "<group>";
