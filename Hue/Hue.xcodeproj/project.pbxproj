@@ -28,9 +28,38 @@
 		9D023DCA2248930700BCA208 /* UIColor+Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D023DC92248930700BCA208 /* UIColor+Accessibility.swift */; };
 		9D5E3547224DCDC20076A7EC /* UIColor+Harmony.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5E3546224DCDC20076A7EC /* UIColor+Harmony.swift */; };
 		9D6BCABF224C725D00B3047C /* UIColor+MixingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BCABE224C725D00B3047C /* UIColor+MixingModel.swift */; };
+		9D6D1F6622680D70005ED098 /* UIColor+AccessibilityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F6522680D70005ED098 /* UIColor+AccessibilityTest.swift */; };
+		9D6D1F6822680D78005ED098 /* UIColor+ContrastTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F6722680D78005ED098 /* UIColor+ContrastTest.swift */; };
+		9D6D1F6A22680D86005ED098 /* UIColor+LuminanceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F6922680D86005ED098 /* UIColor+LuminanceTest.swift */; };
+		9D6D1F6C22680FAE005ED098 /* FunctionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F6B22680FAE005ED098 /* FunctionsTest.swift */; };
+		9D6D1F6E22680FBB005ED098 /* UIColor+ComponentsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F6D22680FBB005ED098 /* UIColor+ComponentsTest.swift */; };
+		9D6D1F7022680FC9005ED098 /* UIColor+IlluminantTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F6F22680FC9005ED098 /* UIColor+IlluminantTest.swift */; };
+		9D6D1F7222680FD4005ED098 /* UIColor+ModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F7122680FD4005ED098 /* UIColor+ModelTest.swift */; };
+		9D6D1F7522681009005ED098 /* UIColor+ARGBTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F7422681009005ED098 /* UIColor+ARGBTest.swift */; };
+		9D6D1F7722681013005ED098 /* UIColor+CMYKTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F7622681013005ED098 /* UIColor+CMYKTest.swift */; };
+		9D6D1F7922681021005ED098 /* UIColor+HexTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F7822681021005ED098 /* UIColor+HexTest.swift */; };
+		9D6D1F7B22681033005ED098 /* UIColor+HSBTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F7A22681033005ED098 /* UIColor+HSBTest.swift */; };
+		9D6D1F7D2268103E005ED098 /* UIColor+HSLTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F7C2268103E005ED098 /* UIColor+HSLTest.swift */; };
+		9D6D1F7F22681048005ED098 /* UIColor+HSVTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F7E22681048005ED098 /* UIColor+HSVTest.swift */; };
+		9D6D1F8122681070005ED098 /* UIColor+LABTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F8022681070005ED098 /* UIColor+LABTest.swift */; };
+		9D6D1F8322681079005ED098 /* UIColor+RGBTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F8222681079005ED098 /* UIColor+RGBTest.swift */; };
+		9D6D1F8522681084005ED098 /* UIColor+RGBATest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F8422681084005ED098 /* UIColor+RGBATest.swift */; };
+		9D6D1F8722681090005ED098 /* UIColor+XYZTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F8622681090005ED098 /* UIColor+XYZTest.swift */; };
+		9D6D1F892268109A005ED098 /* UIColor+YCbCrTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F882268109A005ED098 /* UIColor+YCbCrTest.swift */; };
+		9D6D1F8F2268115A005ED098 /* UIColor+HarmonyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F8E2268115A005ED098 /* UIColor+HarmonyTest.swift */; };
+		9D6D1F9122681163005ED098 /* UIColor+HueTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F9022681163005ED098 /* UIColor+HueTest.swift */; };
+		9D6D1F932268116C005ED098 /* UIColor+InversionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F922268116C005ED098 /* UIColor+InversionTest.swift */; };
+		9D6D1F9522681175005ED098 /* UIColor+LightnessTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F9422681175005ED098 /* UIColor+LightnessTest.swift */; };
+		9D6D1F972268117D005ED098 /* UIColor+SaturationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F962268117D005ED098 /* UIColor+SaturationTest.swift */; };
+		9D6D1F992268118A005ED098 /* UIColor+AveragingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F982268118A005ED098 /* UIColor+AveragingTest.swift */; };
+		9D6D1F9F226811BF005ED098 /* UIColor+ArithmeticTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F9E226811BF005ED098 /* UIColor+ArithmeticTest.swift */; };
+		9D6D1FA1226811C9005ED098 /* UIColor+GradientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1FA0226811C9005ED098 /* UIColor+GradientTest.swift */; };
+		9D6D1FA3226811D2005ED098 /* UIColor+MixingModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1FA2226811D2005ED098 /* UIColor+MixingModelTest.swift */; };
+		9D6D1FA5226811DD005ED098 /* UIColor+TintAndShadeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1FA4226811DD005ED098 /* UIColor+TintAndShadeTest.swift */; };
+		9D6D1FA7226811F7005ED098 /* UIColor+MixingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1FA6226811F7005ED098 /* UIColor+MixingTest.swift */; };
+		9D6D1FAB2268120C005ED098 /* UIColor+RandomTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1FAA2268120C005ED098 /* UIColor+RandomTest.swift */; };
 		9D89FFCA225F008B00FE58C2 /* UIColor+Averaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D89FFC9225F008B00FE58C2 /* UIColor+Averaging.swift */; };
 		9D943E3C22375DA3009C0F04 /* Hue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D943E3222375DA2009C0F04 /* Hue.framework */; };
-		9D943E4122375DA3009C0F04 /* HueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D943E4022375DA3009C0F04 /* HueTests.swift */; };
 		9D943E4322375DA3009C0F04 /* Hue.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D943E3522375DA2009C0F04 /* Hue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9DA45A8822557BB200E51EEE /* UIColor+Saturation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA45A8722557BB200E51EEE /* UIColor+Saturation.swift */; };
 		9DA45A8A22557CE600E51EEE /* UIColor+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA45A8922557CE600E51EEE /* UIColor+Components.swift */; };
@@ -74,12 +103,41 @@
 		9D023DC92248930700BCA208 /* UIColor+Accessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Accessibility.swift"; sourceTree = "<group>"; };
 		9D5E3546224DCDC20076A7EC /* UIColor+Harmony.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Harmony.swift"; sourceTree = "<group>"; };
 		9D6BCABE224C725D00B3047C /* UIColor+MixingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+MixingModel.swift"; sourceTree = "<group>"; };
+		9D6D1F6522680D70005ED098 /* UIColor+AccessibilityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+AccessibilityTest.swift"; sourceTree = "<group>"; };
+		9D6D1F6722680D78005ED098 /* UIColor+ContrastTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ContrastTest.swift"; sourceTree = "<group>"; };
+		9D6D1F6922680D86005ED098 /* UIColor+LuminanceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+LuminanceTest.swift"; sourceTree = "<group>"; };
+		9D6D1F6B22680FAE005ED098 /* FunctionsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionsTest.swift; sourceTree = "<group>"; };
+		9D6D1F6D22680FBB005ED098 /* UIColor+ComponentsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ComponentsTest.swift"; sourceTree = "<group>"; };
+		9D6D1F6F22680FC9005ED098 /* UIColor+IlluminantTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+IlluminantTest.swift"; sourceTree = "<group>"; };
+		9D6D1F7122680FD4005ED098 /* UIColor+ModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ModelTest.swift"; sourceTree = "<group>"; };
+		9D6D1F7422681009005ED098 /* UIColor+ARGBTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ARGBTest.swift"; sourceTree = "<group>"; };
+		9D6D1F7622681013005ED098 /* UIColor+CMYKTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CMYKTest.swift"; sourceTree = "<group>"; };
+		9D6D1F7822681021005ED098 /* UIColor+HexTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HexTest.swift"; sourceTree = "<group>"; };
+		9D6D1F7A22681033005ED098 /* UIColor+HSBTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HSBTest.swift"; sourceTree = "<group>"; };
+		9D6D1F7C2268103E005ED098 /* UIColor+HSLTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HSLTest.swift"; sourceTree = "<group>"; };
+		9D6D1F7E22681048005ED098 /* UIColor+HSVTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HSVTest.swift"; sourceTree = "<group>"; };
+		9D6D1F8022681070005ED098 /* UIColor+LABTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+LABTest.swift"; sourceTree = "<group>"; };
+		9D6D1F8222681079005ED098 /* UIColor+RGBTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+RGBTest.swift"; sourceTree = "<group>"; };
+		9D6D1F8422681084005ED098 /* UIColor+RGBATest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+RGBATest.swift"; sourceTree = "<group>"; };
+		9D6D1F8622681090005ED098 /* UIColor+XYZTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+XYZTest.swift"; sourceTree = "<group>"; };
+		9D6D1F882268109A005ED098 /* UIColor+YCbCrTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+YCbCrTest.swift"; sourceTree = "<group>"; };
+		9D6D1F8E2268115A005ED098 /* UIColor+HarmonyTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HarmonyTest.swift"; sourceTree = "<group>"; };
+		9D6D1F9022681163005ED098 /* UIColor+HueTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HueTest.swift"; sourceTree = "<group>"; };
+		9D6D1F922268116C005ED098 /* UIColor+InversionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+InversionTest.swift"; sourceTree = "<group>"; };
+		9D6D1F9422681175005ED098 /* UIColor+LightnessTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+LightnessTest.swift"; sourceTree = "<group>"; };
+		9D6D1F962268117D005ED098 /* UIColor+SaturationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+SaturationTest.swift"; sourceTree = "<group>"; };
+		9D6D1F982268118A005ED098 /* UIColor+AveragingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+AveragingTest.swift"; sourceTree = "<group>"; };
+		9D6D1F9E226811BF005ED098 /* UIColor+ArithmeticTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ArithmeticTest.swift"; sourceTree = "<group>"; };
+		9D6D1FA0226811C9005ED098 /* UIColor+GradientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+GradientTest.swift"; sourceTree = "<group>"; };
+		9D6D1FA2226811D2005ED098 /* UIColor+MixingModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+MixingModelTest.swift"; sourceTree = "<group>"; };
+		9D6D1FA4226811DD005ED098 /* UIColor+TintAndShadeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+TintAndShadeTest.swift"; sourceTree = "<group>"; };
+		9D6D1FA6226811F7005ED098 /* UIColor+MixingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+MixingTest.swift"; sourceTree = "<group>"; };
+		9D6D1FAA2268120C005ED098 /* UIColor+RandomTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+RandomTest.swift"; sourceTree = "<group>"; };
 		9D89FFC9225F008B00FE58C2 /* UIColor+Averaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Averaging.swift"; sourceTree = "<group>"; };
 		9D943E3222375DA2009C0F04 /* Hue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Hue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D943E3522375DA2009C0F04 /* Hue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Hue.h; sourceTree = "<group>"; };
 		9D943E3622375DA2009C0F04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D943E3B22375DA3009C0F04 /* HueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D943E4022375DA3009C0F04 /* HueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HueTests.swift; sourceTree = "<group>"; };
 		9D943E4222375DA3009C0F04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DA45A8722557BB200E51EEE /* UIColor+Saturation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Saturation.swift"; sourceTree = "<group>"; };
 		9DA45A8922557CE600E51EEE /* UIColor+Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Components.swift"; sourceTree = "<group>"; };
@@ -151,6 +209,104 @@
 			path = Contrast;
 			sourceTree = "<group>";
 		};
+		9D6D1F6122680D46005ED098 /* Contrast */ = {
+			isa = PBXGroup;
+			children = (
+				9D6D1F6522680D70005ED098 /* UIColor+AccessibilityTest.swift */,
+				9D6D1F6722680D78005ED098 /* UIColor+ContrastTest.swift */,
+				9D6D1F6922680D86005ED098 /* UIColor+LuminanceTest.swift */,
+			);
+			path = Contrast;
+			sourceTree = "<group>";
+		};
+		9D6D1F6222680D4D005ED098 /* Deriving */ = {
+			isa = PBXGroup;
+			children = (
+				9D6D1F8A226810FB005ED098 /* Adjusting */,
+				9D6D1F8B22681103005ED098 /* Averaging */,
+				9D6D1F8C22681109005ED098 /* Mixing */,
+				9D6D1F8D2268110D005ED098 /* Randomizing */,
+			);
+			path = Deriving;
+			sourceTree = "<group>";
+		};
+		9D6D1F6322680D52005ED098 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9D6D1F7322680FF7005ED098 /* Representations */,
+				9D6D1F6D22680FBB005ED098 /* UIColor+ComponentsTest.swift */,
+				9D6D1F6F22680FC9005ED098 /* UIColor+IlluminantTest.swift */,
+				9D6D1F7122680FD4005ED098 /* UIColor+ModelTest.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9D6D1F6422680D57005ED098 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9D6D1F6B22680FAE005ED098 /* FunctionsTest.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		9D6D1F7322680FF7005ED098 /* Representations */ = {
+			isa = PBXGroup;
+			children = (
+				9D6D1F7422681009005ED098 /* UIColor+ARGBTest.swift */,
+				9D6D1F7622681013005ED098 /* UIColor+CMYKTest.swift */,
+				9D6D1F7822681021005ED098 /* UIColor+HexTest.swift */,
+				9D6D1F7A22681033005ED098 /* UIColor+HSBTest.swift */,
+				9D6D1F7C2268103E005ED098 /* UIColor+HSLTest.swift */,
+				9D6D1F7E22681048005ED098 /* UIColor+HSVTest.swift */,
+				9D6D1F8022681070005ED098 /* UIColor+LABTest.swift */,
+				9D6D1F8222681079005ED098 /* UIColor+RGBTest.swift */,
+				9D6D1F8422681084005ED098 /* UIColor+RGBATest.swift */,
+				9D6D1F8622681090005ED098 /* UIColor+XYZTest.swift */,
+				9D6D1F882268109A005ED098 /* UIColor+YCbCrTest.swift */,
+			);
+			path = Representations;
+			sourceTree = "<group>";
+		};
+		9D6D1F8A226810FB005ED098 /* Adjusting */ = {
+			isa = PBXGroup;
+			children = (
+				9D6D1F8E2268115A005ED098 /* UIColor+HarmonyTest.swift */,
+				9D6D1F9022681163005ED098 /* UIColor+HueTest.swift */,
+				9D6D1F922268116C005ED098 /* UIColor+InversionTest.swift */,
+				9D6D1F9422681175005ED098 /* UIColor+LightnessTest.swift */,
+				9D6D1F962268117D005ED098 /* UIColor+SaturationTest.swift */,
+			);
+			path = Adjusting;
+			sourceTree = "<group>";
+		};
+		9D6D1F8B22681103005ED098 /* Averaging */ = {
+			isa = PBXGroup;
+			children = (
+				9D6D1F982268118A005ED098 /* UIColor+AveragingTest.swift */,
+			);
+			path = Averaging;
+			sourceTree = "<group>";
+		};
+		9D6D1F8C22681109005ED098 /* Mixing */ = {
+			isa = PBXGroup;
+			children = (
+				9D6D1F9E226811BF005ED098 /* UIColor+ArithmeticTest.swift */,
+				9D6D1FA0226811C9005ED098 /* UIColor+GradientTest.swift */,
+				9D6D1FA6226811F7005ED098 /* UIColor+MixingTest.swift */,
+				9D6D1FA2226811D2005ED098 /* UIColor+MixingModelTest.swift */,
+				9D6D1FA4226811DD005ED098 /* UIColor+TintAndShadeTest.swift */,
+			);
+			path = Mixing;
+			sourceTree = "<group>";
+		};
+		9D6D1F8D2268110D005ED098 /* Randomizing */ = {
+			isa = PBXGroup;
+			children = (
+				9D6D1FAA2268120C005ED098 /* UIColor+RandomTest.swift */,
+			);
+			path = Randomizing;
+			sourceTree = "<group>";
+		};
 		9D89FFCB225F009800FE58C2 /* Averaging */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,7 +357,10 @@
 		9D943E3F22375DA3009C0F04 /* HueTests */ = {
 			isa = PBXGroup;
 			children = (
-				9D943E4022375DA3009C0F04 /* HueTests.swift */,
+				9D6D1F6122680D46005ED098 /* Contrast */,
+				9D6D1F6222680D4D005ED098 /* Deriving */,
+				9D6D1F6322680D52005ED098 /* Models */,
+				9D6D1F6422680D57005ED098 /* Utils */,
 				9D943E4222375DA3009C0F04 /* Info.plist */,
 			);
 			path = HueTests;
@@ -394,7 +553,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D943E4122375DA3009C0F04 /* HueTests.swift in Sources */,
+				9D6D1F6622680D70005ED098 /* UIColor+AccessibilityTest.swift in Sources */,
+				9D6D1F9122681163005ED098 /* UIColor+HueTest.swift in Sources */,
+				9D6D1F8122681070005ED098 /* UIColor+LABTest.swift in Sources */,
+				9D6D1F7B22681033005ED098 /* UIColor+HSBTest.swift in Sources */,
+				9D6D1F8722681090005ED098 /* UIColor+XYZTest.swift in Sources */,
+				9D6D1F8322681079005ED098 /* UIColor+RGBTest.swift in Sources */,
+				9D6D1F7722681013005ED098 /* UIColor+CMYKTest.swift in Sources */,
+				9D6D1FA7226811F7005ED098 /* UIColor+MixingTest.swift in Sources */,
+				9D6D1F6E22680FBB005ED098 /* UIColor+ComponentsTest.swift in Sources */,
+				9D6D1F9522681175005ED098 /* UIColor+LightnessTest.swift in Sources */,
+				9D6D1F7222680FD4005ED098 /* UIColor+ModelTest.swift in Sources */,
+				9D6D1F7022680FC9005ED098 /* UIColor+IlluminantTest.swift in Sources */,
+				9D6D1F8F2268115A005ED098 /* UIColor+HarmonyTest.swift in Sources */,
+				9D6D1FA3226811D2005ED098 /* UIColor+MixingModelTest.swift in Sources */,
+				9D6D1F9F226811BF005ED098 /* UIColor+ArithmeticTest.swift in Sources */,
+				9D6D1F992268118A005ED098 /* UIColor+AveragingTest.swift in Sources */,
+				9D6D1F7F22681048005ED098 /* UIColor+HSVTest.swift in Sources */,
+				9D6D1F6C22680FAE005ED098 /* FunctionsTest.swift in Sources */,
+				9D6D1F8522681084005ED098 /* UIColor+RGBATest.swift in Sources */,
+				9D6D1FAB2268120C005ED098 /* UIColor+RandomTest.swift in Sources */,
+				9D6D1FA5226811DD005ED098 /* UIColor+TintAndShadeTest.swift in Sources */,
+				9D6D1F7922681021005ED098 /* UIColor+HexTest.swift in Sources */,
+				9D6D1F972268117D005ED098 /* UIColor+SaturationTest.swift in Sources */,
+				9D6D1F892268109A005ED098 /* UIColor+YCbCrTest.swift in Sources */,
+				9D6D1F7522681009005ED098 /* UIColor+ARGBTest.swift in Sources */,
+				9D6D1F7D2268103E005ED098 /* UIColor+HSLTest.swift in Sources */,
+				9D6D1FA1226811C9005ED098 /* UIColor+GradientTest.swift in Sources */,
+				9D6D1F932268116C005ED098 /* UIColor+InversionTest.swift in Sources */,
+				9D6D1F6A22680D86005ED098 /* UIColor+LuminanceTest.swift in Sources */,
+				9D6D1F6822680D78005ED098 /* UIColor+ContrastTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,7 +629,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -461,7 +648,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -505,7 +691,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -519,7 +704,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -534,7 +718,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -547,7 +731,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adamgraham.Hue;
@@ -556,6 +740,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -563,7 +748,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -576,7 +761,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adamgraham.Hue;
@@ -584,6 +769,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -591,14 +777,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = HueTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adamgraham.HueTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -611,14 +798,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = HueTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adamgraham.HueTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
