@@ -8,6 +8,24 @@
 
 import UIKit
 
+/// An extension to declare common tertiary colors.
+extension UIColor {
+
+    /// A color object whose RGB values are 0.0, 0.5, and 1.0 and whose alpha value is 1.0.
+    open class var azure: UIColor { return cyan + blue }
+    /// A color object whose RGB values are 0.5, 0.0, and 1.0 and whose alpha value is 1.0.
+    open class var violet: UIColor { return blue + magenta }
+    /// A color object whose RGB values are 1.0, 0.0, and 0.5 and whose alpha value is 1.0.
+    open class var rose: UIColor { return magenta + red }
+    /// A color object whose RGB values are 1.0, 0.5, and 0.0 and whose alpha value is 1.0.
+    // open class var orange: UIColor { return red + yellow }
+    /// A color object whose RGB values are 0.5, 1.0, and 0.0 and whose alpha value is 1.0.
+    open class var chartreuse: UIColor { return yellow + green }
+    /// A color object whose RGB values are 0.0, 1.0, and 0.5 and whose alpha value is 1.0.
+    open class var springGreen: UIColor { return green + cyan }
+
+}
+
 /// An extension to declare the colors of the color wheel.
 public extension UIColor {
 
@@ -37,17 +55,17 @@ public extension UIColor {
             public static let yellow = UIColor.yellow
 
             /// `#0080ff`, `rgb(0,128,255)`
-            public static let azure = cyan + blue
+            public static let azure = UIColor.azure
             /// `#8000ff`, `rgb(128,0,255)`
-            public static let violet = blue + magenta
+            public static let violet = UIColor.violet
             /// `#ff0080`, `rgb(255,0,128)`
-            public static let rose = magenta + red
+            public static let rose = UIColor.rose
             /// `#ff8000`, `rgb(255,128,0)`
-            public static let orange = red + yellow
+            public static let orange = UIColor.orange
             /// `#80ff00`, `rgb(128,255,0)`
-            public static let chartreuse = yellow + green
+            public static let chartreuse = UIColor.chartreuse
             /// `#00ff80`, `rgb(0,255,128)`
-            public static let springGreen = green + cyan
+            public static let springGreen = UIColor.springGreen
 
             private init() {}
 
