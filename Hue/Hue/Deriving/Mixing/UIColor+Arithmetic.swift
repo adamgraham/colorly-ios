@@ -46,3 +46,14 @@ public func *(color: UIColor, multiplier: CGFloat) -> UIColor {
                    blue: clamp(b * multiplier, 0.0, 1.0),
                    alpha: a)
 }
+
+/// Returns the result of dividing a color by a divisor.
+public func /(color: UIColor, divisor: CGFloat) -> UIColor {
+    var (r, g, b, a) = (CGFloat(), CGFloat(), CGFloat(), CGFloat())
+    color.getRed(&r, green: &g, blue: &b, alpha: &a)
+
+    return UIColor(red: clamp(r / divisor, 0.0, 1.0),
+                   green: clamp(g / divisor, 0.0, 1.0),
+                   blue: clamp(b / divisor, 0.0, 1.0),
+                   alpha: a)
+}
