@@ -12,7 +12,11 @@ import UIKit
 public extension UIColor {
 
     /**
-     Returns the average colors of an array of colors.
+     Returns the average color of an array of colors.
+
+     This function accounts for human visual perception by squaring the RGB values first,
+     then dividing by the number of colors and taking the square root. Here is a video that
+     explains it further: https://www.youtube.com/watch?v=LKnqECcg6Gw.
 
      - parameter colors: The array of colors to average.
      - returns: The average color.
@@ -39,6 +43,10 @@ public extension UIColor {
 
     /**
      Returns the average of two colors.
+
+     This function accounts for human visual perception by squaring the RGB values first,
+     then dividing by two and taking the square root. Here is a video that explains it further:
+     https://www.youtube.com/watch?v=LKnqECcg6Gw.
 
      - parameter color1: The first color to average with the second.
      - parameter color2: The second color to average with the first.
