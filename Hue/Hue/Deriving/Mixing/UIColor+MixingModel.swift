@@ -62,12 +62,12 @@ public extension UIColor {
             let primary = self.primaryColors
             let secondary = self.secondaryColors
 
-            return (primary.0 + secondary.1,
-                    primary.0 + secondary.2,
-                    primary.1 + secondary.0,
-                    primary.1 + secondary.2,
-                    primary.2 + secondary.0,
-                    primary.2 + secondary.1)
+            return (primary.0 * 0.5 + secondary.1 * 0.5,
+                    primary.0 * 0.5 + secondary.2 * 0.5,
+                    primary.1 * 0.5 + secondary.0 * 0.5,
+                    primary.1 * 0.5 + secondary.2 * 0.5,
+                    primary.2 * 0.5 + secondary.0 * 0.5,
+                    primary.2 * 0.5 + secondary.1 * 0.5)
         }
 
         /// The primary, secondary, and tertiary colors of the mixing model, together forming a
