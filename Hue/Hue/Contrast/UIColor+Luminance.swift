@@ -21,9 +21,9 @@ public extension UIColor {
             return (component > 0.03928) ? pow((component + 0.055) / 1.055, 2.4) : (component / 12.92)
         }
 
-        return 0.2126 * r +
-               0.7152 * g +
-               0.0722 * b
+        return 0.2126 * linear(r) +
+               0.7152 * linear(g) +
+               0.0722 * linear(b)
     }
 
     /// The perceived brightness of the color, measured according to the HSP color model -
