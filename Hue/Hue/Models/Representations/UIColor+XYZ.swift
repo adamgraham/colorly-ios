@@ -33,9 +33,10 @@ public extension UIColor {
         b = (b <= 0.04045) ? (b / 12.92) : pow((b + 0.055) / 1.055, 2.4)
 
         // sRGB (D65) matrix transformation
-        let x = (0.4124 * r) + (0.3576 * g) + (0.1805 * b)
-        let y = (0.2126 * r) + (0.7152 * g) + (0.0722 * b)
-        let z = (0.0193 * r) + (0.1192 * g) + (0.9505 * b)
+        // http://www.brucelindbloom.com/index.html?Eqn_RGB_XYZ_Matrix.html
+        let x = (0.4124564 * r) + (0.3575761 * g) + (0.1804375 * b)
+        let y = (0.2126729 * r) + (0.7151522 * g) + (0.0721750 * b)
+        let z = (0.0193339 * r) + (0.1191920 * g) + (0.9503041 * b)
 
         return XYZ(x: x * 100.0,
                    y: y * 100.0,
@@ -49,14 +50,16 @@ public extension UIColor {
         let z = xyz.z / 100.0
 
         // sRGB (D65) matrix transformation
-        var r =  (3.2406 * x) - (1.5372 * y) - (0.4986 * z)
-        var g = (-0.9689 * x) + (1.8758 * y) + (0.0415 * z)
-        var b =  (0.0557 * x) - (0.2040 * y) + (1.0570 * z)
+        // http://www.brucelindbloom.com/index.html?Eqn_RGB_XYZ_Matrix.html
+        var r =  (3.2404542 * x) - (1.5371385 * y) - (0.4985314 * z)
+        var g = (-0.9692660 * x) + (1.8760108 * y) + (0.0415560 * z)
+        var b =  (0.0556434 * x) - (0.2040259 * y) + (1.0572252 * z)
 
         // sRGB (D65) gamma correction - companding to get non-linear values
-        r = (r <= 0.0031308) ? (12.92 * r) : (1.055 * pow(r, 1/2.4) - 0.055)
-        g = (g <= 0.0031308) ? (12.92 * g) : (1.055 * pow(g, 1/2.4) - 0.055)
-        b = (b <= 0.0031308) ? (12.92 * b) : (1.055 * pow(b, 1/2.4) - 0.055)
+        let k: CGFloat = 1.0 / 2.4
+        r = (r <= 0.0031308) ? (12.92 * r) : (1.055 * pow(r, k) - 0.055)
+        g = (g <= 0.0031308) ? (12.92 * g) : (1.055 * pow(g, k) - 0.055)
+        b = (b <= 0.0031308) ? (12.92 * b) : (1.055 * pow(b, k) - 0.055)
 
         self.init(red: r, green: g, blue: b, alpha: alpha)
     }
