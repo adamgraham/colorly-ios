@@ -14,9 +14,9 @@ public extension UIColor {
     /// The negative of the color, produced by inverting the RGB values.
     var inverted: UIColor {
         var rgba = self.rgba
-        rgba.red = 255.0 - rgb.red
-        rgba.green = 255.0 - rgb.green
-        rgba.blue = 255.0 - rgb.blue
+        rgba.red = 255.0 - rgba.red
+        rgba.green = 255.0 - rgba.green
+        rgba.blue = 255.0 - rgba.blue
         return UIColor(rgba: rgba)
     }
 

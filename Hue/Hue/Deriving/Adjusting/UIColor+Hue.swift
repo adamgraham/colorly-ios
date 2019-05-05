@@ -19,9 +19,9 @@ public extension UIColor {
      */
     func adjustingHue(by degrees: CGFloat) -> UIColor {
         let degrees = rotatingClamp(degrees, 0.0, 360.0)
-        var hsl = self.hsl
-        hsl.hue = (hsl.hue + degrees).truncatingRemainder(dividingBy: 360.0)
-        return UIColor(hsl: hsl)
+        var hsb = self.hsb
+        hsb.hue = (hsb.hue + degrees).truncatingRemainder(dividingBy: 360.0)
+        return UIColor(hsb: hsb)
     }
 
     /// The color opposite on the color wheel, equivalant to adjusting the hue by 180°.
@@ -32,7 +32,7 @@ public extension UIColor {
     /// Returns `true` if the color falls on the cool side of the color wheel
     /// (90° ≤ hue < 270°).
     var isCool: Bool {
-        let hue = self.hsl.hue
+        let hue = self.hueComponent * 360.0
         return hue >= 90.0 && hue < 270.0
     }
 
