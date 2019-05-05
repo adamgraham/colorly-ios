@@ -91,7 +91,7 @@ public extension UIColor {
 
     /// The hexadecimal string value of the color in the ARGB format (AARRGGBB), e.g., "#80ffff00".
     var hexString_ARGB: String {
-        return "#\(String(format: "%06x", self.hex_ARGB))"
+        return "#\(String(format: "%08x", self.hex_ARGB))"
     }
 
 }
@@ -136,7 +136,7 @@ public extension UIColor {
 
     /// The hexadecimal string value of the color in the RGBA format (RRGGBBAA), e.g., "#ffff0080".
     var hexString_RGBA: String {
-        return "#\(String(format: "%06x", self.hex_RGBA))"
+        return "#\(String(format: "%08x", self.hex_RGBA))"
     }
 
 }
