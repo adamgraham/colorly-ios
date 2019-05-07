@@ -60,22 +60,22 @@ public extension UIColor {
         /// respectively.
         case HSL
 
+        /// The YCbCr color model used as a part of the color image pipeline in video and digital
+        /// photography systems. _Y_ is the luminance (luma) component and _Cb_ and _Cr_ are the
+        /// blue-difference and red-difference chrominance (chroma) components, respectively.
+        case YCbCr
+
         /// The XYZ color model defined by the International Commission on Illumination (CIE).
         /// Created to map out all of the colors perceived by the human eye, it is considered to be
         /// one of the most accurate color models; thus, it is commonly used for color
         /// management and conversions.
-        case XYZ
+        case CIE_XYZ
 
         /// The LAB (lightness, A-channel, B-channel) color model defined by the International
         /// Commission on Illumination (CIE). It was designed to be perceptually uniform with
         /// respect to human color vision, meaning that the same amount of numerical change in
         /// these values corresponds to about the same amount of visually perceived change.
-        case LAB
-
-        /// The YCbCr color model used as a part of the color image pipeline in video and digital
-        /// photography systems. _Y_ is the luminance (luma) component and _Cb_ and _Cr_ are the
-        /// blue-difference and red-difference chrominance (chroma) components, respectively.
-        case YCbCr
+        case CIE_LAB
 
     }
 

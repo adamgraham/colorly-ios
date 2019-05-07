@@ -11,7 +11,7 @@ import UIKit
 /// An extension to define color illuminants.
 public extension UIColor {
 
-    /// A standard illuminat defined by the International Commission on Illumination (CIE)
+    /// A standard illuminant defined by the International Commission on Illumination (CIE)
     /// which provides a basis for comparing images or colors recorded under different
     /// lighting.
     public enum Illuminant {

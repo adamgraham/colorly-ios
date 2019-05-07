@@ -1,5 +1,5 @@
 //
-//  UIColor+LAB.swift
+//  UIColor+CIE-LAB.swift
 //  Hue
 //
 //  Created by Adam Graham on 3/22/19.
@@ -24,7 +24,7 @@ public extension UIColor {
     }
 
     /// The components of a color in the CIE-LAB color model.
-    public struct LAB: Equatable {
+    public struct CIE_LAB: Equatable {
 
         /// The L (lightness) component of the color, in the range 0 to 100 (darkest to brightest).
         public var L: CGFloat
@@ -36,7 +36,7 @@ public extension UIColor {
     }
 
     /// The components of the color in the CIE-LAB color model.
-    var lab: LAB {
+    var lab: CIE_LAB {
         let fn = { (t: CGFloat) -> CGFloat in
             if t > Constant.δ³ { return pow(t, Constant.⅓) }
             return (t / Constant.δ²3) + Constant.⁴୵₂₉
@@ -53,11 +53,11 @@ public extension UIColor {
         let a = 500.0 * (fx - fy)
         let b = 200.0 * (fy - fz)
 
-        return LAB(L: L, a: a, b: b)
+        return CIE_LAB(L: L, a: a, b: b)
     }
 
     /// Initializes a color from the components of a CIE-LAB color model.
-    convenience init(lab: LAB, alpha: CGFloat = 1.0) {
+    convenience init(lab: CIE_LAB, alpha: CGFloat = 1.0) {
         let fn = { (t: CGFloat) -> CGFloat in
             if t > Constant.δ { return pow(t, 3.0) }
             return Constant.δ²3 * (t - Constant.⁴୵₂₉)
@@ -72,7 +72,7 @@ public extension UIColor {
         let y = r.y * fn(L) * 100.0
         let z = r.z * fn(b) * 100.0
 
-        self.init(xyz: XYZ(x: x, y: y, z: z), alpha: alpha)
+        self.init(xyz: CIE_XYZ(x: x, y: y, z: z), alpha: alpha)
     }
 
 }

@@ -1,5 +1,5 @@
 //
-//  UIColor+XYZ.swift
+//  UIColor+CIE-XYZ.swift
 //  Hue
 //
 //  Created by Adam Graham on 3/22/19.
@@ -12,7 +12,7 @@ import UIKit
 public extension UIColor {
 
     /// The components of a color in the CIE-XYZ color model.
-    public struct XYZ: Equatable {
+    public struct CIE_XYZ: Equatable {
 
         /// The x component of the color, a mix (a linear combination) of cone response curves
         /// chosen to be non-negative, in the range 0 to 100.
@@ -26,7 +26,7 @@ public extension UIColor {
     }
 
     /// The components of the color in the CIE-XYZ color model.
-    var xyz: XYZ {
+    var xyz: CIE_XYZ {
         var (r, g, b) = (CGFloat(), CGFloat(), CGFloat())
         getRed(&r, green: &g, blue: &b, alpha: nil)
 
@@ -41,13 +41,13 @@ public extension UIColor {
         let y = (0.2126729 * r) + (0.7151522 * g) + (0.0721750 * b)
         let z = (0.0193339 * r) + (0.1191920 * g) + (0.9503041 * b)
 
-        return XYZ(x: x * 100.0,
-                   y: y * 100.0,
-                   z: z * 100.0)
+        return CIE_XYZ(x: x * 100.0,
+                       y: y * 100.0,
+                       z: z * 100.0)
     }
 
     /// Initializes a color from the components of a CIE-XYZ color model.
-    convenience init(xyz: XYZ, alpha: CGFloat = 1.0) {
+    convenience init(xyz: CIE_XYZ, alpha: CGFloat = 1.0) {
         let x = xyz.x / 100.0
         let y = xyz.y / 100.0
         let z = xyz.z / 100.0
