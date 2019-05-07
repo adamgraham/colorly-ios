@@ -52,16 +52,16 @@ public extension UIColor {
 
         switch encoding {
         case .standard:
-            Y  = (0.299 * r) + (0.587 * g) + (0.114 * b)
-            Cb = 0.564 * (b - Y)
-            Cr = 0.713 * (r - Y)
+            Y  =  (0.299 * r) + (0.587 * g) + (0.114 * b)
+            Cb = (-0.169 * r) - (0.331 * g) + (0.500 * b)
+            Cr =  (0.500 * r) - (0.419 * g) - (0.081 * b)
         case .hdtv:
-            Y  = (0.2126 * r) + (0.7152 * g) + (0.0722 * b)
-            Cb = 0.5389 * (b - Y)
-            Cr = 0.6350 * (r - Y)
+            Y  =  (0.213 * r) + (0.715 * g) + (0.072 * b)
+            Cb = (-0.115 * r) - (0.385 * g) + (0.500 * b)
+            Cr =  (0.500 * r) - (0.454 * g) - (0.046 * b)
         }
 
-        return YCbCr(luma: Y, chroma: (blue: Cb, red: Cr), encoding: encoding)
+        return YCbCr(Y: Y, Cb: Cb, Cr: Cr, encoding: encoding)
     }
 
     /// Initializes a color from the components of a YCbCr color model.
@@ -72,13 +72,13 @@ public extension UIColor {
 
         switch yCbCr.encoding {
         case .standard:
-            r = yCbCr.luma + (1.402 * yCbCr.chroma.red)
-            g = yCbCr.luma - (0.344 * yCbCr.chroma.blue) - (0.714 * yCbCr.chroma.red)
-            b = yCbCr.luma + (1.773 * yCbCr.chroma.blue)
+            r = yCbCr.Y + (1.402 * yCbCr.Cr)
+            g = yCbCr.Y - (0.344 * yCbCr.Cb) - (0.714 * yCbCr.Cr)
+            b = yCbCr.Y + (1.772 * yCbCr.Cb)
         case .hdtv:
-            r = yCbCr.luma + (1.5701 * yCbCr.chroma.red)
-            g = yCbCr.luma - (0.1870 * yCbCr.chroma.blue) - (0.4664 * yCbCr.chroma.red)
-            b = yCbCr.luma - (1.8556 * yCbCr.chroma.blue)
+            r = yCbCr.Y + (1.575 * yCbCr.Cr)
+            g = yCbCr.Y - (0.187 * yCbCr.Cb) - (0.468 * yCbCr.Cr)
+            b = yCbCr.Y + (1.856 * yCbCr.Cb)
         }
 
         self.init(red: r, green: g, blue: b, alpha: alpha)
