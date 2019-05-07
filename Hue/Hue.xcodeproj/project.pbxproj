@@ -66,6 +66,7 @@
 		9DB19FA12255BF8300C3A6C7 /* UIColor+Hue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB19FA02255BF8300C3A6C7 /* UIColor+Hue.swift */; };
 		9DC72B8C22811D77002E5FB4 /* UIColor+CIE-LAB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC72B8A22811D77002E5FB4 /* UIColor+CIE-LAB.swift */; };
 		9DC72B8D22811D77002E5FB4 /* UIColor+CIE-XYZ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC72B8B22811D77002E5FB4 /* UIColor+CIE-XYZ.swift */; };
+		9DC72B8F22811E4E002E5FB4 /* XCTest+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC72B8E22811E4E002E5FB4 /* XCTest+UIColor.swift */; };
 		9DE0381522582813006638E4 /* UIColor+Inversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE0381422582813006638E4 /* UIColor+Inversion.swift */; };
 		9DE03819225862F0006638E4 /* UIColor+Luminance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE03818225862F0006638E4 /* UIColor+Luminance.swift */; };
 		9DE0381B2258E81C006638E4 /* UIColor+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE0381A2258E81C006638E4 /* UIColor+Gradient.swift */; };
@@ -145,6 +146,7 @@
 		9DB19FA02255BF8300C3A6C7 /* UIColor+Hue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hue.swift"; sourceTree = "<group>"; };
 		9DC72B8A22811D77002E5FB4 /* UIColor+CIE-LAB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+CIE-LAB.swift"; sourceTree = "<group>"; };
 		9DC72B8B22811D77002E5FB4 /* UIColor+CIE-XYZ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+CIE-XYZ.swift"; sourceTree = "<group>"; };
+		9DC72B8E22811E4E002E5FB4 /* XCTest+UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTest+UIColor.swift"; sourceTree = "<group>"; };
 		9DE0381422582813006638E4 /* UIColor+Inversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Inversion.swift"; sourceTree = "<group>"; };
 		9DE03818225862F0006638E4 /* UIColor+Luminance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Luminance.swift"; sourceTree = "<group>"; };
 		9DE0381A2258E81C006638E4 /* UIColor+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Gradient.swift"; sourceTree = "<group>"; };
@@ -364,6 +366,7 @@
 				9D6D1F6222680D4D005ED098 /* Deriving */,
 				9D6D1F6322680D52005ED098 /* Models */,
 				9D6D1F6422680D57005ED098 /* Utils */,
+				9DC72B8E22811E4E002E5FB4 /* XCTest+UIColor.swift */,
 				9D943E4222375DA3009C0F04 /* Info.plist */,
 			);
 			path = HueTests;
@@ -572,6 +575,7 @@
 				9D6D1F8F2268115A005ED098 /* UIColor+HarmonyTest.swift in Sources */,
 				9D6D1FA3226811D2005ED098 /* UIColor+MixingModelTest.swift in Sources */,
 				9D6D1F9F226811BF005ED098 /* UIColor+ArithmeticTest.swift in Sources */,
+				9DC72B8F22811E4E002E5FB4 /* XCTest+UIColor.swift in Sources */,
 				9D6D1F992268118A005ED098 /* UIColor+AveragingTest.swift in Sources */,
 				9D6D1F7F22681048005ED098 /* UIColor+HSVTest.swift in Sources */,
 				9D6D1F6C22680FAE005ED098 /* FunctionsTest.swift in Sources */,
