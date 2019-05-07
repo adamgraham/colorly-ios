@@ -31,9 +31,9 @@ public extension UIColor {
         getRed(&r, green: &g, blue: &b, alpha: nil)
 
         // sRGB (D65) gamma correction - inverse companding to get linear values
-        r = (r <= 0.04045) ? (r / 12.92) : pow((r + 0.055) / 1.055, 2.4)
-        g = (g <= 0.04045) ? (g / 12.92) : pow((g + 0.055) / 1.055, 2.4)
-        b = (b <= 0.04045) ? (b / 12.92) : pow((b + 0.055) / 1.055, 2.4)
+        r = (r > 0.04045) ? pow((r + 0.055) / 1.055, 2.4) : (r / 12.92)
+        g = (g > 0.04045) ? pow((g + 0.055) / 1.055, 2.4) : (g / 12.92)
+        b = (b > 0.04045) ? pow((b + 0.055) / 1.055, 2.4) : (b / 12.92)
 
         // sRGB (D65) matrix transformation
         // http://www.brucelindbloom.com/index.html?Eqn_RGB_XYZ_Matrix.html
@@ -59,7 +59,7 @@ public extension UIColor {
         var b =  (0.0556434 * x) - (0.2040259 * y) + (1.0572252 * z)
 
         // sRGB (D65) gamma correction - companding to get non-linear values
-        let k: CGFloat = 1.0 / 2.4
+        let k: CGFloat = 1.0/2.4
         r = (r <= 0.0031308) ? (12.92 * r) : (1.055 * pow(r, k) - 0.055)
         g = (g <= 0.0031308) ? (12.92 * g) : (1.055 * pow(g, k) - 0.055)
         b = (b <= 0.0031308) ? (12.92 * b) : (1.055 * pow(b, k) - 0.055)

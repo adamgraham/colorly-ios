@@ -11,18 +11,6 @@ import UIKit
 /// An extension to provide conversion to and from CIE-LAB colors.
 public extension UIColor {
 
-    /// A set of constant values used to convert to and from CIE-LAB colors.
-    private struct Constant {
-
-        static let ⅓: CGFloat = 1.0 / 3.0
-        static let ⁴୵₂₉: CGFloat = 4.0 / 29.0
-        static let δ: CGFloat = 6.0 / 29.0
-        static let δ² = δ * δ
-        static let δ³ = δ * δ * δ
-        static let δ²3 = δ * δ * 3.0
-
-    }
-
     /// The components of a color in the CIE-LAB color model.
     public struct CIE_LAB: Equatable {
 
@@ -35,16 +23,34 @@ public extension UIColor {
 
     }
 
-    /// The components of the color in the CIE-LAB color model.
+    /// A set of constant values used to convert to and from CIE-LAB colors.
+    private struct Constant {
+
+        static let ⅓: CGFloat = 1.0 / 3.0
+        static let ⁴୵₂₉: CGFloat = 4.0 / 29.0
+        static let δ: CGFloat = 6.0 / 29.0
+        static let δ² = δ * δ
+        static let δ³ = δ * δ * δ
+        static let δ²3 = δ * δ * 3.0
+
+    }
+
+    /// The components of the color in the CIE-LAB color model using a d65 illuminant and
+    /// standard 2° observer.
     var lab: CIE_LAB {
+        return self.lab(illuminant: .d65, observer: .two)
+    }
+
+    /// The components of the color in the CIE-LAB color model for a given illuminant and
+    /// standard observer.
+    func lab(illuminant: UIColor.Illuminant, observer: UIColor.StandardObserver) -> CIE_LAB {
         let fn = { (t: CGFloat) -> CGFloat in
             if t > Constant.δ³ { return pow(t, Constant.⅓) }
             return (t / Constant.δ²3) + Constant.⁴୵₂₉
         }
 
-        let r = UIColor.Illuminant.d65.twoDegrees
         let xyz = self.xyz
-
+        let r = illuminant.referenceValues(for: observer)
         let fx = fn(xyz.x / 100.0 / r.x)
         let fy = fn(xyz.y / 100.0 / r.y)
         let fz = fn(xyz.z / 100.0 / r.z)
@@ -57,17 +63,21 @@ public extension UIColor {
     }
 
     /// Initializes a color from the components of a CIE-LAB color model.
-    convenience init(lab: CIE_LAB, alpha: CGFloat = 1.0) {
+    convenience init(lab: CIE_LAB,
+                     illuminant: UIColor.Illuminant = .d65,
+                     observer: UIColor.StandardObserver = .two,
+                     alpha: CGFloat = 1.0) {
+
         let fn = { (t: CGFloat) -> CGFloat in
             if t > Constant.δ { return pow(t, 3.0) }
             return Constant.δ²3 * (t - Constant.⁴୵₂₉)
         }
 
-        let r = UIColor.Illuminant.d65.twoDegrees
         let L = (lab.L + 16.0) / 116.0
         let a = L + (lab.a / 500.0)
         let b = L - (lab.b / 200.0)
 
+        let r = illuminant.referenceValues(for: observer)
         let x = r.x * fn(a) * 100.0
         let y = r.y * fn(L) * 100.0
         let z = r.z * fn(b) * 100.0
