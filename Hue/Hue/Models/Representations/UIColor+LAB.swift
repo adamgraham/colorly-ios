@@ -24,15 +24,16 @@ public extension UIColor {
     }
 
     /// The components of a color in the CIE-LAB color model.
-    ///
-    /// - **L** – lightness
-    /// - **a** – color channel for green-red
-    /// - **b** – color channel for blue-yellow
-    typealias LAB = (
-        L: CGFloat, // 0 to 100 (darkest to brightest)
-        a: CGFloat, // -128 to 128 (green to red)
-        b: CGFloat  // -128 to 128 (blue to yellow)
-    )
+    public struct LAB: Equatable {
+
+        /// The L (lightness) component of the color, in the range 0 to 100 (darkest to brightest).
+        public var L: CGFloat
+        /// The a component of the color, the color channel for green-red, in the range -128 to 128.
+        public var a: CGFloat
+        /// The b component of the color, the color channel for blue-yellow, in the range -128 to 128.
+        public var b: CGFloat
+
+    }
 
     /// The components of the color in the CIE-LAB color model.
     var lab: LAB {

@@ -12,11 +12,16 @@ import UIKit
 public extension UIColor {
 
     /// The components of a color in the HSL color model.
-    typealias HSL = (
-        hue: CGFloat,        // 0 to 360°
-        saturation: CGFloat, // 0 to 1
-        lightness: CGFloat   // 0 to 1
-    )
+    public struct HSL: Equatable {
+
+        /// The hue component of the color, in the range 0 to 360°.
+        public var hue: CGFloat
+        /// The saturation component of the color, in the range 0 to 1.
+        public var saturation: CGFloat
+        /// The lightness component of the color, in the range 0 to 1.
+        public var lightness: CGFloat
+
+    }
 
     /// The components of the color in the HSL color model.
     var hsl: HSL {

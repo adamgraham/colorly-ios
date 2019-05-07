@@ -12,11 +12,16 @@ import UIKit
 public extension UIColor {
 
     /// The components of a color in the RGB color model.
-    typealias RGB = (
-        red: CGFloat,   // 0 to 255
-        green: CGFloat, // 0 to 255
-        blue: CGFloat   // 0 to 255
-    )
+    public struct RGB: Equatable {
+
+        /// The red component of the color, in the range 0 to 255.
+        public var red: CGFloat
+        /// The green component of the color, in the range 0 to 255.
+        public var green: CGFloat
+        /// The blue component of the color, in the range 0 to 255.
+        public var blue: CGFloat
+
+    }
 
     /// The components of the color in the RGB color model.
     var rgb: RGB {

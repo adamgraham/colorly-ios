@@ -25,14 +25,16 @@ public extension UIColor {
         }
 
         /// The luminance component of the color, in the range 0 to 1 (black to white).
-        public let luma: CGFloat
+        public var Y: CGFloat
 
-        /// The chrominance (blue-difference, red-difference) components of the color, in the
-        /// range -0.5 to 0.5.
-        public let chroma: (blue: CGFloat, red: CGFloat)
+        /// The blue-difference chrominance component of the color, in the range -0.5 to 0.5.
+        public var Cb: CGFloat
+
+        /// The red-difference chrominance component of the color, in the range -0.5 to 0.5.
+        public var Cr: CGFloat
 
         /// The image signal encoding used for color conversions.
-        public let encoding: Encoding
+        public var encoding: Encoding
 
     }
 

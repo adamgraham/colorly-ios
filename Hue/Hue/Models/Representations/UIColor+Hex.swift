@@ -24,11 +24,8 @@ public extension UIColor {
 
     /// Initializes a color using a hexadecimal string in the RGB format (RRGGBB), e.g., "#ffff00".
     convenience init?(hex: String, alpha: CGFloat = 1.0) {
-        if let value = Int(hex: hex) {
-            self.init(hex: value, alpha: alpha)
-        } else {
-            return nil
-        }
+        guard let value = Int(hex: hex) else { return nil }
+        self.init(hex: value, alpha: alpha)
     }
 
     /// The hexadecimal integer value of the color in the RGB format (RRGGBB), e.g., 0xffff00.
@@ -67,11 +64,8 @@ public extension UIColor {
 
     /// Initializes a color using a hexadecimal string in the ARGB format (AARRGGBB), e.g., "#80ffff00".
     convenience init?(hex_ARGB hex: String) {
-        if let value = Int(hex: hex) {
-            self.init(hex_ARGB: value)
-        } else {
-            return nil
-        }
+        guard let value = Int(hex: hex) else { return nil }
+        self.init(hex_ARGB: value)
     }
 
     /// The hexadecimal integer value of the color in the ARGB format (AARRGGBB), e.g., 0x80ffff00.
@@ -112,11 +106,8 @@ public extension UIColor {
 
     /// Initializes a color using a hexadecimal string in the RGBA format (RRGGBBAA), e.g., "#ffff0080".
     convenience init?(hex_RGBA hex: String) {
-        if let value = Int(hex: hex) {
-            self.init(hex_RGBA: value)
-        } else {
-            return nil
-        }
+        guard let value = Int(hex: hex) else { return nil }
+        self.init(hex_RGBA: value)
     }
 
     /// The hexadecimal integer value of the color in the RGBA format (RRGGBBAA), e.g., 0xffff0080.

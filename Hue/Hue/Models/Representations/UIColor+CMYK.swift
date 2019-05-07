@@ -12,12 +12,18 @@ import UIKit
 public extension UIColor {
 
     /// The components of a color in the CMYK color model.
-    typealias CMYK = (
-        cyan: CGFloat,    // 0 to 1
-        magenta: CGFloat, // 0 to 1
-        yellow: CGFloat,  // 0 to 1
-        black: CGFloat    // 0 to 1
-    )
+    public struct CMYK: Equatable {
+
+        /// The cyan component of the color, in the range 0 to 1.
+        public var cyan: CGFloat
+        /// The magenta component of the color, in the range 0 to 1.
+        public var magenta: CGFloat
+        /// The yellow component of the color, in the range 0 to 1.
+        public var yellow: CGFloat
+        /// The black component of the color, in the range 0 to 1.
+        public var black: CGFloat
+
+    }
 
     /// The components of the color in the CMYK color model.
     var cmyk: CMYK {

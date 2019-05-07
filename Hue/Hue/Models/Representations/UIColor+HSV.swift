@@ -12,11 +12,16 @@ import UIKit
 public extension UIColor {
 
     /// The components of a color in the HSV color model.
-    typealias HSV = (
-        hue: CGFloat,        // 0 to 360°
-        saturation: CGFloat, // 0 to 1
-        value: CGFloat       // 0 to 1
-    )
+    public struct HSV: Equatable {
+
+        /// The hue component of the color, in the range 0 to 360°.
+        public var hue: CGFloat
+        /// The saturation component of the color, in the range 0 to 1.
+        public var saturation: CGFloat
+        /// The value component of the color, in the range 0 to 1.
+        public var value: CGFloat
+
+    }
 
     /// The components of the color in the HSV color model.
     var hsv: HSV {
