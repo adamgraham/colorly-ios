@@ -67,7 +67,7 @@ public extension UIColor {
             /// `#00ff80`, `rgb(0,255,128)`
             public static let springGreen = UIColor.springGreen
 
-            private init() {}
+            internal init() {}
 
         }
 
@@ -106,11 +106,11 @@ public extension UIColor {
             /// `#ff0080`, `ryb(255,0,128)`
             public static let magenta = (purple * 0.5) + (red * 0.5)
 
-            private init() {}
+            internal init() {}
 
         }
 
-        private init() {}
+        internal init() {}
 
     }
 
