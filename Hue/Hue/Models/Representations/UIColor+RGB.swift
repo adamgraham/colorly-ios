@@ -12,7 +12,7 @@ import UIKit
 public extension UIColor {
 
     /// The components of a color in the RGB color model.
-    public struct RGB: Equatable {
+    struct RGB: Equatable {
 
         /// The red component of the color, in the range 0 to 255.
         public var red: CGFloat

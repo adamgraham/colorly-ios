@@ -12,7 +12,7 @@ import UIKit
 public extension UIColor {
 
     /// The components of a color in the CIE-XYZ color model.
-    public struct CIE_XYZ: Equatable {
+    struct CIE_XYZ: Equatable {
 
         /// The x component of the color, a mix (a linear combination) of cone response curves
         /// chosen to be non-negative, in the range 0 to 100.

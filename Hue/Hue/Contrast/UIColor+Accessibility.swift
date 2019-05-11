@@ -14,7 +14,7 @@ public extension UIColor {
     /// A requirement defining how the visual presentation of text achieves a minimum contrast
     /// ratio to pass the accessibility specification -
     /// https://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast-contrast
-    public enum AccessibilityRequirement {
+    enum AccessibilityRequirement {
 
         /// The visual presentation of text has a contrast ratio of at least `4.5:1` (Level AA) -
         /// https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#qr-visual-audio-contrast-contrast

@@ -12,7 +12,7 @@ import UIKit
 public extension UIColor {
 
     /// The components of a color in the YCbCr color model.
-    public struct YCbCr {
+    struct YCbCr {
 
         /// The type of image signal encoding used for color conversions.
         public enum Encoding {

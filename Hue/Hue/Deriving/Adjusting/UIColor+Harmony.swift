@@ -12,7 +12,7 @@ import UIKit
 public extension UIColor {
 
     /// A set of harmonized color schemes created from a base color.
-    public struct Harmony {
+    struct Harmony {
 
         /// The base color used to create the harmonized color schemes.
         private let color: UIColor

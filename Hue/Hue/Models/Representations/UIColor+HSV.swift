@@ -12,7 +12,7 @@ import UIKit
 public extension UIColor {
 
     /// The components of a color in the HSV color model.
-    public struct HSV: Equatable {
+    struct HSV: Equatable {
 
         /// The hue component of the color, in the range 0 to 360°.
         public var hue: CGFloat

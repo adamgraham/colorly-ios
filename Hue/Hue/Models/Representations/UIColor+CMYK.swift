@@ -12,7 +12,7 @@ import UIKit
 public extension UIColor {
 
     /// The components of a color in the CMYK color model.
-    public struct CMYK: Equatable {
+    struct CMYK: Equatable {
 
         /// The cyan component of the color, in the range 0 to 1.
         public var cyan: CGFloat

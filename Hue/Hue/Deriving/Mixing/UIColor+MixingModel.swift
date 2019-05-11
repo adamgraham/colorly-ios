@@ -12,7 +12,7 @@ import UIKit
 public extension UIColor {
 
     /// A model that describes how colors are mixed together to form all other colors.
-    public enum MixingModel {
+    enum MixingModel {
 
         /// A mixing model that leads to the RGB color model with primary colors of red, green,
         /// and blue. The absence of color is black, and the presence of all three primary colors is

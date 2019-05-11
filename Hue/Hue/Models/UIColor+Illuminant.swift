@@ -14,7 +14,7 @@ public extension UIColor {
     /// A standard illuminant defined by the International Commission on Illumination (CIE)
     /// which provides a basis for comparing images or colors recorded under different
     /// lighting.
-    public enum Illuminant {
+    enum Illuminant {
 
         /// Incandescent/Tungsten
         case a
@@ -65,7 +65,7 @@ public extension UIColor {
 public extension UIColor {
 
     /// A CIE color-mapping function called the standard (colorimetric) observer.
-    public enum StandardObserver {
+    enum StandardObserver {
 
         /// CIE 1931 2° Standard Observer
         case two

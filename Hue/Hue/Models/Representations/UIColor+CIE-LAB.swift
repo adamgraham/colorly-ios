@@ -12,7 +12,7 @@ import UIKit
 public extension UIColor {
 
     /// The components of a color in the CIE-LAB color model.
-    public struct CIE_LAB: Equatable {
+    struct CIE_LAB: Equatable {
 
         /// The L (lightness) component of the color, in the range 0 to 100 (darkest to brightest).
         public var L: CGFloat

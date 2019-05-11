@@ -30,7 +30,7 @@ extension UIColor {
 public extension UIColor {
 
     /// The colors that define the color wheel.
-    public struct ColorWheel {
+    struct ColorWheel {
 
         /// The colors that define the RGB color wheel.
         public struct RGB {

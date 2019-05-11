@@ -14,6 +14,6 @@ public extension UIColor {
     /// Tristimulus system, a system for visually matching a color under standardized
     /// conditions against the three primary colours—red, green, and blue; the three results
     /// are expressed as X, Y, and Z, respectively, and are called tristimulus values.
-    public typealias Tristimulus = (x: CGFloat, y: CGFloat, z: CGFloat)
+    typealias Tristimulus = (x: CGFloat, y: CGFloat, z: CGFloat)
 
 }
