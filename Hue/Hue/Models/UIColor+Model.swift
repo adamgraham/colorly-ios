@@ -35,8 +35,8 @@ public extension UIColor {
         /// perceives color-making attributes. HSB is the same as HSV.
         ///
         /// The HSB representation models the way paints of different colors mix together, with the
-        /// _saturation_ dimension resembling various shades of brightly colored paint, and the
-        /// _brightness_ dimension resembling the mixture of those paints with varying amounts of
+        /// saturation dimension resembling various shades of brightly colored paint, and the
+        /// brightness dimension resembling the mixture of those paints with varying amounts of
         /// black or white paint
         case HSB
 
@@ -45,12 +45,12 @@ public extension UIColor {
         /// color-making attributes. HSV is the same as HSB.
         ///
         /// The HSV representation models the way paints of different colors mix together, with the
-        /// _saturation_ dimension resembling various shades of brightly colored paint, and the
-        /// _value_ dimension resembling the mixture of those paints with varying amounts of
+        /// saturation dimension resembling various shades of brightly colored paint, and the
+        /// value dimension resembling the mixture of those paints with varying amounts of
         /// black or white paint
         case HSV
 
-        /// The HSL (hue, saturation, lightness) color model, an alternative representation to the
+        /// The HSL (hue, saturation, lightness) color model is an alternative representation to the
         /// RGB color model designed to more closely align with the way human vision perceives
         /// color-making attributes.
         ///
@@ -61,7 +61,7 @@ public extension UIColor {
         case HSL
 
         /// The YCbCr color model used as a part of the color image pipeline in video and digital
-        /// photography systems. _Y_ is the luminance (luma) component and _Cb_ and _Cr_ are the
+        /// photography systems. Y is the luminance (luma) component and Cb and Cr are the
         /// blue-difference and red-difference chrominance (chroma) components, respectively.
         case YCbCr
 
@@ -77,11 +77,17 @@ public extension UIColor {
         /// non-negative.
         case CIE_XYZ
 
-        /// The LAB (lightness, A-channel, B-channel) color model defined by the International
-        /// Commission on Illumination (CIE). It was designed to be perceptually uniform with
-        /// respect to human color vision, meaning that the same amount of numerical change in
-        /// these values corresponds to about the same amount of visually perceived change.
-        case CIE_LAB
+        /// In CIE xyY, Y is the luminance and x and y represents the chrominance values derived
+        /// from the tristimulus values X, Y and Z in the CIE XYZ color space. CIE xyY is just
+        /// another way to represent CIE XYZ.
+        case CIE_xyY
+
+        /// CIE L\*a\*b\* is a color model+space combo in which L is brightness and a and b are
+        /// chrominance components, with the difference that the color values are far more than
+        /// the human gamut. It was designed to be perceptually uniform with respect to human
+        /// color vision, meaning that the same amount of numerical change in these values
+        /// corresponds to about the same amount of visually perceived change.
+        case CIE_Lab
 
     }
 

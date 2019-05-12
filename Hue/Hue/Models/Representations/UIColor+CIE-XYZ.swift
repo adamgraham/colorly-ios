@@ -11,7 +11,7 @@ import UIKit
 /// An extension to provide conversion to and from CIE-XYZ colors.
 public extension UIColor {
 
-    /// The components of a color in the CIE-XYZ color model.
+    /// The components of a color in the CIE-XYZ color space.
     struct CIE_XYZ: Equatable {
 
         /// A mix of cone response curves chosen to be orthogonal to luminance and
@@ -24,7 +24,7 @@ public extension UIColor {
 
     }
 
-    /// The components of the color in the CIE-XYZ color model.
+    /// The components of the color in the CIE-XYZ color space.
     var XYZ: CIE_XYZ {
         var (r, g, b) = (CGFloat(), CGFloat(), CGFloat())
         getRed(&r, green: &g, blue: &b, alpha: nil)
@@ -45,7 +45,7 @@ public extension UIColor {
                        Z: Z * 100.0)
     }
 
-    /// Initializes a color from the components of a CIE-XYZ color model.
+    /// Initializes a color from the components of a color in the CIE-XYZ color space.
     convenience init(XYZ: CIE_XYZ, alpha: CGFloat = 1.0) {
         let X = XYZ.X / 100.0
         let Y = XYZ.Y / 100.0
