@@ -14,11 +14,11 @@ public extension UIColor {
     /// The components of a color in the CIE-LAB color model.
     struct CIE_LAB: Equatable {
 
-        /// The L (lightness) component of the color, in the range 0 to 100 (darkest to brightest).
+        /// The L (lightness) component of the color, in the range [0, 100] (darkest to brightest).
         public var L: CGFloat
-        /// The a component of the color, the color channel for green-red, in the range -128 to 128.
+        /// The a component of the color, the color channel for green-red, in the range [-128, 128].
         public var a: CGFloat
-        /// The b component of the color, the color channel for blue-yellow, in the range -128 to 128.
+        /// The b component of the color, the color channel for blue-yellow, in the range [-128, 128].
         public var b: CGFloat
 
     }

@@ -14,13 +14,13 @@ public extension UIColor {
     /// The components of a color in the RGBA color model.
     struct RGBA: Equatable {
 
-        /// The red component of the color, in the range 0 to 255.
+        /// The red component of the color, in the range [0, 255].
         public var red: CGFloat
-        /// The green component of the color, in the range 0 to 255.
+        /// The green component of the color, in the range [0, 255].
         public var green: CGFloat
-        /// The blue component of the color, in the range 0 to 255.
+        /// The blue component of the color, in the range [0, 255].
         public var blue: CGFloat
-        /// The alpha component of the color, in the range 0 to 255.
+        /// The alpha component of the color, in the range [0, 255].
         public var alpha: CGFloat
 
     }

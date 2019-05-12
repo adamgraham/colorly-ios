@@ -14,7 +14,7 @@ public extension UIColor {
     /**
      Returns a mixture of the color with black, decreasing lightness.
 
-     - parameter percent: The amount of black mixed with the color, in the range 0.0 to 1.0.
+     - parameter percent: The amount of black mixed with the color, in the range [0, 1].
      - returns: The new shaded color after mixing with black.
      */
     func shade(percent: CGFloat = 0.1) -> UIColor {
@@ -24,7 +24,7 @@ public extension UIColor {
     /**
      Returns a mixture of the color with white, increasing lightness.
 
-     - parameter percent: The amount of white mixed with the color, in the range 0.0 to 1.0.
+     - parameter percent: The amount of white mixed with the color, in the range [0, 1].
      - returns: The new tinted color after mixing with white.
      */
     func tint(percent: CGFloat = 0.1) -> UIColor {
@@ -34,7 +34,7 @@ public extension UIColor {
     /**
      Returns a mixture of the color with gray, decreasing saturation.
 
-     - parameter percent: The amount of gray mixed with the color, in the range 0.0 to 1.0.
+     - parameter percent: The amount of gray mixed with the color, in the range [0, 1].
      - returns: The new toned color after mixing with gray.
      */
     func tone(percent: CGFloat = 0.1) -> UIColor {

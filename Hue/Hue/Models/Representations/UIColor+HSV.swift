@@ -14,11 +14,11 @@ public extension UIColor {
     /// The components of a color in the HSV color model.
     struct HSV: Equatable {
 
-        /// The hue component of the color, in the range 0 to 360°.
+        /// The hue component of the color, in the range [0, 360°].
         public var hue: CGFloat
-        /// The saturation component of the color, in the range 0 to 1.
+        /// The saturation component of the color, as a % in the normalized range [0, 1].
         public var saturation: CGFloat
-        /// The value component of the color, in the range 0 to 1.
+        /// The value component of the color, as a % in the normalized range [0, 1].
         public var value: CGFloat
 
     }

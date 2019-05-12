@@ -14,14 +14,13 @@ public extension UIColor {
     /// The components of a color in the CIE-XYZ color model.
     struct CIE_XYZ: Equatable {
 
-        /// The x component of the color, a mix (a linear combination) of cone response curves
-        /// chosen to be non-negative, in the range 0 to 100.
         public var x: CGFloat
-        /// The y component of the color – luminance (perceived brightness) – in the range 0 to 100.
         public var y: CGFloat
-        /// The z component of the color, quasi-equal to blue stimulation, or the "S" cone
-        /// response, in the range 0 to 100.
         public var z: CGFloat
+        /// A mix of cone response curves chosen to be orthogonal to luminance and
+        /// non-negative, in the range [0, 100].
+        /// The luminance component of the color, in the range [0, 100].
+        /// Somewhat equal to blue stimulation, or the "S" cone response, in the range [0, 100].
 
     }
 

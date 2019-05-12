@@ -14,7 +14,7 @@ public extension UIColor {
     /**
      Returns a new color by adjusting the color's hue by a given amount.
 
-     - parameter degrees: The amount to adjust the hue, in the range -360° to 360°.
+     - parameter degrees: The amount to adjust the hue, in the range [-360°, 360°].
      - returns: The hue adjusted color.
      */
     func adjustingHue(by degrees: CGFloat) -> UIColor {

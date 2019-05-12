@@ -14,7 +14,7 @@ public extension UIColor {
     /**
      Returns a new color by increasing the color's saturation value by a given amount.
 
-     - parameter percent: The amount to saturate the color, in the range 0.0 to 1.0.
+     - parameter percent: The amount to saturate the color, in the range [0, 1].
      - returns: The saturated color.
      */
     func saturated(percent: CGFloat = 0.1) -> UIColor {
@@ -26,7 +26,7 @@ public extension UIColor {
     /**
      Returns a new color by decreasing the color's saturation value by a given amount.
 
-     - parameter percent: The amount to desaturate the color, in the range 0.0 to 1.0.
+     - parameter percent: The amount to desaturate the color, in the range [0, 1].
      - returns: The desaturated color.
      */
     func desaturated(percent: CGFloat = 0.1) -> UIColor {

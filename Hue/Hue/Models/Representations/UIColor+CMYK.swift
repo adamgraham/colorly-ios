@@ -14,13 +14,13 @@ public extension UIColor {
     /// The components of a color in the CMYK color model.
     struct CMYK: Equatable {
 
-        /// The cyan component of the color, in the range 0 to 1.
+        /// The cyan component of the color, as a % in the normalized range [0, 1].
         public var cyan: CGFloat
-        /// The magenta component of the color, in the range 0 to 1.
+        /// The magenta component of the color, as a % in the normalized range [0, 1].
         public var magenta: CGFloat
-        /// The yellow component of the color, in the range 0 to 1.
+        /// The yellow component of the color, as a % in the normalized range [0, 1].
         public var yellow: CGFloat
-        /// The black component of the color, in the range 0 to 1.
+        /// The black component of the color, as a % in the normalized range [0, 1].
         public var black: CGFloat
 
     }

@@ -79,8 +79,9 @@ public extension UIColor {
 /// An extension to add standard observer tristimulus reference values.
 public extension UIColor.Illuminant {
 
-    /// The tristimulus values for a given standard observer that represent an average human's
-    /// chromatic response while observing an object under the illuminant.
+    /// The XYZ tristimulus values for a given standard observer that represent an average
+    /// human's chromatic response while observing an object under the illuminant. The values
+    /// are normalized in the range [0, 1].
     func referenceValues(for observer: UIColor.StandardObserver) -> UIColor.Tristimulus {
         switch observer {
         case .two:
