@@ -84,17 +84,17 @@ public extension UIColor {
         /// non-negative.
         case CIE_XYZ
 
-        /// In CIE xyY, Y is the luminance and x and y represents the chrominance values derived
+        /// In CIE xyY, Y is the luminance and x and y represents the chromaticity values derived
         /// from the tristimulus values X, Y and Z in the CIE XYZ color space. CIE xyY is just
         /// another way to represent CIE XYZ.
         case CIE_xyY
 
-        /// CIE L\*a\*b\* is a color model+space combo in which L is brightness and a and b are
-        /// chrominance components, with the difference that the color values are far more than
-        /// the human gamut. It was designed to be perceptually uniform with respect to human
-        /// color vision, meaning that the same amount of numerical change in these values
-        /// corresponds to about the same amount of visually perceived change.
-        case CIE_Lab
+        /// CIE L\*a\*b\* is a color space in which L is lightness and a and b are chromaticity
+        /// components, with the difference that the color values are far more than the human
+        /// gamut. It was designed to be perceptually uniform with respect to human color vision,
+        /// meaning that the same amount of numerical change in these values corresponds to
+        /// about the same amount of visually perceived change.
+        case CIE_LAB
 
     }
 

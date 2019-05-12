@@ -11,7 +11,7 @@ import UIKit
 /// An extension to provide conversion to and from HSB (hue, saturation, brightness) colors.
 public extension UIColor {
 
-    /// The components of a color in the HSB color model.
+    /// The HSB components of a color - hue, saturation, and brightness.
     struct HSB: Equatable {
 
         /// The hue component of the color, in the range [0, 360°].
@@ -23,7 +23,7 @@ public extension UIColor {
 
     }
 
-    /// The components of the color in the HSB color model.
+    /// The HSB components of the color.
     var hsb: HSB {
         var (h, s, b) = (CGFloat(), CGFloat(), CGFloat())
         getHue(&h, saturation: &s, brightness: &b, alpha: nil)
@@ -33,7 +33,9 @@ public extension UIColor {
                    brightness: b)
     }
 
-    /// Initializes a color from the components of a HSB color model.
+    /// Initializes a color from HSB components.
+    /// - parameter hsb: The components used to initialize the color.
+    /// - parameter alpha: The alpha value of the color.
     convenience init(hsb: HSB, alpha: CGFloat = 1.0) {
         self.init(hue: hsb.hue / 360.0,
                   saturation: hsb.saturation,

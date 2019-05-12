@@ -12,17 +12,21 @@ import UIKit
 public extension UIColor {
 
     /// Initializes a color using a hexadecimal integer in the RGB format (RRGGBB), e.g., 0xffff00.
+    /// - parameter hex: The hexadecimal value of the color.
+    /// - parameter alpha: The alpha value of the color.
     convenience init(hex: Int, alpha: CGFloat = 1.0) {
-        let components = (
-            red:   CGFloat((hex >> 16) & 0xff) / 0xff,
-            green: CGFloat((hex >> 08) & 0xff) / 0xff,
-            blue:  CGFloat((hex >> 00) & 0xff) / 0xff
+        let rgb = (
+            r: CGFloat((hex >> 16) & 0xff) / 0xff,
+            g: CGFloat((hex >> 08) & 0xff) / 0xff,
+            b: CGFloat((hex >> 00) & 0xff) / 0xff
         )
 
-        self.init(red: components.red, green: components.green, blue: components.blue, alpha: alpha)
+        self.init(red: rgb.r, green: rgb.g, blue: rgb.b, alpha: alpha)
     }
 
     /// Initializes a color using a hexadecimal string in the RGB format (RRGGBB), e.g., "#ffff00".
+    /// - parameter hex: The hexadecimal string value of the color.
+    /// - parameter alpha: The alpha value of the color.
     convenience init?(hex: String, alpha: CGFloat = 1.0) {
         guard let value = Int(hex: hex) else { return nil }
         self.init(hex: value, alpha: alpha)
@@ -30,15 +34,12 @@ public extension UIColor {
 
     /// The hexadecimal integer value of the color in the RGB format (RRGGBB), e.g., 0xffff00.
     var hex: Int {
-        var red: CGFloat = 0.0
-        var green: CGFloat = 0.0
-        var blue: CGFloat = 0.0
+        var (r, g, b) = (CGFloat(), CGFloat(), CGFloat())
+        getRed(&r, green: &g, blue: &b, alpha: nil)
 
-        getRed(&red, green: &green, blue: &blue, alpha: nil)
-
-        return (Int(round(red   * 0xff)) << 16) |
-               (Int(round(green * 0xff)) << 08) |
-               (Int(round(blue  * 0xff)) << 00)
+        return (Int(round(r * 0xff)) << 16) |
+               (Int(round(g * 0xff)) << 08) |
+               (Int(round(b * 0xff)) << 00)
     }
 
     /// The hexadecimal string value of the color in the RGB format (RRGGBB), e.g., "#ffff00".
@@ -48,21 +49,24 @@ public extension UIColor {
 
 }
 
+/// An extension to instantiate and represent ARGB colors with hexadecimal values.
 public extension UIColor {
 
     /// Initializes a color using a hexadecimal integer in the ARGB format (AARRGGBB), e.g., 0x80ffff00.
+    /// - parameter hex: The hexadecimal value of the color.
     convenience init(hex_ARGB hex: Int) {
-        let components = (
-            alpha: CGFloat((hex >> 24) & 0xff) / 0xff,
-            red:   CGFloat((hex >> 16) & 0xff) / 0xff,
-            green: CGFloat((hex >> 08) & 0xff) / 0xff,
-            blue:  CGFloat((hex >> 00) & 0xff) / 0xff
+        let argb = (
+            a: CGFloat((hex >> 24) & 0xff) / 0xff,
+            r: CGFloat((hex >> 16) & 0xff) / 0xff,
+            g: CGFloat((hex >> 08) & 0xff) / 0xff,
+            b: CGFloat((hex >> 00) & 0xff) / 0xff
         )
 
-        self.init(red: components.red, green: components.green, blue: components.blue, alpha: components.alpha)
+        self.init(red: argb.r, green: argb.g, blue: argb.b, alpha: argb.a)
     }
 
     /// Initializes a color using a hexadecimal string in the ARGB format (AARRGGBB), e.g., "#80ffff00".
+    /// - parameter hex: The hexadecimal string value of the color.
     convenience init?(hex_ARGB hex: String) {
         guard let value = Int(hex: hex) else { return nil }
         self.init(hex_ARGB: value)
@@ -70,17 +74,13 @@ public extension UIColor {
 
     /// The hexadecimal integer value of the color in the ARGB format (AARRGGBB), e.g., 0x80ffff00.
     var hex_ARGB: Int {
-        var alpha: CGFloat = 1.0
-        var red: CGFloat = 0.0
-        var green: CGFloat = 0.0
-        var blue: CGFloat = 0.0
+        var (a, r, g, b) = (CGFloat(), CGFloat(), CGFloat(), CGFloat())
+        getRed(&r, green: &g, blue: &b, alpha: &a)
 
-        getRed(&red, green: &green, blue: &blue, alpha: &alpha)
-
-        return (Int(round(alpha * 0xff)) << 24) |
-               (Int(round(red   * 0xff)) << 16) |
-               (Int(round(green * 0xff)) << 08) |
-               (Int(round(blue  * 0xff)) << 00)
+        return (Int(round(a * 0xff)) << 24) |
+               (Int(round(r * 0xff)) << 16) |
+               (Int(round(g * 0xff)) << 08) |
+               (Int(round(b * 0xff)) << 00)
     }
 
     /// The hexadecimal string value of the color in the ARGB format (AARRGGBB), e.g., "#80ffff00".
@@ -90,21 +90,24 @@ public extension UIColor {
 
 }
 
+/// An extension to instantiate and represent RGBA colors with hexadecimal values.
 public extension UIColor {
 
     /// Initializes a color using a hexadecimal integer in the RGBA format (RRGGBBAA), e.g., 0xffff0080.
+    /// - parameter hex: The hexadecimal value of the color.
     convenience init(hex_RGBA hex: Int) {
-        let components = (
-            red:   CGFloat((hex >> 24) & 0xff) / 0xff,
-            green: CGFloat((hex >> 16) & 0xff) / 0xff,
-            blue:  CGFloat((hex >> 08) & 0xff) / 0xff,
-            alpha: CGFloat((hex >> 00) & 0xff) / 0xff
+        let rgba = (
+            r: CGFloat((hex >> 24) & 0xff) / 0xff,
+            g: CGFloat((hex >> 16) & 0xff) / 0xff,
+            b: CGFloat((hex >> 08) & 0xff) / 0xff,
+            a: CGFloat((hex >> 00) & 0xff) / 0xff
         )
 
-        self.init(red: components.red, green: components.green, blue: components.blue, alpha: components.alpha)
+        self.init(red: rgba.r, green: rgba.g, blue: rgba.b, alpha: rgba.a)
     }
 
     /// Initializes a color using a hexadecimal string in the RGBA format (RRGGBBAA), e.g., "#ffff0080".
+    /// - parameter hex: The hexadecimal string value of the color.
     convenience init?(hex_RGBA hex: String) {
         guard let value = Int(hex: hex) else { return nil }
         self.init(hex_RGBA: value)
@@ -112,17 +115,13 @@ public extension UIColor {
 
     /// The hexadecimal integer value of the color in the RGBA format (RRGGBBAA), e.g., 0xffff0080.
     var hex_RGBA: Int {
-        var red: CGFloat = 0.0
-        var green: CGFloat = 0.0
-        var blue: CGFloat = 0.0
-        var alpha: CGFloat = 1.0
+        var (r, g, b, a) = (CGFloat(), CGFloat(), CGFloat(), CGFloat())
+        getRed(&r, green: &g, blue: &b, alpha: &a)
 
-        getRed(&red, green: &green, blue: &blue, alpha: &alpha)
-
-        return (Int(round(red   * 0xff)) << 24) |
-               (Int(round(green * 0xff)) << 16) |
-               (Int(round(blue  * 0xff)) << 08) |
-               (Int(round(alpha * 0xff)) << 00)
+        return (Int(round(r * 0xff)) << 24) |
+               (Int(round(g * 0xff)) << 16) |
+               (Int(round(b * 0xff)) << 08) |
+               (Int(round(a * 0xff)) << 00)
     }
 
     /// The hexadecimal string value of the color in the RGBA format (RRGGBBAA), e.g., "#ffff0080".

@@ -11,7 +11,7 @@ import UIKit
 /// An extension to provide conversion to and from CMYK (cyan, magenta, yellow, black) colors.
 public extension UIColor {
 
-    /// The components of a color in the CMYK color model.
+    /// The CMYK components of a color - cyan, magenta, yellow, and black.
     struct CMYK: Equatable {
 
         /// The cyan component of the color, as a % in the normalized range [0, 1].
@@ -25,7 +25,7 @@ public extension UIColor {
 
     }
 
-    /// The components of the color in the CMYK color model.
+    /// The CMYK components of the color.
     var cmyk: CMYK {
         var (r, g, b) = (CGFloat(), CGFloat(), CGFloat())
         getRed(&r, green: &g, blue: &b, alpha: nil)
@@ -41,7 +41,9 @@ public extension UIColor {
                     black: k)
     }
 
-    /// Initializes a color from the components of a CMYK color model.
+    /// Initializes a color from CMYK components.
+    /// - parameter cmyk: The components used to initialize the color.
+    /// - parameter alpha: The alpha value of the color.
     convenience init(cmyk: CMYK, alpha: CGFloat = 1.0) {
         let r = (1.0 - cmyk.cyan) * (1.0 - cmyk.black)
         let g = (1.0 - cmyk.magenta) * (1.0 - cmyk.black)

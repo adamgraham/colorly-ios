@@ -11,7 +11,7 @@ import UIKit
 /// An extension to provide conversion to and from ARGB (alpha, red, green, blue) colors.
 public extension UIColor {
 
-    /// The components of a color in the ARGB color model.
+    /// The ARGB components of a color - alpha, red, green, and blue.
     struct ARGB: Equatable {
 
         /// The alpha component of the color, in the range [0, 255].
@@ -25,7 +25,7 @@ public extension UIColor {
 
     }
 
-    /// The components of the color in the ARGB color model.
+    /// The ARGB components of the color.
     var argb: ARGB {
         var (a, r, g, b) = (CGFloat(), CGFloat(), CGFloat(), CGFloat())
         getRed(&r, green: &g, blue: &b, alpha: &a)
@@ -36,7 +36,8 @@ public extension UIColor {
                     blue: b * 255.0)
     }
 
-    /// Initializes a color from the components of an ARGB color model.
+    /// Initializes a color from ARGB components.
+    /// - parameter argb: The components used to initialize the color.
     convenience init(argb: ARGB) {
         self.init(red: argb.red / 255.0,
                   green: argb.green / 255.0,

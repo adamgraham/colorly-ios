@@ -11,7 +11,7 @@ import UIKit
 /// An extension to provide conversion to and from HSL (hue, saturation, lightness) colors.
 public extension UIColor {
 
-    /// The components of a color in the HSL color model.
+    /// The HSL components of a color - hue, saturation, and lightness.
     struct HSL: Equatable {
 
         /// The hue component of the color, in the range [0, 360°].
@@ -23,7 +23,7 @@ public extension UIColor {
 
     }
 
-    /// The components of the color in the HSL color model.
+    /// The HSL components of the color.
     var hsl: HSL {
         var (h, s, b) = (CGFloat(), CGFloat(), CGFloat())
         getHue(&h, saturation: &s, brightness: &b, alpha: nil)
@@ -46,7 +46,9 @@ public extension UIColor {
                    lightness: l)
     }
 
-    /// Initializes a color from the components of a HSL color model.
+    /// Initializes a color from HSL components.
+    /// - parameter hsl: The components used to initialize the color.
+    /// - parameter alpha: The alpha value of the color.
     convenience init(hsl: HSL, alpha: CGFloat = 1.0) {
         let h = hsl.hue
         let t = hsl.saturation * ((hsl.lightness < 0.5) ? hsl.lightness : (1.0 - hsl.lightness))

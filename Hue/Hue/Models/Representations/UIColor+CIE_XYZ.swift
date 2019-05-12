@@ -1,5 +1,5 @@
 //
-//  UIColor+CIE-XYZ.swift
+//  UIColor+CIE_XYZ.swift
 //  Hue
 //
 //  Created by Adam Graham on 3/22/19.
@@ -8,23 +8,23 @@
 
 import UIKit
 
-/// An extension to provide conversion to and from CIE-XYZ colors.
+/// An extension to provide conversion to and from CIE XYZ colors.
 public extension UIColor {
 
-    /// The components of a color in the CIE-XYZ color space.
+    /// The CIE XYZ components of a color.
     struct CIE_XYZ: Equatable {
 
         /// A mix of cone response curves chosen to be orthogonal to luminance and
-        /// non-negative, in the range [0, 100].
+        /// non-negative, in the range [0, 95.047].
         public var X: CGFloat
         /// The luminance component of the color, in the range [0, 100].
         public var Y: CGFloat
-        /// Somewhat equal to blue stimulation, or the "S" cone response, in the range [0, 100].
+        /// Somewhat equal to blue, or the "S" cone response, in the range [0, 108.883].
         public var Z: CGFloat
 
     }
 
-    /// The components of the color in the CIE-XYZ color space.
+    /// The CIE XYZ components of the color.
     var XYZ: CIE_XYZ {
         var (r, g, b) = (CGFloat(), CGFloat(), CGFloat())
         getRed(&r, green: &g, blue: &b, alpha: nil)
@@ -45,7 +45,9 @@ public extension UIColor {
                        Z: Z * 100.0)
     }
 
-    /// Initializes a color from the components of a color in the CIE-XYZ color space.
+    /// Initializes a color from CIE XYZ components.
+    /// - parameter XYZ: The components used to initialize the color.
+    /// - parameter alpha: The alpha value of the color.
     convenience init(XYZ: CIE_XYZ, alpha: CGFloat = 1.0) {
         let X = XYZ.X / 100.0
         let Y = XYZ.Y / 100.0

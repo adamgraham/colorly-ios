@@ -11,7 +11,7 @@ import UIKit
 /// An extension to provide conversion to and from HSV (hue, saturation, value) colors.
 public extension UIColor {
 
-    /// The components of a color in the HSV color model.
+    /// The HSV components of a color - hue, saturation, and value.
     struct HSV: Equatable {
 
         /// The hue component of the color, in the range [0, 360°].
@@ -23,7 +23,7 @@ public extension UIColor {
 
     }
 
-    /// The components of the color in the HSV color model.
+    /// The HSV components of the color.
     var hsv: HSV {
         var (h, s, v) = (CGFloat(), CGFloat(), CGFloat())
         getHue(&h, saturation: &s, brightness: &v, alpha: nil)
@@ -33,7 +33,9 @@ public extension UIColor {
                    value: v)
     }
 
-    /// Initializes a color from the components of a HSV color model.
+    /// Initializes a color from HSV components.
+    /// - parameter hsv: The components used to initialize the color.
+    /// - parameter alpha: The alpha value of the color.
     convenience init(hsv: HSV, alpha: CGFloat = 1.0) {
         self.init(hue: hsv.hue / 360.0,
                   saturation: hsv.saturation,

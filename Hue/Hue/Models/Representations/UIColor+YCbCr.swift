@@ -11,7 +11,7 @@ import UIKit
 /// An extension to provide conversion to and from YCbCr colors.
 public extension UIColor {
 
-    /// The components of a color in the YCbCr color model.
+    /// The YCbCr components of a color - luminance (Y) and chrominance (Cb,Cr).
     struct YCbCr {
 
         /// The type of image signal encoding used for color conversions.
@@ -38,12 +38,12 @@ public extension UIColor {
 
     }
 
-    /// The components of the color in the YCbCr color model using standard-definition encoding.
+    /// The YCbCr components of the color using standard-definition encoding.
     var yCbCr: YCbCr {
         return yCbCr(.standard)
     }
 
-    /// The components of the color in the YCbCr color model using a given encoding.
+    /// The YCbCr components of the color using a given encoding.
     func yCbCr(_ encoding: YCbCr.Encoding) -> YCbCr {
         var (r, g, b) = (CGFloat(), CGFloat(), CGFloat())
         getRed(&r, green: &g, blue: &b, alpha: nil)
@@ -66,7 +66,9 @@ public extension UIColor {
         return YCbCr(Y: Y, Cb: Cb, Cr: Cr, encoding: encoding)
     }
 
-    /// Initializes a color from the components of a YCbCr color model.
+    /// Initializes a color from YCbCr components.
+    /// - parameter yCbCr: The components used to initialize the color.
+    /// - parameter alpha: The alpha value of the color.
     convenience init(yCbCr: YCbCr, alpha: CGFloat = 1.0) {
         let r: CGFloat
         let g: CGFloat

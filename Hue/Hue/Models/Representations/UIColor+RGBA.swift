@@ -11,7 +11,7 @@ import UIKit
 /// An extension to provide conversion to and from RGBA (red, green, blue, alpha) colors.
 public extension UIColor {
 
-    /// The components of a color in the RGBA color model.
+    /// The RGBA components of a color - red, green, blue, and alpha.
     struct RGBA: Equatable {
 
         /// The red component of the color, in the range [0, 255].
@@ -25,7 +25,7 @@ public extension UIColor {
 
     }
 
-    /// The components of the color in the RGBA color model.
+    /// The RGBA components of the color.
     var rgba: RGBA {
         var (r, g, b, a) = (CGFloat(), CGFloat(), CGFloat(), CGFloat())
         getRed(&r, green: &g, blue: &b, alpha: &a)
@@ -36,7 +36,8 @@ public extension UIColor {
                     alpha: a * 255.0)
     }
 
-    /// Initializes a color from the components of a RGBA color model.
+    /// Initializes a color from RGBA components.
+    /// - parameter rgba: The components used to initialize the color.
     convenience init(rgba: RGBA) {
         self.init(red: rgba.red / 255.0,
                   green: rgba.green / 255.0,
