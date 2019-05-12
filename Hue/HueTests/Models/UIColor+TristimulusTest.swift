@@ -14,9 +14,9 @@ class UIColor_TristimulusTest: XCTestCase {
 
     func test() {
         let values: UIColor.Tristimulus = (1.0, 2.0, 3.0)
-        XCTAssertEqual(values.x, 1.0)
-        XCTAssertEqual(values.y, 2.0)
-        XCTAssertEqual(values.z, 3.0)
+        XCTAssertEqual(values.X, 1.0)
+        XCTAssertEqual(values.Y, 2.0)
+        XCTAssertEqual(values.Z, 3.0)
     }
 
 }

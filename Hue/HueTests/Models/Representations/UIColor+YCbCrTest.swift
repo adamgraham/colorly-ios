@@ -14,7 +14,7 @@ class UIColor_YCbCrTest: XCTestCase {
 
     typealias YCbCr = UIColor.YCbCr
 
-    private let accuracy: CGFloat = 0.001 // YCbCr to RGB is not very accurate
+    private let accuracy: CGFloat = 0.001
 
     func testYCbCrStandard() {
         assert(UIColor.white.yCbCr, YCbCr(Y: 1.0, Cb: 0.0, Cr: 0.0, encoding: .standard))

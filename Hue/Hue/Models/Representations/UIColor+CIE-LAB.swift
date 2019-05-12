@@ -49,11 +49,11 @@ public extension UIColor {
             return (t / Constant.δ²3) + Constant.⁴୵₂₉
         }
 
-        let xyz = self.xyz
+        let XYZ = self.XYZ
         let r = illuminant.referenceValues(for: observer)
-        let fx = fn(xyz.x / 100.0 / r.x)
-        let fy = fn(xyz.y / 100.0 / r.y)
-        let fz = fn(xyz.z / 100.0 / r.z)
+        let fx = fn(XYZ.X / 100.0 / r.X)
+        let fy = fn(XYZ.Y / 100.0 / r.Y)
+        let fz = fn(XYZ.Z / 100.0 / r.Z)
 
         let L = (116.0 * fy) - 16.0
         let a = 500.0 * (fx - fy)
@@ -78,11 +78,11 @@ public extension UIColor {
         let b = L - (lab.b / 200.0)
 
         let r = illuminant.referenceValues(for: observer)
-        let x = r.x * fn(a) * 100.0
-        let y = r.y * fn(L) * 100.0
-        let z = r.z * fn(b) * 100.0
+        let X = r.X * fn(a) * 100.0
+        let Y = r.Y * fn(L) * 100.0
+        let Z = r.Z * fn(b) * 100.0
 
-        self.init(xyz: CIE_XYZ(x: x, y: y, z: z), alpha: alpha)
+        self.init(XYZ: CIE_XYZ(X: X, Y: Y, Z: Z), alpha: alpha)
     }
 
 }

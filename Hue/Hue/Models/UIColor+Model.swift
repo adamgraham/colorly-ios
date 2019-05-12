@@ -65,10 +65,16 @@ public extension UIColor {
         /// blue-difference and red-difference chrominance (chroma) components, respectively.
         case YCbCr
 
-        /// The XYZ color model defined by the International Commission on Illumination (CIE).
-        /// Created to map out all of the colors perceived by the human eye, it is considered to be
-        /// one of the most accurate color models; thus, it is commonly used for color
+        /// In 1931, based on the results of the CIE RGB version of the human eye, CIE
+        /// mathematically determined a theoretical color space called the CIE XYZ 1931 color
+        /// space to map out all of the colors perceived by the human eye. It is considered to be
+        /// one of the most accurate color spaces; thus, it is commonly used for color
         /// management and conversions.
+        ///
+        /// X, Y and Z are extrapolations of RGB created mathematically to avoid negative numbers
+        /// and are called Tristimulus values. Y means luminance, Z is somewhat equal to blue, and
+        /// X is a mix of cone response curves chosen to be orthogonal to luminance and
+        /// non-negative.
         case CIE_XYZ
 
         /// The LAB (lightness, A-channel, B-channel) color model defined by the International

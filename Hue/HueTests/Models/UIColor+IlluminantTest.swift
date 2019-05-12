@@ -59,9 +59,9 @@ class UIColor_IlluminantTest: XCTestCase {
     }
 
     private func assert(_ reference: UIColor.Tristimulus, _ expected: UIColor.Tristimulus) {
-        XCTAssertEqual(reference.x, expected.x)
-        XCTAssertEqual(reference.y, expected.y)
-        XCTAssertEqual(reference.z, expected.z)
+        XCTAssertEqual(reference.X, expected.X)
+        XCTAssertEqual(reference.Y, expected.Y)
+        XCTAssertEqual(reference.Z, expected.Z)
     }
 
 }

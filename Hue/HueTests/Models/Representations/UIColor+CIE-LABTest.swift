@@ -14,7 +14,7 @@ class UIColor_CIE_LABTest: XCTestCase {
 
     typealias LAB = UIColor.CIE_LAB
 
-    private let accuracy: CGFloat = 0.0001 // LAB to RGB is not very accurate
+    private let accuracy: CGFloat = 0.0001
 
     func testLAB() {
         assert(UIColor.white.lab, LAB(L: 100.0, a: 0.0, b: 0.0))

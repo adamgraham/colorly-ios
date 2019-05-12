@@ -14,36 +14,36 @@ class UIColor_CIE_XYZTest: XCTestCase {
 
     typealias XYZ = UIColor.CIE_XYZ
 
-    private let accuracy: CGFloat = 0.0001 // XYZ to RGB is not very accurate
+    private let accuracy: CGFloat = 0.0001
 
     func testXYZ() {
-        assert(UIColor.white.xyz, XYZ(x: 95.047, y: 100.0, z: 108.883))
-        assert(UIColor.red.xyz, XYZ(x: 41.24564, y: 21.26729, z: 1.93339))
-        assert(UIColor.green.xyz, XYZ(x: 35.75761, y: 71.51522, z: 11.9192))
-        assert(UIColor.blue.xyz, XYZ(x: 18.04375, y: 7.2175, z: 95.03041))
-        assert(UIColor.cyan.xyz, XYZ(x: 53.80136, y: 78.73272, z: 106.94961))
-        assert(UIColor.magenta.xyz, XYZ(x: 59.28939, y: 28.48479, z: 96.9638))
-        assert(UIColor.yellow.xyz, XYZ(x: 77.00325, y: 92.78251, z: 13.85259))
-        assert(UIColor.black.xyz, XYZ(x: 0.0, y: 0.0, z: 0.0))
-        assert(UIColor.darkGray.xyz, XYZ(x: 8.63423, y: 9.08417, z: 9.89112))
-        assert(UIColor.gray.xyz, XYZ(x: 20.34397, y: 21.40412, z: 23.30544))
-        assert(UIColor.lightGray.xyz, XYZ(x: 38.20678, y: 40.19778, z: 43.76855))
-        assert(UIColor.clear.xyz, XYZ(x: 0.0, y: 0.0, z: 0.0))
+        assert(UIColor.white.XYZ, XYZ(X: 95.047, Y: 100.0, Z: 108.883))
+        assert(UIColor.red.XYZ, XYZ(X: 41.24564, Y: 21.26729, Z: 1.93339))
+        assert(UIColor.green.XYZ, XYZ(X: 35.75761, Y: 71.51522, Z: 11.9192))
+        assert(UIColor.blue.XYZ, XYZ(X: 18.04375, Y: 7.2175, Z: 95.03041))
+        assert(UIColor.cyan.XYZ, XYZ(X: 53.80136, Y: 78.73272, Z: 106.94961))
+        assert(UIColor.magenta.XYZ, XYZ(X: 59.28939, Y: 28.48479, Z: 96.9638))
+        assert(UIColor.yellow.XYZ, XYZ(X: 77.00325, Y: 92.78251, Z: 13.85259))
+        assert(UIColor.black.XYZ, XYZ(X: 0.0, Y: 0.0, Z: 0.0))
+        assert(UIColor.darkGray.XYZ, XYZ(X: 8.63423, Y: 9.08417, Z: 9.89112))
+        assert(UIColor.gray.XYZ, XYZ(X: 20.34397, Y: 21.40412, Z: 23.30544))
+        assert(UIColor.lightGray.XYZ, XYZ(X: 38.20678, Y: 40.19778, Z: 43.76855))
+        assert(UIColor.clear.XYZ, XYZ(X: 0.0, Y: 0.0, Z: 0.0))
     }
 
     func testXYZInit() {
-        assert(UIColor(xyz: XYZ(x: 95.047, y: 100.0, z: 108.883)), .white)
-        assert(UIColor(xyz: XYZ(x: 41.24564, y: 21.26729, z: 1.93339)), .red)
-        assert(UIColor(xyz: XYZ(x: 35.75761, y: 71.51522, z: 11.9192)), .green)
-        assert(UIColor(xyz: XYZ(x: 18.04375, y: 7.2175, z: 95.03041)), .blue)
-        assert(UIColor(xyz: XYZ(x: 53.80136, y: 78.73272, z: 106.94961)), .cyan)
-        assert(UIColor(xyz: XYZ(x: 59.28939, y: 28.48479, z: 96.9638)), .magenta)
-        assert(UIColor(xyz: XYZ(x: 77.00325, y: 92.78251, z: 13.85259)), .yellow)
-        assert(UIColor(xyz: XYZ(x: 0.0, y: 0.0, z: 0.0)), .black)
-        assert(UIColor(xyz: XYZ(x: 8.63423, y: 9.08417, z: 9.89112)), .darkGray)
-        assert(UIColor(xyz: XYZ(x: 20.34397, y: 21.40412, z: 23.30544)), .gray)
-        assert(UIColor(xyz: XYZ(x: 38.20678, y: 40.19778, z: 43.76855)), .lightGray)
-        assert(UIColor(xyz: XYZ(x: 0.0, y: 0.0, z: 0.0), alpha: 0.0), .clear)
+        assert(UIColor(XYZ: XYZ(X: 95.047, Y: 100.0, Z: 108.883)), .white)
+        assert(UIColor(XYZ: XYZ(X: 41.24564, Y: 21.26729, Z: 1.93339)), .red)
+        assert(UIColor(XYZ: XYZ(X: 35.75761, Y: 71.51522, Z: 11.9192)), .green)
+        assert(UIColor(XYZ: XYZ(X: 18.04375, Y: 7.2175, Z: 95.03041)), .blue)
+        assert(UIColor(XYZ: XYZ(X: 53.80136, Y: 78.73272, Z: 106.94961)), .cyan)
+        assert(UIColor(XYZ: XYZ(X: 59.28939, Y: 28.48479, Z: 96.9638)), .magenta)
+        assert(UIColor(XYZ: XYZ(X: 77.00325, Y: 92.78251, Z: 13.85259)), .yellow)
+        assert(UIColor(XYZ: XYZ(X: 0.0, Y: 0.0, Z: 0.0)), .black)
+        assert(UIColor(XYZ: XYZ(X: 8.63423, Y: 9.08417, Z: 9.89112)), .darkGray)
+        assert(UIColor(XYZ: XYZ(X: 20.34397, Y: 21.40412, Z: 23.30544)), .gray)
+        assert(UIColor(XYZ: XYZ(X: 38.20678, Y: 40.19778, Z: 43.76855)), .lightGray)
+        assert(UIColor(XYZ: XYZ(X: 0.0, Y: 0.0, Z: 0.0), alpha: 0.0), .clear)
     }
 
     private func assert(_ color: UIColor, _ expected: UIColor) {
@@ -51,9 +51,9 @@ class UIColor_CIE_XYZTest: XCTestCase {
     }
 
     private func assert(_ xyz: XYZ, _ expected: XYZ) {
-        XCTAssertEqual(xyz.x, expected.x, accuracy: self.accuracy)
-        XCTAssertEqual(xyz.y, expected.y, accuracy: self.accuracy)
-        XCTAssertEqual(xyz.z, expected.z, accuracy: self.accuracy)
+        XCTAssertEqual(xyz.X, expected.X, accuracy: self.accuracy)
+        XCTAssertEqual(xyz.Y, expected.Y, accuracy: self.accuracy)
+        XCTAssertEqual(xyz.Z, expected.Z, accuracy: self.accuracy)
     }
 
 }
