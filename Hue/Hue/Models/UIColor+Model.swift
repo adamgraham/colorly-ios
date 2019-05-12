@@ -65,6 +65,13 @@ public extension UIColor {
         /// blue-difference and red-difference chrominance (chroma) components, respectively.
         case YCbCr
 
+        /// In the 1920s, W. David Wright and John Guild independently conducted a series of
+        /// experiments on human sight, from which they tried to determine the colors in human
+        /// vision, and give it a mathematical basis. The results of these experiments defined the
+        /// CIE RGB color space which became the basis for the trichromatic CIE XYZ color
+        /// specification.
+        case CIE_RGB
+
         /// In 1931, based on the results of the CIE RGB version of the human eye, CIE
         /// mathematically determined a theoretical color space called the CIE XYZ 1931 color
         /// space to map out all of the colors perceived by the human eye. It is considered to be
