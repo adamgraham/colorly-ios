@@ -80,14 +80,15 @@ public extension UIColor {
 public extension UIColor.Illuminant {
 
     /// The XYZ tristimulus values for a given standard observer that represent an average
-    /// human's chromatic response while observing an object under the illuminant. The values
-    /// are normalized in the range [0, 1].
-    func referenceValues(for observer: UIColor.StandardObserver) -> UIColor.Tristimulus {
+    /// human's chromatic response while observing an object under the illuminant.
+    func referenceValues(for observer: UIColor.StandardObserver, scale: CGFloat = 1.0) -> UIColor.Tristimulus {
         switch observer {
         case .two:
-            return self.two
+            let XYZ = self.two
+            return (XYZ.X * scale, XYZ.Y * scale, XYZ.Z * scale)
         case .ten:
-            return self.ten
+            let XYZ = self.ten
+            return (XYZ.X * scale, XYZ.Y * scale, XYZ.Z * scale)
         }
     }
 

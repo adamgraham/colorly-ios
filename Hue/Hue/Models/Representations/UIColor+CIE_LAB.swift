@@ -31,7 +31,7 @@ public extension UIColor {
         static let δ: CGFloat = 6.0 / 29.0
         static let δ² = δ * δ
         static let δ³ = δ * δ * δ
-        static let δ²3 = δ * δ * 3.0
+        static let δ²3 = δ² * 3.0
 
     }
 
@@ -46,16 +46,16 @@ public extension UIColor {
     func Lab(illuminant: UIColor.Illuminant,
              observer: UIColor.StandardObserver) -> CIE_LAB {
 
-        let reference = illuminant.referenceValues(for: observer)
+        let reference = illuminant.referenceValues(for: observer, scale: 100.0)
         let fn = { (t: CGFloat) -> CGFloat in
             if t > Constant.δ³ { return pow(t, Constant.⅓) }
             return (t / Constant.δ²3) + Constant.⁴୵₂₉
         }
 
         let XYZ = self.XYZ
-        let X = fn(XYZ.X / reference.X / 100.0)
-        let Y = fn(XYZ.Y / reference.Y / 100.0)
-        let Z = fn(XYZ.Z / reference.Z / 100.0)
+        let X = fn(XYZ.X / reference.X)
+        let Y = fn(XYZ.Y / reference.Y)
+        let Z = fn(XYZ.Z / reference.Z)
 
         let L = (116.0 * Y) - 16.0
         let a = 500.0 * (X - Y)
@@ -74,7 +74,7 @@ public extension UIColor {
                      observer: UIColor.StandardObserver = .two,
                      alpha: CGFloat = 1.0) {
 
-        let reference = illuminant.referenceValues(for: observer)
+        let reference = illuminant.referenceValues(for: observer, scale: 100.0)
         let fn = { (t: CGFloat) -> CGFloat in
             if t > Constant.δ { return pow(t, 3.0) }
             return Constant.δ²3 * (t - Constant.⁴୵₂₉)
@@ -84,9 +84,9 @@ public extension UIColor {
         let a = L + (Lab.a / 500.0)
         let b = L - (Lab.b / 200.0)
 
-        let X = fn(a) * reference.X * 100.0
-        let Y = fn(L) * reference.Y * 100.0
-        let Z = fn(b) * reference.Z * 100.0
+        let X = fn(a) * reference.X
+        let Y = fn(L) * reference.Y
+        let Z = fn(b) * reference.Z
 
         self.init(XYZ: CIE_XYZ(X: X, Y: Y, Z: Z), alpha: alpha)
     }
