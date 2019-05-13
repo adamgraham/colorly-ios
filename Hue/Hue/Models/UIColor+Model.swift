@@ -96,6 +96,16 @@ public extension UIColor {
         /// about the same amount of visually perceived change.
         case CIE_LAB
 
+        /// The Hunter Lab color space, defined in 1948 by Richard S. Hunter, is another color
+        /// space sometimes referred to as "Lab". Like CIELAB, it was also designed to be
+        /// computed via simple formulas from the CIE XYZ space but to be more perceptually
+        /// uniform than CIE XYZ.
+        ///
+        /// Hunter named his coordinates L, a, and b; the CIELAB space, defined years later in
+        /// 1976, named its coordinates L*, a*, and b* to distinguish them from Hunter's
+        /// coordinates.
+        case HunterLab
+
     }
 
 }

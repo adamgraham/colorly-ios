@@ -29,9 +29,8 @@ public extension UIColor {
         static let ⅓: CGFloat = 1.0 / 3.0
         static let ⁴୵₂₉: CGFloat = 4.0 / 29.0
         static let δ: CGFloat = 6.0 / 29.0
-        static let δ² = δ * δ
         static let δ³ = δ * δ * δ
-        static let δ²3 = δ² * 3.0
+        static let δ²3 = δ * δ * 3.0
 
     }
 
