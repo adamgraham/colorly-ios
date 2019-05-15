@@ -8,7 +8,7 @@
 
 import UIKit
 
-/// An extension to define color illuminants.
+/// An extension to define standard illuminants.
 public extension UIColor {
 
     /// A standard illuminant defined by the International Commission on Illumination (CIE)
@@ -61,10 +61,11 @@ public extension UIColor {
 
 }
 
-/// An extension to define CIE color-mapping functions called the standard (colorimetric) observer.
+/// An extension to define CIE color-mapping functions called standard observers.
 public extension UIColor {
 
-    /// A CIE color-mapping function called the standard (colorimetric) observer.
+    /// A CIE color-mapping function called the standard observer which represents an
+    /// average human's chromatic response while observing an object under an illuminant.
     enum StandardObserver {
 
         /// CIE 1931 2° Standard Observer
@@ -76,12 +77,15 @@ public extension UIColor {
 
 }
 
-/// An extension to add standard observer tristimulus reference values.
+/// An extension to add reference white XYZ tristimulus values.
 public extension UIColor.Illuminant {
 
-    /// The XYZ tristimulus values for a given standard observer that represent an average
-    /// human's chromatic response while observing an object under the illuminant.
-    func referenceValues(for observer: UIColor.StandardObserver, scale: CGFloat = 1.0) -> UIColor.Tristimulus {
+    /// The XYZ tristimulus values of the white point (often referred to as reference white)
+    /// of the illuminant for a given standard observer.
+    /// - parameter observer: The standard observer with which the illuminant is observed.
+    /// - parameter scale: The numerical scale/multiplier of the tristimulus values. XYZ values are
+    ///                    usually in the range [0, 100], so the default value is 100.
+    func whitePoint(for observer: UIColor.StandardObserver = .two, scale: CGFloat = 100.0) -> UIColor.Tristimulus {
         switch observer {
         case .two:
             let ref = self.two

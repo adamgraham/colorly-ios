@@ -11,7 +11,7 @@ import UIKit
 /// An extension to provide conversion to and from Hunter Lab colors.
 public extension UIColor {
 
-    /// The Hunter Lab components of a color.
+    /// The Hunter Lab components of a color - lightness (L) and chromaticity (a,b).
     struct HunterLab: Equatable {
 
         /// The lightness component of the color, in the range [0, 100] (darkest to brightest).
@@ -31,19 +31,17 @@ public extension UIColor {
     /// The Hunter Lab components of the color using a given illuminant and standard observer.
     /// - parameter illuminant: The illuminant used to calculate tristimulus values.
     /// - parameter observer: The standard observer used to calculate tristimulus values.
-    func hunterLab(illuminant: UIColor.Illuminant,
-                   observer: UIColor.StandardObserver) -> HunterLab {
-
-        let reference = illuminant.referenceValues(for: observer, scale: 100.0)
-
+    func hunterLab(illuminant: Illuminant, observer: StandardObserver) -> HunterLab {
         let XYZ = self.XYZ
-        let X = XYZ.X / reference.X
-        let Y = XYZ.Y / reference.Y
-        let Z = XYZ.Z / reference.Z
+        let ref = illuminant.whitePoint(for: observer)
+
+        let X = XYZ.X / ref.X
+        let Y = XYZ.Y / ref.Y
+        let Z = XYZ.Z / ref.Z
 
         let kL = sqrt(Y)
-        let kA = (175.0 / 198.04) * (reference.Y + reference.X)
-        let kB = (70.0 / 218.11) * (reference.Y + reference.Z)
+        let kA = (175.0 / 198.04) * (ref.Y + ref.X)
+        let kB = (70.0 / 218.11) * (ref.Y + ref.Z)
 
         let L = 100.0 * kL
         let a = kA * ((X - Y) / kL)
@@ -60,21 +58,21 @@ public extension UIColor {
     /// - parameter observer: The standard observer used calculate tristimulus values.
     /// - parameter alpha: The alpha value of the color.
     convenience init(hunterLab: HunterLab,
-                     illuminant: UIColor.Illuminant = .d65,
-                     observer: UIColor.StandardObserver = .two,
+                     illuminant: Illuminant = .d65,
+                     observer: StandardObserver = .two,
                      alpha: CGFloat = 1.0) {
 
-        let reference = illuminant.referenceValues(for: observer, scale: 100.0)
+        let ref = illuminant.whitePoint(for: observer)
 
-        let kA = (175.0 / 198.04) * (reference.Y + reference.X)
-        let kB = (70.0 / 218.11) * (reference.Y + reference.Z)
+        let kA = (175.0 / 198.04) * (ref.Y + ref.X)
+        let kB = (70.0 / 218.11) * (ref.Y + ref.Z)
 
-        let Y = pow(hunterLab.L / reference.Y, 2.0) * 100.0
-        let kL = Y / reference.Y
+        let Y = pow(hunterLab.L / ref.Y, 2.0) * 100.0
+        let kL = Y / ref.Y
         let kLs = sqrt(kL)
 
-        let X =  (hunterLab.a / kA * kLs + kL) * reference.X
-        let Z = -(hunterLab.b / kB * kLs - kL) * reference.Z
+        let X =  (hunterLab.a / kA * kLs + kL) * ref.X
+        let Z = -(hunterLab.b / kB * kLs - kL) * ref.Z
 
         self.init(XYZ: CIE_XYZ(X: X, Y: Y, Z: Z), alpha: alpha)
     }

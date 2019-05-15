@@ -42,19 +42,18 @@ public extension UIColor {
     /// The CIELAB components of the color using a given illuminant and standard observer.
     /// - parameter illuminant: The illuminant used to calculate tristimulus values.
     /// - parameter observer: The standard observer used to calculate tristimulus values.
-    func Lab(illuminant: UIColor.Illuminant,
-             observer: UIColor.StandardObserver) -> CIE_LAB {
-
-        let reference = illuminant.referenceValues(for: observer, scale: 100.0)
+    func Lab(illuminant: Illuminant, observer: StandardObserver) -> CIE_LAB {
         let fn = { (t: CGFloat) -> CGFloat in
             if t > Constant.δ³ { return pow(t, Constant.⅓) }
             return (t / Constant.δ²3) + Constant.⁴୵₂₉
         }
 
         let XYZ = self.XYZ
-        let X = fn(XYZ.X / reference.X)
-        let Y = fn(XYZ.Y / reference.Y)
-        let Z = fn(XYZ.Z / reference.Z)
+        let ref = illuminant.whitePoint(for: observer)
+
+        let X = fn(XYZ.X / ref.X)
+        let Y = fn(XYZ.Y / ref.Y)
+        let Z = fn(XYZ.Z / ref.Z)
 
         let L = (116.0 * Y) - 16.0
         let a = 500.0 * (X - Y)
@@ -69,23 +68,24 @@ public extension UIColor {
     /// - parameter observer: The standard observer used calculate tristimulus values.
     /// - parameter alpha: The alpha value of the color.
     convenience init(Lab: CIE_LAB,
-                     illuminant: UIColor.Illuminant = .d65,
-                     observer: UIColor.StandardObserver = .two,
+                     illuminant: Illuminant = .d65,
+                     observer: StandardObserver = .two,
                      alpha: CGFloat = 1.0) {
 
-        let reference = illuminant.referenceValues(for: observer, scale: 100.0)
         let fn = { (t: CGFloat) -> CGFloat in
             if t > Constant.δ { return pow(t, 3.0) }
             return Constant.δ²3 * (t - Constant.⁴୵₂₉)
         }
 
+        let ref = illuminant.whitePoint(for: observer)
+
         let L = (Lab.L + 16.0) / 116.0
         let a = L + (Lab.a / 500.0)
         let b = L - (Lab.b / 200.0)
 
-        let X = fn(a) * reference.X
-        let Y = fn(L) * reference.Y
-        let Z = fn(b) * reference.Z
+        let X = fn(a) * ref.X
+        let Y = fn(L) * ref.Y
+        let Z = fn(b) * ref.Z
 
         self.init(XYZ: CIE_XYZ(X: X, Y: Y, Z: Z), alpha: alpha)
     }

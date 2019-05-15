@@ -22,7 +22,7 @@ public extension UIColor {
      - returns: The average color.
      */
     static func average(of colors: [UIColor]) -> UIColor {
-        var rgba = UIColor.RGBA(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
+        var rgba = RGBA(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
 
         for color in colors {
             let components = color.rgba
