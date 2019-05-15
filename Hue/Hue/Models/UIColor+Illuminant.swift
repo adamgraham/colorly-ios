@@ -84,16 +84,16 @@ public extension UIColor.Illuminant {
     func referenceValues(for observer: UIColor.StandardObserver, scale: CGFloat = 1.0) -> UIColor.Tristimulus {
         switch observer {
         case .two:
-            let XYZ = self.two
-            return (XYZ.X * scale, XYZ.Y * scale, XYZ.Z * scale)
+            let ref = self.two
+            return UIColor.Tristimulus(X: ref.X * scale, Y: ref.Y * scale, Z: ref.Z * scale)
         case .ten:
-            let XYZ = self.ten
-            return (XYZ.X * scale, XYZ.Y * scale, XYZ.Z * scale)
+            let ref = self.ten
+            return UIColor.Tristimulus(X: ref.X * scale, Y: ref.Y * scale, Z: ref.Z * scale)
         }
     }
 
     /// CIE 1931 2° Standard Observer
-    private var two: UIColor.Tristimulus {
+    private var two: (X: CGFloat, Y: CGFloat, Z: CGFloat) {
         switch self {
         case .a:
             return (1.09850, 1.00000, 0.35585)
@@ -139,7 +139,7 @@ public extension UIColor.Illuminant {
     }
 
     /// CIE 1964 10° Standard Observer
-    private var ten: UIColor.Tristimulus {
+    private var ten: (X: CGFloat, Y: CGFloat, Z: CGFloat) {
         switch self {
         case .a:
             return (1.11144, 1.00000, 0.35200)

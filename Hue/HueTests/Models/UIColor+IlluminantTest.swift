@@ -58,10 +58,10 @@ class UIColor_IlluminantTest: XCTestCase {
         assert(UIColor.Illuminant.f12.referenceValues(for: .ten), (1.11428, 1.00000, 0.40353))
     }
 
-    private func assert(_ reference: UIColor.Tristimulus, _ expected: UIColor.Tristimulus) {
-        XCTAssertEqual(reference.X, expected.X)
-        XCTAssertEqual(reference.Y, expected.Y)
-        XCTAssertEqual(reference.Z, expected.Z)
+    private func assert(_ reference: UIColor.Tristimulus, _ expected: (X: CGFloat, Y: CGFloat, Z: CGFloat)) {
+        XCTAssertEqual(reference.X, expected.X, accuracy: self.accuracy)
+        XCTAssertEqual(reference.Y, expected.Y, accuracy: self.accuracy)
+        XCTAssertEqual(reference.Z, expected.Z, accuracy: self.accuracy)
     }
 
 }

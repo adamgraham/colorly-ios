@@ -13,10 +13,10 @@ import XCTest
 class UIColor_TristimulusTest: XCTestCase {
 
     func test() {
-        let values: UIColor.Tristimulus = (1.0, 2.0, 3.0)
-        XCTAssertEqual(values.X, 1.0)
-        XCTAssertEqual(values.Y, 2.0)
-        XCTAssertEqual(values.Z, 3.0)
+        let XYZ = UIColor.Tristimulus(X: 1.0, Y: 2.0, Z: 3.0)
+        XCTAssertEqual(XYZ.X, 1.0)
+        XCTAssertEqual(XYZ.Y, 2.0)
+        XCTAssertEqual(XYZ.Z, 3.0)
     }
 
 }
