@@ -27,12 +27,15 @@ public extension UIColor {
     var xyY: CIE_xyY {
         let XYZ = self.XYZ
         let sum = XYZ.X + XYZ.Y + XYZ.Z
+
+        guard sum != 0.0 else {
+            return CIE_xyY(x: 0.0, y: 0.0, Y: XYZ.Y)
+        }
+
         let x = XYZ.X / sum
         let y = XYZ.Y / sum
 
-        return CIE_xyY(x: x.isNaN ? 0.0 : x,
-                       y: y.isNaN ? 0.0 : y,
-                       Y: XYZ.Y)
+        return CIE_xyY(x: x, y: y, Y: XYZ.Y)
     }
 
     /// Initializes a color from CIE xyY components.
@@ -40,7 +43,7 @@ public extension UIColor {
     /// - parameter alpha: The alpha value of the color.
     convenience init(xyY: CIE_xyY, alpha: CGFloat = 1.0) {
         guard xyY.y != 0.0 else {
-            self.init(XYZ: CIE_XYZ(X: 0.0, Y: 0.0, Z: 0.0), alpha: alpha)
+            self.init(XYZ: CIE_XYZ(X: 0.0, Y: xyY.y, Z: 0.0), alpha: alpha)
             return
         }
 

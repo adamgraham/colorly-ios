@@ -96,6 +96,12 @@ public extension UIColor {
         /// about the same amount of visually perceived change.
         case CIE_LAB
 
+        /// The CIE 1976 L\*u\*v\* color space, commonly known by its abbreviation CIELUV, is a
+        /// simple-to-compute transformation of the 1931 CIE XYZ color space, but which
+        /// attempted perceptual uniformity. It is extensively used for applications such as
+        /// computer graphics which deal with colored lights.
+        case CIE_LUV
+
         /// The Hunter Lab color space, defined in 1948 by Richard S. Hunter, is another color
         /// space sometimes referred to as "Lab". Like CIELAB, it was also designed to be
         /// computed via simple formulas from the CIE XYZ space but to be more perceptually
