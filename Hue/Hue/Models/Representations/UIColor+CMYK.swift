@@ -31,14 +31,15 @@ public extension UIColor {
         getRed(&r, green: &g, blue: &b, alpha: nil)
 
         let k = 1.0 - max(r, g, b)
-        let c = (1.0 - r - k) / (1.0 - k)
-        let m = (1.0 - g - k) / (1.0 - k)
-        let y = (1.0 - b - k) / (1.0 - k)
+        var c = (1.0 - r - k) / (1.0 - k)
+        var m = (1.0 - g - k) / (1.0 - k)
+        var y = (1.0 - b - k) / (1.0 - k)
 
-        return CMYK(cyan: c.isNaN ? 0.0 : c,
-                    magenta: m.isNaN ? 0.0 : m,
-                    yellow: y.isNaN ? 0.0 : y,
-                    black: k)
+        if c.isNaN { c = 0.0 }
+        if m.isNaN { m = 0.0 }
+        if y.isNaN { y = 0.0 }
+
+        return CMYK(cyan: c, magenta: m, yellow: y, black: k)
     }
 
     /// Initializes a color from CMYK components.

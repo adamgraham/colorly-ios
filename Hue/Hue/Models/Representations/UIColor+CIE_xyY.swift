@@ -43,7 +43,7 @@ public extension UIColor {
     /// - parameter alpha: The alpha value of the color.
     convenience init(xyY: CIE_xyY, alpha: CGFloat = 1.0) {
         guard xyY.y != 0.0 else {
-            self.init(XYZ: CIE_XYZ(X: 0.0, Y: xyY.y, Z: 0.0), alpha: alpha)
+            self.init(XYZ: CIE_XYZ(X: 0.0, Y: xyY.Y, Z: 0.0), alpha: alpha)
             return
         }
 

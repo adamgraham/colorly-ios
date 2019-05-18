@@ -43,13 +43,15 @@ public extension UIColor {
         let kA = (175.0 / 198.04) * (ref.Y + ref.X)
         let kB = (70.0 / 218.11) * (ref.Y + ref.Z)
 
-        let L = 100.0 * kL
-        let a = kA * ((X - Y) / kL)
-        let b = kB * ((Y - Z) / kL)
+        var L = 100.0 * kL
+        var a = kA * ((X - Y) / kL)
+        var b = kB * ((Y - Z) / kL)
 
-        return HunterLab(L: L,
-                         a: a.isNaN ? 0.0 : a,
-                         b: b.isNaN ? 0.0 : b)
+        if L.isNaN { L = 0.0 }
+        if a.isNaN { a = 0.0 }
+        if b.isNaN { b = 0.0 }
+
+        return HunterLab(L: L, a: a, b: b)
     }
 
     /// Initializes a color from Hunter Lab components.
@@ -67,12 +69,16 @@ public extension UIColor {
         let kA = (175.0 / 198.04) * (ref.Y + ref.X)
         let kB = (70.0 / 218.11) * (ref.Y + ref.Z)
 
-        let Y = pow(hunterLab.L / ref.Y, 2.0) * 100.0
+        var Y = pow(hunterLab.L / ref.Y, 2.0) * 100.0
         let kL = Y / ref.Y
         let kLs = sqrt(kL)
 
-        let X =  (hunterLab.a / kA * kLs + kL) * ref.X
-        let Z = -(hunterLab.b / kB * kLs - kL) * ref.Z
+        var X =  (hunterLab.a / kA * kLs + kL) * ref.X
+        var Z = -(hunterLab.b / kB * kLs - kL) * ref.Z
+
+        if X.isNaN { X = 0.0 }
+        if Y.isNaN { Y = 0.0 }
+        if Z.isNaN { Z = 0.0 }
 
         self.init(XYZ: CIE_XYZ(X: X, Y: Y, Z: Z), alpha: alpha)
     }

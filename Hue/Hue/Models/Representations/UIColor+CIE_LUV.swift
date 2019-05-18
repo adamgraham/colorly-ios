@@ -59,10 +59,11 @@ public extension UIColor {
         let XYZ = self.XYZ
         let ref = illuminant.whitePoint(for: observer)
 
-        let L = fL(XYZ.Y / ref.Y)
+        var L = fL(XYZ.Y / ref.Y)
         var u = 13.0 * L * (fu(XYZ) - fu(ref))
         var v = 13.0 * L * (fv(XYZ) - fv(ref))
 
+        if L.isNaN { L = 0.0 }
         if u.isNaN { u = 0.0 }
         if v.isNaN { v = 0.0 }
 
@@ -91,11 +92,12 @@ public extension UIColor {
         let u = Luv.u / (13.0 * Luv.L) + fu(ref)
         let v = Luv.v / (13.0 * Luv.L) + fv(ref)
 
-        let Y = fL(Luv.L) * 100.0
+        var Y = fL(Luv.L) * 100.0
         var X = (-9.0 * Y * u) / ((u - 4.0) * v - (u * v))
         var Z = (9.0 * Y - (15.0 * v * Y) - (v * X)) / (3.0 * v)
 
         if X.isNaN { X = 0.0 }
+        if Y.isNaN { Y = 0.0 }
         if Z.isNaN { Z = 0.0 }
 
         self.init(XYZ: CIE_XYZ(X: X, Y: Y, Z: Z), alpha: alpha)
