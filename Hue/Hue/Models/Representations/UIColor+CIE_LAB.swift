@@ -16,9 +16,9 @@ public extension UIColor {
 
         /// The lightness component of the color, in the range [0, 100] (darkest to brightest).
         public var L: CGFloat
-        /// The a-chromaticity component of the color, the color channel for green-red.
+        /// The red-green chromaticity component of the color, in the range [-128, 128].
         public var a: CGFloat
-        /// The b-chromaticity component of the color, the color channel for blue-yellow.
+        /// The blue-yellow chromaticity component of the color, in the range [-128, 128].
         public var b: CGFloat
 
     }

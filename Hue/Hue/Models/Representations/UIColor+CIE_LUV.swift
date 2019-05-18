@@ -16,9 +16,9 @@ public extension UIColor {
 
         /// The lightness component of the color, in the range [0, 100] (darkest to brightest).
         public var L: CGFloat
-        /// The u-chromaticity coordinate of the color, in the range [-100, 100].
+        /// The red-green chromaticity component of the color.
         public var u: CGFloat
-        /// The v-chromaticity coordinate of the color, in the range [-100, 100].
+        /// The blue-yellow chromaticity component of the color.
         public var v: CGFloat
 
     }

@@ -11,7 +11,7 @@ import UIKit
 /// An extension to provide conversion to and from CIE XYZ colors.
 public extension UIColor {
 
-    /// The CIE XYZ components of a color.
+    /// The CIE XYZ components of a color - luminance (Y) and chromaticity (X,Z).
     struct CIE_XYZ: Equatable {
 
         /// A mix of cone response curves chosen to be orthogonal to luminance and
