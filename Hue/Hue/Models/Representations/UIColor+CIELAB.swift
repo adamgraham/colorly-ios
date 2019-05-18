@@ -1,5 +1,5 @@
 //
-//  UIColor+CIE_LAB.swift
+//  UIColor+CIELAB.swift
 //  Hue
 //
 //  Created by Adam Graham on 3/22/19.
@@ -12,7 +12,7 @@ import UIKit
 public extension UIColor {
 
     /// The CIELAB components of a color - lightness (L) and chromaticity (a,b).
-    struct CIE_LAB: Equatable {
+    struct CIELAB: Equatable {
 
         /// The lightness component of the color, in the range [0, 100] (darkest to brightest).
         public var L: CGFloat
@@ -35,14 +35,14 @@ public extension UIColor {
     }
 
     /// The CIELAB components of the color using a d65 illuminant and standard 2° observer.
-    var Lab: CIE_LAB {
+    var Lab: CIELAB {
         return self.Lab(illuminant: .d65, observer: .two)
     }
 
     /// The CIELAB components of the color using a given illuminant and standard observer.
     /// - parameter illuminant: The illuminant used to calculate tristimulus values.
     /// - parameter observer: The standard observer used to calculate tristimulus values.
-    func Lab(illuminant: Illuminant, observer: StandardObserver) -> CIE_LAB {
+    func Lab(illuminant: Illuminant, observer: StandardObserver) -> CIELAB {
         let fn = { (t: CGFloat) -> CGFloat in
             if t > Constant.δ³ { return pow(t, Constant.⅓) }
             return (t / Constant.δ²3) + Constant.⁴୵₂₉
@@ -59,7 +59,7 @@ public extension UIColor {
         let a = 500.0 * (X - Y)
         let b = 200.0 * (Y - Z)
 
-        return CIE_LAB(L: L, a: a, b: b)
+        return CIELAB(L: L, a: a, b: b)
     }
 
     /// Initializes a color from CIELAB components.
@@ -67,7 +67,7 @@ public extension UIColor {
     /// - parameter illuminant: The illuminant used to calculate tristimulus values.
     /// - parameter observer: The standard observer used calculate tristimulus values.
     /// - parameter alpha: The alpha value of the color.
-    convenience init(Lab: CIE_LAB,
+    convenience init(Lab: CIELAB,
                      illuminant: Illuminant = .d65,
                      observer: StandardObserver = .two,
                      alpha: CGFloat = 1.0) {
@@ -87,7 +87,7 @@ public extension UIColor {
         let Y = fn(L) * ref.Y
         let Z = fn(b) * ref.Z
 
-        self.init(XYZ: CIE_XYZ(X: X, Y: Y, Z: Z), alpha: alpha)
+        self.init(XYZ: CIEXYZ(X: X, Y: Y, Z: Z), alpha: alpha)
     }
 
 }

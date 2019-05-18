@@ -1,5 +1,5 @@
 //
-//  UIColor+CIE_LUV.swift
+//  UIColor+CIELUV.swift
 //  Hue
 //
 //  Created by Adam Graham on 5/13/19.
@@ -12,7 +12,7 @@ import UIKit
 public extension UIColor {
 
     /// The CIELUV components of a color - lightness (L) and chromaticity (u,v).
-    struct CIE_LUV: Equatable {
+    struct CIELUV: Equatable {
 
         /// The lightness component of the color, in the range [0, 100] (darkest to brightest).
         public var L: CGFloat
@@ -41,14 +41,14 @@ public extension UIColor {
     }
 
     /// The CIELUV components of the color using a d65 illuminant and standard 2° observer.
-    var Luv: CIE_LUV {
+    var Luv: CIELUV {
         return self.Luv(illuminant: .d65, observer: .two)
     }
 
     /// The CIELUV components of the color using a given illuminant and standard observer.
     /// - parameter illuminant: The illuminant used to calculate tristimulus values.
     /// - parameter observer: The standard observer used to calculate tristimulus values.
-    func Luv(illuminant: Illuminant, observer: StandardObserver) -> CIE_LUV {
+    func Luv(illuminant: Illuminant, observer: StandardObserver) -> CIELUV {
         let fu = Constant.fu
         let fv = Constant.fv
         let fL = { (t: CGFloat) -> CGFloat in
@@ -67,7 +67,7 @@ public extension UIColor {
         if u.isNaN { u = 0.0 }
         if v.isNaN { v = 0.0 }
 
-        return CIE_LUV(L: L, u: u, v: v)
+        return CIELUV(L: L, u: u, v: v)
     }
 
     /// Initializes a color from CIELUV components.
@@ -75,7 +75,7 @@ public extension UIColor {
     /// - parameter illuminant: The illuminant used to calculate tristimulus values.
     /// - parameter observer: The standard observer used calculate tristimulus values.
     /// - parameter alpha: The alpha value of the color.
-    convenience init(Luv: CIE_LUV,
+    convenience init(Luv: CIELUV,
                      illuminant: Illuminant = .d65,
                      observer: StandardObserver = .two,
                      alpha: CGFloat = 1.0) {
@@ -100,7 +100,7 @@ public extension UIColor {
         if Y.isNaN { Y = 0.0 }
         if Z.isNaN { Z = 0.0 }
 
-        self.init(XYZ: CIE_XYZ(X: X, Y: Y, Z: Z), alpha: alpha)
+        self.init(XYZ: CIEXYZ(X: X, Y: Y, Z: Z), alpha: alpha)
     }
 
 }

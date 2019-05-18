@@ -1,5 +1,5 @@
 //
-//  UIColor+CIE_xyY.swift
+//  UIColor+CIExyY.swift
 //  Hue
 //
 //  Created by Adam Graham on 5/6/19.
@@ -12,7 +12,7 @@ import UIKit
 public extension UIColor {
 
     /// The CIE xyY components of a color - luminance (Y) and chromaticity (x,y).
-    struct CIE_xyY: Equatable {
+    struct CIExyY: Equatable {
 
         /// The x-chromaticity component of the color, in the range [0, 1].
         public var x: CGFloat
@@ -24,26 +24,26 @@ public extension UIColor {
     }
 
     /// The CIE xyY components of the color.
-    var xyY: CIE_xyY {
+    var xyY: CIExyY {
         let XYZ = self.XYZ
         let sum = XYZ.X + XYZ.Y + XYZ.Z
 
         guard sum != 0.0 else {
-            return CIE_xyY(x: 0.0, y: 0.0, Y: XYZ.Y)
+            return CIExyY(x: 0.0, y: 0.0, Y: XYZ.Y)
         }
 
         let x = XYZ.X / sum
         let y = XYZ.Y / sum
 
-        return CIE_xyY(x: x, y: y, Y: XYZ.Y)
+        return CIExyY(x: x, y: y, Y: XYZ.Y)
     }
 
     /// Initializes a color from CIE xyY components.
     /// - parameter xyY: The components used to initialize the color.
     /// - parameter alpha: The alpha value of the color.
-    convenience init(xyY: CIE_xyY, alpha: CGFloat = 1.0) {
+    convenience init(xyY: CIExyY, alpha: CGFloat = 1.0) {
         guard xyY.y != 0.0 else {
-            self.init(XYZ: CIE_XYZ(X: 0.0, Y: xyY.Y, Z: 0.0), alpha: alpha)
+            self.init(XYZ: CIEXYZ(X: 0.0, Y: xyY.Y, Z: 0.0), alpha: alpha)
             return
         }
 
@@ -51,7 +51,7 @@ public extension UIColor {
         let Y = xyY.Y
         let Z = ((1.0 - xyY.x - xyY.y) * xyY.Y) / xyY.y
 
-        self.init(XYZ: CIE_XYZ(X: X, Y: Y, Z: Z), alpha: alpha)
+        self.init(XYZ: CIEXYZ(X: X, Y: Y, Z: Z), alpha: alpha)
     }
 
 }

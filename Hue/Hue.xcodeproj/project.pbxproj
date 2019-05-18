@@ -24,9 +24,9 @@
 		9D023DC32248905F00BCA208 /* UIColor+TintAndShade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D023DC22248905F00BCA208 /* UIColor+TintAndShade.swift */; };
 		9D023DC72248908E00BCA208 /* UIColor+Contrast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D023DC52248908E00BCA208 /* UIColor+Contrast.swift */; };
 		9D023DCA2248930700BCA208 /* UIColor+Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D023DC92248930700BCA208 /* UIColor+Accessibility.swift */; };
-		9D08214E228A426A0011E437 /* UIColor+CIE_LUV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D08214D228A426A0011E437 /* UIColor+CIE_LUV.swift */; };
+		9D08214E228A426A0011E437 /* UIColor+CIELUV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D08214D228A426A0011E437 /* UIColor+CIELUV.swift */; };
 		9D5E3547224DCDC20076A7EC /* UIColor+Harmony.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5E3546224DCDC20076A7EC /* UIColor+Harmony.swift */; };
-		9D5F3218228CC700000EE464 /* UIColor+CIE_LUVTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5F3217228CC700000EE464 /* UIColor+CIE_LUVTest.swift */; };
+		9D5F3218228CC700000EE464 /* UIColor+CIELUVTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5F3217228CC700000EE464 /* UIColor+CIELUVTest.swift */; };
 		9D62C9D22288F72B00136ADF /* UIColor+HunterLab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D62C9D12288F72B00136ADF /* UIColor+HunterLab.swift */; };
 		9D62C9D422890EA900136ADF /* UIColor+HunterLabTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D62C9D322890EA900136ADF /* UIColor+HunterLabTest.swift */; };
 		9D6BCABF224C725D00B3047C /* UIColor+MixingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BCABE224C725D00B3047C /* UIColor+MixingModel.swift */; };
@@ -43,10 +43,10 @@
 		9D6D1F7B22681033005ED098 /* UIColor+HSBTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F7A22681033005ED098 /* UIColor+HSBTest.swift */; };
 		9D6D1F7D2268103E005ED098 /* UIColor+HSLTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F7C2268103E005ED098 /* UIColor+HSLTest.swift */; };
 		9D6D1F7F22681048005ED098 /* UIColor+HSVTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F7E22681048005ED098 /* UIColor+HSVTest.swift */; };
-		9D6D1F8122681070005ED098 /* UIColor+CIE_LABTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F8022681070005ED098 /* UIColor+CIE_LABTest.swift */; };
+		9D6D1F8122681070005ED098 /* UIColor+CIELABTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F8022681070005ED098 /* UIColor+CIELABTest.swift */; };
 		9D6D1F8322681079005ED098 /* UIColor+RGBTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F8222681079005ED098 /* UIColor+RGBTest.swift */; };
 		9D6D1F8522681084005ED098 /* UIColor+RGBATest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F8422681084005ED098 /* UIColor+RGBATest.swift */; };
-		9D6D1F8722681090005ED098 /* UIColor+CIE_XYZTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F8622681090005ED098 /* UIColor+CIE_XYZTest.swift */; };
+		9D6D1F8722681090005ED098 /* UIColor+CIEXYZTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F8622681090005ED098 /* UIColor+CIEXYZTest.swift */; };
 		9D6D1F892268109A005ED098 /* UIColor+YCbCrTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F882268109A005ED098 /* UIColor+YCbCrTest.swift */; };
 		9D6D1F8F2268115A005ED098 /* UIColor+HarmonyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F8E2268115A005ED098 /* UIColor+HarmonyTest.swift */; };
 		9D6D1F9122681163005ED098 /* UIColor+HueTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F9022681163005ED098 /* UIColor+HueTest.swift */; };
@@ -68,14 +68,14 @@
 		9DA45A8A22557CE600E51EEE /* UIColor+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA45A8922557CE600E51EEE /* UIColor+Components.swift */; };
 		9DA45A8C2255811000E51EEE /* UIColor+Lightness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA45A8B2255811000E51EEE /* UIColor+Lightness.swift */; };
 		9DB19FA12255BF8300C3A6C7 /* UIColor+Hue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB19FA02255BF8300C3A6C7 /* UIColor+Hue.swift */; };
-		9DC72B8C22811D77002E5FB4 /* UIColor+CIE_LAB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC72B8A22811D77002E5FB4 /* UIColor+CIE_LAB.swift */; };
-		9DC72B8D22811D77002E5FB4 /* UIColor+CIE_XYZ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC72B8B22811D77002E5FB4 /* UIColor+CIE_XYZ.swift */; };
+		9DC72B8C22811D77002E5FB4 /* UIColor+CIELAB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC72B8A22811D77002E5FB4 /* UIColor+CIELAB.swift */; };
+		9DC72B8D22811D77002E5FB4 /* UIColor+CIEXYZ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC72B8B22811D77002E5FB4 /* UIColor+CIEXYZ.swift */; };
 		9DC72B8F22811E4E002E5FB4 /* XCTest+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC72B8E22811E4E002E5FB4 /* XCTest+UIColor.swift */; };
 		9DC72B9122811FA0002E5FB4 /* UIColor+ColorWheelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC72B9022811FA0002E5FB4 /* UIColor+ColorWheelTest.swift */; };
 		9DC72B9322813B91002E5FB4 /* UIColor+Tristimulus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC72B9222813B91002E5FB4 /* UIColor+Tristimulus.swift */; };
 		9DC72B97228143BE002E5FB4 /* UIColor+TristimulusTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC72B96228143BE002E5FB4 /* UIColor+TristimulusTest.swift */; };
-		9DC72B9922814682002E5FB4 /* UIColor+CIE_xyY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC72B9822814682002E5FB4 /* UIColor+CIE_xyY.swift */; };
-		9DC824F52287A72E001957CC /* UIColor+CIE_xyYTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC824F42287A72E001957CC /* UIColor+CIE_xyYTest.swift */; };
+		9DC72B9922814682002E5FB4 /* UIColor+CIExyY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC72B9822814682002E5FB4 /* UIColor+CIExyY.swift */; };
+		9DC824F52287A72E001957CC /* UIColor+CIExyYTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC824F42287A72E001957CC /* UIColor+CIExyYTest.swift */; };
 		9DE0381522582813006638E4 /* UIColor+Inversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE0381422582813006638E4 /* UIColor+Inversion.swift */; };
 		9DE03819225862F0006638E4 /* UIColor+Luminance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE03818225862F0006638E4 /* UIColor+Luminance.swift */; };
 		9DE0381B2258E81C006638E4 /* UIColor+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE0381A2258E81C006638E4 /* UIColor+Gradient.swift */; };
@@ -110,9 +110,9 @@
 		9D023DC22248905F00BCA208 /* UIColor+TintAndShade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+TintAndShade.swift"; sourceTree = "<group>"; };
 		9D023DC52248908E00BCA208 /* UIColor+Contrast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Contrast.swift"; sourceTree = "<group>"; };
 		9D023DC92248930700BCA208 /* UIColor+Accessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Accessibility.swift"; sourceTree = "<group>"; };
-		9D08214D228A426A0011E437 /* UIColor+CIE_LUV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CIE_LUV.swift"; sourceTree = "<group>"; };
+		9D08214D228A426A0011E437 /* UIColor+CIELUV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CIELUV.swift"; sourceTree = "<group>"; };
 		9D5E3546224DCDC20076A7EC /* UIColor+Harmony.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Harmony.swift"; sourceTree = "<group>"; };
-		9D5F3217228CC700000EE464 /* UIColor+CIE_LUVTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+CIE_LUVTest.swift"; sourceTree = "<group>"; };
+		9D5F3217228CC700000EE464 /* UIColor+CIELUVTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+CIELUVTest.swift"; sourceTree = "<group>"; };
 		9D62C9D12288F72B00136ADF /* UIColor+HunterLab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+HunterLab.swift"; sourceTree = "<group>"; };
 		9D62C9D322890EA900136ADF /* UIColor+HunterLabTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HunterLabTest.swift"; sourceTree = "<group>"; };
 		9D6BCABE224C725D00B3047C /* UIColor+MixingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+MixingModel.swift"; sourceTree = "<group>"; };
@@ -129,10 +129,10 @@
 		9D6D1F7A22681033005ED098 /* UIColor+HSBTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HSBTest.swift"; sourceTree = "<group>"; };
 		9D6D1F7C2268103E005ED098 /* UIColor+HSLTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HSLTest.swift"; sourceTree = "<group>"; };
 		9D6D1F7E22681048005ED098 /* UIColor+HSVTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HSVTest.swift"; sourceTree = "<group>"; };
-		9D6D1F8022681070005ED098 /* UIColor+CIE_LABTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CIE_LABTest.swift"; sourceTree = "<group>"; };
+		9D6D1F8022681070005ED098 /* UIColor+CIELABTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CIELABTest.swift"; sourceTree = "<group>"; };
 		9D6D1F8222681079005ED098 /* UIColor+RGBTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+RGBTest.swift"; sourceTree = "<group>"; };
 		9D6D1F8422681084005ED098 /* UIColor+RGBATest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+RGBATest.swift"; sourceTree = "<group>"; };
-		9D6D1F8622681090005ED098 /* UIColor+CIE_XYZTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CIE_XYZTest.swift"; sourceTree = "<group>"; };
+		9D6D1F8622681090005ED098 /* UIColor+CIEXYZTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CIEXYZTest.swift"; sourceTree = "<group>"; };
 		9D6D1F882268109A005ED098 /* UIColor+YCbCrTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+YCbCrTest.swift"; sourceTree = "<group>"; };
 		9D6D1F8E2268115A005ED098 /* UIColor+HarmonyTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HarmonyTest.swift"; sourceTree = "<group>"; };
 		9D6D1F9022681163005ED098 /* UIColor+HueTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HueTest.swift"; sourceTree = "<group>"; };
@@ -157,14 +157,14 @@
 		9DA45A8922557CE600E51EEE /* UIColor+Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Components.swift"; sourceTree = "<group>"; };
 		9DA45A8B2255811000E51EEE /* UIColor+Lightness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Lightness.swift"; sourceTree = "<group>"; };
 		9DB19FA02255BF8300C3A6C7 /* UIColor+Hue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hue.swift"; sourceTree = "<group>"; };
-		9DC72B8A22811D77002E5FB4 /* UIColor+CIE_LAB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+CIE_LAB.swift"; sourceTree = "<group>"; };
-		9DC72B8B22811D77002E5FB4 /* UIColor+CIE_XYZ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+CIE_XYZ.swift"; sourceTree = "<group>"; };
+		9DC72B8A22811D77002E5FB4 /* UIColor+CIELAB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+CIELAB.swift"; sourceTree = "<group>"; };
+		9DC72B8B22811D77002E5FB4 /* UIColor+CIEXYZ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+CIEXYZ.swift"; sourceTree = "<group>"; };
 		9DC72B8E22811E4E002E5FB4 /* XCTest+UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTest+UIColor.swift"; sourceTree = "<group>"; };
 		9DC72B9022811FA0002E5FB4 /* UIColor+ColorWheelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ColorWheelTest.swift"; sourceTree = "<group>"; };
 		9DC72B9222813B91002E5FB4 /* UIColor+Tristimulus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Tristimulus.swift"; sourceTree = "<group>"; };
 		9DC72B96228143BE002E5FB4 /* UIColor+TristimulusTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+TristimulusTest.swift"; sourceTree = "<group>"; };
-		9DC72B9822814682002E5FB4 /* UIColor+CIE_xyY.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+CIE_xyY.swift"; sourceTree = "<group>"; };
-		9DC824F42287A72E001957CC /* UIColor+CIE_xyYTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CIE_xyYTest.swift"; sourceTree = "<group>"; };
+		9DC72B9822814682002E5FB4 /* UIColor+CIExyY.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+CIExyY.swift"; sourceTree = "<group>"; };
+		9DC824F42287A72E001957CC /* UIColor+CIExyYTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CIExyYTest.swift"; sourceTree = "<group>"; };
 		9DE0381422582813006638E4 /* UIColor+Inversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Inversion.swift"; sourceTree = "<group>"; };
 		9DE03818225862F0006638E4 /* UIColor+Luminance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Luminance.swift"; sourceTree = "<group>"; };
 		9DE0381A2258E81C006638E4 /* UIColor+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Gradient.swift"; sourceTree = "<group>"; };
@@ -278,10 +278,10 @@
 			isa = PBXGroup;
 			children = (
 				9D6D1F7422681009005ED098 /* UIColor+ARGBTest.swift */,
-				9D6D1F8022681070005ED098 /* UIColor+CIE_LABTest.swift */,
-				9D5F3217228CC700000EE464 /* UIColor+CIE_LUVTest.swift */,
-				9DC824F42287A72E001957CC /* UIColor+CIE_xyYTest.swift */,
-				9D6D1F8622681090005ED098 /* UIColor+CIE_XYZTest.swift */,
+				9D6D1F8022681070005ED098 /* UIColor+CIELABTest.swift */,
+				9D5F3217228CC700000EE464 /* UIColor+CIELUVTest.swift */,
+				9DC824F42287A72E001957CC /* UIColor+CIExyYTest.swift */,
+				9D6D1F8622681090005ED098 /* UIColor+CIEXYZTest.swift */,
 				9D6D1F7622681013005ED098 /* UIColor+CMYKTest.swift */,
 				9D6D1F7822681021005ED098 /* UIColor+HexTest.swift */,
 				9D6D1F7A22681033005ED098 /* UIColor+HSBTest.swift */,
@@ -423,10 +423,10 @@
 			isa = PBXGroup;
 			children = (
 				9D023D992245B7EE00BCA208 /* UIColor+ARGB.swift */,
-				9DC72B8A22811D77002E5FB4 /* UIColor+CIE_LAB.swift */,
-				9D08214D228A426A0011E437 /* UIColor+CIE_LUV.swift */,
-				9DC72B9822814682002E5FB4 /* UIColor+CIE_xyY.swift */,
-				9DC72B8B22811D77002E5FB4 /* UIColor+CIE_XYZ.swift */,
+				9DC72B8A22811D77002E5FB4 /* UIColor+CIELAB.swift */,
+				9D08214D228A426A0011E437 /* UIColor+CIELUV.swift */,
+				9DC72B9822814682002E5FB4 /* UIColor+CIExyY.swift */,
+				9DC72B8B22811D77002E5FB4 /* UIColor+CIEXYZ.swift */,
 				9D023D9D2245B8DB00BCA208 /* UIColor+CMYK.swift */,
 				9D023D9B2245B83D00BCA208 /* UIColor+Hex.swift */,
 				9D023D9F2245B9E500BCA208 /* UIColor+HSB.swift */,
@@ -551,16 +551,16 @@
 			files = (
 				9D023DB822488F2300BCA208 /* Functions.swift in Sources */,
 				9DE03819225862F0006638E4 /* UIColor+Luminance.swift in Sources */,
-				9D08214E228A426A0011E437 /* UIColor+CIE_LUV.swift in Sources */,
+				9D08214E228A426A0011E437 /* UIColor+CIELUV.swift in Sources */,
 				9DA45A8A22557CE600E51EEE /* UIColor+Components.swift in Sources */,
 				9D023DAE2245BBBE00BCA208 /* UIColor+Illuminant.swift in Sources */,
 				9D6DE3E6226A67FC00B84E42 /* UIColor+ColorWheel.swift in Sources */,
 				9D6BCABF224C725D00B3047C /* UIColor+MixingModel.swift in Sources */,
-				9DC72B8D22811D77002E5FB4 /* UIColor+CIE_XYZ.swift in Sources */,
+				9DC72B8D22811D77002E5FB4 /* UIColor+CIEXYZ.swift in Sources */,
 				9D023DAC2245BB7B00BCA208 /* UIColor+Model.swift in Sources */,
 				9D023DCA2248930700BCA208 /* UIColor+Accessibility.swift in Sources */,
 				9D023D9A2245B7EF00BCA208 /* UIColor+ARGB.swift in Sources */,
-				9DC72B8C22811D77002E5FB4 /* UIColor+CIE_LAB.swift in Sources */,
+				9DC72B8C22811D77002E5FB4 /* UIColor+CIELAB.swift in Sources */,
 				9D023DBE22488F9F00BCA208 /* UIColor+Arithmetic.swift in Sources */,
 				9DA45A8822557BB200E51EEE /* UIColor+Saturation.swift in Sources */,
 				9D62C9D22288F72B00136ADF /* UIColor+HunterLab.swift in Sources */,
@@ -571,7 +571,7 @@
 				9DC72B9322813B91002E5FB4 /* UIColor+Tristimulus.swift in Sources */,
 				9DE0381522582813006638E4 /* UIColor+Inversion.swift in Sources */,
 				9D023D9C2245B83D00BCA208 /* UIColor+Hex.swift in Sources */,
-				9DC72B9922814682002E5FB4 /* UIColor+CIE_xyY.swift in Sources */,
+				9DC72B9922814682002E5FB4 /* UIColor+CIExyY.swift in Sources */,
 				9D023DA02245B9E500BCA208 /* UIColor+HSB.swift in Sources */,
 				9D023DA22245BA1E00BCA208 /* UIColor+HSL.swift in Sources */,
 				9D023DA42245BA5200BCA208 /* UIColor+HSV.swift in Sources */,
@@ -593,14 +593,14 @@
 			files = (
 				9D6D1F6622680D70005ED098 /* UIColor+AccessibilityTest.swift in Sources */,
 				9D6D1F9122681163005ED098 /* UIColor+HueTest.swift in Sources */,
-				9D6D1F8122681070005ED098 /* UIColor+CIE_LABTest.swift in Sources */,
+				9D6D1F8122681070005ED098 /* UIColor+CIELABTest.swift in Sources */,
 				9D6D1F7B22681033005ED098 /* UIColor+HSBTest.swift in Sources */,
-				9D6D1F8722681090005ED098 /* UIColor+CIE_XYZTest.swift in Sources */,
+				9D6D1F8722681090005ED098 /* UIColor+CIEXYZTest.swift in Sources */,
 				9D6D1F8322681079005ED098 /* UIColor+RGBTest.swift in Sources */,
 				9D6D1F7722681013005ED098 /* UIColor+CMYKTest.swift in Sources */,
 				9D6D1FA7226811F7005ED098 /* UIColor+MixingTest.swift in Sources */,
 				9D62C9D422890EA900136ADF /* UIColor+HunterLabTest.swift in Sources */,
-				9DC824F52287A72E001957CC /* UIColor+CIE_xyYTest.swift in Sources */,
+				9DC824F52287A72E001957CC /* UIColor+CIExyYTest.swift in Sources */,
 				9D6D1F6E22680FBB005ED098 /* UIColor+ComponentsTest.swift in Sources */,
 				9D6D1F9522681175005ED098 /* UIColor+LightnessTest.swift in Sources */,
 				9D6D1F7222680FD4005ED098 /* UIColor+ModelTest.swift in Sources */,
@@ -614,7 +614,7 @@
 				9D6D1F6C22680FAE005ED098 /* FunctionsTest.swift in Sources */,
 				9DC72B9122811FA0002E5FB4 /* UIColor+ColorWheelTest.swift in Sources */,
 				9D6D1F8522681084005ED098 /* UIColor+RGBATest.swift in Sources */,
-				9D5F3218228CC700000EE464 /* UIColor+CIE_LUVTest.swift in Sources */,
+				9D5F3218228CC700000EE464 /* UIColor+CIELUVTest.swift in Sources */,
 				9D6D1FAB2268120C005ED098 /* UIColor+RandomTest.swift in Sources */,
 				9D6D1FA5226811DD005ED098 /* UIColor+TintAndShadeTest.swift in Sources */,
 				9D6D1F7922681021005ED098 /* UIColor+HexTest.swift in Sources */,

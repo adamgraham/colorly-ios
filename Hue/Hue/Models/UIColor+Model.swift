@@ -70,10 +70,10 @@ public extension UIColor {
         /// vision, and give it a mathematical basis. The results of these experiments defined the
         /// CIE RGB color space which became the basis for the trichromatic CIE XYZ color
         /// specification.
-        case CIE_RGB
+        case CIERGB
 
         /// In 1931, based on the results of the CIE RGB version of the human eye, CIE
-        /// mathematically determined a theoretical color space called the CIE XYZ 1931 color
+        /// mathematically determined a theoretical color space called the CIE 1931 XYZ color
         /// space to map out all of the colors perceived by the human eye. It is considered to be
         /// one of the most accurate color spaces; thus, it is commonly used for color
         /// management and conversions.
@@ -82,25 +82,25 @@ public extension UIColor {
         /// and are called Tristimulus values. Y means luminance, Z is somewhat equal to blue, and
         /// X is a mix of cone response curves chosen to be orthogonal to luminance and
         /// non-negative.
-        case CIE_XYZ
+        case CIEXYZ
 
         /// In CIE xyY, Y is the luminance and x and y represents the chromaticity values derived
         /// from the tristimulus values X, Y and Z in the CIE XYZ color space. CIE xyY is just
         /// another way to represent CIE XYZ.
-        case CIE_xyY
+        case CIExyY
 
         /// CIE L\*a\*b\* is a color space in which L is lightness and a and b are chromaticity
         /// components, with the difference that the color values are far more than the human
         /// gamut. It was designed to be perceptually uniform with respect to human color vision,
         /// meaning that the same amount of numerical change in these values corresponds to
         /// about the same amount of visually perceived change.
-        case CIE_LAB
+        case CIELAB
 
         /// The CIE 1976 L\*u\*v\* color space, commonly known by its abbreviation CIELUV, is a
         /// simple-to-compute transformation of the 1931 CIE XYZ color space, but which
         /// attempted perceptual uniformity. It is extensively used for applications such as
         /// computer graphics which deal with colored lights.
-        case CIE_LUV
+        case CIELUV
 
         /// The Hunter Lab color space, defined in 1948 by Richard S. Hunter, is another color
         /// space sometimes referred to as "Lab". Like CIELAB, it was also designed to be

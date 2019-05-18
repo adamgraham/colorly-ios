@@ -80,7 +80,7 @@ public extension UIColor {
         if Y.isNaN { Y = 0.0 }
         if Z.isNaN { Z = 0.0 }
 
-        self.init(XYZ: CIE_XYZ(X: X, Y: Y, Z: Z), alpha: alpha)
+        self.init(XYZ: CIEXYZ(X: X, Y: Y, Z: Z), alpha: alpha)
     }
 
 }
