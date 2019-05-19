@@ -39,6 +39,27 @@ public extension UIColor {
         return a
     }
 
+    /// The red, green, and blue components of the color, in the range [0, 1].
+    var rgbComponents: (r: CGFloat, g: CGFloat, b: CGFloat) {
+        var (r, g, b) = (CGFloat(), CGFloat(), CGFloat())
+        getRed(&r, green: &g, blue: &b, alpha: nil)
+        return (r, g, b)
+    }
+
+    /// The red, green, blue, and alpha components of the color, in the range [0, 1].
+    var rgbaComponents: (r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat) {
+        var (r, g, b, a) = (CGFloat(), CGFloat(), CGFloat(), CGFloat())
+        getRed(&r, green: &g, blue: &b, alpha: &a)
+        return (r, g, b, a)
+    }
+
+    /// The alpha, red, green, and blue components of the color, in the range [0, 1].
+    var argbComponents: (a: CGFloat, r: CGFloat, g: CGFloat, b: CGFloat) {
+        var (a, r, g, b) = (CGFloat(), CGFloat(), CGFloat(), CGFloat())
+        getRed(&r, green: &g, blue: &b, alpha: &a)
+        return (a, r, g, b)
+    }
+
 }
 
 /// An extension to retrieve the HSB (hue, saturation, brightness) components of a color.
@@ -63,6 +84,13 @@ public extension UIColor {
         var b = CGFloat()
         getHue(nil, saturation: nil, brightness: &b, alpha: nil)
         return b
+    }
+
+    /// The hue, saturation, and brightness components of the color, in the range [0, 1].
+    var hsbComponents: (h: CGFloat, s: CGFloat, b: CGFloat) {
+        var (h, s, b) = (CGFloat(), CGFloat(), CGFloat())
+        getHue(&h, saturation: &s, brightness: &b, alpha: nil)
+        return (h, s, b)
     }
 
 }

@@ -11,8 +11,11 @@ import XCTest
 @testable import Hue
 
 class UIColor_ComponentsTest: XCTestCase {
-    
+
+    // MARK: RGBA Tests
+
     func testRedComponent() {
+        XCTAssertEqual(UIColor.white.redComponent, 1.0)
         XCTAssertEqual(UIColor.red.redComponent, 1.0)
         XCTAssertEqual(UIColor.green.redComponent, 0.0)
         XCTAssertEqual(UIColor.blue.redComponent, 0.0)
@@ -20,11 +23,11 @@ class UIColor_ComponentsTest: XCTestCase {
         XCTAssertEqual(UIColor.magenta.redComponent, 1.0)
         XCTAssertEqual(UIColor.yellow.redComponent, 1.0)
         XCTAssertEqual(UIColor.black.redComponent, 0.0)
-        XCTAssertEqual(UIColor.white.redComponent, 1.0)
         XCTAssertEqual(UIColor.clear.redComponent, 0.0)
     }
 
     func testGreenComponent() {
+        XCTAssertEqual(UIColor.white.greenComponent, 1.0)
         XCTAssertEqual(UIColor.red.greenComponent, 0.0)
         XCTAssertEqual(UIColor.green.greenComponent, 1.0)
         XCTAssertEqual(UIColor.blue.greenComponent, 0.0)
@@ -32,11 +35,11 @@ class UIColor_ComponentsTest: XCTestCase {
         XCTAssertEqual(UIColor.magenta.greenComponent, 0.0)
         XCTAssertEqual(UIColor.yellow.greenComponent, 1.0)
         XCTAssertEqual(UIColor.black.greenComponent, 0.0)
-        XCTAssertEqual(UIColor.white.greenComponent, 1.0)
         XCTAssertEqual(UIColor.clear.greenComponent, 0.0)
     }
 
     func testBlueComponent() {
+        XCTAssertEqual(UIColor.white.blueComponent, 1.0)
         XCTAssertEqual(UIColor.red.blueComponent, 0.0)
         XCTAssertEqual(UIColor.green.blueComponent, 0.0)
         XCTAssertEqual(UIColor.blue.blueComponent, 1.0)
@@ -44,11 +47,11 @@ class UIColor_ComponentsTest: XCTestCase {
         XCTAssertEqual(UIColor.magenta.blueComponent, 1.0)
         XCTAssertEqual(UIColor.yellow.blueComponent, 0.0)
         XCTAssertEqual(UIColor.black.blueComponent, 0.0)
-        XCTAssertEqual(UIColor.white.blueComponent, 1.0)
         XCTAssertEqual(UIColor.clear.blueComponent, 0.0)
     }
 
     func testAlphaComponent() {
+        XCTAssertEqual(UIColor.white.alphaComponent, 1.0)
         XCTAssertEqual(UIColor.red.alphaComponent, 1.0)
         XCTAssertEqual(UIColor.green.alphaComponent, 1.0)
         XCTAssertEqual(UIColor.blue.alphaComponent, 1.0)
@@ -56,11 +59,69 @@ class UIColor_ComponentsTest: XCTestCase {
         XCTAssertEqual(UIColor.magenta.alphaComponent, 1.0)
         XCTAssertEqual(UIColor.yellow.alphaComponent, 1.0)
         XCTAssertEqual(UIColor.black.alphaComponent, 1.0)
-        XCTAssertEqual(UIColor.white.alphaComponent, 1.0)
         XCTAssertEqual(UIColor.clear.alphaComponent, 0.0)
     }
 
+    func testRGBComponents() {
+        assert(rgb: UIColor.white.rgbComponents, (1.0, 1.0, 1.0))
+        assert(rgb: UIColor.red.rgbComponents, (1.0, 0.0, 0.0))
+        assert(rgb: UIColor.green.rgbComponents, (0.0, 1.0, 0.0))
+        assert(rgb: UIColor.blue.rgbComponents, (0.0, 0.0, 1.0))
+        assert(rgb: UIColor.cyan.rgbComponents, (0.0, 1.0, 1.0))
+        assert(rgb: UIColor.magenta.rgbComponents, (1.0, 0.0, 1.0))
+        assert(rgb: UIColor.yellow.rgbComponents, (1.0, 1.0, 0.0))
+        assert(rgb: UIColor.black.rgbComponents, (0.0, 0.0, 0.0))
+        assert(rgb: UIColor.clear.rgbComponents, (0.0, 0.0, 0.0))
+    }
+
+    func testRGBAComponents() {
+        assert(rgba: UIColor.white.rgbaComponents, (1.0, 1.0, 1.0, 1.0))
+        assert(rgba: UIColor.red.rgbaComponents, (1.0, 0.0, 0.0, 1.0))
+        assert(rgba: UIColor.green.rgbaComponents, (0.0, 1.0, 0.0, 1.0))
+        assert(rgba: UIColor.blue.rgbaComponents, (0.0, 0.0, 1.0, 1.0))
+        assert(rgba: UIColor.cyan.rgbaComponents, (0.0, 1.0, 1.0, 1.0))
+        assert(rgba: UIColor.magenta.rgbaComponents, (1.0, 0.0, 1.0, 1.0))
+        assert(rgba: UIColor.yellow.rgbaComponents, (1.0, 1.0, 0.0, 1.0))
+        assert(rgba: UIColor.black.rgbaComponents, (0.0, 0.0, 0.0, 1.0))
+        assert(rgba: UIColor.clear.rgbaComponents, (0.0, 0.0, 0.0, 0.0))
+    }
+
+    func testARGBComponents() {
+        assert(argb: UIColor.white.argbComponents, (1.0, 1.0, 1.0, 1.0))
+        assert(argb: UIColor.red.argbComponents, (1.0, 1.0, 0.0, 0.0))
+        assert(argb: UIColor.green.argbComponents, (1.0, 0.0, 1.0, 0.0))
+        assert(argb: UIColor.blue.argbComponents, (1.0, 0.0, 0.0, 1.0))
+        assert(argb: UIColor.cyan.argbComponents, (1.0, 0.0, 1.0, 1.0))
+        assert(argb: UIColor.magenta.argbComponents, (1.0, 1.0, 0.0, 1.0))
+        assert(argb: UIColor.yellow.argbComponents, (1.0, 1.0, 1.0, 0.0))
+        assert(argb: UIColor.black.argbComponents, (1.0, 0.0, 0.0, 0.0))
+        assert(argb: UIColor.clear.argbComponents, (0.0, 0.0, 0.0, 0.0))
+    }
+
+    private func assert(rgb: (r: CGFloat, g: CGFloat, b: CGFloat), _ expected: (r: CGFloat, g: CGFloat, b: CGFloat)) {
+        XCTAssertEqual(rgb.r, expected.r)
+        XCTAssertEqual(rgb.g, expected.g)
+        XCTAssertEqual(rgb.b, expected.b)
+    }
+
+    private func assert(rgba: (r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat), _ expected: (r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat)) {
+        XCTAssertEqual(rgba.r, expected.r)
+        XCTAssertEqual(rgba.g, expected.g)
+        XCTAssertEqual(rgba.b, expected.b)
+        XCTAssertEqual(rgba.a, expected.a)
+    }
+
+    private func assert(argb: (a: CGFloat, r: CGFloat, g: CGFloat, b: CGFloat), _ expected: (a: CGFloat, r: CGFloat, g: CGFloat, b: CGFloat)) {
+        XCTAssertEqual(argb.a, expected.a)
+        XCTAssertEqual(argb.r, expected.r)
+        XCTAssertEqual(argb.g, expected.g)
+        XCTAssertEqual(argb.b, expected.b)
+    }
+
+    // MARK: HSB Tests
+
     func testHueComponent() {
+        XCTAssertEqual(UIColor.white.hueComponent, 0.0)
         XCTAssertEqual(UIColor.red.hueComponent, 0.0 / 360.0)
         XCTAssertEqual(UIColor.green.hueComponent, 120.0 / 360.0)
         XCTAssertEqual(UIColor.blue.hueComponent, 240.0 / 360.0)
@@ -68,11 +129,11 @@ class UIColor_ComponentsTest: XCTestCase {
         XCTAssertEqual(UIColor.magenta.hueComponent, 300.0 / 360.0)
         XCTAssertEqual(UIColor.yellow.hueComponent, 60.0 / 360.0)
         XCTAssertEqual(UIColor.black.hueComponent, 0.0)
-        XCTAssertEqual(UIColor.white.hueComponent, 0.0)
         XCTAssertEqual(UIColor.clear.hueComponent, 0.0)
     }
 
     func testSaturationComponent() {
+        XCTAssertEqual(UIColor.white.saturationComponent, 0.0)
         XCTAssertEqual(UIColor.red.saturationComponent, 1.0)
         XCTAssertEqual(UIColor.green.saturationComponent, 1.0)
         XCTAssertEqual(UIColor.blue.saturationComponent, 1.0)
@@ -80,11 +141,11 @@ class UIColor_ComponentsTest: XCTestCase {
         XCTAssertEqual(UIColor.magenta.saturationComponent, 1.0)
         XCTAssertEqual(UIColor.yellow.saturationComponent, 1.0)
         XCTAssertEqual(UIColor.black.saturationComponent, 0.0)
-        XCTAssertEqual(UIColor.white.saturationComponent, 0.0)
         XCTAssertEqual(UIColor.clear.saturationComponent, 0.0)
     }
 
     func testBrightnessComponent() {
+        XCTAssertEqual(UIColor.white.brightnessComponent, 1.0)
         XCTAssertEqual(UIColor.red.brightnessComponent, 1.0)
         XCTAssertEqual(UIColor.green.brightnessComponent, 1.0)
         XCTAssertEqual(UIColor.blue.brightnessComponent, 1.0)
@@ -92,11 +153,31 @@ class UIColor_ComponentsTest: XCTestCase {
         XCTAssertEqual(UIColor.magenta.brightnessComponent, 1.0)
         XCTAssertEqual(UIColor.yellow.brightnessComponent, 1.0)
         XCTAssertEqual(UIColor.black.brightnessComponent, 0.0)
-        XCTAssertEqual(UIColor.white.brightnessComponent, 1.0)
         XCTAssertEqual(UIColor.clear.brightnessComponent, 0.0)
     }
 
+    func testHSBComponents() {
+        assert(hsb: UIColor.white.hsbComponents, (0.0, 0.0, 1.0))
+        assert(hsb: UIColor.red.hsbComponents, (0.0 / 360.0, 1.0, 1.0))
+        assert(hsb: UIColor.green.hsbComponents, (120.0 / 360.0, 1.0, 1.0))
+        assert(hsb: UIColor.blue.hsbComponents, (240.0 / 360.0, 1.0, 1.0))
+        assert(hsb: UIColor.cyan.hsbComponents, (180.0 / 360.0, 1.0, 1.0))
+        assert(hsb: UIColor.magenta.hsbComponents, (300.0 / 360.0, 1.0, 1.0))
+        assert(hsb: UIColor.yellow.hsbComponents, (60.0 / 360.0, 1.0, 1.0))
+        assert(hsb: UIColor.black.hsbComponents, (0.0, 0.0, 0.0))
+        assert(hsb: UIColor.clear.hsbComponents, (0.0, 0.0, 0.0))
+    }
+
+    private func assert(hsb: (h: CGFloat, s: CGFloat, b: CGFloat), _ expected: (h: CGFloat, s: CGFloat, b: CGFloat)) {
+        XCTAssertEqual(hsb.h, expected.h)
+        XCTAssertEqual(hsb.s, expected.s)
+        XCTAssertEqual(hsb.b, expected.b)
+    }
+
+    // MARK: Grayscale Tests
+
     func testWhiteComponent() {
+        XCTAssertEqual(UIColor.white.whiteComponent, 1.0)
         XCTAssertEqual(UIColor.red.whiteComponent, 0.5090234875679016)
         XCTAssertEqual(UIColor.green.whiteComponent, 0.8633751273155212)
         XCTAssertEqual(UIColor.blue.whiteComponent, 0.2730749249458313)
@@ -104,7 +185,6 @@ class UIColor_ComponentsTest: XCTestCase {
         XCTAssertEqual(UIColor.magenta.whiteComponent, 0.568579375743866)
         XCTAssertEqual(UIColor.yellow.whiteComponent, 0.9728571772575378)
         XCTAssertEqual(UIColor.black.whiteComponent, 0.0)
-        XCTAssertEqual(UIColor.white.whiteComponent, 1.0)
         XCTAssertEqual(UIColor.clear.whiteComponent, 0.0)
     }
 
