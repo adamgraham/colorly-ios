@@ -36,4 +36,25 @@ class FunctionsTest: XCTestCase {
         XCTAssertEqual(rotatingClamp(1.5, 0.0, 1.0), 0.5)
     }
 
+    func testDeg2Rad() {
+        XCTAssertEqual(deg2rad(1.0), 0.0174533, accuracy: 0.0001)
+        XCTAssertEqual(deg2rad(57.2958), 1.0, accuracy: 0.0001)
+        XCTAssertEqual(deg2rad(180.0), .pi, accuracy: 0.0001)
+    }
+
+    func testRad2Deg() {
+        XCTAssertEqual(rad2deg(0.0174533), 1.0, accuracy: 0.0001)
+        XCTAssertEqual(rad2deg(1.0), 57.2958, accuracy: 0.0001)
+        XCTAssertEqual(rad2deg(.pi), 180.0, accuracy: 0.0001)
+    }
+
+    func testIsZero() {
+        XCTAssertTrue(CGFloat(0.0).isZero(accuracy: .ulpOfOne))
+        XCTAssertTrue(CGFloat.ulpOfOne.isZero(accuracy: .ulpOfOne))
+        XCTAssertTrue((-CGFloat.ulpOfOne).isZero(accuracy: .ulpOfOne))
+        XCTAssertTrue((CGFloat.ulpOfOne / 2.0).isZero(accuracy: .ulpOfOne))
+        XCTAssertFalse((CGFloat.ulpOfOne * 2.0).isZero(accuracy: .ulpOfOne))
+        XCTAssertFalse((CGFloat.ulpOfOne * -2.0).isZero(accuracy: .ulpOfOne))
+    }
+
 }

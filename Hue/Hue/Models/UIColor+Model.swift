@@ -102,6 +102,16 @@ public extension UIColor {
         /// computer graphics which deal with colored lights.
         case CIELUV
 
+        /// The CIELCh° color space is a cylindrical representation of the CIELAB or CIELUV cube
+        /// color space, where C* is the chroma and h° is the hue. The L* lightness value remains
+        /// unchanged.
+        ///
+        /// The LCh color space is not the same as the HSV, HSL or HSB color models, although
+        /// their values can also be interpreted as a base color, saturation and lightness of a color.
+        /// The HSL values are a polar coordinate transformation of what is technically defined
+        /// RGB cube color space. LCh is still perceptually uniform.
+        case CIELCh
+
         /// The Hunter Lab color space, defined in 1948 by Richard S. Hunter, is another color
         /// space sometimes referred to as "Lab". Like CIELAB, it was also designed to be
         /// computed via simple formulas from the CIE XYZ space but to be more perceptually
