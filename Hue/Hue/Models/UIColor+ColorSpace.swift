@@ -1,69 +1,28 @@
 //
-//  UIColor+Model.swift
+//  UIColor+ColorSpace.swift
 //  Hue
 //
-//  Created by Adam Graham on 3/22/19.
+//  Created by Adam Graham on 5/19/19.
 //  Copyright © 2019 Adam Graham. All rights reserved.
 //
 
 import UIKit
 
-/// An extension to describe various color models.
+/// An extension to describe various color spaces.
 public extension UIColor {
 
-    /// An abstract mathematical model describing the ways colors can be represented as
-    /// tuples of numbers, typically as three or four values or color components.
-    enum Model {
+    /// A color space is a specific organization of colors. In combination with physical device
+    /// profiling, it allows for reproducible representations of color, in both analog and digital
+    /// representations. Adding a specific mapping function between a color model and a
+    /// reference color space establishes a definite "footprint", known as a gamut, and for a
+    /// given color model this defines a color space.
+    enum ColorSpace {
 
-        /// A representation of the RGB color model using hexadecimal numbers, i.e., `#0080ff`.
-        case Hex
-
-        /// The RGB (red, green, blue) color model, an additive color mixing, device-dependent
-        /// model used mainly for the representation and display of images in digital formats.
-        case RGB
-
-        /// The RYB (red, yellow, blue) color model, a traditional model used in a standard artist's
-        /// color wheel, particularly in painting.
-        case RYB
-
-        /// The CMYK (cyan, magenta, yellow, black) color model, a subtractive color mixing model
-        /// used in color printing.
-        case CMYK
-
-        /// The HSB (hue, saturation, brightness) color model is an alternative representation to
-        /// the RGB color model designed to more closely align with the way human vision
-        /// perceives color-making attributes. HSB is the same as HSV.
-        ///
-        /// The HSB representation models the way paints of different colors mix together, with the
-        /// saturation dimension resembling various shades of brightly colored paint, and the
-        /// brightness dimension resembling the mixture of those paints with varying amounts of
-        /// black or white paint
-        case HSB
-
-        /// The HSV (hue, saturation, value) color model is an alternative representation to the
-        /// RGB color model designed to more closely align with the way human vision perceives
-        /// color-making attributes. HSV is the same as HSB.
-        ///
-        /// The HSV representation models the way paints of different colors mix together, with the
-        /// saturation dimension resembling various shades of brightly colored paint, and the
-        /// value dimension resembling the mixture of those paints with varying amounts of
-        /// black or white paint
-        case HSV
-
-        /// The HSL (hue, saturation, lightness) color model is an alternative representation to the
-        /// RGB color model designed to more closely align with the way human vision perceives
-        /// color-making attributes.
-        ///
-        /// The HSL model attempts to resemble more perceptual color models such as the natural
-        /// color system (NCS) or Munsell color system, placing fully saturated colors around a
-        /// circle at a lightness value of ​½, where a lightness value of 0 or 1 is fully black or white,
-        /// respectively.
-        case HSL
-
-        /// The YCbCr color model used as a part of the color image pipeline in video and digital
-        /// photography systems. Y is the luminance (luma) component and Cb and Cr are the
-        /// blue-difference and red-difference chrominance (chroma) components, respectively.
-        case YCbCr
+        /// sRGB (standard Red Green Blue) is an RGB color space that HP and Microsoft created
+        /// cooperatively in 1996 to use on monitors, printers, and the Internet. It is often the
+        /// "default" color space for images that contain no color space information, especially if
+        /// the images' pixels are stored in 8-bit integers per color channel.
+        case sRGB
 
         /// In the 1920s, W. David Wright and John Guild independently conducted a series of
         /// experiments on human sight, from which they tried to determine the colors in human
