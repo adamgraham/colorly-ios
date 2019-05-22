@@ -34,6 +34,8 @@
 		9D6BB42A22922C2D007A3649 /* UIColor+ColorSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BB42922922C2D007A3649 /* UIColor+ColorSpace.swift */; };
 		9D6BB42E229234EA007A3649 /* UIColor+Pantone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BB42D229234EA007A3649 /* UIColor+Pantone.swift */; };
 		9D6BB43022923FB5007A3649 /* UIColor+PantoneTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BB42F22923FB5007A3649 /* UIColor+PantoneTest.swift */; };
+		9D6BB43622924915007A3649 /* UIColor+Quantization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BB43522924915007A3649 /* UIColor+Quantization.swift */; };
+		9D6BB4402294FC9D007A3649 /* UIColor+QuantizationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BB43F2294FC9D007A3649 /* UIColor+QuantizationTest.swift */; };
 		9D6BCABF224C725D00B3047C /* UIColor+MixingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BCABE224C725D00B3047C /* UIColor+MixingModel.swift */; };
 		9D6D1F6622680D70005ED098 /* UIColor+AccessibilityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F6522680D70005ED098 /* UIColor+AccessibilityTest.swift */; };
 		9D6D1F6822680D78005ED098 /* UIColor+ContrastTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D1F6722680D78005ED098 /* UIColor+ContrastTest.swift */; };
@@ -126,6 +128,8 @@
 		9D6BB42922922C2D007A3649 /* UIColor+ColorSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ColorSpace.swift"; sourceTree = "<group>"; };
 		9D6BB42D229234EA007A3649 /* UIColor+Pantone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Pantone.swift"; sourceTree = "<group>"; };
 		9D6BB42F22923FB5007A3649 /* UIColor+PantoneTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+PantoneTest.swift"; sourceTree = "<group>"; };
+		9D6BB43522924915007A3649 /* UIColor+Quantization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Quantization.swift"; sourceTree = "<group>"; };
+		9D6BB43F2294FC9D007A3649 /* UIColor+QuantizationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+QuantizationTest.swift"; sourceTree = "<group>"; };
 		9D6BCABE224C725D00B3047C /* UIColor+MixingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+MixingModel.swift"; sourceTree = "<group>"; };
 		9D6D1F6522680D70005ED098 /* UIColor+AccessibilityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+AccessibilityTest.swift"; sourceTree = "<group>"; };
 		9D6D1F6722680D78005ED098 /* UIColor+ContrastTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ContrastTest.swift"; sourceTree = "<group>"; };
@@ -326,6 +330,7 @@
 			isa = PBXGroup;
 			children = (
 				9D6D1F982268118A005ED098 /* UIColor+AveragingTest.swift */,
+				9D6BB43F2294FC9D007A3649 /* UIColor+QuantizationTest.swift */,
 			);
 			path = Averaging;
 			sourceTree = "<group>";
@@ -355,6 +360,7 @@
 			isa = PBXGroup;
 			children = (
 				9D89FFC9225F008B00FE58C2 /* UIColor+Averaging.swift */,
+				9D6BB43522924915007A3649 /* UIColor+Quantization.swift */,
 			);
 			path = Averaging;
 			sourceTree = "<group>";
@@ -593,6 +599,7 @@
 				9D6BB42A22922C2D007A3649 /* UIColor+ColorSpace.swift in Sources */,
 				9DC72B9922814682002E5FB4 /* UIColor+CIExyY.swift in Sources */,
 				9D023DA02245B9E500BCA208 /* UIColor+HSB.swift in Sources */,
+				9D6BB43622924915007A3649 /* UIColor+Quantization.swift in Sources */,
 				9D6BB424229212E8007A3649 /* UIColor+LinearRGB.swift in Sources */,
 				9D023DA22245BA1E00BCA208 /* UIColor+HSL.swift in Sources */,
 				9D023DA42245BA5200BCA208 /* UIColor+HSV.swift in Sources */,
@@ -637,6 +644,7 @@
 				9D6D1F6C22680FAE005ED098 /* FunctionsTest.swift in Sources */,
 				9DC72B9122811FA0002E5FB4 /* UIColor+ColorWheelTest.swift in Sources */,
 				9D6D1F8522681084005ED098 /* UIColor+RGBATest.swift in Sources */,
+				9D6BB4402294FC9D007A3649 /* UIColor+QuantizationTest.swift in Sources */,
 				9D5F3218228CC700000EE464 /* UIColor+CIELUVTest.swift in Sources */,
 				9D6D1FAB2268120C005ED098 /* UIColor+RandomTest.swift in Sources */,
 				9D6D1FA5226811DD005ED098 /* UIColor+TintAndShadeTest.swift in Sources */,
