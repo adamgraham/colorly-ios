@@ -66,9 +66,14 @@ public extension UIColor {
         /// that define these color spaces are essential tools for color management.
         case CIE
 
-        /// The YPbPr color model used as a part of the color image pipeline in video and digital
-        /// photography systems. Y is the luminance (luma) component and Pb and Pr are the
+        /// The YCbCr color model used as a part of the color image pipeline in video and digital
+        /// photography systems. Y is the luminance (luma) component and Cb and Cr are the
         /// blue-difference and red-difference chrominance (chroma) components, respectively.
+        case YCbCr
+
+        /// YPbPr is the analog version of the YCbCr color space; the two are numerically
+        /// equivalent but YPbPr is designed for use in analog systems while YCbCr is intended for
+        /// digital video.
         case YPbPr
 
     }

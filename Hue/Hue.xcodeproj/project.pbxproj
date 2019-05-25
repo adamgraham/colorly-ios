@@ -78,6 +78,8 @@
 		9DA45A8A22557CE600E51EEE /* UIColor+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA45A8922557CE600E51EEE /* UIColor+Components.swift */; };
 		9DA45A8C2255811000E51EEE /* UIColor+Lightness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA45A8B2255811000E51EEE /* UIColor+Lightness.swift */; };
 		9DA7C71F2298FB5300DE2FE3 /* UIColor+SignalEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA7C71E2298FB5300DE2FE3 /* UIColor+SignalEncoding.swift */; };
+		9DA7C7212299897400DE2FE3 /* UIColor+YCbCr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA7C7202299897300DE2FE3 /* UIColor+YCbCr.swift */; };
+		9DA7C723229996F900DE2FE3 /* UIColor+YCbCrTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA7C722229996F900DE2FE3 /* UIColor+YCbCrTest.swift */; };
 		9DB19FA12255BF8300C3A6C7 /* UIColor+Hue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB19FA02255BF8300C3A6C7 /* UIColor+Hue.swift */; };
 		9DC72B8C22811D77002E5FB4 /* UIColor+CIELAB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC72B8A22811D77002E5FB4 /* UIColor+CIELAB.swift */; };
 		9DC72B8D22811D77002E5FB4 /* UIColor+CIEXYZ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC72B8B22811D77002E5FB4 /* UIColor+CIEXYZ.swift */; };
@@ -178,6 +180,8 @@
 		9DA45A8922557CE600E51EEE /* UIColor+Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Components.swift"; sourceTree = "<group>"; };
 		9DA45A8B2255811000E51EEE /* UIColor+Lightness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Lightness.swift"; sourceTree = "<group>"; };
 		9DA7C71E2298FB5300DE2FE3 /* UIColor+SignalEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+SignalEncoding.swift"; sourceTree = "<group>"; };
+		9DA7C7202299897300DE2FE3 /* UIColor+YCbCr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+YCbCr.swift"; sourceTree = "<group>"; };
+		9DA7C722229996F900DE2FE3 /* UIColor+YCbCrTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+YCbCrTest.swift"; sourceTree = "<group>"; };
 		9DB19FA02255BF8300C3A6C7 /* UIColor+Hue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hue.swift"; sourceTree = "<group>"; };
 		9DC72B8A22811D77002E5FB4 /* UIColor+CIELAB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+CIELAB.swift"; sourceTree = "<group>"; };
 		9DC72B8B22811D77002E5FB4 /* UIColor+CIEXYZ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+CIEXYZ.swift"; sourceTree = "<group>"; };
@@ -316,6 +320,7 @@
 				9D6BB42F22923FB5007A3649 /* UIColor+PantoneTest.swift */,
 				9D6D1F8422681084005ED098 /* UIColor+RGBATest.swift */,
 				9D6D1F8222681079005ED098 /* UIColor+RGBTest.swift */,
+				9DA7C722229996F900DE2FE3 /* UIColor+YCbCrTest.swift */,
 				9D6D1F882268109A005ED098 /* UIColor+YPbPrTest.swift */,
 			);
 			path = Representations;
@@ -468,6 +473,7 @@
 				9D6BB42D229234EA007A3649 /* UIColor+Pantone.swift */,
 				9D023D952245B79800BCA208 /* UIColor+RGB.swift */,
 				9D023D972245B7D500BCA208 /* UIColor+RGBA.swift */,
+				9DA7C7202299897300DE2FE3 /* UIColor+YCbCr.swift */,
 				9D023DA92245BB2200BCA208 /* UIColor+YPbPr.swift */,
 			);
 			path = Representations;
@@ -623,6 +629,7 @@
 				9D023DC32248905F00BCA208 /* UIColor+TintAndShade.swift in Sources */,
 				9DC72B9322813B91002E5FB4 /* UIColor+Tristimulus.swift in Sources */,
 				9D6BB442229501C5007A3649 /* UIColor+WebSafe.swift in Sources */,
+				9DA7C7212299897400DE2FE3 /* UIColor+YCbCr.swift in Sources */,
 				9D023DAA2245BB2200BCA208 /* UIColor+YPbPr.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -669,6 +676,7 @@
 				9D6D1FA5226811DD005ED098 /* UIColor+TintAndShadeTest.swift in Sources */,
 				9DC72B97228143BE002E5FB4 /* UIColor+TristimulusTest.swift in Sources */,
 				9D6BB444229501DA007A3649 /* UIColor+WebSafeTest.swift in Sources */,
+				9DA7C723229996F900DE2FE3 /* UIColor+YCbCrTest.swift in Sources */,
 				9D6D1F892268109A005ED098 /* UIColor+YPbPrTest.swift in Sources */,
 				9DC72B8F22811E4E002E5FB4 /* XCTest+UIColor.swift in Sources */,
 			);
