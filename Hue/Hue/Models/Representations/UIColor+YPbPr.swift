@@ -35,20 +35,24 @@ public extension UIColor {
         var (r, g, b) = (CGFloat(), CGFloat(), CGFloat())
         getRed(&r, green: &g, blue: &b, alpha: nil)
 
-        let Y: CGFloat
-        let Pb: CGFloat
-        let Pr: CGFloat
+        let kR: CGFloat
+        let kG: CGFloat
+        let kB: CGFloat
 
         switch encoding {
         case .standard:
-            Y  =  (0.299 * r) + (0.587 * g) + (0.114 * b)
-            Pb = (-0.169 * r) - (0.331 * g) + (0.500 * b)
-            Pr =  (0.500 * r) - (0.419 * g) - (0.081 * b)
+            kR = 0.299
+            kG = 0.587
+            kB = 0.114
         case .hdtv:
-            Y  =  (0.213 * r) + (0.715 * g) + (0.072 * b)
-            Pb = (-0.115 * r) - (0.385 * g) + (0.500 * b)
-            Pr =  (0.500 * r) - (0.454 * g) - (0.046 * b)
+            kR = 0.2126
+            kG = 0.7152
+            kB = 0.0722
         }
+
+        let Y = (r * kR) + (g * kG) + (b * kB)
+        let Pb = 0.5 * ((b - Y) / (1.0 - kB))
+        let Pr = 0.5 * ((r - Y) / (1.0 - kR))
 
         return YPbPr(Y: Y, Pb: Pb, Pr: Pr)
     }
