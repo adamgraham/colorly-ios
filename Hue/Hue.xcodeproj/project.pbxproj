@@ -77,6 +77,7 @@
 		9DA45A8822557BB200E51EEE /* UIColor+Saturation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA45A8722557BB200E51EEE /* UIColor+Saturation.swift */; };
 		9DA45A8A22557CE600E51EEE /* UIColor+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA45A8922557CE600E51EEE /* UIColor+Components.swift */; };
 		9DA45A8C2255811000E51EEE /* UIColor+Lightness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA45A8B2255811000E51EEE /* UIColor+Lightness.swift */; };
+		9DA7C71F2298FB5300DE2FE3 /* UIColor+SignalEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA7C71E2298FB5300DE2FE3 /* UIColor+SignalEncoding.swift */; };
 		9DB19FA12255BF8300C3A6C7 /* UIColor+Hue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB19FA02255BF8300C3A6C7 /* UIColor+Hue.swift */; };
 		9DC72B8C22811D77002E5FB4 /* UIColor+CIELAB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC72B8A22811D77002E5FB4 /* UIColor+CIELAB.swift */; };
 		9DC72B8D22811D77002E5FB4 /* UIColor+CIEXYZ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC72B8B22811D77002E5FB4 /* UIColor+CIEXYZ.swift */; };
@@ -176,6 +177,7 @@
 		9DA45A8722557BB200E51EEE /* UIColor+Saturation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Saturation.swift"; sourceTree = "<group>"; };
 		9DA45A8922557CE600E51EEE /* UIColor+Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Components.swift"; sourceTree = "<group>"; };
 		9DA45A8B2255811000E51EEE /* UIColor+Lightness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Lightness.swift"; sourceTree = "<group>"; };
+		9DA7C71E2298FB5300DE2FE3 /* UIColor+SignalEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+SignalEncoding.swift"; sourceTree = "<group>"; };
 		9DB19FA02255BF8300C3A6C7 /* UIColor+Hue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hue.swift"; sourceTree = "<group>"; };
 		9DC72B8A22811D77002E5FB4 /* UIColor+CIELAB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+CIELAB.swift"; sourceTree = "<group>"; };
 		9DC72B8B22811D77002E5FB4 /* UIColor+CIEXYZ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+CIEXYZ.swift"; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				9D6BB42922922C2D007A3649 /* UIColor+ColorSpace.swift */,
 				9DA45A8922557CE600E51EEE /* UIColor+Components.swift */,
 				9D023DAD2245BBBE00BCA208 /* UIColor+Illuminant.swift */,
+				9DA7C71E2298FB5300DE2FE3 /* UIColor+SignalEncoding.swift */,
 				9DC72B9222813B91002E5FB4 /* UIColor+Tristimulus.swift */,
 			);
 			path = Models;
@@ -616,6 +619,7 @@
 				9D023D962245B79800BCA208 /* UIColor+RGB.swift in Sources */,
 				9D023D982245B7D500BCA208 /* UIColor+RGBA.swift in Sources */,
 				9DA45A8822557BB200E51EEE /* UIColor+Saturation.swift in Sources */,
+				9DA7C71F2298FB5300DE2FE3 /* UIColor+SignalEncoding.swift in Sources */,
 				9D023DC32248905F00BCA208 /* UIColor+TintAndShade.swift in Sources */,
 				9DC72B9322813B91002E5FB4 /* UIColor+Tristimulus.swift in Sources */,
 				9D6BB442229501C5007A3649 /* UIColor+WebSafe.swift in Sources */,

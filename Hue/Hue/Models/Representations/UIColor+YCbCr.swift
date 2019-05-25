@@ -14,16 +14,6 @@ public extension UIColor {
     /// The YCbCr components of a color - luminance (Y) and chrominance (Cb,Cr).
     struct YCbCr {
 
-        /// The type of image signal encoding used for color conversions.
-        public enum Encoding {
-
-            /// ITU-R BT.601 (standard-definition television)
-            case standard
-            /// ITU-R BT.709 (high-definition television)
-            case hdtv
-
-        }
-
         /// The luminance component of the color, in the range [0, 1] (black to white).
         public var Y: CGFloat
 
@@ -33,9 +23,6 @@ public extension UIColor {
         /// The red-difference chrominance component of the color, in the range [-0.5, 0.5].
         public var Cr: CGFloat
 
-        /// The image signal encoding used for color conversions.
-        public var encoding: Encoding
-
     }
 
     /// The YCbCr components of the color using standard-definition encoding.
@@ -44,7 +31,7 @@ public extension UIColor {
     }
 
     /// The YCbCr components of the color using a given encoding.
-    func yCbCr(_ encoding: YCbCr.Encoding) -> YCbCr {
+    func yCbCr(_ encoding: SignalEncoding) -> YCbCr {
         var (r, g, b) = (CGFloat(), CGFloat(), CGFloat())
         getRed(&r, green: &g, blue: &b, alpha: nil)
 
@@ -63,18 +50,22 @@ public extension UIColor {
             Cr =  (0.500 * r) - (0.454 * g) - (0.046 * b)
         }
 
-        return YCbCr(Y: Y, Cb: Cb, Cr: Cr, encoding: encoding)
+        return YCbCr(Y: Y, Cb: Cb, Cr: Cr)
     }
 
     /// Initializes a color from YCbCr components.
     /// - parameter yCbCr: The components used to initialize the color.
+    /// - parameter encoding: The signal encoding with which the components were derived.
     /// - parameter alpha: The alpha value of the color.
-    convenience init(yCbCr: YCbCr, alpha: CGFloat = 1.0) {
+    convenience init(yCbCr: YCbCr,
+                     encoding: SignalEncoding,
+                     alpha: CGFloat = 1.0) {
+
         let r: CGFloat
         let g: CGFloat
         let b: CGFloat
 
-        switch yCbCr.encoding {
+        switch encoding {
         case .standard:
             r = yCbCr.Y + (1.402 * yCbCr.Cr)
             g = yCbCr.Y - (0.344 * yCbCr.Cb) - (0.714 * yCbCr.Cr)
