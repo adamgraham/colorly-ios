@@ -1,0 +1,4 @@
+#!/bin/bash
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+perl "$DIR/sort-Xcode-project-file.pl" "$DIR/../hue.xcodeproj"
