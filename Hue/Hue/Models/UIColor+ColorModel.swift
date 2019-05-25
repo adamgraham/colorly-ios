@@ -76,6 +76,19 @@ public extension UIColor {
         /// digital video.
         case YPbPr
 
+        /// YUV is a color encoding system typically used as part of a color image pipeline. It
+        /// encodes a color image or video taking human perception into account, allowing
+        /// reduced bandwidth for chrominance components, thereby typically enabling
+        /// transmission errors or compression artifacts to be more efficiently masked by
+        /// human perception than using a "direct" RGB-representation.
+        case YUV
+
+        /// YIQ is the color model used by the NTSC color TV system, intended to take advantage
+        /// of human color-response characteristics. The chrominance component I stands for
+        /// *in-phase*, while chrominance component Q stands for *quadrature*, referring to the
+        /// components used in quadrature amplitude modulation.
+        case YIQ
+
     }
 
 }
