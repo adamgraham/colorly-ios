@@ -80,6 +80,8 @@
 		9DA7C71F2298FB5300DE2FE3 /* UIColor+SignalEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA7C71E2298FB5300DE2FE3 /* UIColor+SignalEncoding.swift */; };
 		9DA7C7212299897400DE2FE3 /* UIColor+YCbCr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA7C7202299897300DE2FE3 /* UIColor+YCbCr.swift */; };
 		9DA7C723229996F900DE2FE3 /* UIColor+YCbCrTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA7C722229996F900DE2FE3 /* UIColor+YCbCrTest.swift */; };
+		9DA7C7252299A59900DE2FE3 /* UIColor+YUV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA7C7242299A59900DE2FE3 /* UIColor+YUV.swift */; };
+		9DA7C7272299B40A00DE2FE3 /* UIColor+YUVTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA7C7262299B40A00DE2FE3 /* UIColor+YUVTest.swift */; };
 		9DB19FA12255BF8300C3A6C7 /* UIColor+Hue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB19FA02255BF8300C3A6C7 /* UIColor+Hue.swift */; };
 		9DC72B8C22811D77002E5FB4 /* UIColor+CIELAB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC72B8A22811D77002E5FB4 /* UIColor+CIELAB.swift */; };
 		9DC72B8D22811D77002E5FB4 /* UIColor+CIEXYZ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC72B8B22811D77002E5FB4 /* UIColor+CIEXYZ.swift */; };
@@ -182,6 +184,8 @@
 		9DA7C71E2298FB5300DE2FE3 /* UIColor+SignalEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+SignalEncoding.swift"; sourceTree = "<group>"; };
 		9DA7C7202299897300DE2FE3 /* UIColor+YCbCr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+YCbCr.swift"; sourceTree = "<group>"; };
 		9DA7C722229996F900DE2FE3 /* UIColor+YCbCrTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+YCbCrTest.swift"; sourceTree = "<group>"; };
+		9DA7C7242299A59900DE2FE3 /* UIColor+YUV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+YUV.swift"; sourceTree = "<group>"; };
+		9DA7C7262299B40A00DE2FE3 /* UIColor+YUVTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+YUVTest.swift"; sourceTree = "<group>"; };
 		9DB19FA02255BF8300C3A6C7 /* UIColor+Hue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hue.swift"; sourceTree = "<group>"; };
 		9DC72B8A22811D77002E5FB4 /* UIColor+CIELAB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+CIELAB.swift"; sourceTree = "<group>"; };
 		9DC72B8B22811D77002E5FB4 /* UIColor+CIEXYZ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+CIEXYZ.swift"; sourceTree = "<group>"; };
@@ -322,6 +326,7 @@
 				9D6D1F8222681079005ED098 /* UIColor+RGBTest.swift */,
 				9DA7C722229996F900DE2FE3 /* UIColor+YCbCrTest.swift */,
 				9D6D1F882268109A005ED098 /* UIColor+YPbPrTest.swift */,
+				9DA7C7262299B40A00DE2FE3 /* UIColor+YUVTest.swift */,
 			);
 			path = Representations;
 			sourceTree = "<group>";
@@ -475,6 +480,7 @@
 				9D023D972245B7D500BCA208 /* UIColor+RGBA.swift */,
 				9DA7C7202299897300DE2FE3 /* UIColor+YCbCr.swift */,
 				9D023DA92245BB2200BCA208 /* UIColor+YPbPr.swift */,
+				9DA7C7242299A59900DE2FE3 /* UIColor+YUV.swift */,
 			);
 			path = Representations;
 			sourceTree = "<group>";
@@ -631,6 +637,7 @@
 				9D6BB442229501C5007A3649 /* UIColor+WebSafe.swift in Sources */,
 				9DA7C7212299897400DE2FE3 /* UIColor+YCbCr.swift in Sources */,
 				9D023DAA2245BB2200BCA208 /* UIColor+YPbPr.swift in Sources */,
+				9DA7C7252299A59900DE2FE3 /* UIColor+YUV.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -678,6 +685,7 @@
 				9D6BB444229501DA007A3649 /* UIColor+WebSafeTest.swift in Sources */,
 				9DA7C723229996F900DE2FE3 /* UIColor+YCbCrTest.swift in Sources */,
 				9D6D1F892268109A005ED098 /* UIColor+YPbPrTest.swift in Sources */,
+				9DA7C7272299B40A00DE2FE3 /* UIColor+YUVTest.swift in Sources */,
 				9DC72B8F22811E4E002E5FB4 /* XCTest+UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
