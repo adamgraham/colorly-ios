@@ -83,7 +83,7 @@ public extension UIColor {
      - parameter observer: The standard observer used calculate tristimulus values.
      - parameter alpha: The alpha value of the color.
      */
-    convenience init(Luv: CIELUV,
+    convenience init(_ Luv: CIELUV,
                      illuminant: Illuminant = .d65,
                      observer: StandardObserver = .two,
                      alpha: CGFloat = 1.0) {
@@ -108,7 +108,7 @@ public extension UIColor {
         if Y.isNaN { Y = 0.0 }
         if Z.isNaN { Z = 0.0 }
 
-        self.init(XYZ: CIEXYZ(X: X, Y: Y, Z: Z), alpha: alpha)
+        self.init(CIEXYZ(X: X, Y: Y, Z: Z), alpha: alpha)
     }
 
 }

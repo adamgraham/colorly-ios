@@ -30,18 +30,18 @@ class UIColor_RGBTest: XCTestCase {
     }
 
     func testRGBInit() {
-        XCTAssertEqual(UIColor(rgb: RGB(red: 255.0, green: 255.0, blue: 255.0)), .white)
-        XCTAssertEqual(UIColor(rgb: RGB(red: 255.0, green: 0.0, blue: 0.0)), .red)
-        XCTAssertEqual(UIColor(rgb: RGB(red: 0.0, green: 255.0, blue: 0.0)), .green)
-        XCTAssertEqual(UIColor(rgb: RGB(red: 0.0, green: 0.0, blue: 255.0)), .blue)
-        XCTAssertEqual(UIColor(rgb: RGB(red: 0.0, green: 255.0, blue: 255.0)), .cyan)
-        XCTAssertEqual(UIColor(rgb: RGB(red: 255.0, green: 0.0, blue: 255.0)), .magenta)
-        XCTAssertEqual(UIColor(rgb: RGB(red: 255.0, green: 255.0, blue: 0.0)), .yellow)
-        XCTAssertEqual(UIColor(rgb: RGB(red: 0.0, green: 0.0, blue: 0.0)), .black)
-        XCTAssertEqual(UIColor(rgb: RGB(red: 85.0, green: 85.0, blue: 85.0)), .darkGray)
-        XCTAssertEqual(UIColor(rgb: RGB(red: 127.5, green: 127.5, blue: 127.5)), .gray)
-        XCTAssertEqual(UIColor(rgb: RGB(red: 170.0, green: 170.0, blue: 170.0)), .lightGray)
-        XCTAssertEqual(UIColor(rgb: RGB(red: 0.0, green: 0.0, blue: 0.0), alpha: 0.0), .clear)
+        XCTAssertEqual(UIColor(RGB(red: 255.0, green: 255.0, blue: 255.0)), .white)
+        XCTAssertEqual(UIColor(RGB(red: 255.0, green: 0.0, blue: 0.0)), .red)
+        XCTAssertEqual(UIColor(RGB(red: 0.0, green: 255.0, blue: 0.0)), .green)
+        XCTAssertEqual(UIColor(RGB(red: 0.0, green: 0.0, blue: 255.0)), .blue)
+        XCTAssertEqual(UIColor(RGB(red: 0.0, green: 255.0, blue: 255.0)), .cyan)
+        XCTAssertEqual(UIColor(RGB(red: 255.0, green: 0.0, blue: 255.0)), .magenta)
+        XCTAssertEqual(UIColor(RGB(red: 255.0, green: 255.0, blue: 0.0)), .yellow)
+        XCTAssertEqual(UIColor(RGB(red: 0.0, green: 0.0, blue: 0.0)), .black)
+        XCTAssertEqual(UIColor(RGB(red: 85.0, green: 85.0, blue: 85.0)), .darkGray)
+        XCTAssertEqual(UIColor(RGB(red: 127.5, green: 127.5, blue: 127.5)), .gray)
+        XCTAssertEqual(UIColor(RGB(red: 170.0, green: 170.0, blue: 170.0)), .lightGray)
+        XCTAssertEqual(UIColor(RGB(red: 0.0, green: 0.0, blue: 0.0), alpha: 0.0), .clear)
     }
 
 }

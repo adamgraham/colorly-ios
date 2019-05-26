@@ -42,7 +42,7 @@ public extension UIColor {
     /// Initializes a color from CIE XYZ components.
     /// - parameter XYZ: The components used to initialize the color.
     /// - parameter alpha: The alpha value of the color.
-    convenience init(XYZ: CIEXYZ, alpha: CGFloat = 1.0) {
+    convenience init(_ XYZ: CIEXYZ, alpha: CGFloat = 1.0) {
         let X = XYZ.X / 100.0
         let Y = XYZ.Y / 100.0
         let Z = XYZ.Z / 100.0

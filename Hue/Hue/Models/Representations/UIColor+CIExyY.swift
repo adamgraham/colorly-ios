@@ -41,9 +41,9 @@ public extension UIColor {
     /// Initializes a color from CIE xyY components.
     /// - parameter xyY: The components used to initialize the color.
     /// - parameter alpha: The alpha value of the color.
-    convenience init(xyY: CIExyY, alpha: CGFloat = 1.0) {
+    convenience init(_ xyY: CIExyY, alpha: CGFloat = 1.0) {
         guard xyY.y != 0.0 else {
-            self.init(XYZ: CIEXYZ(X: 0.0, Y: xyY.Y, Z: 0.0), alpha: alpha)
+            self.init(CIEXYZ(X: 0.0, Y: xyY.Y, Z: 0.0), alpha: alpha)
             return
         }
 
@@ -51,7 +51,7 @@ public extension UIColor {
         let Y = xyY.Y
         let Z = ((1.0 - xyY.x - xyY.y) * xyY.Y) / xyY.y
 
-        self.init(XYZ: CIEXYZ(X: X, Y: Y, Z: Z), alpha: alpha)
+        self.init(CIEXYZ(X: X, Y: Y, Z: Z), alpha: alpha)
     }
 
 }

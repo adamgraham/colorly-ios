@@ -34,7 +34,7 @@ public extension UIColor {
     /// Initializes a color from HSB components.
     /// - parameter hsb: The components used to initialize the color.
     /// - parameter alpha: The alpha value of the color.
-    convenience init(hsb: HSB, alpha: CGFloat = 1.0) {
+    convenience init(_ hsb: HSB, alpha: CGFloat = 1.0) {
         self.init(hue: hsb.hue / 360.0,
                   saturation: hsb.saturation / 100.0,
                   brightness: hsb.brightness / 100.0,

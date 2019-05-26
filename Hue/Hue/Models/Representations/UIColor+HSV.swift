@@ -34,7 +34,7 @@ public extension UIColor {
     /// Initializes a color from HSV components.
     /// - parameter hsv: The components used to initialize the color.
     /// - parameter alpha: The alpha value of the color.
-    convenience init(hsv: HSV, alpha: CGFloat = 1.0) {
+    convenience init(_ hsv: HSV, alpha: CGFloat = 1.0) {
         self.init(hue: hsv.hue / 360.0,
                   saturation: hsv.saturation / 100.0,
                   brightness: hsv.value / 100.0,

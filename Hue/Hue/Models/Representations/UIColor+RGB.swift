@@ -34,7 +34,7 @@ public extension UIColor {
     /// Initializes a color from RGB components.
     /// - parameter rgb: The components used to initialize the color.
     /// - parameter alpha: The alpha value of the color.
-    convenience init(rgb: RGB, alpha: CGFloat = 1.0) {
+    convenience init(_ rgb: RGB, alpha: CGFloat = 1.0) {
         self.init(red: rgb.red / 255.0,
                   green: rgb.green / 255.0,
                   blue: rgb.blue / 255.0,

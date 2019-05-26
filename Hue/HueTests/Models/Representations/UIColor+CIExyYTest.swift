@@ -32,18 +32,18 @@ class UIColor_CIExyYTest: XCTestCase {
     }
 
     func testCIExyYInit() {
-        assert(UIColor(xyY: CIExyY(x: 0.312727, y: 0.329023, Y: 100.000000)), .white)
-        assert(UIColor(xyY: CIExyY(x: 0.640000, y: 0.330000, Y: 21.267290)), .red)
-        assert(UIColor(xyY: CIExyY(x: 0.300000, y: 0.600000, Y: 71.515220)), .green)
-        assert(UIColor(xyY: CIExyY(x: 0.150000, y: 0.060000, Y: 7.217500)), .blue)
-        assert(UIColor(xyY: CIExyY(x: 0.224656, y: 0.328760, Y: 78.732720)), .cyan)
-        assert(UIColor(xyY: CIExyY(x: 0.320938, y: 0.154190, Y: 28.484790)), .magenta)
-        assert(UIColor(xyY: CIExyY(x: 0.419320, y: 0.505246, Y: 92.782510)), .yellow)
-        assert(UIColor(xyY: CIExyY(x: 0.000000, y: 0.000000, Y: 0.000000)), .black)
-        assert(UIColor(xyY: CIExyY(x: 0.312727, y: 0.329023, Y: 9.084172)), .darkGray)
-        assert(UIColor(xyY: CIExyY(x: 0.312727, y: 0.329023, Y: 21.404116)), .gray)
-        assert(UIColor(xyY: CIExyY(x: 0.312727, y: 0.329023, Y: 40.197782)), .lightGray)
-        assert(UIColor(xyY: CIExyY(x: 0.000000, y: 0.000000, Y: 0.000000), alpha: 0.0), .clear)
+        assert(UIColor(CIExyY(x: 0.312727, y: 0.329023, Y: 100.000000)), .white)
+        assert(UIColor(CIExyY(x: 0.640000, y: 0.330000, Y: 21.267290)), .red)
+        assert(UIColor(CIExyY(x: 0.300000, y: 0.600000, Y: 71.515220)), .green)
+        assert(UIColor(CIExyY(x: 0.150000, y: 0.060000, Y: 7.217500)), .blue)
+        assert(UIColor(CIExyY(x: 0.224656, y: 0.328760, Y: 78.732720)), .cyan)
+        assert(UIColor(CIExyY(x: 0.320938, y: 0.154190, Y: 28.484790)), .magenta)
+        assert(UIColor(CIExyY(x: 0.419320, y: 0.505246, Y: 92.782510)), .yellow)
+        assert(UIColor(CIExyY(x: 0.000000, y: 0.000000, Y: 0.000000)), .black)
+        assert(UIColor(CIExyY(x: 0.312727, y: 0.329023, Y: 9.084172)), .darkGray)
+        assert(UIColor(CIExyY(x: 0.312727, y: 0.329023, Y: 21.404116)), .gray)
+        assert(UIColor(CIExyY(x: 0.312727, y: 0.329023, Y: 40.197782)), .lightGray)
+        assert(UIColor(CIExyY(x: 0.000000, y: 0.000000, Y: 0.000000), alpha: 0.0), .clear)
     }
 
     private func assert(_ color: UIColor, _ expected: UIColor) {

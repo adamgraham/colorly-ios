@@ -47,7 +47,7 @@ public extension UIColor {
     /// Initializes a color from CMYK components.
     /// - parameter cmyk: The components used to initialize the color.
     /// - parameter alpha: The alpha value of the color.
-    convenience init(cmyk: CMYK, alpha: CGFloat = 1.0) {
+    convenience init(_ cmyk: CMYK, alpha: CGFloat = 1.0) {
         let c = cmyk.cyan / 100.0
         let m = cmyk.magenta / 100.0
         let y = cmyk.yellow / 100.0

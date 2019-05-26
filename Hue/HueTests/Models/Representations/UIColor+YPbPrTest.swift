@@ -32,18 +32,18 @@ class UIColor_YPbPrTest: XCTestCase {
     }
 
     func testYPbPrStandardInit() {
-        assert(UIColor(yPbPr: YPbPr(Y: 1.0, Pb: 0.0, Pr: 0.0), encoding: .standard), .white)
-        assert(UIColor(yPbPr: YPbPr(Y: 0.299, Pb: -0.169, Pr: 0.5), encoding: .standard), .red)
-        assert(UIColor(yPbPr: YPbPr(Y: 0.587, Pb: -0.331, Pr: -0.419), encoding: .standard), .green)
-        assert(UIColor(yPbPr: YPbPr(Y: 0.114, Pb: 0.5, Pr: -0.081), encoding: .standard), .blue)
-        assert(UIColor(yPbPr: YPbPr(Y: 0.701, Pb: 0.169, Pr: -0.5), encoding: .standard), .cyan)
-        assert(UIColor(yPbPr: YPbPr(Y: 0.413, Pb: 0.331, Pr: 0.419), encoding: .standard), .magenta)
-        assert(UIColor(yPbPr: YPbPr(Y: 0.886, Pb: -0.5, Pr: 0.081), encoding: .standard), .yellow)
-        assert(UIColor(yPbPr: YPbPr(Y: 0.0, Pb: 0.0, Pr: 0.0), encoding: .standard), .black)
-        assert(UIColor(yPbPr: YPbPr(Y: 1.0/3.0, Pb: 0.0, Pr: 0.0), encoding: .standard), .darkGray)
-        assert(UIColor(yPbPr: YPbPr(Y: 0.5, Pb: 0.0, Pr: 0.0), encoding: .standard), .gray)
-        assert(UIColor(yPbPr: YPbPr(Y: 2.0/3.0, Pb: 0.0, Pr: 0.0), encoding: .standard), .lightGray)
-        assert(UIColor(yPbPr: YPbPr(Y: 0.0, Pb: 0.0, Pr: 0.0), encoding: .standard, alpha: 0.0), .clear)
+        assert(UIColor(YPbPr(Y: 1.0, Pb: 0.0, Pr: 0.0), encoding: .standard), .white)
+        assert(UIColor(YPbPr(Y: 0.299, Pb: -0.169, Pr: 0.5), encoding: .standard), .red)
+        assert(UIColor(YPbPr(Y: 0.587, Pb: -0.331, Pr: -0.419), encoding: .standard), .green)
+        assert(UIColor(YPbPr(Y: 0.114, Pb: 0.5, Pr: -0.081), encoding: .standard), .blue)
+        assert(UIColor(YPbPr(Y: 0.701, Pb: 0.169, Pr: -0.5), encoding: .standard), .cyan)
+        assert(UIColor(YPbPr(Y: 0.413, Pb: 0.331, Pr: 0.419), encoding: .standard), .magenta)
+        assert(UIColor(YPbPr(Y: 0.886, Pb: -0.5, Pr: 0.081), encoding: .standard), .yellow)
+        assert(UIColor(YPbPr(Y: 0.0, Pb: 0.0, Pr: 0.0), encoding: .standard), .black)
+        assert(UIColor(YPbPr(Y: 1.0/3.0, Pb: 0.0, Pr: 0.0), encoding: .standard), .darkGray)
+        assert(UIColor(YPbPr(Y: 0.5, Pb: 0.0, Pr: 0.0), encoding: .standard), .gray)
+        assert(UIColor(YPbPr(Y: 2.0/3.0, Pb: 0.0, Pr: 0.0), encoding: .standard), .lightGray)
+        assert(UIColor(YPbPr(Y: 0.0, Pb: 0.0, Pr: 0.0), encoding: .standard, alpha: 0.0), .clear)
     }
 
     func testYPbPrHDTV() {
@@ -62,18 +62,18 @@ class UIColor_YPbPrTest: XCTestCase {
     }
 
     func testYPbPrHDTVInit() {
-        assert(UIColor(yPbPr: YPbPr(Y: 1.0, Pb: 0.0, Pr: 0.0), encoding: .hdtv), .white)
-        assert(UIColor(yPbPr: YPbPr(Y: 0.213, Pb: -0.115, Pr: 0.5), encoding: .hdtv), .red)
-        assert(UIColor(yPbPr: YPbPr(Y: 0.715, Pb: -0.385, Pr: -0.454), encoding: .hdtv), .green)
-        assert(UIColor(yPbPr: YPbPr(Y: 0.072, Pb: 0.5, Pr: -0.046), encoding: .hdtv), .blue)
-        assert(UIColor(yPbPr: YPbPr(Y: 0.787, Pb: 0.115, Pr: -0.5), encoding: .hdtv), .cyan)
-        assert(UIColor(yPbPr: YPbPr(Y: 0.285, Pb: 0.385, Pr: 0.454), encoding: .hdtv), .magenta)
-        assert(UIColor(yPbPr: YPbPr(Y: 0.928, Pb: -0.5, Pr: 0.046), encoding: .hdtv), .yellow)
-        assert(UIColor(yPbPr: YPbPr(Y: 0.0, Pb: 0.0, Pr: 0.0), encoding: .hdtv), .black)
-        assert(UIColor(yPbPr: YPbPr(Y: 1.0/3.0, Pb: 0.0, Pr: 0.0), encoding: .hdtv), .darkGray)
-        assert(UIColor(yPbPr: YPbPr(Y: 0.5, Pb: 0.0, Pr: 0.0), encoding: .hdtv), .gray)
-        assert(UIColor(yPbPr: YPbPr(Y: 2.0/3.0, Pb: 0.0, Pr: 0.0), encoding: .hdtv), .lightGray)
-        assert(UIColor(yPbPr: YPbPr(Y: 0.0, Pb: 0.0, Pr: 0.0), encoding: .hdtv, alpha: 0.0), .clear)
+        assert(UIColor(YPbPr(Y: 1.0, Pb: 0.0, Pr: 0.0), encoding: .hdtv), .white)
+        assert(UIColor(YPbPr(Y: 0.213, Pb: -0.115, Pr: 0.5), encoding: .hdtv), .red)
+        assert(UIColor(YPbPr(Y: 0.715, Pb: -0.385, Pr: -0.454), encoding: .hdtv), .green)
+        assert(UIColor(YPbPr(Y: 0.072, Pb: 0.5, Pr: -0.046), encoding: .hdtv), .blue)
+        assert(UIColor(YPbPr(Y: 0.787, Pb: 0.115, Pr: -0.5), encoding: .hdtv), .cyan)
+        assert(UIColor(YPbPr(Y: 0.285, Pb: 0.385, Pr: 0.454), encoding: .hdtv), .magenta)
+        assert(UIColor(YPbPr(Y: 0.928, Pb: -0.5, Pr: 0.046), encoding: .hdtv), .yellow)
+        assert(UIColor(YPbPr(Y: 0.0, Pb: 0.0, Pr: 0.0), encoding: .hdtv), .black)
+        assert(UIColor(YPbPr(Y: 1.0/3.0, Pb: 0.0, Pr: 0.0), encoding: .hdtv), .darkGray)
+        assert(UIColor(YPbPr(Y: 0.5, Pb: 0.0, Pr: 0.0), encoding: .hdtv), .gray)
+        assert(UIColor(YPbPr(Y: 2.0/3.0, Pb: 0.0, Pr: 0.0), encoding: .hdtv), .lightGray)
+        assert(UIColor(YPbPr(Y: 0.0, Pb: 0.0, Pr: 0.0), encoding: .hdtv, alpha: 0.0), .clear)
     }
 
     private func assert(_ color: UIColor, _ expected: UIColor) {

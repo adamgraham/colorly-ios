@@ -18,7 +18,7 @@ public extension UIColor {
         let degrees = rotatingClamp(degrees, 0.0, 360.0)
         var hsb = self.hsb
         hsb.hue = (hsb.hue + degrees).truncatingRemainder(dividingBy: 360.0)
-        return UIColor(hsb: hsb)
+        return UIColor(hsb)
     }
 
     /// The color opposite on the color wheel, equivalant to adjusting the hue by 180°.

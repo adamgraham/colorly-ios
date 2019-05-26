@@ -32,18 +32,18 @@ class UIColor_YIQTest: XCTestCase {
     }
 
     func testYIQInit() {
-        assert(UIColor(yiq: YIQ(Y: 1.0, I: 0.0, Q: 0.0)), .white)
-        assert(UIColor(yiq: YIQ(Y: 0.299, I: 0.5959, Q: 0.2115)), .red)
-        assert(UIColor(yiq: YIQ(Y: 0.587, I: -0.2746, Q: -0.5227)), .green)
-        assert(UIColor(yiq: YIQ(Y: 0.114, I: -0.3213, Q: 0.3112)), .blue)
-        assert(UIColor(yiq: YIQ(Y: 0.701, I: -0.5959, Q: -0.2115)), .cyan)
-        assert(UIColor(yiq: YIQ(Y: 0.413, I: 0.2746, Q: 0.5227)), .magenta)
-        assert(UIColor(yiq: YIQ(Y: 0.886, I: 0.3213, Q: -0.3112)), .yellow)
-        assert(UIColor(yiq: YIQ(Y: 0.0, I: 0.0, Q: 0.0)), .black)
-        assert(UIColor(yiq: YIQ(Y: 1.0/3.0, I: 0.0, Q: 0.0)), .darkGray)
-        assert(UIColor(yiq: YIQ(Y: 0.5, I: 0.0, Q: 0.0)), .gray)
-        assert(UIColor(yiq: YIQ(Y: 2.0/3.0, I: 0.0, Q: 0.0)), .lightGray)
-        assert(UIColor(yiq: YIQ(Y: 0.0, I: 0.0, Q: 0.0), alpha: 0.0), .clear)
+        assert(UIColor(YIQ(Y: 1.0, I: 0.0, Q: 0.0)), .white)
+        assert(UIColor(YIQ(Y: 0.299, I: 0.5959, Q: 0.2115)), .red)
+        assert(UIColor(YIQ(Y: 0.587, I: -0.2746, Q: -0.5227)), .green)
+        assert(UIColor(YIQ(Y: 0.114, I: -0.3213, Q: 0.3112)), .blue)
+        assert(UIColor(YIQ(Y: 0.701, I: -0.5959, Q: -0.2115)), .cyan)
+        assert(UIColor(YIQ(Y: 0.413, I: 0.2746, Q: 0.5227)), .magenta)
+        assert(UIColor(YIQ(Y: 0.886, I: 0.3213, Q: -0.3112)), .yellow)
+        assert(UIColor(YIQ(Y: 0.0, I: 0.0, Q: 0.0)), .black)
+        assert(UIColor(YIQ(Y: 1.0/3.0, I: 0.0, Q: 0.0)), .darkGray)
+        assert(UIColor(YIQ(Y: 0.5, I: 0.0, Q: 0.0)), .gray)
+        assert(UIColor(YIQ(Y: 2.0/3.0, I: 0.0, Q: 0.0)), .lightGray)
+        assert(UIColor(YIQ(Y: 0.0, I: 0.0, Q: 0.0), alpha: 0.0), .clear)
     }
 
     private func assert(_ color: UIColor, _ expected: UIColor) {

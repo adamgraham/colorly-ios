@@ -32,18 +32,18 @@ class UIColor_CMYKTest: XCTestCase {
     }
 
     func testCMYKInit() {
-        assert(UIColor(cmyk: CMYK(cyan: 0.0, magenta: 0.0, yellow: 0.0, black: 0.0)), .white)
-        assert(UIColor(cmyk: CMYK(cyan: 0.0, magenta: 100.0, yellow: 100.0, black: 0.0)), .red)
-        assert(UIColor(cmyk: CMYK(cyan: 100.0, magenta: 0.0, yellow: 100.0, black: 0.0)), .green)
-        assert(UIColor(cmyk: CMYK(cyan: 100.0, magenta: 100.0, yellow: 0.0, black: 0.0)), .blue)
-        assert(UIColor(cmyk: CMYK(cyan: 100.0, magenta: 0.0, yellow: 0.0, black: 0.0)), .cyan)
-        assert(UIColor(cmyk: CMYK(cyan: 0.0, magenta: 100.0, yellow: 0.0, black: 0.0)), .magenta)
-        assert(UIColor(cmyk: CMYK(cyan: 0.0, magenta: 0.0, yellow: 100.0, black: 0.0)), .yellow)
-        assert(UIColor(cmyk: CMYK(cyan: 0.0, magenta: 0.0, yellow: 0.0, black: 100.0)), .black)
-        assert(UIColor(cmyk: CMYK(cyan: 0.0, magenta: 0.0, yellow: 0.0, black: 200.0/3.0)), .darkGray)
-        assert(UIColor(cmyk: CMYK(cyan: 0.0, magenta: 0.0, yellow: 0.0, black: 50.0)), .gray)
-        assert(UIColor(cmyk: CMYK(cyan: 0.0, magenta: 0.0, yellow: 0.0, black: 100.0/3.0)), .lightGray)
-        assert(UIColor(cmyk: CMYK(cyan: 0.0, magenta: 0.0, yellow: 0.0, black: 100.0), alpha: 0.0), .clear)
+        assert(UIColor(CMYK(cyan: 0.0, magenta: 0.0, yellow: 0.0, black: 0.0)), .white)
+        assert(UIColor(CMYK(cyan: 0.0, magenta: 100.0, yellow: 100.0, black: 0.0)), .red)
+        assert(UIColor(CMYK(cyan: 100.0, magenta: 0.0, yellow: 100.0, black: 0.0)), .green)
+        assert(UIColor(CMYK(cyan: 100.0, magenta: 100.0, yellow: 0.0, black: 0.0)), .blue)
+        assert(UIColor(CMYK(cyan: 100.0, magenta: 0.0, yellow: 0.0, black: 0.0)), .cyan)
+        assert(UIColor(CMYK(cyan: 0.0, magenta: 100.0, yellow: 0.0, black: 0.0)), .magenta)
+        assert(UIColor(CMYK(cyan: 0.0, magenta: 0.0, yellow: 100.0, black: 0.0)), .yellow)
+        assert(UIColor(CMYK(cyan: 0.0, magenta: 0.0, yellow: 0.0, black: 100.0)), .black)
+        assert(UIColor(CMYK(cyan: 0.0, magenta: 0.0, yellow: 0.0, black: 200.0/3.0)), .darkGray)
+        assert(UIColor(CMYK(cyan: 0.0, magenta: 0.0, yellow: 0.0, black: 50.0)), .gray)
+        assert(UIColor(CMYK(cyan: 0.0, magenta: 0.0, yellow: 0.0, black: 100.0/3.0)), .lightGray)
+        assert(UIColor(CMYK(cyan: 0.0, magenta: 0.0, yellow: 0.0, black: 100.0), alpha: 0.0), .clear)
     }
 
     private func assert(_ color: UIColor, _ expected: UIColor) {

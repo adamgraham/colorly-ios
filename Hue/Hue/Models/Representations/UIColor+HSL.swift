@@ -45,7 +45,7 @@ public extension UIColor {
     /// Initializes a color from HSL components.
     /// - parameter hsl: The components used to initialize the color.
     /// - parameter alpha: The alpha value of the color.
-    convenience init(hsl: HSL, alpha: CGFloat = 1.0) {
+    convenience init(_ hsl: HSL, alpha: CGFloat = 1.0) {
         let h = hsl.hue / 360.0
         var s = hsl.saturation / 100.0
         let l = hsl.lightness / 100.0

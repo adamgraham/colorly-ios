@@ -76,7 +76,7 @@ public extension UIColor {
      - parameter observer: The standard observer used calculate tristimulus values.
      - parameter alpha: The alpha value of the color.
      */
-    convenience init(LCh_ab LCh: CIELCh,
+    convenience init(ab LCh: CIELCh,
                      illuminant: Illuminant = .d65,
                      observer: StandardObserver = .two,
                      alpha: CGFloat = 1.0) {
@@ -84,7 +84,7 @@ public extension UIColor {
         let a = LCh.C * cos(deg2rad(LCh.h))
         let b = LCh.C * sin(deg2rad(LCh.h))
 
-        self.init(Lab: CIELAB(L: LCh.L, a: a, b: b),
+        self.init(CIELAB(L: LCh.L, a: a, b: b),
                   illuminant: illuminant,
                   observer: observer,
                   alpha: alpha)
@@ -118,7 +118,7 @@ public extension UIColor {
      - parameter observer: The standard observer used calculate tristimulus values.
      - parameter alpha: The alpha value of the color.
      */
-    convenience init(LCh_uv LCh: CIELCh,
+    convenience init(uv LCh: CIELCh,
                      illuminant: Illuminant = .d65,
                      observer: StandardObserver = .two,
                      alpha: CGFloat = 1.0) {
@@ -126,7 +126,7 @@ public extension UIColor {
         let u = LCh.C * cos(deg2rad(LCh.h))
         let v = LCh.C * sin(deg2rad(LCh.h))
 
-        self.init(Luv: CIELUV(L: LCh.L, u: u, v: v),
+        self.init(CIELUV(L: LCh.L, u: u, v: v),
                   illuminant: illuminant,
                   observer: observer,
                   alpha: alpha)

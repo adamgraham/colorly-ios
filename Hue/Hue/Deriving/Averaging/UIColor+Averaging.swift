@@ -38,7 +38,7 @@ public extension UIColor {
         rgba.blue = sqrt(rgba.blue / count)
         rgba.alpha = sqrt(rgba.alpha / count)
 
-        return UIColor(rgba: rgba)
+        return UIColor(rgba)
     }
 
     /**

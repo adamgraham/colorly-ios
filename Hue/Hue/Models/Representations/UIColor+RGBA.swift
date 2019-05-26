@@ -36,7 +36,7 @@ public extension UIColor {
 
     /// Initializes a color from RGBA components.
     /// - parameter rgba: The components used to initialize the color.
-    convenience init(rgba: RGBA) {
+    convenience init(_ rgba: RGBA) {
         self.init(red: rgba.red / 255.0,
                   green: rgba.green / 255.0,
                   blue: rgba.blue / 255.0,

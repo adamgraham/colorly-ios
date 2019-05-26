@@ -39,7 +39,7 @@ public extension UIColor {
     /// Initializes a color from HSI components.
     /// - parameter hsi: The components used to initialize the color.
     /// - parameter alpha: The alpha value of the color.
-    convenience init(hsi: HSI, alpha: CGFloat = 1.0) {
+    convenience init(_ hsi: HSI, alpha: CGFloat = 1.0) {
         let r: CGFloat
         let g: CGFloat
         let b: CGFloat

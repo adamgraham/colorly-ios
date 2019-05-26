@@ -17,7 +17,7 @@ public extension UIColor {
         rgba.red = 255.0 - rgba.red
         rgba.green = 255.0 - rgba.green
         rgba.blue = 255.0 - rgba.blue
-        return UIColor(rgba: rgba)
+        return UIColor(rgba)
     }
 
 }

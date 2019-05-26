@@ -37,7 +37,7 @@ public extension UIColor {
     /// Initializes a color from YIQ components.
     /// - parameter yiq: The components used to initialize the color.
     /// - parameter alpha: The alpha value of the color.
-    convenience init(yiq: YIQ, alpha: CGFloat = 1.0) {
+    convenience init(_ yiq: YIQ, alpha: CGFloat = 1.0) {
         let r = yiq.Y + (0.956 * yiq.I) + (0.619 * yiq.Q)
         let g = yiq.Y - (0.272 * yiq.I) - (0.647 * yiq.Q)
         let b = yiq.Y - (1.106 * yiq.I) + (1.703 * yiq.Q)

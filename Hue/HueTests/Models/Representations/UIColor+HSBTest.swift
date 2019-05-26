@@ -32,18 +32,18 @@ class UIColor_HSBTest: XCTestCase {
     }
 
     func testHSBInit() {
-        assert(UIColor(hsb: HSB(hue: 0.0, saturation: 0.0, brightness: 100.0)), .white)
-        assert(UIColor(hsb: HSB(hue: 0.0, saturation: 100.0, brightness: 100.0)), .red)
-        assert(UIColor(hsb: HSB(hue: 120.0, saturation: 100.0, brightness: 100.0)), .green)
-        assert(UIColor(hsb: HSB(hue: 240.0, saturation: 100.0, brightness: 100.0)), .blue)
-        assert(UIColor(hsb: HSB(hue: 180.0, saturation: 100.0, brightness: 100.0)), .cyan)
-        assert(UIColor(hsb: HSB(hue: 300.0, saturation: 100.0, brightness: 100.0)), .magenta)
-        assert(UIColor(hsb: HSB(hue: 60.0, saturation: 100.0, brightness: 100.0)), .yellow)
-        assert(UIColor(hsb: HSB(hue: 0.0, saturation: 0.0, brightness: 0.0)), .black)
-        assert(UIColor(hsb: HSB(hue: 0.0, saturation: 0.0, brightness: 100.0/3.0)), .darkGray)
-        assert(UIColor(hsb: HSB(hue: 0.0, saturation: 0.0, brightness: 50.0)), .gray)
-        assert(UIColor(hsb: HSB(hue: 0.0, saturation: 0.0, brightness: 200.0/3.0)), .lightGray)
-        assert(UIColor(hsb: HSB(hue: 0.0, saturation: 0.0, brightness: 0.0), alpha: 0.0), .clear)
+        assert(UIColor(HSB(hue: 0.0, saturation: 0.0, brightness: 100.0)), .white)
+        assert(UIColor(HSB(hue: 0.0, saturation: 100.0, brightness: 100.0)), .red)
+        assert(UIColor(HSB(hue: 120.0, saturation: 100.0, brightness: 100.0)), .green)
+        assert(UIColor(HSB(hue: 240.0, saturation: 100.0, brightness: 100.0)), .blue)
+        assert(UIColor(HSB(hue: 180.0, saturation: 100.0, brightness: 100.0)), .cyan)
+        assert(UIColor(HSB(hue: 300.0, saturation: 100.0, brightness: 100.0)), .magenta)
+        assert(UIColor(HSB(hue: 60.0, saturation: 100.0, brightness: 100.0)), .yellow)
+        assert(UIColor(HSB(hue: 0.0, saturation: 0.0, brightness: 0.0)), .black)
+        assert(UIColor(HSB(hue: 0.0, saturation: 0.0, brightness: 100.0/3.0)), .darkGray)
+        assert(UIColor(HSB(hue: 0.0, saturation: 0.0, brightness: 50.0)), .gray)
+        assert(UIColor(HSB(hue: 0.0, saturation: 0.0, brightness: 200.0/3.0)), .lightGray)
+        assert(UIColor(HSB(hue: 0.0, saturation: 0.0, brightness: 0.0), alpha: 0.0), .clear)
     }
 
     private func assert(_ color: UIColor, _ expected: UIColor) {

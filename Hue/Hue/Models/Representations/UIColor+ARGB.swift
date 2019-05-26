@@ -36,7 +36,7 @@ public extension UIColor {
 
     /// Initializes a color from ARGB components.
     /// - parameter argb: The components used to initialize the color.
-    convenience init(argb: ARGB) {
+    convenience init(_ argb: ARGB) {
         self.init(red: argb.red / 255.0,
                   green: argb.green / 255.0,
                   blue: argb.blue / 255.0,

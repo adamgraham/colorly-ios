@@ -32,18 +32,18 @@ class UIColor_HunterLabTest: XCTestCase {
     }
 
     func testHunterLabInit() {
-        assert(UIColor(hunterLab: HunterLab(L: 100.00000, a: 0.00000, b: 0.00000)), .white)
-        assert(UIColor(hunterLab: HunterLab(L: 46.11647, a: 82.69984, b: 28.33464)), .red)
-        assert(UIColor(hunterLab: HunterLab(L: 84.56667, a: -69.07981, b: 48.01452)), .green)
-        assert(UIColor(hunterLab: HunterLab(L: 26.86541, a: 75.48825, b: -199.77815)), .blue)
-        assert(UIColor(hunterLab: HunterLab(L: 88.73146, a: -42.98167, b: -14.72638)), .cyan)
-        assert(UIColor(hunterLab: HunterLab(L: 53.37114, a: 109.45704, b: -76.07908)), .magenta)
-        assert(UIColor(hunterLab: HunterLab(L: 96.32368, a: -21.05426, b: 55.71965)), .yellow)
-        assert(UIColor(hunterLab: HunterLab(L: 0.00000, a: 0.00000, b: 0.00000)), .black)
-        assert(UIColor(hunterLab: HunterLab(L: 30.13996, a: 0.00000, b: 0.00000)), .darkGray)
-        assert(UIColor(hunterLab: HunterLab(L: 46.26458, a: 0.00000, b: 0.00000)), .gray)
-        assert(UIColor(hunterLab: HunterLab(L: 63.40172, a: 0.00000, b: 0.00000)), .lightGray)
-        assert(UIColor(hunterLab: HunterLab(L: 0.00000, a: 0.00000, b: 0.00000), alpha: 0.0), .clear)
+        assert(UIColor(HunterLab(L: 100.00000, a: 0.00000, b: 0.00000)), .white)
+        assert(UIColor(HunterLab(L: 46.11647, a: 82.69984, b: 28.33464)), .red)
+        assert(UIColor(HunterLab(L: 84.56667, a: -69.07981, b: 48.01452)), .green)
+        assert(UIColor(HunterLab(L: 26.86541, a: 75.48825, b: -199.77815)), .blue)
+        assert(UIColor(HunterLab(L: 88.73146, a: -42.98167, b: -14.72638)), .cyan)
+        assert(UIColor(HunterLab(L: 53.37114, a: 109.45704, b: -76.07908)), .magenta)
+        assert(UIColor(HunterLab(L: 96.32368, a: -21.05426, b: 55.71965)), .yellow)
+        assert(UIColor(HunterLab(L: 0.00000, a: 0.00000, b: 0.00000)), .black)
+        assert(UIColor(HunterLab(L: 30.13996, a: 0.00000, b: 0.00000)), .darkGray)
+        assert(UIColor(HunterLab(L: 46.26458, a: 0.00000, b: 0.00000)), .gray)
+        assert(UIColor(HunterLab(L: 63.40172, a: 0.00000, b: 0.00000)), .lightGray)
+        assert(UIColor(HunterLab(L: 0.00000, a: 0.00000, b: 0.00000), alpha: 0.0), .clear)
     }
 
     private func assert(_ color: UIColor, _ expected: UIColor) {
