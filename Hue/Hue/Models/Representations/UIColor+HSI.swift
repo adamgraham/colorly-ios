@@ -16,9 +16,9 @@ public extension UIColor {
 
         /// The hue component of the color, in the range [0, 360°].
         public var hue: CGFloat
-        /// The saturation component of the color, as a % in the normalized range [0, 1].
+        /// The saturation component of the color, in the range [0, 100%].
         public var saturation: CGFloat
-        /// The intensity component of the color, as a % in the normalized range [0, 1].
+        /// The intensity component of the color, in the range [0, 100%].
         public var intensity: CGFloat
 
     }
@@ -32,8 +32,8 @@ public extension UIColor {
         let s = 1.0 - (min(rgb.r, rgb.g, rgb.b) / i)
 
         return HSI(hue: self.hueComponent * 360.0,
-                   saturation: s.isNaN ? 0.0 : s,
-                   intensity: i)
+                   saturation: s.isNaN ? 0.0 : s * 100.0,
+                   intensity: i * 100.0)
     }
 
     /// Initializes a color from HSI components.
@@ -45,8 +45,8 @@ public extension UIColor {
         let b: CGFloat
 
         let h = hsi.hue
-        let s = hsi.saturation
-        let i = hsi.intensity
+        let s = hsi.saturation / 100.0
+        let i = hsi.intensity / 100.0
 
         if h < 120.0 {
             b = i * (1.0 - s)

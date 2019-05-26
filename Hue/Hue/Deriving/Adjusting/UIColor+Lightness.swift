@@ -16,7 +16,7 @@ public extension UIColor {
     /// - returns: The lighter color.
     func lighter(percent: CGFloat = 0.1) -> UIColor {
         var hsl = self.hsl
-        hsl.lightness = clamp(hsl.lightness + percent, 0.0, 1.0)
+        hsl.lightness = clamp(hsl.lightness + (percent * 100.0), 0.0, 100.0)
         return UIColor(hsl: hsl, alpha: self.alphaComponent)
     }
 
@@ -25,7 +25,7 @@ public extension UIColor {
     /// - returns: The darker color.
     func darker(percent: CGFloat = 0.1) -> UIColor {
         var hsl = self.hsl
-        hsl.lightness = clamp(hsl.lightness - percent, 0.0, 1.0)
+        hsl.lightness = clamp(hsl.lightness - (percent * 100.0), 0.0, 100.0)
         return UIColor(hsl: hsl, alpha: self.alphaComponent)
     }
     

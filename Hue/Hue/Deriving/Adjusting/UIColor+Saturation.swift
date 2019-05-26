@@ -16,7 +16,7 @@ public extension UIColor {
     /// - returns: The saturated color.
     func saturated(percent: CGFloat = 0.1) -> UIColor {
         var hsl = self.hsl
-        hsl.saturation = clamp(hsl.saturation + percent, 0.0, 1.0)
+        hsl.saturation = clamp(hsl.saturation + (percent * 100.0), 0.0, 100.0)
         return UIColor(hsl: hsl, alpha: self.alphaComponent)
     }
 
@@ -25,7 +25,7 @@ public extension UIColor {
     /// - returns: The desaturated color.
     func desaturated(percent: CGFloat = 0.1) -> UIColor {
         var hsl = self.hsl
-        hsl.saturation = clamp(hsl.saturation - percent, 0.0, 1.0)
+        hsl.saturation = clamp(hsl.saturation - (percent * 100.0), 0.0, 100.0)
         return UIColor(hsl: hsl, alpha: self.alphaComponent)
     }
 

@@ -16,9 +16,9 @@ public extension UIColor {
 
         /// The hue component of the color, in the range [0, 360°].
         public var hue: CGFloat
-        /// The saturation component of the color, as a % in the normalized range [0, 1].
+        /// The saturation component of the color, in the range [0, 100%].
         public var saturation: CGFloat
-        /// The value component of the color, as a % in the normalized range [0, 1].
+        /// The value component of the color, in the range [0, 100%].
         public var value: CGFloat
 
     }
@@ -27,8 +27,8 @@ public extension UIColor {
     var hsv: HSV {
         let hsb = self.hsbComponents
         return HSV(hue: hsb.h * 360.0,
-                   saturation: hsb.s,
-                   value: hsb.b)
+                   saturation: hsb.s * 100.0,
+                   value: hsb.b * 100.0)
     }
 
     /// Initializes a color from HSV components.
@@ -36,8 +36,8 @@ public extension UIColor {
     /// - parameter alpha: The alpha value of the color.
     convenience init(hsv: HSV, alpha: CGFloat = 1.0) {
         self.init(hue: hsv.hue / 360.0,
-                  saturation: hsv.saturation,
-                  brightness: hsv.value,
+                  saturation: hsv.saturation / 100.0,
+                  brightness: hsv.value / 100.0,
                   alpha: alpha)
     }
 

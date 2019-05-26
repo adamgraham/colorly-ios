@@ -14,34 +14,46 @@ class UIColor_HSITest: XCTestCase {
 
     typealias HSI = UIColor.HSI
 
+    private let accuracy: CGFloat = .ulpOfOne * 100.0
+
     func testHSI() {
-        XCTAssertEqual(UIColor.white.hsi, HSI(hue: 0.0, saturation: 0.0, intensity: 1.0))
-        XCTAssertEqual(UIColor.red.hsi, HSI(hue: 0.0, saturation: 1.0, intensity: 1.0/3.0))
-        XCTAssertEqual(UIColor.green.hsi, HSI(hue: 120.0, saturation: 1.0, intensity: 1.0/3.0))
-        XCTAssertEqual(UIColor.blue.hsi, HSI(hue: 240.0, saturation: 1.0, intensity: 1.0/3.0))
-        XCTAssertEqual(UIColor.cyan.hsi, HSI(hue: 180.0, saturation: 1.0, intensity: 2.0/3.0))
-        XCTAssertEqual(UIColor.magenta.hsi, HSI(hue: 300.0, saturation: 1.0, intensity: 2.0/3.0))
-        XCTAssertEqual(UIColor.yellow.hsi, HSI(hue: 60.0, saturation: 1.0, intensity: 2.0/3.0))
-        XCTAssertEqual(UIColor.black.hsi, HSI(hue: 0.0, saturation: 0.0, intensity: 0.0))
-        XCTAssertEqual(UIColor.darkGray.hsi, HSI(hue: 0.0, saturation: 0.0, intensity: 1.0/3.0))
-        XCTAssertEqual(UIColor.gray.hsi, HSI(hue: 0.0, saturation: 0.0, intensity: 0.5))
-        XCTAssertEqual(UIColor.lightGray.hsi, HSI(hue: 0.0, saturation: 0.0, intensity: 2.0/3.0))
-        XCTAssertEqual(UIColor.clear.hsi, HSI(hue: 0.0, saturation: 0.0, intensity: 0.0))
+        assert(UIColor.white.hsi, HSI(hue: 0.0, saturation: 0.0, intensity: 100.0))
+        assert(UIColor.red.hsi, HSI(hue: 0.0, saturation: 100.0, intensity: 100.0/3.0))
+        assert(UIColor.green.hsi, HSI(hue: 120.0, saturation: 100.0, intensity: 100.0/3.0))
+        assert(UIColor.blue.hsi, HSI(hue: 240.0, saturation: 100.0, intensity: 100.0/3.0))
+        assert(UIColor.cyan.hsi, HSI(hue: 180.0, saturation: 100.0, intensity: 200.0/3.0))
+        assert(UIColor.magenta.hsi, HSI(hue: 300.0, saturation: 100.0, intensity: 200.0/3.0))
+        assert(UIColor.yellow.hsi, HSI(hue: 60.0, saturation: 100.0, intensity: 200.0/3.0))
+        assert(UIColor.black.hsi, HSI(hue: 0.0, saturation: 0.0, intensity: 0.0))
+        assert(UIColor.darkGray.hsi, HSI(hue: 0.0, saturation: 0.0, intensity: 100.0/3.0))
+        assert(UIColor.gray.hsi, HSI(hue: 0.0, saturation: 0.0, intensity: 50.0))
+        assert(UIColor.lightGray.hsi, HSI(hue: 0.0, saturation: 0.0, intensity: 200.0/3.0))
+        assert(UIColor.clear.hsi, HSI(hue: 0.0, saturation: 0.0, intensity: 0.0))
     }
 
     func testHSIInit() {
-        XCTAssertEqual(UIColor(hsi: HSI(hue: 0.0, saturation: 0.0, intensity: 1.0)), .white)
-        XCTAssertEqual(UIColor(hsi: HSI(hue: 0.0, saturation: 1.0, intensity: 1.0/3.0)), .red)
-        XCTAssertEqual(UIColor(hsi: HSI(hue: 120.0, saturation: 1.0, intensity: 1.0/3.0)), .green)
-        XCTAssertEqual(UIColor(hsi: HSI(hue: 240.0, saturation: 1.0, intensity: 1.0/3.0)), .blue)
-        XCTAssertEqual(UIColor(hsi: HSI(hue: 180.0, saturation: 1.0, intensity: 2.0/3.0)), .cyan)
-        XCTAssertEqual(UIColor(hsi: HSI(hue: 300.0, saturation: 1.0, intensity: 2.0/3.0)), .magenta)
-        XCTAssertEqual(UIColor(hsi: HSI(hue: 60.0, saturation: 1.0, intensity: 2.0/3.0)), .yellow)
-        XCTAssertEqual(UIColor(hsi: HSI(hue: 0.0, saturation: 0.0, intensity: 0.0)), .black)
-        XCTAssertEqual(UIColor(hsi: HSI(hue: 0.0, saturation: 0.0, intensity: 1.0/3.0)), .darkGray)
-        XCTAssertEqual(UIColor(hsi: HSI(hue: 0.0, saturation: 0.0, intensity: 0.5)), .gray)
-        XCTAssertEqual(UIColor(hsi: HSI(hue: 0.0, saturation: 0.0, intensity: 2.0/3.0)), .lightGray)
-        XCTAssertEqual(UIColor(hsi: HSI(hue: 0.0, saturation: 0.0, intensity: 0.0), alpha: 0.0), .clear)
+        assert(UIColor(hsi: HSI(hue: 0.0, saturation: 0.0, intensity: 100.0)), .white)
+        assert(UIColor(hsi: HSI(hue: 0.0, saturation: 100.0, intensity: 100.0/3.0)), .red)
+        assert(UIColor(hsi: HSI(hue: 120.0, saturation: 100.0, intensity: 100.0/3.0)), .green)
+        assert(UIColor(hsi: HSI(hue: 240.0, saturation: 100.0, intensity: 100.0/3.0)), .blue)
+        assert(UIColor(hsi: HSI(hue: 180.0, saturation: 100.0, intensity: 200.0/3.0)), .cyan)
+        assert(UIColor(hsi: HSI(hue: 300.0, saturation: 100.0, intensity: 200.0/3.0)), .magenta)
+        assert(UIColor(hsi: HSI(hue: 60.0, saturation: 100.0, intensity: 200.0/3.0)), .yellow)
+        assert(UIColor(hsi: HSI(hue: 0.0, saturation: 0.0, intensity: 0.0)), .black)
+        assert(UIColor(hsi: HSI(hue: 0.0, saturation: 0.0, intensity: 100.0/3.0)), .darkGray)
+        assert(UIColor(hsi: HSI(hue: 0.0, saturation: 0.0, intensity: 50.0)), .gray)
+        assert(UIColor(hsi: HSI(hue: 0.0, saturation: 0.0, intensity: 200.0/3.0)), .lightGray)
+        assert(UIColor(hsi: HSI(hue: 0.0, saturation: 0.0, intensity: 0.0), alpha: 0.0), .clear)
+    }
+
+    private func assert(_ color: UIColor, _ expected: UIColor) {
+        XCTAssertEqual(color, expected, accuracy: self.accuracy)
+    }
+
+    private func assert(_ hsi: HSI, _ expected: HSI) {
+        XCTAssertEqual(hsi.hue, expected.hue, accuracy: self.accuracy)
+        XCTAssertEqual(hsi.saturation, expected.saturation, accuracy: self.accuracy)
+        XCTAssertEqual(hsi.intensity, expected.intensity, accuracy: self.accuracy)
     }
 
 }

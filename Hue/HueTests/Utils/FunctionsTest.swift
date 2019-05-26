@@ -49,12 +49,13 @@ class FunctionsTest: XCTestCase {
     }
 
     func testIsZero() {
-        XCTAssertTrue(CGFloat(0.0).isZero(accuracy: .ulpOfOne))
-        XCTAssertTrue(CGFloat.ulpOfOne.isZero(accuracy: .ulpOfOne))
-        XCTAssertTrue((-CGFloat.ulpOfOne).isZero(accuracy: .ulpOfOne))
-        XCTAssertTrue((CGFloat.ulpOfOne / 2.0).isZero(accuracy: .ulpOfOne))
-        XCTAssertFalse((CGFloat.ulpOfOne * 2.0).isZero(accuracy: .ulpOfOne))
-        XCTAssertFalse((CGFloat.ulpOfOne * -2.0).isZero(accuracy: .ulpOfOne))
+        let accuracy = CGFloat.ulpOfOne
+        XCTAssertTrue(CGFloat(0.0).isZero(accuracy: accuracy))
+        XCTAssertTrue(CGFloat.ulpOfOne.isZero(accuracy: accuracy))
+        XCTAssertTrue((-CGFloat.ulpOfOne).isZero(accuracy: accuracy))
+        XCTAssertTrue((CGFloat.ulpOfOne / 2.0).isZero(accuracy: accuracy))
+        XCTAssertFalse((CGFloat.ulpOfOne * 2.0).isZero(accuracy: accuracy))
+        XCTAssertFalse((CGFloat.ulpOfOne * -2.0).isZero(accuracy: accuracy))
     }
 
 }

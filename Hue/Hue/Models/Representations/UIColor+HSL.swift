@@ -16,9 +16,9 @@ public extension UIColor {
 
         /// The hue component of the color, in the range [0, 360°].
         public var hue: CGFloat
-        /// The saturation component of the color, as a % in the normalized range [0, 1].
+        /// The saturation component of the color, in the range [0, 100%].
         public var saturation: CGFloat
-        /// The lightness component of the color, as a % in the normalized range [0, 1].
+        /// The lightness component of the color, in the range [0, 100%].
         public var lightness: CGFloat
 
     }
@@ -38,23 +38,23 @@ public extension UIColor {
         }
 
         return HSL(hue: hsb.h * 360.0,
-                   saturation: hsb.s,
-                   lightness: l)
+                   saturation: hsb.s * 100.0,
+                   lightness: l * 100.0)
     }
 
     /// Initializes a color from HSL components.
     /// - parameter hsl: The components used to initialize the color.
     /// - parameter alpha: The alpha value of the color.
     convenience init(hsl: HSL, alpha: CGFloat = 1.0) {
-        let h = hsl.hue
-        let t = hsl.saturation * ((hsl.lightness < 0.5) ? hsl.lightness : (1.0 - hsl.lightness))
-        let b = hsl.lightness + t
-        let s = (hsl.lightness > 0.0) ? (2.0 * t / b) : 0.0
+        let h = hsl.hue / 360.0
+        var s = hsl.saturation / 100.0
+        let l = hsl.lightness / 100.0
 
-        self.init(hue: h / 360.0,
-                  saturation: s,
-                  brightness: b,
-                  alpha: alpha)
+        let t = s * ((l < 0.5) ? l : (1.0 - l))
+        let b = l + t
+        s = (l > 0.0) ? (2.0 * t / b) : 0.0
+
+        self.init(hue: h, saturation: s, brightness: b, alpha: alpha)
     }
 
 }
