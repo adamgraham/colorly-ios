@@ -25,12 +25,10 @@ public extension UIColor {
 
     /// The HSV components of the color.
     var hsv: HSV {
-        var (h, s, v) = (CGFloat(), CGFloat(), CGFloat())
-        getHue(&h, saturation: &s, brightness: &v, alpha: nil)
-
-        return HSV(hue: h * 360.0,
-                   saturation: s,
-                   value: v)
+        let hsb = self.hsbComponents
+        return HSV(hue: hsb.h * 360.0,
+                   saturation: hsb.s,
+                   value: hsb.b)
     }
 
     /// Initializes a color from HSV components.

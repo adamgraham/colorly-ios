@@ -27,13 +27,11 @@ public extension UIColor {
 
     /// The RGBA components of the color.
     var rgba: RGBA {
-        var (r, g, b, a) = (CGFloat(), CGFloat(), CGFloat(), CGFloat())
-        getRed(&r, green: &g, blue: &b, alpha: &a)
-
-        return RGBA(red: r * 255.0,
-                    green: g * 255.0,
-                    blue: b * 255.0,
-                    alpha: a * 255.0)
+        let rgba = self.rgbaComponents
+        return RGBA(red: rgba.r * 255.0,
+                    green: rgba.g * 255.0,
+                    blue: rgba.b * 255.0,
+                    alpha: rgba.a * 255.0)
     }
 
     /// Initializes a color from RGBA components.

@@ -25,12 +25,11 @@ public extension UIColor {
 
     /// The YIQ components of the color.
     var yiq: YIQ {
-        var (r, g, b) = (CGFloat(), CGFloat(), CGFloat())
-        getRed(&r, green: &g, blue: &b, alpha: nil)
+        let rgb = self.rgbComponents
 
-        let Y =  (0.299 * r) +  (0.587 * g) +  (0.114 * b)
-        let I = (0.5959 * r) - (0.2746 * g) - (0.3213 * b)
-        let Q = (0.2115 * r) - (0.5227 * g) + (0.3112 * b)
+        let Y =  (0.299 * rgb.r) +  (0.587 * rgb.g) +  (0.114 * rgb.b)
+        let I = (0.5959 * rgb.r) - (0.2746 * rgb.g) - (0.3213 * rgb.b)
+        let Q = (0.2115 * rgb.r) - (0.5227 * rgb.g) + (0.3112 * rgb.b)
 
         return YIQ(Y: Y, I: I, Q: Q)
     }

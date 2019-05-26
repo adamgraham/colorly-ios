@@ -32,8 +32,7 @@ public extension UIColor {
     /// - parameter encoding: The signal encoding with which the components are derived.
     /// - returns: The YUV components of the color.
     func yuv(_ encoding: SignalEncoding) -> YUV {
-        var (r, g, b) = (CGFloat(), CGFloat(), CGFloat())
-        getRed(&r, green: &g, blue: &b, alpha: nil)
+        let rgb = self.rgbComponents
 
         let Y: CGFloat
         let U: CGFloat
@@ -41,13 +40,13 @@ public extension UIColor {
 
         switch encoding {
         case .standard:
-            Y =    (0.299 * r) +   (0.587 * g) +   (0.114 * b)
-            U = -(0.14713 * r) - (0.28886 * g) +   (0.436 * b)
-            V =    (0.615 * r) - (0.51499 * g) - (0.10001 * b)
+            Y =    (0.299 * rgb.r) +   (0.587 * rgb.g) +   (0.114 * rgb.b)
+            U = -(0.14713 * rgb.r) - (0.28886 * rgb.g) +   (0.436 * rgb.b)
+            V =    (0.615 * rgb.r) - (0.51499 * rgb.g) - (0.10001 * rgb.b)
         case .hdtv:
-            Y =   (0.2126 * r) +  (0.7152 * g) +  (0.0722 * b)
-            U = -(0.09991 * r) - (0.33609 * g) +   (0.436 * b)
-            V =    (0.615 * r) - (0.55861 * g) - (0.05639 * b)
+            Y =   (0.2126 * rgb.r) +  (0.7152 * rgb.g) +  (0.0722 * rgb.b)
+            U = -(0.09991 * rgb.r) - (0.33609 * rgb.g) +   (0.436 * rgb.b)
+            V =    (0.615 * rgb.r) - (0.55861 * rgb.g) - (0.05639 * rgb.b)
         }
 
         return YUV(Y: Y, U: U, V: V)

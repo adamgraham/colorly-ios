@@ -27,13 +27,12 @@ public extension UIColor {
 
     /// The CMYK components of the color.
     var cmyk: CMYK {
-        var (r, g, b) = (CGFloat(), CGFloat(), CGFloat())
-        getRed(&r, green: &g, blue: &b, alpha: nil)
+        let rgb = self.rgbComponents
+        let k = 1.0 - max(rgb.r, rgb.g, rgb.b)
 
-        let k = 1.0 - max(r, g, b)
-        var c = (1.0 - r - k) / (1.0 - k)
-        var m = (1.0 - g - k) / (1.0 - k)
-        var y = (1.0 - b - k) / (1.0 - k)
+        var c = (1.0 - rgb.r - k) / (1.0 - k)
+        var m = (1.0 - rgb.g - k) / (1.0 - k)
+        var y = (1.0 - rgb.b - k) / (1.0 - k)
 
         if c.isNaN { c = 0.0 }
         if m.isNaN { m = 0.0 }

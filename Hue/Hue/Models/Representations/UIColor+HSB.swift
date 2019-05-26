@@ -25,12 +25,10 @@ public extension UIColor {
 
     /// The HSB components of the color.
     var hsb: HSB {
-        var (h, s, b) = (CGFloat(), CGFloat(), CGFloat())
-        getHue(&h, saturation: &s, brightness: &b, alpha: nil)
-
-        return HSB(hue: h * 360.0,
-                   saturation: s,
-                   brightness: b)
+        let hsb = self.hsbComponents
+        return HSB(hue: hsb.h * 360.0,
+                   saturation: hsb.s,
+                   brightness: hsb.b)
     }
 
     /// Initializes a color from HSB components.

@@ -34,12 +34,10 @@ public extension UIColor {
 
     /// The hexadecimal integer value of the color in the RGB format (RRGGBB), e.g., 0xffff00.
     var hex: Int {
-        var (r, g, b) = (CGFloat(), CGFloat(), CGFloat())
-        getRed(&r, green: &g, blue: &b, alpha: nil)
-
-        return (Int(round(r * 0xff)) << 16) |
-               (Int(round(g * 0xff)) << 08) |
-               (Int(round(b * 0xff)) << 00)
+        let rgb = self.rgbComponents
+        return (Int(round(rgb.r * 0xff)) << 16) |
+               (Int(round(rgb.g * 0xff)) << 08) |
+               (Int(round(rgb.b * 0xff)) << 00)
     }
 
     /// The hexadecimal string value of the color in the RGB format (RRGGBB), e.g., "#ffff00".
@@ -74,13 +72,11 @@ public extension UIColor {
 
     /// The hexadecimal integer value of the color in the ARGB format (AARRGGBB), e.g., 0x80ffff00.
     var hex_ARGB: Int {
-        var (a, r, g, b) = (CGFloat(), CGFloat(), CGFloat(), CGFloat())
-        getRed(&r, green: &g, blue: &b, alpha: &a)
-
-        return (Int(round(a * 0xff)) << 24) |
-               (Int(round(r * 0xff)) << 16) |
-               (Int(round(g * 0xff)) << 08) |
-               (Int(round(b * 0xff)) << 00)
+        let argb = self.argbComponents
+        return (Int(round(argb.a * 0xff)) << 24) |
+               (Int(round(argb.r * 0xff)) << 16) |
+               (Int(round(argb.g * 0xff)) << 08) |
+               (Int(round(argb.b * 0xff)) << 00)
     }
 
     /// The hexadecimal string value of the color in the ARGB format (AARRGGBB), e.g., "#80ffff00".
@@ -115,13 +111,11 @@ public extension UIColor {
 
     /// The hexadecimal integer value of the color in the RGBA format (RRGGBBAA), e.g., 0xffff0080.
     var hex_RGBA: Int {
-        var (r, g, b, a) = (CGFloat(), CGFloat(), CGFloat(), CGFloat())
-        getRed(&r, green: &g, blue: &b, alpha: &a)
-
-        return (Int(round(r * 0xff)) << 24) |
-               (Int(round(g * 0xff)) << 16) |
-               (Int(round(b * 0xff)) << 08) |
-               (Int(round(a * 0xff)) << 00)
+        let rgba = self.rgbaComponents
+        return (Int(round(rgba.r * 0xff)) << 24) |
+               (Int(round(rgba.g * 0xff)) << 16) |
+               (Int(round(rgba.b * 0xff)) << 08) |
+               (Int(round(rgba.a * 0xff)) << 00)
     }
 
     /// The hexadecimal string value of the color in the RGBA format (RRGGBBAA), e.g., "#ffff0080".

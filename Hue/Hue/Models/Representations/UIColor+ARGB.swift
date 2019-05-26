@@ -27,13 +27,11 @@ public extension UIColor {
 
     /// The ARGB components of the color.
     var argb: ARGB {
-        var (a, r, g, b) = (CGFloat(), CGFloat(), CGFloat(), CGFloat())
-        getRed(&r, green: &g, blue: &b, alpha: &a)
-
-        return ARGB(alpha: a * 255.0,
-                    red: r * 255.0,
-                    green: g * 255.0,
-                    blue: b * 255.0)
+        let argb = self.argbComponents
+        return ARGB(alpha: argb.a * 255.0,
+                    red: argb.r * 255.0,
+                    green: argb.g * 255.0,
+                    blue: argb.b * 255.0)
     }
 
     /// Initializes a color from ARGB components.

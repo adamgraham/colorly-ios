@@ -25,24 +25,22 @@ public extension UIColor {
 
     /// The HSL components of the color.
     var hsl: HSL {
-        var (h, s, b) = (CGFloat(), CGFloat(), CGFloat())
-        getHue(&h, saturation: &s, brightness: &b, alpha: nil)
-
-        let l = ((2.0 - s) * b) / 2.0
+        var hsb = self.hsbComponents
+        let l = ((2.0 - hsb.s) * hsb.b) / 2.0
 
         switch l {
         case 0.0:
             break
         case 1.0:
-            s = 0.0
+            hsb.s = 0.0
         case 0.0..<0.5:
-            s = (s * b) / (l * 2.0)
+            hsb.s = (hsb.s * hsb.b) / (l * 2.0)
         default:
-            s = (s * b) / (2.0 - l * 2.0)
+            hsb.s = (hsb.s * hsb.b) / (2.0 - l * 2.0)
         }
 
-        return HSL(hue: h * 360.0,
-                   saturation: s,
+        return HSL(hue: hsb.h * 360.0,
+                   saturation: hsb.s,
                    lightness: l)
     }
 

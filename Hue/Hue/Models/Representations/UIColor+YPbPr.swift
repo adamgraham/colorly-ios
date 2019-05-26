@@ -32,8 +32,7 @@ public extension UIColor {
     /// - parameter encoding: The signal encoding with which the components are derived.
     /// - returns: The YPbPr components of the color.
     func yPbPr(_ encoding: SignalEncoding) -> YPbPr {
-        var (r, g, b) = (CGFloat(), CGFloat(), CGFloat())
-        getRed(&r, green: &g, blue: &b, alpha: nil)
+        let rgb = self.rgbComponents
 
         let kR: CGFloat
         let kG: CGFloat
@@ -50,9 +49,9 @@ public extension UIColor {
             kB = 0.0722
         }
 
-        let Y = (r * kR) + (g * kG) + (b * kB)
-        let Pb = 0.5 * ((b - Y) / (1.0 - kB))
-        let Pr = 0.5 * ((r - Y) / (1.0 - kR))
+        let Y = (rgb.r * kR) + (rgb.g * kG) + (rgb.b * kB)
+        let Pb = 0.5 * ((rgb.b - Y) / (1.0 - kB))
+        let Pr = 0.5 * ((rgb.r - Y) / (1.0 - kR))
 
         return YPbPr(Y: Y, Pb: Pb, Pr: Pr)
     }

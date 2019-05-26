@@ -25,12 +25,10 @@ public extension UIColor {
 
     /// The RGB components of the color.
     var rgb: RGB {
-        var (r, g, b) = (CGFloat(), CGFloat(), CGFloat())
-        getRed(&r, green: &g, blue: &b, alpha: nil)
-
-        return RGB(red: r * 255.0,
-                   green: g * 255.0,
-                   blue: b * 255.0)
+        let rgb = self.rgbComponents
+        return RGB(red: rgb.r * 255.0,
+                   green: rgb.g * 255.0,
+                   blue: rgb.b * 255.0)
     }
 
     /// Initializes a color from RGB components.
