@@ -39,8 +39,8 @@ public extension UIColor {
      mixing the start color with the end color with a custom array of distributed stops. This
      function can be used to generate a gradient that is not evenly distributed.
 
-     - parameter start: The color with a stop of `0%`.
-     - parameter end: The color with a stop of `100%`.
+     - parameter start: The color at a stop of `0%`.
+     - parameter end: The color at a stop of `100%`.
      - parameter customStops: The array of custom stop percentages. The start and end color are
                               not included by default; therefore, a value of `0.0` and `1.0` should
                               be included in the array, if desired.

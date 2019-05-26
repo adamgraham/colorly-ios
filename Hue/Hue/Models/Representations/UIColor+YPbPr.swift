@@ -29,6 +29,8 @@ public extension UIColor {
     }
 
     /// The YPbPr components of the color using a given encoding.
+    /// - parameter encoding: The signal encoding with which the components are derived.
+    /// - returns: The YPbPr components of the color.
     func yPbPr(_ encoding: SignalEncoding) -> YPbPr {
         var (r, g, b) = (CGFloat(), CGFloat(), CGFloat())
         getRed(&r, green: &g, blue: &b, alpha: nil)

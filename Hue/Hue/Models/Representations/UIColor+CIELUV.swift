@@ -45,9 +45,14 @@ public extension UIColor {
         return self.Luv(illuminant: .d65, observer: .two)
     }
 
-    /// The CIELUV components of the color using a given illuminant and standard observer.
-    /// - parameter illuminant: The illuminant used to calculate tristimulus values.
-    /// - parameter observer: The standard observer used to calculate tristimulus values.
+    /**
+     The CIELUV components of the color using a given illuminant and standard observer.
+
+     - parameter illuminant: The illuminant used to calculate tristimulus values.
+     - parameter observer: The standard observer used to calculate tristimulus values.
+
+     - returns: The CIELUV components of the color.
+     */
     func Luv(illuminant: Illuminant, observer: StandardObserver) -> CIELUV {
         let fu = Constant.fu
         let fv = Constant.fv
@@ -70,11 +75,14 @@ public extension UIColor {
         return CIELUV(L: L, u: u, v: v)
     }
 
-    /// Initializes a color from CIELUV components.
-    /// - parameter Luv: The components used to initialize the color.
-    /// - parameter illuminant: The illuminant used to calculate tristimulus values.
-    /// - parameter observer: The standard observer used calculate tristimulus values.
-    /// - parameter alpha: The alpha value of the color.
+    /**
+     Initializes a color from CIELUV components.
+
+     - parameter Luv: The components used to initialize the color.
+     - parameter illuminant: The illuminant used to calculate tristimulus values.
+     - parameter observer: The standard observer used calculate tristimulus values.
+     - parameter alpha: The alpha value of the color.
+     */
     convenience init(Luv: CIELUV,
                      illuminant: Illuminant = .d65,
                      observer: StandardObserver = .two,

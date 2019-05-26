@@ -29,6 +29,8 @@ public extension UIColor {
     }
 
     /// The YCbCr components of the color using a given encoding.
+    /// - parameter encoding: The signal encoding with which the components are derived.
+    /// - returns: The YCbCr components of the color.
     func yCbCr(_ encoding: SignalEncoding) -> YCbCr {
         let yPbPr = self.yPbPr(encoding)
 

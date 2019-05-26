@@ -8,10 +8,10 @@
 
 import UIKit
 
-/// An extension to instantiate and represent RGB colors with hexadecimal values.
+/// An extension to instantiate and represent RGB colors as hexadecimal values.
 public extension UIColor {
 
-    /// Initializes a color using a hexadecimal integer in the RGB format (RRGGBB), e.g., 0xffff00.
+    /// Initializes a color from a hexadecimal integer in the RGB format (RRGGBB), e.g., 0xffff00.
     /// - parameter hex: The hexadecimal value of the color.
     /// - parameter alpha: The alpha value of the color.
     convenience init(hex: Int, alpha: CGFloat = 1.0) {
@@ -24,7 +24,7 @@ public extension UIColor {
         self.init(red: rgb.r, green: rgb.g, blue: rgb.b, alpha: alpha)
     }
 
-    /// Initializes a color using a hexadecimal string in the RGB format (RRGGBB), e.g., "#ffff00".
+    /// Initializes a color from a hexadecimal string in the RGB format (RRGGBB), e.g., "#ffff00".
     /// - parameter hex: The hexadecimal string value of the color.
     /// - parameter alpha: The alpha value of the color.
     convenience init?(hex: String, alpha: CGFloat = 1.0) {
@@ -49,10 +49,10 @@ public extension UIColor {
 
 }
 
-/// An extension to instantiate and represent ARGB colors with hexadecimal values.
+/// An extension to instantiate and represent ARGB colors as hexadecimal values.
 public extension UIColor {
 
-    /// Initializes a color using a hexadecimal integer in the ARGB format (AARRGGBB), e.g., 0x80ffff00.
+    /// Initializes a color from a hexadecimal integer in the ARGB format (AARRGGBB), e.g., 0x80ffff00.
     /// - parameter hex: The hexadecimal value of the color.
     convenience init(hex_ARGB hex: Int) {
         let argb = (
@@ -65,7 +65,7 @@ public extension UIColor {
         self.init(red: argb.r, green: argb.g, blue: argb.b, alpha: argb.a)
     }
 
-    /// Initializes a color using a hexadecimal string in the ARGB format (AARRGGBB), e.g., "#80ffff00".
+    /// Initializes a color from a hexadecimal string in the ARGB format (AARRGGBB), e.g., "#80ffff00".
     /// - parameter hex: The hexadecimal string value of the color.
     convenience init?(hex_ARGB hex: String) {
         guard let value = Int(hex: hex) else { return nil }
@@ -90,10 +90,10 @@ public extension UIColor {
 
 }
 
-/// An extension to instantiate and represent RGBA colors with hexadecimal values.
+/// An extension to instantiate and represent RGBA colors as hexadecimal values.
 public extension UIColor {
 
-    /// Initializes a color using a hexadecimal integer in the RGBA format (RRGGBBAA), e.g., 0xffff0080.
+    /// Initializes a color from a hexadecimal integer in the RGBA format (RRGGBBAA), e.g., 0xffff0080.
     /// - parameter hex: The hexadecimal value of the color.
     convenience init(hex_RGBA hex: Int) {
         let rgba = (
@@ -106,7 +106,7 @@ public extension UIColor {
         self.init(red: rgba.r, green: rgba.g, blue: rgba.b, alpha: rgba.a)
     }
 
-    /// Initializes a color using a hexadecimal string in the RGBA format (RRGGBBAA), e.g., "#ffff0080".
+    /// Initializes a color from a hexadecimal string in the RGBA format (RRGGBBAA), e.g., "#ffff0080".
     /// - parameter hex: The hexadecimal string value of the color.
     convenience init?(hex_RGBA hex: String) {
         guard let value = Int(hex: hex) else { return nil }

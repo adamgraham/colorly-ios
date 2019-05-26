@@ -28,9 +28,14 @@ public extension UIColor {
         return self.hunterLab(illuminant: .d65, observer: .two)
     }
 
-    /// The Hunter Lab components of the color using a given illuminant and standard observer.
-    /// - parameter illuminant: The illuminant used to calculate tristimulus values.
-    /// - parameter observer: The standard observer used to calculate tristimulus values.
+    /**
+     The Hunter Lab components of the color using a given illuminant and standard observer.
+
+     - parameter illuminant: The illuminant used to calculate tristimulus values.
+     - parameter observer: The standard observer used to calculate tristimulus values.
+
+     - returns: The Hunter Lab components of the color.
+     */
     func hunterLab(illuminant: Illuminant, observer: StandardObserver) -> HunterLab {
         let XYZ = self.XYZ
         let ref = illuminant.whitePoint(for: observer)
@@ -54,11 +59,14 @@ public extension UIColor {
         return HunterLab(L: L, a: a, b: b)
     }
 
-    /// Initializes a color from Hunter Lab components.
-    /// - parameter hunterLab: The components used to initialize the color.
-    /// - parameter illuminant: The illuminant used to calculate tristimulus values.
-    /// - parameter observer: The standard observer used calculate tristimulus values.
-    /// - parameter alpha: The alpha value of the color.
+    /**
+     Initializes a color from Hunter Lab components.
+
+     - parameter hunterLab: The components used to initialize the color.
+     - parameter illuminant: The illuminant used to calculate tristimulus values.
+     - parameter observer: The standard observer used calculate tristimulus values.
+     - parameter alpha: The alpha value of the color.
+     */
     convenience init(hunterLab: HunterLab,
                      illuminant: Illuminant = .d65,
                      observer: StandardObserver = .two,

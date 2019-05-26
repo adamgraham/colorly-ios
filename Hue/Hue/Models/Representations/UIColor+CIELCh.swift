@@ -23,11 +23,16 @@ public extension UIColor {
 
     }
 
-    /// Calculates the CIELCh° components from a lightness value and a pair of
-    /// chromaticity coordinates.
-    /// - parameter L: The lightness value of the color.
-    /// - parameter x: The x-axis chromaticity coordinate of the color.
-    /// - parameter y: The y-axis chromaticity coordinate of the color.
+    /**
+     Calculates the CIELCh° components from a lightness value and a pair of chromaticity
+     coordinates.
+
+     - parameter L: The lightness value of the color.
+     - parameter x: The x-axis chromaticity coordinate of the color.
+     - parameter y: The y-axis chromaticity coordinate of the color.
+
+     - returns: The CIELCh° components of the color.
+     */
     private func LCh(L: CGFloat, x: CGFloat, y: CGFloat) -> CIELCh {
         let C = sqrt((x * x) + (y * y))
         var h = atan2(y, x)
@@ -50,19 +55,27 @@ public extension UIColor {
         return self.LCh_ab(illuminant: .d65, observer: .two)
     }
 
-    /// The CIELCh°(ab) components of the color using a given illuminant and standard observer.
-    /// - parameter illuminant: The illuminant used to calculate tristimulus values.
-    /// - parameter observer: The standard observer used to calculate tristimulus values.
+    /**
+     The CIELCh°(ab) components of the color using a given illuminant and standard observer.
+
+     - parameter illuminant: The illuminant used to calculate tristimulus values.
+     - parameter observer: The standard observer used to calculate tristimulus values.
+
+     - returns: The CIELCh°(ab) components of the color.
+     */
     func LCh_ab(illuminant: Illuminant, observer: StandardObserver) -> CIELCh {
         let Lab = self.Lab(illuminant: illuminant, observer: observer)
         return LCh(L: Lab.L, x: Lab.a, y: Lab.b)
     }
 
-    /// Initializes a color from CIELCh°(ab) components.
-    /// - parameter LCh: The components used to initialize the color.
-    /// - parameter illuminant: The illuminant used to calculate tristimulus values.
-    /// - parameter observer: The standard observer used calculate tristimulus values.
-    /// - parameter alpha: The alpha value of the color.
+    /**
+     Initializes a color from CIELCh°(ab) components.
+
+     - parameter LCh: The components used to initialize the color.
+     - parameter illuminant: The illuminant used to calculate tristimulus values.
+     - parameter observer: The standard observer used calculate tristimulus values.
+     - parameter alpha: The alpha value of the color.
+     */
     convenience init(LCh_ab LCh: CIELCh,
                      illuminant: Illuminant = .d65,
                      observer: StandardObserver = .two,
@@ -84,19 +97,27 @@ public extension UIColor {
         return self.LCh_uv(illuminant: .d65, observer: .two)
     }
 
-    /// The CIELCh°(uv) components of the color using a given illuminant and standard observer.
-    /// - parameter illuminant: The illuminant used to calculate tristimulus values.
-    /// - parameter observer: The standard observer used to calculate tristimulus values.
+    /**
+     The CIELCh°(uv) components of the color using a given illuminant and standard observer.
+
+     - parameter illuminant: The illuminant used to calculate tristimulus values.
+     - parameter observer: The standard observer used to calculate tristimulus values.
+
+     - returns: The CIELCh°(uv) components of the color.
+     */
     func LCh_uv(illuminant: Illuminant, observer: StandardObserver) -> CIELCh {
         let Luv = self.Luv(illuminant: illuminant, observer: observer)
         return LCh(L: Luv.L, x: Luv.u, y: Luv.v)
     }
 
-    /// Initializes a color from CIELCh°(uv) components.
-    /// - parameter LCh: The components used to initialize the color.
-    /// - parameter illuminant: The illuminant used to calculate tristimulus values.
-    /// - parameter observer: The standard observer used calculate tristimulus values.
-    /// - parameter alpha: The alpha value of the color.
+    /**
+     Initializes a color from CIELCh°(uv) components.
+
+     - parameter LCh: The components used to initialize the color.
+     - parameter illuminant: The illuminant used to calculate tristimulus values.
+     - parameter observer: The standard observer used calculate tristimulus values.
+     - parameter alpha: The alpha value of the color.
+     */
     convenience init(LCh_uv LCh: CIELCh,
                      illuminant: Illuminant = .d65,
                      observer: StandardObserver = .two,

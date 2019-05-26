@@ -8,8 +8,14 @@
 
 import UIKit
 
+/// An extension to declare Pantone colors.
 public extension UIColor {
 
+    /// The Pantone colors of the year color palette.
+    ///
+    /// Pantone is a limited liability company best known for its Pantone Matching System
+    /// (PMS), a proprietary color space used in a variety of industries, notably printing, and
+    /// some manufacturing of colored paint, fabric, and plastics.
     struct Pantone {
 
         /// Pantone 15-4020, #9BB7D4, Color of the year 2000

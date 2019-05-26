@@ -8,7 +8,7 @@
 
 import UIKit
 
-/// An extension to provide color quantization processing.
+/// An extension to perform color quantization processing.
 public extension UIColor {
 
     /// A cache of all computed cluster ranges.

@@ -8,7 +8,7 @@
 
 import UIKit
 
-/// An extension to define standard illuminants.
+/// An extension to describe standard illuminants.
 public extension UIColor {
 
     /// A standard illuminant defined by the International Commission on Illumination (CIE)
@@ -61,7 +61,7 @@ public extension UIColor {
 
 }
 
-/// An extension to define CIE color-mapping functions called standard observers.
+/// An extension to describe CIE color-mapping functions called standard observers.
 public extension UIColor {
 
     /// A CIE color-mapping function called the standard observer which represents an
@@ -77,7 +77,7 @@ public extension UIColor {
 
 }
 
-/// An extension to add reference white XYZ tristimulus values.
+/// An extension to define reference white XYZ tristimulus values.
 public extension UIColor.Illuminant {
 
     /// The XYZ tristimulus values of the white point (often referred to as reference white)

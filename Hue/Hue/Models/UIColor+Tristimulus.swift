@@ -8,7 +8,7 @@
 
 import UIKit
 
-/// An extension to define the tristimulus system.
+/// An extension to declare the tristimulus system.
 public extension UIColor {
 
     /// Tristimulus system, a system for visually matching a color under standardized

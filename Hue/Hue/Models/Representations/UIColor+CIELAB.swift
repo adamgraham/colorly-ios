@@ -39,9 +39,14 @@ public extension UIColor {
         return self.Lab(illuminant: .d65, observer: .two)
     }
 
-    /// The CIELAB components of the color using a given illuminant and standard observer.
-    /// - parameter illuminant: The illuminant used to calculate tristimulus values.
-    /// - parameter observer: The standard observer used to calculate tristimulus values.
+    /**
+     The CIELAB components of the color using a given illuminant and standard observer.
+
+     - parameter illuminant: The illuminant used to calculate tristimulus values.
+     - parameter observer: The standard observer used to calculate tristimulus values.
+
+     - returns: The CIELAB components of the color.
+     */
     func Lab(illuminant: Illuminant, observer: StandardObserver) -> CIELAB {
         let fn = { (t: CGFloat) -> CGFloat in
             if t > Constant.δ³ { return pow(t, Constant.⅓) }
@@ -62,11 +67,14 @@ public extension UIColor {
         return CIELAB(L: L, a: a, b: b)
     }
 
-    /// Initializes a color from CIELAB components.
-    /// - parameter Lab: The components used to initialize the color.
-    /// - parameter illuminant: The illuminant used to calculate tristimulus values.
-    /// - parameter observer: The standard observer used calculate tristimulus values.
-    /// - parameter alpha: The alpha value of the color.
+    /**
+     Initializes a color from CIELAB components.
+
+     - parameter Lab: The components used to initialize the color.
+     - parameter illuminant: The illuminant used to calculate tristimulus values.
+     - parameter observer: The standard observer used calculate tristimulus values.
+     - parameter alpha: The alpha value of the color.
+     */
     convenience init(Lab: CIELAB,
                      illuminant: Illuminant = .d65,
                      observer: StandardObserver = .two,

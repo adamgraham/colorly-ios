@@ -8,15 +8,12 @@
 
 import UIKit
 
-/// An extension to adjust the hue value of a color.
+/// An extension to adjust the hue of a color.
 public extension UIColor {
 
-    /**
-     Returns a new color by adjusting the color's hue by a given amount.
-
-     - parameter degrees: The amount to adjust the hue, in the range [-360°, 360°].
-     - returns: The hue adjusted color.
-     */
+    /// Returns a new instance of the color with an adjusted hue.
+    /// - parameter degrees: The amount to adjust the hue, in the range [-360°, 360°].
+    /// - returns: The hue adjusted color.
     func adjustingHue(by degrees: CGFloat) -> UIColor {
         let degrees = rotatingClamp(degrees, 0.0, 360.0)
         var hsb = self.hsb

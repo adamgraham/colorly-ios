@@ -11,8 +11,9 @@ import UIKit
 /// An extension to describe various color models.
 public extension UIColor {
 
-    /// An abstract mathematical model describing the ways colors can be represented as
-    /// tuples of numbers, typically as three or four values or color components.
+    /// A color model is an abstract mathematical model describing the ways colors can be
+    /// represented as tuples of numbers, typically as three or four values or color
+    /// components.
     enum ColorModel {
 
         /// A representation of the RGB color model using hexadecimal numbers, i.e., `#0080ff`.

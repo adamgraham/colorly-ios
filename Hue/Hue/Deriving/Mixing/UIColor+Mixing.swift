@@ -20,7 +20,7 @@ public extension UIColor {
                          of 0.5 indicates 50% of each color is mixed together. A value of 0.25
                          indicates 25% of the second color is mixed with 75% of the first color.
 
-     - returns: The newly mixed color.
+     - returns: The mixed color.
      */
     static func mixing(_ first: UIColor, with second: UIColor, weight: CGFloat = 0.5) -> UIColor {
         let weight = clamp(weight, 0.0, 1.0)
@@ -51,7 +51,7 @@ public extension UIColor {
                          value of 0.25 indicates 25% of the second color is mixed with 75% of the
                          first color.
 
-     - returns: The newly mixed color.
+     - returns: The mixed color.
      */
     func mixed(with color: UIColor, weight: CGFloat = 0.5) -> UIColor {
         return UIColor.mixing(self, with: color, weight: weight)
