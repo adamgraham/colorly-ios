@@ -29,9 +29,7 @@ public extension UIColor {
         let l = ((2.0 - hsb.s) * hsb.b) / 2.0
 
         switch l {
-        case 0.0:
-            break
-        case 1.0:
+        case 0.0, 1.0:
             hsb.s = 0.0
         case 0.0..<0.5:
             hsb.s = (hsb.s * hsb.b) / (l * 2.0)

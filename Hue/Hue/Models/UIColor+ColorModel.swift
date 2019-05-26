@@ -61,6 +61,17 @@ public extension UIColor {
         /// respectively.
         case HSL
 
+        /// The HSI (hue, saturation, intensity) color model is an alternative representation to the
+        /// RGB color model designed to more closely align with the way human vision perceives
+        /// color-making attributes.
+        ///
+        /// The HSI model commonly used for computer vision, which takes H as a hue dimension
+        /// and the component average I ("intensity") as a lightness dimension, does not attempt
+        /// to "fill" a cylinder by its definition of saturation. Instead of presenting color choice or
+        /// modification interfaces to end users, the goal of HSI is to facilitate separation of shapes
+        /// in an image.
+        case HSI
+
         /// The CIE 1931 color spaces were the first defined quantitative links between
         /// distributions of wavelengths in the electromagnetic visible spectrum, and
         /// physiologically perceived colors in human color vision. The mathematical relationships
