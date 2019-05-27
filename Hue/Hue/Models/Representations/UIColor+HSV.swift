@@ -12,7 +12,7 @@ import UIKit
 public extension UIColor {
 
     /// The HSV components of a color - hue, saturation, and value.
-    struct HSV: Equatable {
+    struct HSV: Hashable {
 
         /// The hue component of the color, in the range [0, 360°].
         public var hue: CGFloat

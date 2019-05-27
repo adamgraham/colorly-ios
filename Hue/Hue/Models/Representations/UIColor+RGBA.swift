@@ -12,7 +12,7 @@ import UIKit
 public extension UIColor {
 
     /// The RGBA components of a color - red, green, blue, and alpha.
-    struct RGBA: Equatable {
+    struct RGBA: Hashable {
 
         /// The red component of the color, in the range [0, 255].
         public var red: CGFloat

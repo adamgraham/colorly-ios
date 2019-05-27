@@ -12,7 +12,7 @@ import UIKit
 public extension UIColor {
 
     /// The HSB components of a color - hue, saturation, and brightness.
-    struct HSB: Equatable {
+    struct HSB: Hashable {
 
         /// The hue component of the color, in the range [0, 360°].
         public var hue: CGFloat

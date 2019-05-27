@@ -12,7 +12,7 @@ import UIKit
 public extension UIColor {
 
     /// The CIE XYZ components of a color - luminance (Y) and chromaticity (X,Z).
-    struct CIEXYZ: Equatable {
+    struct CIEXYZ: Hashable {
 
         /// A mix of cone response curves chosen to be orthogonal to luminance and
         /// non-negative, in the range [0, 95.047].

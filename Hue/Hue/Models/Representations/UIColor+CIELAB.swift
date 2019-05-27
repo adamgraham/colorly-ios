@@ -12,7 +12,7 @@ import UIKit
 public extension UIColor {
 
     /// The CIELAB components of a color - lightness (L) and chromaticity (a,b).
-    struct CIELAB: Equatable {
+    struct CIELAB: Hashable {
 
         /// The lightness component of the color, in the range [0, 100] (darkest to brightest).
         public var L: CGFloat

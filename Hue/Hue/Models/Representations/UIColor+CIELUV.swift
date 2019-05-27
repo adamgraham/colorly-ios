@@ -12,7 +12,7 @@ import UIKit
 public extension UIColor {
 
     /// The CIELUV components of a color - lightness (L) and chromaticity (u,v).
-    struct CIELUV: Equatable {
+    struct CIELUV: Hashable {
 
         /// The lightness component of the color, in the range [0, 100] (darkest to brightest).
         public var L: CGFloat

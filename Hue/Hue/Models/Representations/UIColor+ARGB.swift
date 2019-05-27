@@ -12,7 +12,7 @@ import UIKit
 public extension UIColor {
 
     /// The ARGB components of a color - alpha, red, green, and blue.
-    struct ARGB: Equatable {
+    struct ARGB: Hashable {
 
         /// The alpha component of the color, in the range [0, 255].
         public var alpha: CGFloat

@@ -12,7 +12,7 @@ import UIKit
 public extension UIColor {
 
     /// The CIE xyY components of a color - luminance (Y) and chromaticity (x,y).
-    struct CIExyY: Equatable {
+    struct CIExyY: Hashable {
 
         /// The x-chromaticity component of the color, in the range [0, 1].
         public var x: CGFloat

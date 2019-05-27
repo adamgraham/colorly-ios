@@ -12,7 +12,7 @@ import UIKit
 public extension UIColor {
 
     /// The Hunter Lab components of a color - lightness (L) and chromaticity (a,b).
-    struct HunterLab: Equatable {
+    struct HunterLab: Hashable {
 
         /// The lightness component of the color, in the range [0, 100] (darkest to brightest).
         public var L: CGFloat

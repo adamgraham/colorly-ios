@@ -12,7 +12,7 @@ import UIKit
 public extension UIColor {
 
     /// The CIELCh° components of a color.
-    struct CIELCh: Equatable {
+    struct CIELCh: Hashable {
 
         /// The lightness component of the color, in the range [0, 100] (darkest to brightest).
         public var L: CGFloat
