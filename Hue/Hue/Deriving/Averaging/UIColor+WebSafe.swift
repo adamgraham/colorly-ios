@@ -14,7 +14,11 @@ public extension UIColor {
     /// The nearest web safe color to the current color. All web safe colors have RGB
     /// component values of 0, 51, 102, 153, 204, or 255 (20% intervals).
     var webSafe: UIColor {
-        return self.quantized(clusters: 5)
+        var rgba = self.rgba
+        rgba.red = (rgba.red + 25) / 51 * 51
+        rgba.green = (rgba.green + 25) / 51 * 51
+        rgba.blue = (rgba.blue + 25) / 51 * 51
+        return UIColor(rgba)
     }
 
 }

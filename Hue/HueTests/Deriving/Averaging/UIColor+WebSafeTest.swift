@@ -23,7 +23,7 @@ class UIColor_WebSafeTest: XCTestCase {
         XCTAssertEqual(color.webSafe, UIColor(red: 0.6, green: 0.8, blue: 0.8, alpha: 1.0))
 
         color = UIColor(red: 0.90, green: 1.0, blue: 0.0, alpha: 1.0)
-        XCTAssertEqual(color.webSafe, UIColor(red: 0.8, green: 1.0, blue: 0.0, alpha: 1.0))
+        XCTAssertEqual(color.webSafe, UIColor(red: 1.0, green: 1.0, blue: 0.0, alpha: 1.0))
     }
 
 }
