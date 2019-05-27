@@ -60,6 +60,27 @@ public extension UIColor {
         return (a, r, g, b)
     }
 
+    /// Initializes a color from a tuple of RGB components.
+    /// - parameter rgb: The components used to initialize the color.
+    /// - parameter alpha: The alpha value of the color.
+    convenience init(rgb: (r: CGFloat, g: CGFloat, b: CGFloat), alpha: CGFloat = 1.0) {
+        self.init(red: rgb.r, green: rgb.g, blue: rgb.b, alpha: alpha)
+    }
+
+    /// Initializes a color from a tuple of RGBA components.
+    /// - parameter rgba: The components used to initialize the color.
+    /// - parameter alpha: The alpha value of the color.
+    convenience init(rgba: (r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat)) {
+        self.init(red: rgba.r, green: rgba.g, blue: rgba.b, alpha: rgba.a)
+    }
+
+    /// Initializes a color from a tuple of ARGB components.
+    /// - parameter argb: The components used to initialize the color.
+    /// - parameter alpha: The alpha value of the color.
+    convenience init(argb: (a: CGFloat, r: CGFloat, g: CGFloat, b: CGFloat)) {
+        self.init(red: argb.r, green: argb.g, blue: argb.b, alpha: argb.a)
+    }
+
 }
 
 /// An extension to retrieve the HSB (hue, saturation, brightness) components of a color.
@@ -91,6 +112,13 @@ public extension UIColor {
         var (h, s, b) = (CGFloat(), CGFloat(), CGFloat())
         getHue(&h, saturation: &s, brightness: &b, alpha: nil)
         return (h, s, b)
+    }
+
+    /// Initializes a color from a tuple of HSB components.
+    /// - parameter hsb: The components used to initialize the color.
+    /// - parameter alpha: The alpha value of the color.
+    convenience init(hsb: (h: CGFloat, s: CGFloat, b: CGFloat), alpha: CGFloat = 1.0) {
+        self.init(hue: hsb.h, saturation: hsb.s, brightness: hsb.b, alpha: alpha)
     }
 
 }
