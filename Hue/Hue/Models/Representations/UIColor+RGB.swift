@@ -15,29 +15,29 @@ public extension UIColor {
     struct RGB: Hashable {
 
         /// The red component of the color, in the range [0, 255].
-        public var red: CGFloat
+        public var red: Int
         /// The green component of the color, in the range [0, 255].
-        public var green: CGFloat
+        public var green: Int
         /// The blue component of the color, in the range [0, 255].
-        public var blue: CGFloat
+        public var blue: Int
 
     }
 
     /// The RGB components of the color.
     var rgb: RGB {
         let rgb = self.rgbComponents
-        return RGB(red: rgb.r * 255.0,
-                   green: rgb.g * 255.0,
-                   blue: rgb.b * 255.0)
+        return RGB(red: Int(round(rgb.r * 255.0)),
+                   green: Int(round(rgb.g * 255.0)),
+                   blue: Int(round(rgb.b * 255.0)))
     }
 
     /// Initializes a color from RGB components.
     /// - parameter rgb: The components used to initialize the color.
     /// - parameter alpha: The alpha value of the color.
     convenience init(_ rgb: RGB, alpha: CGFloat = 1.0) {
-        self.init(red: rgb.red / 255.0,
-                  green: rgb.green / 255.0,
-                  blue: rgb.blue / 255.0,
+        self.init(red: CGFloat(rgb.red) / 255.0,
+                  green: CGFloat(rgb.green) / 255.0,
+                  blue: CGFloat(rgb.blue) / 255.0,
                   alpha: alpha)
     }
 

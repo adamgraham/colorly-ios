@@ -15,32 +15,32 @@ public extension UIColor {
     struct ARGB: Hashable {
 
         /// The alpha component of the color, in the range [0, 255].
-        public var alpha: CGFloat
+        public var alpha: Int
         /// The red component of the color, in the range [0, 255].
-        public var red: CGFloat
+        public var red: Int
         /// The green component of the color, in the range [0, 255].
-        public var green: CGFloat
+        public var green: Int
         /// The blue component of the color, in the range [0, 255].
-        public var blue: CGFloat
+        public var blue: Int
 
     }
 
     /// The ARGB components of the color.
     var argb: ARGB {
         let argb = self.argbComponents
-        return ARGB(alpha: argb.a * 255.0,
-                    red: argb.r * 255.0,
-                    green: argb.g * 255.0,
-                    blue: argb.b * 255.0)
+        return ARGB(alpha: Int(round(argb.a * 255.0)),
+                    red: Int(round(argb.r * 255.0)),
+                    green: Int(round(argb.g * 255.0)),
+                    blue: Int(round(argb.b * 255.0)))
     }
 
     /// Initializes a color from ARGB components.
     /// - parameter argb: The components used to initialize the color.
     convenience init(_ argb: ARGB) {
-        self.init(red: argb.red / 255.0,
-                  green: argb.green / 255.0,
-                  blue: argb.blue / 255.0,
-                  alpha: argb.alpha / 255.0)
+        self.init(red: CGFloat(argb.red) / 255.0,
+                  green: CGFloat(argb.green) / 255.0,
+                  blue: CGFloat(argb.blue) / 255.0,
+                  alpha: CGFloat(argb.alpha) / 255.0)
     }
 
 }

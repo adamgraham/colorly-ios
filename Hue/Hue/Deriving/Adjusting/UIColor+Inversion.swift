@@ -13,11 +13,11 @@ public extension UIColor {
 
     /// The negative of the color, produced by inverting the RGB values.
     var inverted: UIColor {
-        var rgba = self.rgba
-        rgba.red = 255.0 - rgba.red
-        rgba.green = 255.0 - rgba.green
-        rgba.blue = 255.0 - rgba.blue
-        return UIColor(rgba)
+        var rgba = self.rgbaComponents
+        rgba.r = 1.0 - rgba.r
+        rgba.g = 1.0 - rgba.g
+        rgba.b = 1.0 - rgba.b
+        return UIColor(rgba: rgba)
     }
 
 }

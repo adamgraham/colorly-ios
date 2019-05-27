@@ -22,23 +22,23 @@ public extension UIColor {
      - returns: The average color.
      */
     static func average(of colors: [UIColor]) -> UIColor {
-        var rgba = RGBA(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
+        var rgba = (r: CGFloat(), g: CGFloat(), b: CGFloat(), a: CGFloat())
 
         for color in colors {
-            let components = color.rgba
-            rgba.red += pow(components.red, 2.0)
-            rgba.green += pow(components.green, 2.0)
-            rgba.blue += pow(components.blue, 2.0)
-            rgba.alpha += pow(components.alpha, 2.0)
+            let components = color.rgbaComponents
+            rgba.r += pow(components.r, 2.0)
+            rgba.g += pow(components.g, 2.0)
+            rgba.b += pow(components.b, 2.0)
+            rgba.a += pow(components.a, 2.0)
         }
 
         let count = CGFloat(colors.count)
-        rgba.red = sqrt(rgba.red / count)
-        rgba.green = sqrt(rgba.green / count)
-        rgba.blue = sqrt(rgba.blue / count)
-        rgba.alpha = sqrt(rgba.alpha / count)
+        rgba.r = sqrt(rgba.r / count)
+        rgba.g = sqrt(rgba.g / count)
+        rgba.b = sqrt(rgba.b / count)
+        rgba.a = sqrt(rgba.a / count)
 
-        return UIColor(rgba)
+        return UIColor(rgba: rgba)
     }
 
     /**
