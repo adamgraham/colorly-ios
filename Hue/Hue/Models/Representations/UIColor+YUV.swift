@@ -23,6 +23,16 @@ public extension UIColor {
 
     }
 
+    /// Constant values used to convert to and from YUV colors.
+    private struct Constant {
+
+        /// The maximum value of the U component.
+        static let Umax: CGFloat = 0.436
+        /// The maximum value of the V component.
+        static let Vmax: CGFloat = 0.615
+
+    }
+
     /// The YUV components of the color using standard-definition encoding.
     var yuv: YUV {
         return yuv(.standard)
@@ -33,21 +43,11 @@ public extension UIColor {
     /// - returns: The YUV components of the color.
     func yuv(_ encoding: SignalEncoding) -> YUV {
         let rgb = self.rgbComponents
+        let k = encoding.constants
 
-        let Y: CGFloat
-        let U: CGFloat
-        let V: CGFloat
-
-        switch encoding {
-        case .standard:
-            Y =    (0.299 * rgb.r) +   (0.587 * rgb.g) +   (0.114 * rgb.b)
-            U = -(0.14713 * rgb.r) - (0.28886 * rgb.g) +   (0.436 * rgb.b)
-            V =    (0.615 * rgb.r) - (0.51499 * rgb.g) - (0.10001 * rgb.b)
-        case .hdtv:
-            Y =   (0.2126 * rgb.r) +  (0.7152 * rgb.g) +  (0.0722 * rgb.b)
-            U = -(0.09991 * rgb.r) - (0.33609 * rgb.g) +   (0.436 * rgb.b)
-            V =    (0.615 * rgb.r) - (0.55861 * rgb.g) - (0.05639 * rgb.b)
-        }
+        let Y = (k.r * rgb.r) + (k.g * rgb.g) + (k.b * rgb.b)
+        let U = Constant.Umax * ((rgb.b - Y) / (1.0 - k.b))
+        let V = Constant.Vmax * ((rgb.r - Y) / (1.0 - k.r))
 
         return YUV(Y: Y, U: U, V: V)
     }
@@ -57,20 +57,19 @@ public extension UIColor {
     /// - parameter encoding: The signal encoding with which the components were derived.
     /// - parameter alpha: The alpha value of the color.
     convenience init(_ yuv: YUV, encoding: SignalEncoding = .standard, alpha: CGFloat = 1.0) {
-        let r: CGFloat
-        let g: CGFloat
-        let b: CGFloat
+        let Y = yuv.Y
+        let U = yuv.U
+        let V = yuv.V
 
-        switch encoding {
-        case .standard:
-            r = yuv.Y + (1.13983 * yuv.V)
-            g = yuv.Y - (0.39465 * yuv.U) - (0.58060 * yuv.V)
-            b = yuv.Y + (2.03211 * yuv.U)
-        case .hdtv:
-            r = yuv.Y + (1.28033 * yuv.V)
-            g = yuv.Y - (0.21482 * yuv.U) - (0.38059 * yuv.V)
-            b = yuv.Y + (2.12798 * yuv.U)
-        }
+        let k = encoding.constants
+        let kr = (V * ((1.0 - k.r) / Constant.Vmax))
+        let kgb = (U * ((k.b * (1.0 - k.b)) / (Constant.Umax * k.g)))
+        let kgr = (V * ((k.r * (1.0 - k.r)) / (Constant.Vmax * k.g)))
+        let kb = (U * ((1.0 - k.b) / Constant.Umax))
+
+        let r = Y + kr
+        let g = Y - kgb - kgr
+        let b = Y + kb
 
         self.init(red: r, green: g, blue: b, alpha: alpha)
     }

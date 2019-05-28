@@ -33,25 +33,11 @@ public extension UIColor {
     /// - returns: The YPbPr components of the color.
     func yPbPr(_ encoding: SignalEncoding) -> YPbPr {
         let rgb = self.rgbComponents
+        let k = encoding.constants
 
-        let kR: CGFloat
-        let kG: CGFloat
-        let kB: CGFloat
-
-        switch encoding {
-        case .standard:
-            kR = 0.299
-            kG = 0.587
-            kB = 0.114
-        case .hdtv:
-            kR = 0.2126
-            kG = 0.7152
-            kB = 0.0722
-        }
-
-        let Y = (rgb.r * kR) + (rgb.g * kG) + (rgb.b * kB)
-        let Pb = 0.5 * ((rgb.b - Y) / (1.0 - kB))
-        let Pr = 0.5 * ((rgb.r - Y) / (1.0 - kR))
+        let Y = (k.r * rgb.r) + (k.g * rgb.g) + (k.b * rgb.b)
+        let Pb = 0.5 * ((rgb.b - Y) / (1.0 - k.b))
+        let Pr = 0.5 * ((rgb.r - Y) / (1.0 - k.r))
 
         return YPbPr(Y: Y, Pb: Pb, Pr: Pr)
     }
@@ -61,20 +47,19 @@ public extension UIColor {
     /// - parameter encoding: The signal encoding with which the components were derived.
     /// - parameter alpha: The alpha value of the color.
     convenience init(_ yPbPr: YPbPr, encoding: SignalEncoding = .standard, alpha: CGFloat = 1.0) {
-        let r: CGFloat
-        let g: CGFloat
-        let b: CGFloat
+        let Y = yPbPr.Y
+        let Pb = yPbPr.Pb
+        let Pr = yPbPr.Pr
 
-        switch encoding {
-        case .standard:
-            r = yPbPr.Y + (1.402 * yPbPr.Pr)
-            g = yPbPr.Y - (0.344 * yPbPr.Pb) - (0.714 * yPbPr.Pr)
-            b = yPbPr.Y + (1.772 * yPbPr.Pb)
-        case .hdtv:
-            r = yPbPr.Y + (1.575 * yPbPr.Pr)
-            g = yPbPr.Y - (0.187 * yPbPr.Pb) - (0.468 * yPbPr.Pr)
-            b = yPbPr.Y + (1.856 * yPbPr.Pb)
-        }
+        let k = encoding.constants
+        let kr = (Pr * ((1.0 - k.r) / 0.5))
+        let kgb = (Pb * ((k.b * (1.0 - k.b)) / (0.5 * k.g)))
+        let kgr = (Pr * ((k.r * (1.0 - k.r)) / (0.5 * k.g)))
+        let kb = (Pb * ((1.0 - k.b) / 0.5))
+
+        let r = Y + kr
+        let g = Y - kgb - kgr
+        let b = Y + kb
 
         self.init(red: r, green: g, blue: b, alpha: alpha)
     }

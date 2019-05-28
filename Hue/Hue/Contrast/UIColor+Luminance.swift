@@ -14,19 +14,22 @@ public extension UIColor {
     /// The relative luminance of the color, measured according to the HSL color model.
     var relativeLuminance: CGFloat {
         let rgb = self.linearRGB
-        return 0.2126 * rgb.r +
-               0.7152 * rgb.g +
-               0.0722 * rgb.b
+        let k = UIColor.SignalEncoding.hdtv.constants
+
+        return k.r * rgb.r +
+               k.g * rgb.g +
+               k.b * rgb.b
     }
 
     /// The perceived brightness of the color, measured according to the HSP color model -
     /// http://alienryderflex.com/hsp.html
     var perceivedBrightness: CGFloat {
         let rgb = self.linearRGB
+        let k = UIColor.SignalEncoding.standard.constants
 
-        let r = 0.299 * pow(rgb.r, 2.0)
-        let g = 0.587 * pow(rgb.g, 2.0)
-        let b = 0.114 * pow(rgb.b, 2.0)
+        let r = k.r * pow(rgb.r, 2.0)
+        let g = k.g * pow(rgb.g, 2.0)
+        let b = k.b * pow(rgb.b, 2.0)
 
         return sqrt(r + g + b)
     }

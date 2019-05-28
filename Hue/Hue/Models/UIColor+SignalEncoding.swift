@@ -8,10 +8,12 @@
 
 import UIKit
 
-/// An extension to describe ITU-R recommendations.
+/// An extension to describe ITU-R Recommendation signal encodings.
 public extension UIColor {
 
-    /// ITU-R Recommendations are the names given to set of international technical
+    /// A standard ITU-R Recommendation signal encoding.
+    ///
+    /// ITU-R Recommendations are the names given to the set of international technical
     /// standards developed by the Radiocommunication Sector of the International
     /// Telecommunication Union (ITU).
     enum SignalEncoding {
@@ -20,6 +22,15 @@ public extension UIColor {
         case standard
         /// ITU-R BT.709 (high-definition television)
         case hdtv
+
+        internal var constants: (r: CGFloat, g: CGFloat, b: CGFloat) {
+            switch self {
+            case .standard:
+                return (0.299, 0.587, 0.114)
+            case .hdtv:
+                return (0.2126, 0.7152, 0.0722)
+            }
+        }
 
     }
 
