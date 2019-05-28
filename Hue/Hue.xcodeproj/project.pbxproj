@@ -191,7 +191,6 @@
 		9DA7C72E2299E64100DE2FE3 /* UIColor+YIQTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+YIQTest.swift"; sourceTree = "<group>"; };
 		9DA7C735229B2EBB00DE2FE3 /* UIColor+HSI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HSI.swift"; sourceTree = "<group>"; };
 		9DA7C737229B3FD800DE2FE3 /* UIColor+HSITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HSITest.swift"; sourceTree = "<group>"; };
-		9DA7C73E229B654E00DE2FE3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9DB19FA02255BF8300C3A6C7 /* UIColor+Hue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hue.swift"; sourceTree = "<group>"; };
 		9DB892DF229CFCDE00C4D479 /* UIColor+SignalEncodingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+SignalEncodingTest.swift"; sourceTree = "<group>"; };
 		9DC72B8A22811D77002E5FB4 /* UIColor+CIELAB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+CIELAB.swift"; sourceTree = "<group>"; };
@@ -235,6 +234,7 @@
 				9D6BB42922922C2D007A3649 /* UIColor+ColorSpace.swift */,
 				9DA45A8922557CE600E51EEE /* UIColor+Components.swift */,
 				9D023DAD2245BBBE00BCA208 /* UIColor+Illuminant.swift */,
+				9D6BB42D229234EA007A3649 /* UIColor+Pantone.swift */,
 				9DA7C71E2298FB5300DE2FE3 /* UIColor+SignalEncoding.swift */,
 				9DC72B9222813B91002E5FB4 /* UIColor+Tristimulus.swift */,
 			);
@@ -484,7 +484,6 @@
 				9D023DA32245BA5200BCA208 /* UIColor+HSV.swift */,
 				9D62C9D12288F72B00136ADF /* UIColor+HunterLab.swift */,
 				9D6BB423229212E8007A3649 /* UIColor+LinearRGB.swift */,
-				9D6BB42D229234EA007A3649 /* UIColor+Pantone.swift */,
 				9D023D952245B79800BCA208 /* UIColor+RGB.swift */,
 				9D023D972245B7D500BCA208 /* UIColor+RGBA.swift */,
 				9DA7C7202299897300DE2FE3 /* UIColor+YCbCr.swift */,
