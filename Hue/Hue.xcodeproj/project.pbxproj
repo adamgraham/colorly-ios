@@ -84,7 +84,6 @@
 		9DA7C72F2299E64100DE2FE3 /* UIColor+YIQTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA7C72E2299E64100DE2FE3 /* UIColor+YIQTest.swift */; };
 		9DA7C736229B2EBB00DE2FE3 /* UIColor+HSI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA7C735229B2EBB00DE2FE3 /* UIColor+HSI.swift */; };
 		9DA7C738229B3FD800DE2FE3 /* UIColor+HSITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA7C737229B3FD800DE2FE3 /* UIColor+HSITest.swift */; };
-		9DA7C73F229B654E00DE2FE3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DA7C73E229B654E00DE2FE3 /* Images.xcassets */; };
 		9DB19FA12255BF8300C3A6C7 /* UIColor+Hue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB19FA02255BF8300C3A6C7 /* UIColor+Hue.swift */; };
 		9DB892E0229CFCDE00C4D479 /* UIColor+SignalEncodingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB892DF229CFCDE00C4D479 /* UIColor+SignalEncodingTest.swift */; };
 		9DC72B8C22811D77002E5FB4 /* UIColor+CIELAB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC72B8A22811D77002E5FB4 /* UIColor+CIELAB.swift */; };
@@ -427,7 +426,6 @@
 				9D023D7A2245B78C00BCA208 /* Models */,
 				9D023DB622488F2300BCA208 /* Utils */,
 				9D943E3522375DA2009C0F04 /* Hue.h */,
-				9DA7C73E229B654E00DE2FE3 /* Images.xcassets */,
 				9D943E3622375DA2009C0F04 /* Info.plist */,
 			);
 			path = Hue;
@@ -589,7 +587,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DA7C73F229B654E00DE2FE3 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
