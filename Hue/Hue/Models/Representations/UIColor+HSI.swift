@@ -11,7 +11,7 @@ import UIKit
 /// An extension to provide conversion to and from HSI (hue, saturation, intensity) colors.
 public extension UIColor {
 
-    /// The HSI components of a color - hue, saturation, and intensity.
+    /// The HSI (hue, saturation, intensity) components of a color.
     struct HSI: Hashable {
 
         /// The hue component of the color, in the range [0, 360°].
@@ -23,7 +23,7 @@ public extension UIColor {
 
     }
 
-    /// The HSI components of the color.
+    /// The HSI (hue, saturation, intensity) components of the color.
     var hsi: HSI {
         let rgb = self.rgbComponents
         let sum = rgb.r + rgb.g + rgb.b
@@ -36,7 +36,7 @@ public extension UIColor {
                    intensity: i * 100.0)
     }
 
-    /// Initializes a color from HSI components.
+    /// Initializes a color from HSI (hue, saturation, intensity) components.
     /// - parameter hsi: The components used to initialize the color.
     /// - parameter alpha: The alpha value of the color.
     convenience init(_ hsi: HSI, alpha: CGFloat = 1.0) {

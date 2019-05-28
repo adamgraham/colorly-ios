@@ -23,7 +23,7 @@ public extension UIColor {
 
     }
 
-    /// A set of constant values used to convert to and from CIELAB colors.
+    /// Constant values used to convert to and from CIELAB colors.
     private struct Constant {
 
         static let ⅓: CGFloat = 1.0 / 3.0

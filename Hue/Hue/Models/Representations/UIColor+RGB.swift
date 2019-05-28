@@ -11,7 +11,7 @@ import UIKit
 /// An extension to provide conversion to and from RGB (red, green, blue) colors.
 public extension UIColor {
 
-    /// The RGB components of a color - red, green, and blue.
+    /// The RGB (red, green, blue) components of a color, in the range [0, 255].
     struct RGB: Hashable {
 
         /// The red component of the color, in the range [0, 255].
@@ -23,7 +23,7 @@ public extension UIColor {
 
     }
 
-    /// The RGB components of the color.
+    /// The RGB (red, green, blue) components of the color, in the range [0, 255].
     var rgb: RGB {
         let rgb = self.rgbComponents
         return RGB(red: Int(round(rgb.r * 255.0)),
@@ -31,7 +31,7 @@ public extension UIColor {
                    blue: Int(round(rgb.b * 255.0)))
     }
 
-    /// Initializes a color from RGB components.
+    /// Initializes a color from RGB (red, green, blue) components.
     /// - parameter rgb: The components used to initialize the color.
     /// - parameter alpha: The alpha value of the color.
     convenience init(_ rgb: RGB, alpha: CGFloat = 1.0) {

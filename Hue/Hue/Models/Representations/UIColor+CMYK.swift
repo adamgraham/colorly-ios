@@ -11,7 +11,7 @@ import UIKit
 /// An extension to provide conversion to and from CMYK (cyan, magenta, yellow, black) colors.
 public extension UIColor {
 
-    /// The CMYK components of a color - cyan, magenta, yellow, and black.
+    /// The CMYK (cyan, magenta, yellow, black) components of a color, in the range [0, 100%].
     struct CMYK: Hashable {
 
         /// The cyan component of the color, in the range [0, 100%].
@@ -25,7 +25,7 @@ public extension UIColor {
 
     }
 
-    /// The CMYK components of the color.
+    /// The CMYK (cyan, magenta, yellow, black) components of the color, in the range [0, 100%].
     var cmyk: CMYK {
         let rgb = self.rgbComponents
 
@@ -44,7 +44,7 @@ public extension UIColor {
                     black: k * 100.0)
     }
 
-    /// Initializes a color from CMYK components.
+    /// Initializes a color from CMYK (cyan, magenta, yellow, black) components.
     /// - parameter cmyk: The components used to initialize the color.
     /// - parameter alpha: The alpha value of the color.
     convenience init(_ cmyk: CMYK, alpha: CGFloat = 1.0) {

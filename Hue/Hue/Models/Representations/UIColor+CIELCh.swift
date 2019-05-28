@@ -11,14 +11,14 @@ import UIKit
 /// An extension to provide conversion to and from CIELCh° colors.
 public extension UIColor {
 
-    /// The CIELCh° components of a color.
+    /// The CIELCh° components of a color - lightness (L), chroma (C), and hue (h).
     struct CIELCh: Hashable {
 
         /// The lightness component of the color, in the range [0, 100] (darkest to brightest).
         public var L: CGFloat
         /// The chroma component of the color.
         public var C: CGFloat
-        /// The hue component of the color.
+        /// The hue component of the color, in the range [0, 360°].
         public var h: CGFloat
 
     }
