@@ -33,7 +33,7 @@ public extension UIColor {
     /// - returns: The YPbPr components of the color.
     func yPbPr(_ encoding: SignalEncoding) -> YPbPr {
         let rgb = self.rgbComponents
-        let k = encoding.constants
+        let k = encoding.coefficients
 
         let Y = (k.r * rgb.r) + (k.g * rgb.g) + (k.b * rgb.b)
         let Pb = 0.5 * ((rgb.b - Y) / (1.0 - k.b))
@@ -51,7 +51,7 @@ public extension UIColor {
         let Pb = yPbPr.Pb
         let Pr = yPbPr.Pr
 
-        let k = encoding.constants
+        let k = encoding.coefficients
         let kr = (Pr * ((1.0 - k.r) / 0.5))
         let kgb = (Pb * ((k.b * (1.0 - k.b)) / (0.5 * k.g)))
         let kgr = (Pr * ((k.r * (1.0 - k.r)) / (0.5 * k.g)))

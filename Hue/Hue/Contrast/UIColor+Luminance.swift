@@ -14,7 +14,7 @@ public extension UIColor {
     /// The relative luminance of the color, measured according to the HSL color model.
     var relativeLuminance: CGFloat {
         let rgb = self.linearRGB
-        let k = UIColor.SignalEncoding.hdtv.constants
+        let k = UIColor.SignalEncoding.hdtv.coefficients
 
         return k.r * rgb.r +
                k.g * rgb.g +
@@ -25,7 +25,7 @@ public extension UIColor {
     /// http://alienryderflex.com/hsp.html
     var perceivedBrightness: CGFloat {
         let rgb = self.linearRGB
-        let k = UIColor.SignalEncoding.standard.constants
+        let k = UIColor.SignalEncoding.standard.coefficients
 
         let r = k.r * pow(rgb.r, 2.0)
         let g = k.g * pow(rgb.g, 2.0)

@@ -43,7 +43,7 @@ public extension UIColor {
     /// - returns: The YUV components of the color.
     func yuv(_ encoding: SignalEncoding) -> YUV {
         let rgb = self.rgbComponents
-        let k = encoding.constants
+        let k = encoding.coefficients
 
         let Y = (k.r * rgb.r) + (k.g * rgb.g) + (k.b * rgb.b)
         let U = Constant.Umax * ((rgb.b - Y) / (1.0 - k.b))
@@ -61,7 +61,7 @@ public extension UIColor {
         let U = yuv.U
         let V = yuv.V
 
-        let k = encoding.constants
+        let k = encoding.coefficients
         let kr = (V * ((1.0 - k.r) / Constant.Vmax))
         let kgb = (U * ((k.b * (1.0 - k.b)) / (Constant.Umax * k.g)))
         let kgr = (V * ((k.r * (1.0 - k.r)) / (Constant.Vmax * k.g)))
