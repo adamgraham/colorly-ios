@@ -12,7 +12,7 @@ import UIKit
 public extension UIColor {
 
     /// The YCbCr components of a color - luminance (Y) and chrominance (Cb,Cr).
-    struct YCbCr {
+    struct YCbCr: Hashable {
 
         /// The luminance component of the color, in the full range [0, 255] (black to white).
         public var Y: CGFloat

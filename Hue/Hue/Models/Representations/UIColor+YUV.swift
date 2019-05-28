@@ -12,7 +12,7 @@ import UIKit
 public extension UIColor {
 
     /// The YUV components of a color - luminance (Y) and chrominance (U,V).
-    struct YUV {
+    struct YUV: Hashable {
 
         /// The luminance component of the color, in the range [0, 1] (black to white).
         public var Y: CGFloat
@@ -56,7 +56,7 @@ public extension UIColor {
     /// - parameter yuv: The components used to initialize the color.
     /// - parameter encoding: The signal encoding with which the components were derived.
     /// - parameter alpha: The alpha value of the color.
-    convenience init(_ yuv: YUV, encoding: SignalEncoding, alpha: CGFloat = 1.0) {
+    convenience init(_ yuv: YUV, encoding: SignalEncoding = .standard, alpha: CGFloat = 1.0) {
         let r: CGFloat
         let g: CGFloat
         let b: CGFloat

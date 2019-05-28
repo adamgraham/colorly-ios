@@ -12,7 +12,7 @@ import UIKit
 public extension UIColor {
 
     /// The YIQ components of a color - luminance (Y) and chrominance (I,Q).
-    struct YIQ {
+    struct YIQ: Hashable {
 
         /// The luminance component of the color, in the range [0, 1] (black to white).
         public var Y: CGFloat
