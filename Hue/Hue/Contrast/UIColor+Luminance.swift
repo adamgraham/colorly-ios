@@ -12,7 +12,7 @@ import UIKit
 public extension UIColor {
 
     /// The relative luminance of the color, measured according to the HSL color model.
-    var luminance: CGFloat {
+    var relativeLuminance: CGFloat {
         let rgb = self.linearRGB
         return 0.2126 * rgb.r +
                0.7152 * rgb.g +
@@ -20,7 +20,7 @@ public extension UIColor {
     }
 
     /// The perceived brightness of the color, measured according to the HSP color model -
-    /// http://alienryderflex.com/hsp.html.
+    /// http://alienryderflex.com/hsp.html
     var perceivedBrightness: CGFloat {
         let rgb = self.linearRGB
 

@@ -12,28 +12,28 @@ import XCTest
 
 class UIColor_LuminanceTest: XCTestCase {
 
-    func testLuminance() {
-        let accuracy = CGFloat.ulpOfOne
-        XCTAssertEqual(UIColor.red.luminance, 0.2126, accuracy: accuracy)
-        XCTAssertEqual(UIColor.green.luminance, 0.7152, accuracy: accuracy)
-        XCTAssertEqual(UIColor.blue.luminance, 0.0722, accuracy: accuracy)
-        XCTAssertEqual(UIColor.cyan.luminance, 0.7874, accuracy: accuracy)
-        XCTAssertEqual(UIColor.magenta.luminance, 0.2848, accuracy: accuracy)
-        XCTAssertEqual(UIColor.yellow.luminance, 0.9278, accuracy: accuracy)
-        XCTAssertEqual(UIColor.black.luminance, 0.0, accuracy: accuracy)
-        XCTAssertEqual(UIColor.white.luminance, 1.0, accuracy: accuracy)
+    private let accuracy: CGFloat = 0.0001
+
+    func testRelativeLuminance() {
+        XCTAssertEqual(UIColor.red.relativeLuminance, 0.2126, accuracy: self.accuracy)
+        XCTAssertEqual(UIColor.green.relativeLuminance, 0.7152, accuracy: self.accuracy)
+        XCTAssertEqual(UIColor.blue.relativeLuminance, 0.0722, accuracy: self.accuracy)
+        XCTAssertEqual(UIColor.cyan.relativeLuminance, 0.7874, accuracy: self.accuracy)
+        XCTAssertEqual(UIColor.magenta.relativeLuminance, 0.2848, accuracy: self.accuracy)
+        XCTAssertEqual(UIColor.yellow.relativeLuminance, 0.9278, accuracy: self.accuracy)
+        XCTAssertEqual(UIColor.black.relativeLuminance, 0.0, accuracy: self.accuracy)
+        XCTAssertEqual(UIColor.white.relativeLuminance, 1.0, accuracy: self.accuracy)
     }
 
     func testPerceivedBrightness() {
-        let accuracy = CGFloat.ulpOfOne
-        XCTAssertEqual(UIColor.red.perceivedBrightness, 0.5468089245796927, accuracy: accuracy)
-        XCTAssertEqual(UIColor.green.perceivedBrightness, 0.7661592523751182, accuracy: accuracy)
-        XCTAssertEqual(UIColor.blue.perceivedBrightness, 0.33763886032268264, accuracy: accuracy)
-        XCTAssertEqual(UIColor.cyan.perceivedBrightness, 0.8372574275573791, accuracy: accuracy)
-        XCTAssertEqual(UIColor.magenta.perceivedBrightness, 0.6426507605223851, accuracy: accuracy)
-        XCTAssertEqual(UIColor.yellow.perceivedBrightness, 0.9412757300600074, accuracy: accuracy)
-        XCTAssertEqual(UIColor.black.perceivedBrightness, 0.0, accuracy: accuracy)
-        XCTAssertEqual(UIColor.white.perceivedBrightness, 1.0, accuracy: accuracy)
+        XCTAssertEqual(UIColor.red.perceivedBrightness, 0.5468, accuracy: self.accuracy)
+        XCTAssertEqual(UIColor.green.perceivedBrightness, 0.7662, accuracy: self.accuracy)
+        XCTAssertEqual(UIColor.blue.perceivedBrightness, 0.3376, accuracy: self.accuracy)
+        XCTAssertEqual(UIColor.cyan.perceivedBrightness, 0.8373, accuracy: self.accuracy)
+        XCTAssertEqual(UIColor.magenta.perceivedBrightness, 0.6427, accuracy: self.accuracy)
+        XCTAssertEqual(UIColor.yellow.perceivedBrightness, 0.9413, accuracy: self.accuracy)
+        XCTAssertEqual(UIColor.black.perceivedBrightness, 0.0, accuracy: self.accuracy)
+        XCTAssertEqual(UIColor.white.perceivedBrightness, 1.0, accuracy: self.accuracy)
     }
 
     func testIsLight() {

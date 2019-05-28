@@ -20,8 +20,8 @@ public extension UIColor {
      - returns: The contrast ratio between the two colors.
      */
     static func contrastRatio(between color1: UIColor, and color2: UIColor) -> CGFloat {
-        let luminance1 = color1.luminance
-        let luminance2 = color2.luminance
+        let luminance1 = color1.relativeLuminance
+        let luminance2 = color2.relativeLuminance
 
         let luminanceDarker = min(luminance1, luminance2)
         let luminanceLighter = max(luminance1, luminance2)
