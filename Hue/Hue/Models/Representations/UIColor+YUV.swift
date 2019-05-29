@@ -33,9 +33,9 @@ public extension UIColor {
 
     }
 
-    /// The Y′UV components of the color using standard-definition encoding.
+    /// The Y′UV components of the color using Rec.601 (standard-definition) encoding.
     var yuv: YUV {
-        return yuv(.standard)
+        return yuv(.rec601)
     }
 
     /// The Y′UV components of the color using a given encoding.
@@ -57,7 +57,7 @@ public extension UIColor {
     /// - parameter encoding: The signal encoding with which the components were derived.
     /// - parameter alpha: The alpha value of the color.
     convenience init(_ yuv: YUV,
-                     encoding: SignalEncoding = .standard,
+                     encoding: SignalEncoding = .rec601,
                      alpha: CGFloat = 1.0) {
 
         let Y = yuv.Y

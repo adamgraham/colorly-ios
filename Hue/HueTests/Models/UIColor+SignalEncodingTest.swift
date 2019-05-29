@@ -12,8 +12,8 @@ import XCTest
 
 class UIColor_SignalEncodingTest: XCTestCase {
 
-    func testStandard() {
-        let encoding = UIColor.SignalEncoding.standard
+    func testRec601() {
+        let encoding = UIColor.SignalEncoding.rec601
         let coefficients = encoding.coefficients
         XCTAssertEqual(coefficients.r, 0.299)
         XCTAssertEqual(coefficients.g, 0.587)
@@ -21,8 +21,8 @@ class UIColor_SignalEncodingTest: XCTestCase {
         XCTAssertEqual(coefficients.r + coefficients.g + coefficients.b, 1.0, accuracy: .ulpOfOne)
     }
 
-    func testHDTV() {
-        let encoding = UIColor.SignalEncoding.hdtv
+    func testRec709() {
+        let encoding = UIColor.SignalEncoding.rec709
         let coefficients = encoding.coefficients
         XCTAssertEqual(coefficients.r, 0.2126)
         XCTAssertEqual(coefficients.g, 0.7152)

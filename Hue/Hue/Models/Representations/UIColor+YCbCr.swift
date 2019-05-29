@@ -23,9 +23,9 @@ public extension UIColor {
 
     }
 
-    /// The Y′CbCr components of the color using standard-definition encoding.
+    /// The Y′CbCr components of the color using Rec.601 (standard-definition) encoding.
     var yCbCr: YCbCr {
-        return yCbCr(.standard)
+        return yCbCr(.rec601)
     }
 
     /// The Y′CbCr components of the color using a given encoding.
@@ -46,7 +46,7 @@ public extension UIColor {
     /// - parameter encoding: The signal encoding with which the components were derived.
     /// - parameter alpha: The alpha value of the color.
     convenience init(_ yCbCr: YCbCr,
-                     encoding: SignalEncoding = .standard,
+                     encoding: SignalEncoding = .rec601,
                      alpha: CGFloat = 1.0) {
 
         let Y  = (yCbCr.Y  / 255.0)

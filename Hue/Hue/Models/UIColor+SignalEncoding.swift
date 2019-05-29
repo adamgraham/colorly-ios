@@ -19,16 +19,16 @@ public extension UIColor {
     enum SignalEncoding {
 
         /// ITU-R BT.601 (standard-definition television)
-        case standard
+        case rec601
         /// ITU-R BT.709 (high-definition television)
-        case hdtv
+        case rec709
 
         /// The RGB coefficients used to calculate luminance/luma.
         internal var coefficients: (r: CGFloat, g: CGFloat, b: CGFloat) {
             switch self {
-            case .standard:
+            case .rec601:
                 return (0.299, 0.587, 0.114)
-            case .hdtv:
+            case .rec709:
                 return (0.2126, 0.7152, 0.0722)
             }
         }
