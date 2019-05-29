@@ -32,18 +32,18 @@ class UIColor_YPbPrTest: XCTestCase {
     }
 
     func testYPbPrStandardInit() {
-        assert(UIColor(YPbPr(Y: 1.0, Pb: 0.0, Pr: 0.0), encoding: .standard), .white)
-        assert(UIColor(YPbPr(Y: 0.299, Pb: -0.169, Pr: 0.5), encoding: .standard), .red)
-        assert(UIColor(YPbPr(Y: 0.587, Pb: -0.331, Pr: -0.419), encoding: .standard), .green)
-        assert(UIColor(YPbPr(Y: 0.114, Pb: 0.5, Pr: -0.081), encoding: .standard), .blue)
-        assert(UIColor(YPbPr(Y: 0.701, Pb: 0.169, Pr: -0.5), encoding: .standard), .cyan)
-        assert(UIColor(YPbPr(Y: 0.413, Pb: 0.331, Pr: 0.419), encoding: .standard), .magenta)
-        assert(UIColor(YPbPr(Y: 0.886, Pb: -0.5, Pr: 0.081), encoding: .standard), .yellow)
-        assert(UIColor(YPbPr(Y: 0.0, Pb: 0.0, Pr: 0.0), encoding: .standard), .black)
-        assert(UIColor(YPbPr(Y: 1.0/3.0, Pb: 0.0, Pr: 0.0), encoding: .standard), .darkGray)
-        assert(UIColor(YPbPr(Y: 0.5, Pb: 0.0, Pr: 0.0), encoding: .standard), .gray)
-        assert(UIColor(YPbPr(Y: 2.0/3.0, Pb: 0.0, Pr: 0.0), encoding: .standard), .lightGray)
-        assert(UIColor(YPbPr(Y: 0.0, Pb: 0.0, Pr: 0.0), encoding: .standard, alpha: 0.0), .clear)
+        assert(UIColor(YPbPr(Y: 1.0, Pb: 0.0, Pr: 0.0)), .white)
+        assert(UIColor(YPbPr(Y: 0.299, Pb: -0.169, Pr: 0.5)), .red)
+        assert(UIColor(YPbPr(Y: 0.587, Pb: -0.331, Pr: -0.419)), .green)
+        assert(UIColor(YPbPr(Y: 0.114, Pb: 0.5, Pr: -0.081)), .blue)
+        assert(UIColor(YPbPr(Y: 0.701, Pb: 0.169, Pr: -0.5)), .cyan)
+        assert(UIColor(YPbPr(Y: 0.413, Pb: 0.331, Pr: 0.419)), .magenta)
+        assert(UIColor(YPbPr(Y: 0.886, Pb: -0.5, Pr: 0.081)), .yellow)
+        assert(UIColor(YPbPr(Y: 0.0, Pb: 0.0, Pr: 0.0)), .black)
+        assert(UIColor(YPbPr(Y: 1.0/3.0, Pb: 0.0, Pr: 0.0)), .darkGray)
+        assert(UIColor(YPbPr(Y: 0.5, Pb: 0.0, Pr: 0.0)), .gray)
+        assert(UIColor(YPbPr(Y: 2.0/3.0, Pb: 0.0, Pr: 0.0)), .lightGray)
+        assert(UIColor(YPbPr(Y: 0.0, Pb: 0.0, Pr: 0.0), alpha: 0.0), .clear)
     }
 
     func testYPbPrHDTV() {

@@ -32,18 +32,18 @@ class UIColor_YUVTest: XCTestCase {
     }
 
     func testYUVStandardInit() {
-        assert(UIColor(YUV(Y: 1.0, U: 0.0, V: 0.0), encoding: .standard), .white)
-        assert(UIColor(YUV(Y: 0.299, U: -0.1471, V: 0.6150), encoding: .standard), .red)
-        assert(UIColor(YUV(Y: 0.587, U: -0.2889, V: -0.5150), encoding: .standard), .green)
-        assert(UIColor(YUV(Y: 0.114, U: 0.4360, V: -0.1000), encoding: .standard), .blue)
-        assert(UIColor(YUV(Y: 0.701, U: 0.1471, V: -0.6150), encoding: .standard), .cyan)
-        assert(UIColor(YUV(Y: 0.413, U: 0.2889, V: 0.5150), encoding: .standard), .magenta)
-        assert(UIColor(YUV(Y: 0.886, U: -0.4360, V: 0.1000), encoding: .standard), .yellow)
-        assert(UIColor(YUV(Y: 0.0, U: 0.0, V: 0.0), encoding: .standard), .black)
-        assert(UIColor(YUV(Y: 1.0/3.0, U: 0.0, V: 0.0), encoding: .standard), .darkGray)
-        assert(UIColor(YUV(Y: 0.5, U: 0.0, V: 0.0), encoding: .standard), .gray)
-        assert(UIColor(YUV(Y: 2.0/3.0, U: 0.0, V: 0.0), encoding: .standard), .lightGray)
-        assert(UIColor(YUV(Y: 0.0, U: 0.0, V: 0.0), encoding: .standard, alpha: 0.0), .clear)
+        assert(UIColor(YUV(Y: 1.0, U: 0.0, V: 0.0)), .white)
+        assert(UIColor(YUV(Y: 0.299, U: -0.1471, V: 0.6150)), .red)
+        assert(UIColor(YUV(Y: 0.587, U: -0.2889, V: -0.5150)), .green)
+        assert(UIColor(YUV(Y: 0.114, U: 0.4360, V: -0.1000)), .blue)
+        assert(UIColor(YUV(Y: 0.701, U: 0.1471, V: -0.6150)), .cyan)
+        assert(UIColor(YUV(Y: 0.413, U: 0.2889, V: 0.5150)), .magenta)
+        assert(UIColor(YUV(Y: 0.886, U: -0.4360, V: 0.1000)), .yellow)
+        assert(UIColor(YUV(Y: 0.0, U: 0.0, V: 0.0)), .black)
+        assert(UIColor(YUV(Y: 1.0/3.0, U: 0.0, V: 0.0)), .darkGray)
+        assert(UIColor(YUV(Y: 0.5, U: 0.0, V: 0.0)), .gray)
+        assert(UIColor(YUV(Y: 2.0/3.0, U: 0.0, V: 0.0)), .lightGray)
+        assert(UIColor(YUV(Y: 0.0, U: 0.0, V: 0.0), alpha: 0.0), .clear)
     }
 
     func testYUVHDTV() {

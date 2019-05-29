@@ -23,26 +23,49 @@ public extension UIColor {
 
     }
 
-    /// The Y′IQ components of the color.
-    var yiq: YIQ {
-        let rgb = self.rgbComponents
+    /// Constant values used to convert to and from Y′IQ colors.
+    private struct Constant {
 
-        let Y =  (0.299 * rgb.r) +  (0.587 * rgb.g) +  (0.114 * rgb.b)
-        let I = (0.5959 * rgb.r) - (0.2746 * rgb.g) - (0.3213 * rgb.b)
-        let Q = (0.2115 * rgb.r) - (0.5227 * rgb.g) + (0.3112 * rgb.b)
+        /// The cosine of 33°.
+        static let cos33: CGFloat = cos(deg2rad(33.0))
+        /// The sine of 33°.
+        static let sin33: CGFloat = sin(deg2rad(33.0))
+
+    }
+
+    /// The Y′IQ components of the color using standard-definition encoding.
+    var yiq: YIQ {
+        return yiq(.standard)
+    }
+
+    /// The Y′IQ components of the color using a given encoding.
+    /// - parameter encoding: The signal encoding with which the components are derived.
+    /// - returns: The Y′IQ components of the color.
+    func yiq(_ encoding: SignalEncoding) -> YIQ {
+        let yuv = self.yuv(encoding)
+
+        let Y = yuv.Y
+        let I = -(yuv.U * Constant.sin33) + (yuv.V * Constant.cos33)
+        let Q = (yuv.U * Constant.cos33) + (yuv.V * Constant.sin33)
 
         return YIQ(Y: Y, I: I, Q: Q)
     }
 
     /// Initializes a color from Y′IQ components.
     /// - parameter yiq: The components used to initialize the color.
+    /// - parameter encoding: The signal encoding with which the components were derived.
     /// - parameter alpha: The alpha value of the color.
-    convenience init(_ yiq: YIQ, alpha: CGFloat = 1.0) {
-        let r = yiq.Y + (0.956 * yiq.I) + (0.619 * yiq.Q)
-        let g = yiq.Y - (0.272 * yiq.I) - (0.647 * yiq.Q)
-        let b = yiq.Y - (1.106 * yiq.I) + (1.703 * yiq.Q)
+    convenience init(_ yiq: YIQ,
+                     encoding: SignalEncoding = .standard,
+                     alpha: CGFloat = 1.0) {
 
-        self.init(red: r, green: g, blue: b, alpha: alpha)
+        let Y = yiq.Y
+        let U = -(yiq.I * Constant.sin33) + (yiq.Q * Constant.cos33)
+        let V = (yiq.I * Constant.cos33) + (yiq.Q * Constant.sin33)
+
+        self.init(YUV(Y: Y, U: U, V: V),
+                  encoding: encoding,
+                  alpha: alpha)
     }
 
 }

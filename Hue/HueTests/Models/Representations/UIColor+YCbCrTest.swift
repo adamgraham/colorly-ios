@@ -32,18 +32,18 @@ class UIColor_YCbCrTest: XCTestCase {
     }
 
     func testYCbCrStandardInit() {
-        assert(UIColor(YCbCr(Y: 255.0, Cb: 127.5, Cr: 127.5), encoding: .standard), .white)
-        assert(UIColor(YCbCr(Y: 76.245, Cb: 84.472, Cr: 255.0), encoding: .standard), .red)
-        assert(UIColor(YCbCr(Y: 149.685, Cb: 43.028, Cr: 20.735), encoding: .standard), .green)
-        assert(UIColor(YCbCr(Y: 29.07, Cb: 255.0, Cr: 106.765), encoding: .standard), .blue)
-        assert(UIColor(YCbCr(Y: 178.755, Cb: 170.528, Cr: 0.0), encoding: .standard), .cyan)
-        assert(UIColor(YCbCr(Y: 105.315, Cb: 211.972, Cr: 234.265), encoding: .standard), .magenta)
-        assert(UIColor(YCbCr(Y: 225.93, Cb: 0.0, Cr: 148.235), encoding: .standard), .yellow)
-        assert(UIColor(YCbCr(Y: 0.0, Cb: 127.5, Cr: 127.5), encoding: .standard), .black)
-        assert(UIColor(YCbCr(Y: 85.0, Cb: 127.5, Cr: 127.5), encoding: .standard), .darkGray)
-        assert(UIColor(YCbCr(Y: 127.5, Cb: 127.5, Cr: 127.5), encoding: .standard), .gray)
-        assert(UIColor(YCbCr(Y: 170.0, Cb: 127.5, Cr: 127.5), encoding: .standard), .lightGray)
-        assert(UIColor(YCbCr(Y: 0.0, Cb: 127.5, Cr: 127.5), encoding: .standard, alpha: 0.0), .clear)
+        assert(UIColor(YCbCr(Y: 255.0, Cb: 127.5, Cr: 127.5)), .white)
+        assert(UIColor(YCbCr(Y: 76.245, Cb: 84.472, Cr: 255.0)), .red)
+        assert(UIColor(YCbCr(Y: 149.685, Cb: 43.028, Cr: 20.735)), .green)
+        assert(UIColor(YCbCr(Y: 29.07, Cb: 255.0, Cr: 106.765)), .blue)
+        assert(UIColor(YCbCr(Y: 178.755, Cb: 170.528, Cr: 0.0)), .cyan)
+        assert(UIColor(YCbCr(Y: 105.315, Cb: 211.972, Cr: 234.265)), .magenta)
+        assert(UIColor(YCbCr(Y: 225.93, Cb: 0.0, Cr: 148.235)), .yellow)
+        assert(UIColor(YCbCr(Y: 0.0, Cb: 127.5, Cr: 127.5)), .black)
+        assert(UIColor(YCbCr(Y: 85.0, Cb: 127.5, Cr: 127.5)), .darkGray)
+        assert(UIColor(YCbCr(Y: 127.5, Cb: 127.5, Cr: 127.5)), .gray)
+        assert(UIColor(YCbCr(Y: 170.0, Cb: 127.5, Cr: 127.5)), .lightGray)
+        assert(UIColor(YCbCr(Y: 0.0, Cb: 127.5, Cr: 127.5), alpha: 0.0), .clear)
     }
 
     func testYCbCrHDTV() {

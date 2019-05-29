@@ -45,7 +45,10 @@ public extension UIColor {
     /// - parameter yCbCr: The components used to initialize the color.
     /// - parameter encoding: The signal encoding with which the components were derived.
     /// - parameter alpha: The alpha value of the color.
-    convenience init(_ yCbCr: YCbCr, encoding: SignalEncoding, alpha: CGFloat = 1.0) {
+    convenience init(_ yCbCr: YCbCr,
+                     encoding: SignalEncoding = .standard,
+                     alpha: CGFloat = 1.0) {
+
         let Y  = (yCbCr.Y  / 255.0)
         let Pb = (yCbCr.Cb / 255.0) - 0.5
         let Pr = (yCbCr.Cr / 255.0) - 0.5
