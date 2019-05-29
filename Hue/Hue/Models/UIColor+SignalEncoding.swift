@@ -23,7 +23,7 @@ public extension UIColor {
         /// ITU-R BT.709 (high-definition television)
         case hdtv
 
-        /// The RGB coefficients used to calculate luminance.
+        /// The RGB coefficients used to calculate luminance/luma.
         internal var coefficients: (r: CGFloat, g: CGFloat, b: CGFloat) {
             switch self {
             case .standard:

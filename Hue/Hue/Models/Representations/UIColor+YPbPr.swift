@@ -8,29 +8,29 @@
 
 import UIKit
 
-/// An extension to provide conversion to and from YPbPr colors.
+/// An extension to provide conversion to and from Y′PbPr colors.
 public extension UIColor {
 
-    /// The YPbPr components of a color - luminance (Y) and chrominance (Pb,Pr).
+    /// The Y′PbPr components of a color - luma (Y′) and chroma (Cb,Cr).
     struct YPbPr: Hashable {
 
-        /// The luminance component of the color, in the range [0, 1] (black to white).
+        /// The luma component of the color, in the range [0, 1] (black to white).
         public var Y: CGFloat
-        /// The blue-difference chrominance component of the color, in the range [-0.5, 0.5].
+        /// The blue-difference chroma component of the color, in the range [-0.5, 0.5].
         public var Pb: CGFloat
-        /// The red-difference chrominance component of the color, in the range [-0.5, 0.5].
+        /// The red-difference chroma component of the color, in the range [-0.5, 0.5].
         public var Pr: CGFloat
 
     }
 
-    /// The YPbPr components of the color using standard-definition encoding.
+    /// The Y′PbPr components of the color using standard-definition encoding.
     var yPbPr: YPbPr {
         return yPbPr(.standard)
     }
 
-    /// The YPbPr components of the color using a given encoding.
+    /// The Y′PbPr components of the color using a given encoding.
     /// - parameter encoding: The signal encoding with which the components are derived.
-    /// - returns: The YPbPr components of the color.
+    /// - returns: The Y′PbPr components of the color.
     func yPbPr(_ encoding: SignalEncoding) -> YPbPr {
         let rgb = self.rgbComponents
         let k = encoding.coefficients
@@ -42,7 +42,7 @@ public extension UIColor {
         return YPbPr(Y: Y, Pb: Pb, Pr: Pr)
     }
 
-    /// Initializes a color from YPbPr components.
+    /// Initializes a color from Y′PbPr components.
     /// - parameter yPbPr: The components used to initialize the color.
     /// - parameter encoding: The signal encoding with which the components were derived.
     /// - parameter alpha: The alpha value of the color.

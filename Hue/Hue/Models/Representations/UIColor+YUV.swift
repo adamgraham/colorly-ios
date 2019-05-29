@@ -8,22 +8,22 @@
 
 import UIKit
 
-/// An extension to provide conversion to and from YUV colors.
+/// An extension to provide conversion to and from Y′UV colors.
 public extension UIColor {
 
-    /// The YUV components of a color - luminance (Y) and chrominance (U,V).
+    /// The Y′UV components of a color - luma (Y′) and chroma (U,V).
     struct YUV: Hashable {
 
-        /// The luminance component of the color, in the range [0, 1] (black to white).
+        /// The luma component of the color, in the range [0, 1] (black to white).
         public var Y: CGFloat
-        /// The blue-difference chrominance component of the color, in the range [-0.436, 0.436].
+        /// The blue-difference chroma component of the color, in the range [-0.436, 0.436].
         public var U: CGFloat
-        /// The red-difference chrominance component of the color, in the range [-0.615, 0.615].
+        /// The red-difference chroma component of the color, in the range [-0.615, 0.615].
         public var V: CGFloat
 
     }
 
-    /// Constant values used to convert to and from YUV colors.
+    /// Constant values used to convert to and from Y′UV colors.
     private struct Constant {
 
         /// The maximum value of the U component.
@@ -33,14 +33,14 @@ public extension UIColor {
 
     }
 
-    /// The YUV components of the color using standard-definition encoding.
+    /// The Y′UV components of the color using standard-definition encoding.
     var yuv: YUV {
         return yuv(.standard)
     }
 
-    /// The YUV components of the color using a given encoding.
+    /// The Y′UV components of the color using a given encoding.
     /// - parameter encoding: The signal encoding with which the components are derived.
-    /// - returns: The YUV components of the color.
+    /// - returns: The Y′UV components of the color.
     func yuv(_ encoding: SignalEncoding) -> YUV {
         let rgb = self.rgbComponents
         let k = encoding.coefficients
@@ -52,7 +52,7 @@ public extension UIColor {
         return YUV(Y: Y, U: U, V: V)
     }
 
-    /// Initializes a color from YUV components.
+    /// Initializes a color from Y′UV components.
     /// - parameter yuv: The components used to initialize the color.
     /// - parameter encoding: The signal encoding with which the components were derived.
     /// - parameter alpha: The alpha value of the color.

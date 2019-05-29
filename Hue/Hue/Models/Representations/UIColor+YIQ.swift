@@ -8,22 +8,22 @@
 
 import UIKit
 
-/// An extension to provide conversion to and from YIQ colors.
+/// An extension to provide conversion to and from Y′IQ colors.
 public extension UIColor {
 
-    /// The YIQ components of a color - luminance (Y) and chrominance (I,Q).
+    /// The Y′IQ components of a color - luma (Y′) and chroma (I,Q).
     struct YIQ: Hashable {
 
-        /// The luminance component of the color, in the range [0, 1] (black to white).
+        /// The luma component of the color, in the range [0, 1] (black to white).
         public var Y: CGFloat
-        /// The orange-blue chrominance component of the color, in the range [-0.5957, 0.5957].
+        /// The orange-blue chroma component of the color, in the range [-0.596, 0.596].
         public var I: CGFloat
-        /// The purple-green chrominance component of the color, in the range [-0.5226, 0.5226].
+        /// The purple-green chroma component of the color, in the range [-0.523, 0.523].
         public var Q: CGFloat
 
     }
 
-    /// The YIQ components of the color.
+    /// The Y′IQ components of the color.
     var yiq: YIQ {
         let rgb = self.rgbComponents
 
@@ -34,7 +34,7 @@ public extension UIColor {
         return YIQ(Y: Y, I: I, Q: Q)
     }
 
-    /// Initializes a color from YIQ components.
+    /// Initializes a color from Y′IQ components.
     /// - parameter yiq: The components used to initialize the color.
     /// - parameter alpha: The alpha value of the color.
     convenience init(_ yiq: YIQ, alpha: CGFloat = 1.0) {
