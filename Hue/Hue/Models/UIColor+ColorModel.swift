@@ -72,10 +72,10 @@ public extension UIColor {
         /// in an image.
         case HSI
 
-        /// The CIE 1931 color spaces were the first defined quantitative links between
-        /// distributions of wavelengths in the electromagnetic visible spectrum, and
-        /// physiologically perceived colors in human color vision. The mathematical relationships
-        /// that define these color spaces are essential tools for color management.
+        /// The CIE color spaces were the first defined quantitative links between distributions of
+        /// wavelengths in the electromagnetic visible spectrum, and physiologically perceived
+        /// colors in human color vision. The mathematical relationships that define these color
+        /// spaces are essential tools for color management.
         case CIE
 
         /// The YCbCr color model used as a part of the color image pipeline in video and digital

@@ -48,17 +48,16 @@ public extension UIColor {
         /// another way to represent CIE XYZ.
         case CIExyY
 
-        /// CIE L\*a\*b\* is a color space in which L is lightness and a and b are chromaticity
+        /// CIE 1976 L\*a\*b\* is a color space in which L is lightness and a and b are chromaticity
         /// components, with the difference that the color values are far more than the human
         /// gamut. It was designed to be perceptually uniform with respect to human color vision,
         /// meaning that the same amount of numerical change in these values corresponds to
         /// about the same amount of visually perceived change.
         case CIELAB
 
-        /// The CIE 1976 L\*u\*v\* color space, commonly known by its abbreviation CIELUV, is a
-        /// simple-to-compute transformation of the 1931 CIE XYZ color space, but which
-        /// attempted perceptual uniformity. It is extensively used for applications such as
-        /// computer graphics which deal with colored lights.
+        /// The CIE 1976 L\*u\*v\* color space is a simple-to-compute transformation of the CIE 1931
+        /// XYZ color space, but which attempted perceptual uniformity. It is extensively used for
+        /// applications such as computer graphics which deal with colored lights.
         case CIELUV
 
         /// The CIELCh° color space is a cylindrical representation of the CIELAB or CIELUV cube
