@@ -48,7 +48,7 @@ public extension UIColor {
      - returns: The CIELAB components of the color.
      */
     func Lab(illuminant: Illuminant, observer: StandardObserver) -> CIELAB {
-        let fn = { (t: CGFloat) -> CGFloat in
+        func fn(_ t: CGFloat) -> CGFloat {
             if t > Constant.δ³ { return pow(t, Constant.⅓) }
             return (t / Constant.δ²3) + Constant.⁴୵₂₉
         }
@@ -80,7 +80,7 @@ public extension UIColor {
                      observer: StandardObserver = .two,
                      alpha: CGFloat = 1.0) {
 
-        let fn = { (t: CGFloat) -> CGFloat in
+        func fn(_ t: CGFloat) -> CGFloat {
             if t > Constant.δ { return pow(t, 3.0) }
             return Constant.δ²3 * (t - Constant.⁴୵₂₉)
         }

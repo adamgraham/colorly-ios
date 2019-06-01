@@ -30,11 +30,11 @@ public extension UIColor {
         static let ϵ: CGFloat = 216.0 / 24389.0
         static let κ: CGFloat = 24389.0 / 27.0
 
-        static let fu = { (XYZ: UIColor.Tristimulus) -> CGFloat in
+        static func fu(_ XYZ: Tristimulus) -> CGFloat {
             return (4.0 * XYZ.X) / (XYZ.X + (15.0 * XYZ.Y) + (3.0 * XYZ.Z))
         }
 
-        static let fv = { (XYZ: UIColor.Tristimulus) -> CGFloat in
+        static func fv(_ XYZ: Tristimulus) -> CGFloat {
             return (9.0 * XYZ.Y) / (XYZ.X + (15.0 * XYZ.Y) + (3.0 * XYZ.Z))
         }
 
@@ -54,9 +54,7 @@ public extension UIColor {
      - returns: The CIELUV components of the color.
      */
     func Luv(illuminant: Illuminant, observer: StandardObserver) -> CIELUV {
-        let fu = Constant.fu
-        let fv = Constant.fv
-        let fL = { (t: CGFloat) -> CGFloat in
+        func fL(_ t: CGFloat) -> CGFloat {
             if t <= Constant.ϵ { return t * Constant.κ }
             return 116.0 * pow(t, Constant.⅓) - 16.0
         }
@@ -65,8 +63,8 @@ public extension UIColor {
         let ref = illuminant.whitePoint(for: observer)
 
         var L = fL(XYZ.Y / ref.Y)
-        var u = 13.0 * L * (fu(XYZ) - fu(ref))
-        var v = 13.0 * L * (fv(XYZ) - fv(ref))
+        var u = 13.0 * L * (Constant.fu(XYZ) - Constant.fu(ref))
+        var v = 13.0 * L * (Constant.fv(XYZ) - Constant.fv(ref))
 
         if L.isNaN { L = 0.0 }
         if u.isNaN { u = 0.0 }
@@ -88,17 +86,15 @@ public extension UIColor {
                      observer: StandardObserver = .two,
                      alpha: CGFloat = 1.0) {
 
-        let fu = Constant.fu
-        let fv = Constant.fv
-        let fL = { (t: CGFloat) -> CGFloat in
+        func fL(_ t: CGFloat) -> CGFloat {
             if t <= Constant.κ * Constant.ϵ { return t / Constant.κ }
             return pow((t + 16.0) / 116.0, 3.0)
         }
 
         let ref = illuminant.whitePoint(for: observer)
 
-        let u = Luv.u / (13.0 * Luv.L) + fu(ref)
-        let v = Luv.v / (13.0 * Luv.L) + fv(ref)
+        let u = Luv.u / (13.0 * Luv.L) + Constant.fu(ref)
+        let v = Luv.v / (13.0 * Luv.L) + Constant.fv(ref)
 
         var Y = fL(Luv.L) * 100.0
         var X = (-9.0 * Y * u) / ((u - 4.0) * v - (u * v))
