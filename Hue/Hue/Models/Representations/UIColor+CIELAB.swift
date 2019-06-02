@@ -34,7 +34,7 @@ public extension UIColor {
 
     }
 
-    /// The CIELAB components of the color using a d65 illuminant and standard 2° observer.
+    /// The CIELAB components of the color using a d65 illuminant and 2° standard observer.
     var Lab: CIELAB {
         return self.Lab(illuminant: .d65, observer: .two)
     }

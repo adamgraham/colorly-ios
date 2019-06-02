@@ -14,9 +14,9 @@ public extension UIColor {
     /// The CIE xyY components of a color - luminance (Y) and chromaticity (x,y).
     struct CIExyY: Hashable {
 
-        /// The x-chromaticity component of the color, in the range [0, 1].
+        /// The x-axis chromaticity coordinate of the color, in the range [0, 1].
         public var x: CGFloat
-        /// The y-chromaticity component of the color, in the range [0, 1].
+        /// The y-axis chromaticity coordinate of the color, in the range [0, 1].
         public var y: CGFloat
         /// The luminance component of the color, in the range [0, 100].
         public var Y: CGFloat

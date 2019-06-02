@@ -40,7 +40,7 @@ public extension UIColor {
 
     }
 
-    /// The CIELUV components of the color using a d65 illuminant and standard 2° observer.
+    /// The CIELUV components of the color using a d65 illuminant and 2° standard observer.
     var Luv: CIELUV {
         return self.Luv(illuminant: .d65, observer: .two)
     }

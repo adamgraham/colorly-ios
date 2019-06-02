@@ -23,7 +23,7 @@ public extension UIColor {
 
     }
 
-    /// The Hunter Lab components of the color using a d65 illuminant and standard 2° observer.
+    /// The Hunter Lab components of the color using a d65 illuminant and 2° standard observer.
     var hunterLab: HunterLab {
         return self.hunterLab(illuminant: .d65, observer: .two)
     }
