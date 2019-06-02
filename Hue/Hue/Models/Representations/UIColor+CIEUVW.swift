@@ -8,10 +8,10 @@
 
 import UIKit
 
-/// An extension to provide conversion to and from CIEUVW colors.
+/// An extension to provide conversion to and from CIE 1964 UVW colors.
 public extension UIColor {
 
-    /// The CIEUVW components of a color - chromaticity (U,V) and lightness (W).
+    /// The CIE 1964 UVW components of a color - chromaticity (U,V) and lightness (W).
     struct CIEUVW: Hashable {
 
         /// The U chromaticity component of the color, typically in the range [-100, 100].
@@ -23,7 +23,7 @@ public extension UIColor {
 
     }
 
-    /// Constant values used to convert to and from CIEUVW colors.
+    /// Constant values used to convert to and from CIE 1964 UVW colors.
     private struct Constant {
 
         static let ⅓: CGFloat = 1.0 / 3.0
@@ -38,18 +38,18 @@ public extension UIColor {
 
     }
 
-    /// The CIEUVW components of the color using a d65 illuminant and 2° standard observer.
+    /// The CIE 1964 UVW components of the color using a d65 illuminant and 2° standard observer.
     var uvw: CIEUVW {
         return uvw(illuminant: .d65, observer: .two)
     }
 
     /**
-     The CIEUVW components of the color using a given illuminant and standard observer.
+     The CIE 1964 UVW components of the color using a given illuminant and standard observer.
 
      - parameter illuminant: The illuminant used to calculate tristimulus values.
      - parameter observer: The standard observer used to calculate tristimulus values.
 
-     - returns: The CIEUVW components of the color.
+     - returns: The CIE 1964 UVW components of the color.
      */
     func uvw(illuminant: Illuminant, observer: StandardObserver) -> CIEUVW {
         let XYZ = self.XYZ
@@ -66,7 +66,7 @@ public extension UIColor {
         return CIEUVW(U: U, V: V, W: W)
     }
 
-    /// Initializes a color from CIEUVW components.
+    /// Initializes a color from CIE 1964 UVW components.
     /// - parameter uvw: The components used to initialize the color.
     /// - parameter illuminant: The illuminant used to calculate tristimulus values.
     /// - parameter observer: The standard observer used calculate tristimulus values.

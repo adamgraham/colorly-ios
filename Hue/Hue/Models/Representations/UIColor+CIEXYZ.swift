@@ -8,10 +8,10 @@
 
 import UIKit
 
-/// An extension to provide conversion to and from CIE XYZ colors.
+/// An extension to provide conversion to and from CIE 1931 XYZ colors.
 public extension UIColor {
 
-    /// The CIE XYZ components of a color - luminance (Y) and chromaticity (X,Z).
+    /// The CIE 1931 XYZ components of a color - luminance (Y) and chromaticity (X,Z).
     struct CIEXYZ: Hashable {
 
         /// A mix of cone response curves chosen to be orthogonal to luminance and
@@ -24,7 +24,7 @@ public extension UIColor {
 
     }
 
-    /// The CIE XYZ components of the color.
+    /// The CIE 1931 XYZ components of the color.
     var XYZ: CIEXYZ {
         let rgb = self.linearRGB
 
@@ -39,7 +39,7 @@ public extension UIColor {
                       Z: Z * 100.0)
     }
 
-    /// Initializes a color from CIE XYZ components.
+    /// Initializes a color from CIE 1931 XYZ components.
     /// - parameter XYZ: The components used to initialize the color.
     /// - parameter alpha: The alpha value of the color.
     convenience init(_ XYZ: CIEXYZ, alpha: CGFloat = 1.0) {

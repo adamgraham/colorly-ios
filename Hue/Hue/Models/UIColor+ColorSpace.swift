@@ -27,8 +27,8 @@ public extension UIColor {
         /// In the 1920s, W. David Wright and John Guild independently conducted a series of
         /// experiments on human sight, from which they tried to determine the colors in human
         /// vision, and give it a mathematical basis. The results of these experiments defined the
-        /// CIE RGB color space which became the basis for the trichromatic CIE XYZ color
-        /// specification.
+        /// CIE 1931 RGB color space which became the basis for the trichromatic CIE 1931 XYZ
+        /// color specification.
         case CIERGB
 
         /// In 1931, based on the results of the CIE RGB version of the human eye, CIE
@@ -44,8 +44,8 @@ public extension UIColor {
         case CIEXYZ
 
         /// In CIE xyY, Y is the luminance and x and y represents the chromaticity values derived
-        /// from the tristimulus values X, Y and Z in the CIE XYZ color space. CIE xyY is just
-        /// another way to represent CIE XYZ.
+        /// from the tristimulus values X, Y and Z in the CIE 1931 XYZ color space. CIE xyY is just
+        /// another way to represent CIE 1931 XYZ.
         case CIExyY
 
         /// CIE 1976 L\*a\*b\* is a color space in which L is lightness and a and b are chromaticity
@@ -72,8 +72,8 @@ public extension UIColor {
 
         /// The Hunter Lab color space, defined in 1948 by Richard S. Hunter, is another color
         /// space sometimes referred to as "Lab". Like CIELAB, it was also designed to be
-        /// computed via simple formulas from the CIE XYZ space but to be more perceptually
-        /// uniform than CIE XYZ.
+        /// computed via simple formulas from the CIE 1931 XYZ space but to be more
+        /// perceptually uniform than CIE 1931 XYZ.
         ///
         /// Hunter named his coordinates L, a, and b; the CIELAB space, defined years later in
         /// 1976, named its coordinates L*, a*, and b* to distinguish them from Hunter's

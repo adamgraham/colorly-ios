@@ -8,10 +8,10 @@
 
 import UIKit
 
-/// An extension to provide conversion to and from CIEUCS colors.
+/// An extension to provide conversion to and from CIE 1960 UCS colors.
 public extension UIColor {
 
-    /// The CIEUCS components of a color - (u,v) chromaticity coordinates.
+    /// The CIE 1960 UCS components of a color - (u,v) chromaticity coordinates.
     struct CIEUCS: Hashable {
 
         /// The u-axis chromaticity coordinate of the color, in the range [0, 1].
@@ -21,7 +21,7 @@ public extension UIColor {
 
     }
 
-    /// The CIEUCS components of the color.
+    /// The CIE 1960 UCS components of the color.
     var ucs: CIEUCS {
         let XYZ = self.XYZ
 
@@ -38,7 +38,7 @@ public extension UIColor {
         return CIEUCS(u: u, v: v)
     }
 
-    /// Initializes a color from CIEUCS components.
+    /// Initializes a color from CIE 1960 UCS components.
     /// - parameter ucs: The components used to initialize the color.
     /// - parameter luminance: The luminance value of the color.
     /// - parameter alpha: The alpha value of the color.
