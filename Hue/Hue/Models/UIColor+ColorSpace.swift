@@ -48,6 +48,20 @@ public extension UIColor {
         /// another way to represent CIE 1931 XYZ.
         case CIExyY
 
+        /// The CIE 1960 UCS color space is another name for the (u, v) chromaticity space
+        /// devised by David MacAdam. The CIE 1960 UCS does not define a luminance or
+        /// lightness component. Today, the CIE 1960 UCS is mostly used to calculate correlated
+        /// color temperature, where the isothermal lines are perpendicular to the Planckian locus.
+        case CIEUCS
+
+        /// The CIE 1964 U\*V\*W\* color space is based on the CIE 1960 UCS. Wyszecki invented
+        /// the UVW color space in order to be able to calculate color differences without having to
+        /// hold the luminance constant. He defined a lightness index W\* by simplifying
+        /// expressions suggested earlier. The chromaticity components U* and V* are defined
+        /// such that the white point maps to the origin. This arrangement has the benefit of being
+        /// able to express the loci of chromaticities with constant saturation.
+        case CIEUVW
+
         /// CIE 1976 L\*a\*b\* is a color space in which L is lightness and a and b are chromaticity
         /// components, with the difference that the color values are far more than the human
         /// gamut. It was designed to be perceptually uniform with respect to human color vision,
