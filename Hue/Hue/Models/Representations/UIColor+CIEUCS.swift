@@ -44,15 +44,16 @@ public extension UIColor {
     /// - parameter alpha: The alpha value of the color.
     convenience init(_ ucs: CIEUCS, luminance: CGFloat = 1.0, alpha: CGFloat = 1.0) {
         let V = luminance
-        var U = V * ucs.u / ucs.v
-        var W = -V * (ucs.u + ucs.v - 1.0) / ucs.v
+        let U = V * ucs.u / ucs.v
+        let W = -V * (ucs.u + ucs.v - 1.0) / ucs.v
 
-        if U.isNaN { U = 0.0 }
-        if W.isNaN { W = 0.0 }
+        var X = ((3.0 / 2.0) * U) * 100.0
+        var Y = V * 100.0
+        var Z = (((3.0 / 2.0) * U) - (3.0 * V) + (2.0 * W)) * 100.0
 
-        let X = ((3.0 / 2.0) * U) * 100.0
-        let Y = V * 100.0
-        let Z = (((3.0 / 2.0) * U) - (3.0 * V) + (2.0 * W)) * 100.0
+        if X.isNaN { X = 0.0 }
+        if Y.isNaN { Y = 0.0 }
+        if Z.isNaN { Z = 0.0 }
 
         self.init(CIEXYZ(X: X, Y: Y, Z: Z), alpha: alpha)
     }
