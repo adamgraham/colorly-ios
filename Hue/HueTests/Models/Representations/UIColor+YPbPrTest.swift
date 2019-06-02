@@ -16,7 +16,7 @@ class UIColor_YPbPrTest: XCTestCase {
 
     private let accuracy: CGFloat = 0.001
 
-    func testYPbPrStandard() {
+    func testYPbPrRec601() {
         assert(UIColor.white.yPbPr, YPbPr(Y: 1.0, Pb: 0.0, Pr: 0.0))
         assert(UIColor.red.yPbPr, YPbPr(Y: 0.299, Pb: -0.169, Pr: 0.5))
         assert(UIColor.green.yPbPr, YPbPr(Y: 0.587, Pb: -0.331, Pr: -0.419))
@@ -31,7 +31,7 @@ class UIColor_YPbPrTest: XCTestCase {
         assert(UIColor.clear.yPbPr, YPbPr(Y: 0.0, Pb: 0.0, Pr: 0.0))
     }
 
-    func testYPbPrStandardInit() {
+    func testYPbPrRec601Init() {
         assert(UIColor(YPbPr(Y: 1.0, Pb: 0.0, Pr: 0.0)), .white)
         assert(UIColor(YPbPr(Y: 0.299, Pb: -0.169, Pr: 0.5)), .red)
         assert(UIColor(YPbPr(Y: 0.587, Pb: -0.331, Pr: -0.419)), .green)
@@ -46,7 +46,7 @@ class UIColor_YPbPrTest: XCTestCase {
         assert(UIColor(YPbPr(Y: 0.0, Pb: 0.0, Pr: 0.0), alpha: 0.0), .clear)
     }
 
-    func testYPbPrHDTV() {
+    func testYPbPrRec709() {
         assert(UIColor.white.yPbPr(.rec709), YPbPr(Y: 1.0, Pb: 0.0, Pr: 0.0))
         assert(UIColor.red.yPbPr(.rec709), YPbPr(Y: 0.213, Pb: -0.115, Pr: 0.5))
         assert(UIColor.green.yPbPr(.rec709), YPbPr(Y: 0.715, Pb: -0.385, Pr: -0.454))
@@ -61,7 +61,7 @@ class UIColor_YPbPrTest: XCTestCase {
         assert(UIColor.clear.yPbPr(.rec709), YPbPr(Y: 0.0, Pb: 0.0, Pr: 0.0))
     }
 
-    func testYPbPrHDTVInit() {
+    func testYPbPrRec709Init() {
         assert(UIColor(YPbPr(Y: 1.0, Pb: 0.0, Pr: 0.0), encoding: .rec709), .white)
         assert(UIColor(YPbPr(Y: 0.213, Pb: -0.115, Pr: 0.5), encoding: .rec709), .red)
         assert(UIColor(YPbPr(Y: 0.715, Pb: -0.385, Pr: -0.454), encoding: .rec709), .green)

@@ -16,7 +16,7 @@ class UIColor_YIQTest: XCTestCase {
 
     private let accuracy: CGFloat = 0.001
 
-    func testYIQStandard() {
+    func testYIQSRec601() {
         assert(UIColor.white.yiq, YIQ(Y: 1.0, I: 0.0, Q: 0.0))
         assert(UIColor.red.yiq, YIQ(Y: 0.299, I: 0.5959, Q: 0.2115))
         assert(UIColor.green.yiq, YIQ(Y: 0.587, I: -0.2746, Q: -0.5227))
@@ -31,7 +31,7 @@ class UIColor_YIQTest: XCTestCase {
         assert(UIColor.clear.yiq, YIQ(Y: 0.0, I: 0.0, Q: 0.0))
     }
 
-    func testYIQStandardInit() {
+    func testYIQRec601Init() {
         assert(UIColor(YIQ(Y: 1.0, I: 0.0, Q: 0.0)), .white)
         assert(UIColor(YIQ(Y: 0.299, I: 0.5959, Q: 0.2115)), .red)
         assert(UIColor(YIQ(Y: 0.587, I: -0.2746, Q: -0.5227)), .green)
@@ -46,7 +46,7 @@ class UIColor_YIQTest: XCTestCase {
         assert(UIColor(YIQ(Y: 0.0, I: 0.0, Q: 0.0), alpha: 0.0), .clear)
     }
 
-    func testYIQHDTV() {
+    func testYIQRec709() {
         assert(UIColor.white.yiq(.rec709), YIQ(Y: 1.0, I: 0.0, Q: 0.0))
         assert(UIColor.red.yiq(.rec709), YIQ(Y: 0.2126, I: 0.5702, Q: 0.2512))
         assert(UIColor.green.yiq(.rec709), YIQ(Y: 0.7152, I: -0.2854, Q: -0.5861))
@@ -61,7 +61,7 @@ class UIColor_YIQTest: XCTestCase {
         assert(UIColor.clear.yiq(.rec709), YIQ(Y: 0.0, I: 0.0, Q: 0.0))
     }
 
-    func testYIQHDTVInit() {
+    func testYIQRec709Init() {
         assert(UIColor(YIQ(Y: 1.0, I: 0.0, Q: 0.0), encoding: .rec709), .white)
         assert(UIColor(YIQ(Y: 0.2126, I: 0.5702, Q: 0.2512), encoding: .rec709), .red)
         assert(UIColor(YIQ(Y: 0.7152, I: -0.2854, Q: -0.5861), encoding: .rec709), .green)

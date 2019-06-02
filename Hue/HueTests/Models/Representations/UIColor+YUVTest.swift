@@ -16,7 +16,7 @@ class UIColor_YUVTest: XCTestCase {
 
     private let accuracy: CGFloat = 0.001
 
-    func testYUVStandard() {
+    func testYUVRec601() {
         assert(UIColor.white.yuv, YUV(Y: 1.0, U: 0.0, V: 0.0))
         assert(UIColor.red.yuv, YUV(Y: 0.299, U: -0.1471, V: 0.6150))
         assert(UIColor.green.yuv, YUV(Y: 0.587, U: -0.2889, V: -0.5150))
@@ -31,7 +31,7 @@ class UIColor_YUVTest: XCTestCase {
         assert(UIColor.clear.yuv, YUV(Y: 0.0, U: 0.0, V: 0.0))
     }
 
-    func testYUVStandardInit() {
+    func testYUVRec601Init() {
         assert(UIColor(YUV(Y: 1.0, U: 0.0, V: 0.0)), .white)
         assert(UIColor(YUV(Y: 0.299, U: -0.1471, V: 0.6150)), .red)
         assert(UIColor(YUV(Y: 0.587, U: -0.2889, V: -0.5150)), .green)
@@ -46,7 +46,7 @@ class UIColor_YUVTest: XCTestCase {
         assert(UIColor(YUV(Y: 0.0, U: 0.0, V: 0.0), alpha: 0.0), .clear)
     }
 
-    func testYUVHDTV() {
+    func testYUVRec709() {
         assert(UIColor.white.yuv(.rec709), YUV(Y: 1.0, U: 0.0, V: 0.0))
         assert(UIColor.red.yuv(.rec709), YUV(Y: 0.2126, U: -0.0999, V: 0.6150))
         assert(UIColor.green.yuv(.rec709), YUV(Y: 0.7152, U: -0.3361, V: -0.5586))
@@ -61,7 +61,7 @@ class UIColor_YUVTest: XCTestCase {
         assert(UIColor.clear.yuv(.rec709), YUV(Y: 0.0, U: 0.0, V: 0.0))
     }
 
-    func testYUVHDTVInit() {
+    func testYUVRec709Init() {
         assert(UIColor(YUV(Y: 1.0, U: 0.0, V: 0.0), encoding: .rec709), .white)
         assert(UIColor(YUV(Y: 0.2126, U: -0.0999, V: 0.6150), encoding: .rec709), .red)
         assert(UIColor(YUV(Y: 0.7152, U: -0.3361, V: -0.5586), encoding: .rec709), .green)

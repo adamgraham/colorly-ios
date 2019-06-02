@@ -16,7 +16,7 @@ class UIColor_YCbCrTest: XCTestCase {
 
     private let accuracy: CGFloat = 0.001
 
-    func testYCbCrStandard() {
+    func testYCbCrRec601() {
         assert(UIColor.white.yCbCr, YCbCr(Y: 255.0, Cb: 127.5, Cr: 127.5))
         assert(UIColor.red.yCbCr, YCbCr(Y: 76.245, Cb: 84.472, Cr: 255.0))
         assert(UIColor.green.yCbCr, YCbCr(Y: 149.685, Cb: 43.028, Cr: 20.735))
@@ -31,7 +31,7 @@ class UIColor_YCbCrTest: XCTestCase {
         assert(UIColor.clear.yCbCr, YCbCr(Y: 0.0, Cb: 127.5, Cr: 127.5))
     }
 
-    func testYCbCrStandardInit() {
+    func testYCbCrRec601Init() {
         assert(UIColor(YCbCr(Y: 255.0, Cb: 127.5, Cr: 127.5)), .white)
         assert(UIColor(YCbCr(Y: 76.245, Cb: 84.472, Cr: 255.0)), .red)
         assert(UIColor(YCbCr(Y: 149.685, Cb: 43.028, Cr: 20.735)), .green)
@@ -46,7 +46,7 @@ class UIColor_YCbCrTest: XCTestCase {
         assert(UIColor(YCbCr(Y: 0.0, Cb: 127.5, Cr: 127.5), alpha: 0.0), .clear)
     }
 
-    func testYCbCrHDTV() {
+    func testYCbCrRec709() {
         assert(UIColor.white.yCbCr(.rec709), YCbCr(Y: 255.0, Cb: 127.5, Cr: 127.5))
         assert(UIColor.red.yCbCr(.rec709), YCbCr(Y: 54.213, Cb: 98.284, Cr: 255.0))
         assert(UIColor.green.yCbCr(.rec709), YCbCr(Y: 182.376, Cb: 29.216, Cr: 11.691))
@@ -61,7 +61,7 @@ class UIColor_YCbCrTest: XCTestCase {
         assert(UIColor.clear.yCbCr(.rec709), YCbCr(Y: 0.0, Cb: 127.5, Cr: 127.5))
     }
 
-    func testYCbCrHDTVInit() {
+    func testYCbCrRec709Init() {
         assert(UIColor(YCbCr(Y: 255.0, Cb: 127.5, Cr: 127.5), encoding: .rec709), .white)
         assert(UIColor(YCbCr(Y: 54.213, Cb: 98.284, Cr: 255.0), encoding: .rec709), .red)
         assert(UIColor(YCbCr(Y: 182.376, Cb: 29.216, Cr: 11.691), encoding: .rec709), .green)
