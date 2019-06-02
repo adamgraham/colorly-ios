@@ -11,7 +11,7 @@ import UIKit
 /// An extension to provide conversion to and from CIEUCS colors.
 public extension UIColor {
 
-    /// The CIEUCS components of a color.
+    /// The CIEUCS components of a color - (u,v) chromaticity coordinates.
     struct CIEUCS: Hashable {
 
         /// The u-axis chromaticity coordinate of the color, in the range [0, 1].

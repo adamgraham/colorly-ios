@@ -52,7 +52,7 @@ public extension UIColor {
 
     /// The CIELCh°(ab) components of the color using a d65 illuminant and 2° standard observer.
     var LCh_ab: CIELCh {
-        return self.LCh_ab(illuminant: .d65, observer: .two)
+        return LCh_ab(illuminant: .d65, observer: .two)
     }
 
     /**
@@ -94,7 +94,7 @@ public extension UIColor {
 
     /// The CIELCh°(uv) components of the color using a d65 illuminant and 2° standard observer.
     var LCh_uv: CIELCh {
-        return self.LCh_uv(illuminant: .d65, observer: .two)
+        return LCh_uv(illuminant: .d65, observer: .two)
     }
 
     /**

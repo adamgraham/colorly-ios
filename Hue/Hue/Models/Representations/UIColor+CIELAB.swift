@@ -16,9 +16,9 @@ public extension UIColor {
 
         /// The lightness component of the color, in the range [0, 100] (darkest to brightest).
         public var L: CGFloat
-        /// The red-green chromaticity component of the color, in the range [-128, 128].
+        /// The green-red chromaticity component of the color, typically in the range [-128, 128].
         public var a: CGFloat
-        /// The blue-yellow chromaticity component of the color, in the range [-128, 128].
+        /// The blue-yellow chromaticity component of the color, typically in the range [-128, 128].
         public var b: CGFloat
 
     }
@@ -36,7 +36,7 @@ public extension UIColor {
 
     /// The CIELAB components of the color using a d65 illuminant and 2° standard observer.
     var Lab: CIELAB {
-        return self.Lab(illuminant: .d65, observer: .two)
+        return Lab(illuminant: .d65, observer: .two)
     }
 
     /**

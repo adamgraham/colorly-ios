@@ -16,7 +16,7 @@ public extension UIColor {
 
         /// The lightness component of the color, in the range [0, 100] (darkest to brightest).
         public var L: CGFloat
-        /// The red-green chromaticity component of the color.
+        /// The green-red chromaticity component of the color.
         public var a: CGFloat
         /// The blue-yellow chromaticity component of the color.
         public var b: CGFloat
@@ -25,7 +25,7 @@ public extension UIColor {
 
     /// The Hunter Lab components of the color using a d65 illuminant and 2° standard observer.
     var hunterLab: HunterLab {
-        return self.hunterLab(illuminant: .d65, observer: .two)
+        return hunterLab(illuminant: .d65, observer: .two)
     }
 
     /**
