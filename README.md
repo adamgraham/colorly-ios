@@ -6,6 +6,7 @@
 ### Index
   * [Accessibility Compliance](#accessibility)
   * [Averaging](#averaging)
+  * [Color Wheel](#color-wheel)
   * [Components](#components)
   * [Contrast Ratio](#contrast)
   * [Gradients](#gradients)
@@ -241,6 +242,54 @@ color.isDark // Returns true if the color is considered dark according to its pe
 ``` swift
 let color = UIColor.random()
 color.webSafe // The nearest web safe color to the current color
+```
+
+#### <a name="color-wheel"></a> Color Wheel 🎡
+``` swift
+UIColor.azure // A color object whose RGB values are 0.0, 0.5, and 1.0 and whose alpha value is 1.0
+UIColor.violet // A color object whose RGB values are 0.5, 0.0, and 1.0 and whose alpha value is 1.0
+UIColor.rose // A color object whose RGB values are 1.0, 0.0, and 0.5 and whose alpha value is 1.0
+UIColor.orange // A color object whose RGB values are 1.0, 0.5, and 0.0 and whose alpha value is 1.0
+UIColor.chartreuse // A color object whose RGB values are 0.5, 1.0, and 0.0 and whose alpha value is 1.0
+UIColor.springGreen // A color object whose RGB values are 0.0, 1.0, and 0.5 and whose alpha value is 1.0
+```
+``` swift
+UIColor.ColorWheel.RGB.white // #ffffff, rgb(255,255,255)
+UIColor.ColorWheel.RGB.black // #000000, rgb(0,0,0)
+// primary
+UIColor.ColorWheel.RGB.red // #ff0000, rgb(255,0,0)
+UIColor.ColorWheel.RGB.green // #00ff00, rgb(0,255,0)
+UIColor.ColorWheel.RGB.blue // #0000ff, rgb(0,0,255)
+// secondary
+UIColor.ColorWheel.RGB.cyan // #00ffff, rgb(0,255,255)
+UIColor.ColorWheel.RGB.magenta // #ff00ff, rgb(255,0,255)
+UIColor.ColorWheel.RGB.yellow // #ffff00, gb(255,255,0)
+// tertiary
+UIColor.ColorWheel.RGB.azure // #0080ff, rgb(0,128,255)
+UIColor.ColorWheel.RGB.violet // #8000ff, rgb(128,0,255)
+UIColor.ColorWheel.RGB.rose // #ff0080, rgb(255,0,128)
+UIColor.ColorWheel.RGB.orange // #ff8000, rgb(255,128,0)
+UIColor.ColorWheel.RGB.chartreuse // #80ff00, rgb(128,255,0)
+UIColor.ColorWheel.RGB.springGreen // #00ff80, rgb(0,255,128)
+```
+``` swift
+UIColor.ColorWheel.RYB.white // #ffffff, ryb(255,255,255)
+UIColor.ColorWheel.RYB.black // #000000, ryb(0,0,0)
+// primary
+UIColor.ColorWheel.RYB.red // #ff0000, ryb(255,0,0)
+UIColor.ColorWheel.RYB.yellow // #00ff00, ryb(0,255,0)
+UIColor.ColorWheel.RYB.blue // #0000ff, ryb(0,0,255)
+// secondary
+UIColor.ColorWheel.RYB.green // #00ffff, ryb(0,255,255)
+UIColor.ColorWheel.RYB.purple // #ff00ff, ryb(255,0,255)
+UIColor.ColorWheel.RYB.orange // #ffff00, ryb(255,255,0)
+// tertiary
+UIColor.ColorWheel.RYB.vermilion // #ff8000, ryb(255,128,0)
+UIColor.ColorWheel.RYB.amber // #80ff00, ryb(128,255,0)
+UIColor.ColorWheel.RYB.chartreuse // #00ff80, ryb(0,255,128)
+UIColor.ColorWheel.RYB.teal // #0080ff, ryb(0,128,255)
+UIColor.ColorWheel.RYB.violet // #8000ff, ryb(128,0,255)
+UIColor.ColorWheel.RYB.magenta // #ff0080, ryb(255,0,128)
 ```
 
 ## License
