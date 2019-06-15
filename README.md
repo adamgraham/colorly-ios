@@ -6,6 +6,7 @@
 ### Index
   * [Accessibility Compliance](#accessibility)
   * [Averaging](#averaging)
+  * [Color Models & Schemes](#color-models)
   * [Color Wheel](#color-wheel)
   * [Components](#components)
   * [Contrast Ratio](#contrast)
@@ -18,7 +19,6 @@
   * [Luminance Values](#luminance)
   * [Mixing](#mixing)
   * [Mixing Models](#mixing-models)
-  * [Models](#models)
   * [Pantone Colors](#pantone)
   * [Randomization](#randomization)
   * [Saturated / Desaturated / Grayscale](#saturation)
@@ -26,7 +26,7 @@
   * [Signal Encodings](#signal-encodings)
   * [Web Safe](#websafe)
 
-#### <a name="models"></a> Models 👩‍🔬
+#### <a name="color-models"></a> Color Models & Schemes 👩‍🔬
 ``` swift
 let color = UIColor.red
 color.hex // The hexadecimal integer value in the RGB format (RRGGBB) e.g. 0xff0000
