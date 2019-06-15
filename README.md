@@ -7,9 +7,9 @@
 ``` swift
 // Returns a mixture of two colors with a given weight.
 UIColor.mixing(.red, with: .blue)
-UIColor.mixing(.red, with: .blue, weight: 0.25)
+//UIColor.mixing(.red, with: .blue, weight: 0.5)
 UIColor.red.mixed(with: .blue)
-UIColor.red.mixed(with: .blue, weight: 0.25)
+//UIColor.red.mixed(with: .blue, weight: 0.5)
 
 // Arithmetic
 let rose = (UIColor.magenta * 0.5) + (UIColor.red * 0.5)
