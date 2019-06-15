@@ -5,6 +5,7 @@
 
 ### Index
   * [Accessibility Compliance](#accessibility)
+  * [Averaging](#averaging)
   * [Components](#components)
   * [Contrast Ratio](#contrast)
   * [Gradients](#gradients)
@@ -18,6 +19,7 @@
   * [Randomization](#randomization)
   * [Saturated / Desaturated / Grayscale](#saturation)
   * [Shades / Tints / Tones](#shades-tints-tones)
+  * [Web Safe](#websafe)
 
 #### <a name="models"></a> Models 👩‍🔬
 ``` swift
@@ -185,6 +187,12 @@ UIColor.gradient(between: .orange, and: .purple, stops: 5)
 UIColor.gradient(between: .orange, and: .purple, customStops: [0.0, 0.1, 0.5, 0.9, 1.0])
 ```
 
+#### <a name="averaging"></a> Averaging 🖖
+``` swift
+UIColor.average(of: [.red, .green, ,blue]) // Returns the average color of an array of colors
+UIColor.average(of: .black, and: .white) // Returns the average of two colors
+```
+
 #### <a name="randomization"></a> Randomization 🔀
 ``` swift
 UIColor.random() // Returns a color with random component values
@@ -227,6 +235,12 @@ color.relativeLuminance // The relative luminance of the color, measured accordi
 color.perceivedBrightness // The perceived brightness of the color, measured according to the HSP color model
 color.isLight // Returns true if the color is considered light according to its perceived brightness
 color.isDark // Returns true if the color is considered dark according to its perceived brightness
+```
+
+#### <a name="websafe"></a> Web Safe 🕸️
+``` swift
+let color = UIColor.random()
+color.webSafe // The nearest web safe color to the current color
 ```
 
 ## License
