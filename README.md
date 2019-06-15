@@ -4,20 +4,20 @@
 ## Usage
 
 ### Index
-  * [🌎 Accessibility Compliance](#accessibility)
-  * [⚛️ Components](#components)
-  * [🔲 Contrast Ratio](#contrast)
-  * [🌈 Gradients](#gradients)
-  * [🎶 Harmonies](#harmonies)
-  * [🚥 Hue Adjustment](#hue-adjustment)
-  * [🙃 Inversion](#inversion)
-  * [🌓 Lighter / Darker](#lightness)
-  * [☀️ Luminance Values](#luminance)
-  * [🎨 Mixing](#mixing)
-  * [👩‍🔬 Models](#models)
-  * [🔀 Randomization](#randomization)
-  * [🖤 Saturated / Desaturated / Grayscale](#saturation)
-  * [👥 Shades / Tints / Tones](#shades-tints-tones)
+  * [Accessibility Compliance](#accessibility)
+  * [Components](#components)
+  * [Contrast Ratio](#contrast)
+  * [Gradients](#gradients)
+  * [Harmonies](#harmonies)
+  * [Hue Adjustment](#hue-adjustment)
+  * [Inversion](#inversion)
+  * [Lighter / Darker](#lightness)
+  * [Luminance Values](#luminance)
+  * [Mixing](#mixing)
+  * [Models](#models)
+  * [Randomization](#randomization)
+  * [Saturated / Desaturated / Grayscale](#saturation)
+  * [Shades / Tints / Tones](#shades-tints-tones)
 
 #### <a name="models"></a> Models 👩‍🔬
 ``` swift
