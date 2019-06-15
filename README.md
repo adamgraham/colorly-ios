@@ -46,6 +46,15 @@ color.darker() // Returns a new instance of the color with decreased lightness.
 //color.darker(percent: 0.1)
 ```
 
+#### Hue Adjustment
+``` swift
+let color = UIColor.red
+color.adjustingHue(by: 180.0) // Returns a new instance of the color with an adjusted hue.
+color.complement // The color opposite on the color wheel, equivalant to adjusting the hue by 180°.
+color.isCool // Returns true if the color falls on the cool side of the color wheel.
+color.isWarm // Returns true if the color falls on the warm side of the color wheel.
+```
+
 #### Inverted
 ``` swift
 let color = UIColor.red
@@ -71,15 +80,6 @@ harmonies.square // Two evenly spaced complementary pairs on the color wheel.
 UIColor.gradient(between: .orange, and: .purple)
 UIColor.gradient(between: .orange, and: .purple, stops: 5)
 UIColor.gradient(between: .orange, and: .purple, customStops: [0.0, 0.1, 0.5, 0.9, 1.0])
-```
-
-#### Hue Adjustment
-``` swift
-let color = UIColor.red
-color.adjustingHue(by: 180.0) // Returns a new instance of the color with an adjusted hue.
-color.complement // The color opposite on the color wheel, equivalant to adjusting the hue by 180°.
-color.isCool // Returns true if the color falls on the cool side of the color wheel.
-color.isWarm // Returns true if the color falls on the warm side of the color wheel.
 ```
 
 #### Randomization
