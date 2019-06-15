@@ -18,9 +18,11 @@
   * [Mixing](#mixing)
   * [Mixing Models](#mixing-models)
   * [Models](#models)
+  * [Pantone Colors](#pantone)
   * [Randomization](#randomization)
   * [Saturated / Desaturated / Grayscale](#saturation)
   * [Shades / Tints / Tones](#shades-tints-tones)
+  * [Signal Encodings](#signal-encodings)
   * [Web Safe](#websafe)
 
 #### <a name="models"></a> Models 👩‍🔬
@@ -309,6 +311,38 @@ colorWheel.chartreuse // #00ff80, ryb(0,255,128)
 colorWheel.teal // #0080ff, ryb(0,128,255)
 colorWheel.violet // #8000ff, ryb(128,0,255)
 colorWheel.magenta // #ff0080, ryb(255,0,128)
+```
+
+#### <a name="pantone"></a> Pantone Colors 🍭
+``` swift
+let palette = UIColor.Pantone
+palette.cerulean // Pantone 15-4020, #9BB7D4, Color of the year 2000
+palette.fuchsiaRose // Pantone 17-2031, #C74375, Color of the year 2001
+palette.trueRed // Pantone 19-1664, #BF1932, Color of the year 2002
+palette.aquaSky // Pantone 14-4811, #7BC4C4, Color of the year 2003
+palette.tigerlily // Pantone 17-1456, #E2583E, Color of the year 2004
+palette.blueTurquoise // Pantone 15-5217, #53B0AE, Color of the year 2005
+palette.sandDollar // Pantone 13-1106, #DECDBE, Color of the year 2006
+palette.chiliPepper // Pantone 19-1557, #9B1B30, Color of the year 2007
+palette.blueIris // Pantone 18-3943, #5A5B9F, Color of the year 2008
+palette.mimosa // Pantone 14-0848, #F0C05A, Color of the year 2009
+palette.turquoise // Pantone 15-5519, #45B5AA, Color of the year 2010
+palette.honeysuckle // Pantone 18-2120, #D94F70, Color of the year 2011
+palette.tangerineTango // Pantone 17-1463, #DD4124, Color of the year 2012
+palette.emerald // Pantone 17-5641, #009473, Color of the year 2013
+palette.radiantOrchid // Pantone 18-3224, #B163A3, Color of the year 2014
+palette.marsala // Pantone 18-1438, #955251, Color of the year 2015
+palette.roseQuartz // Pantone 13-1520, #F7CAC9, Color of the year 2016
+palette.serenity // Pantone 15-3913, #92A8D1, Color of the year 2016
+palette.greenery // Pantone 15-0343, #88B04B, Color of the year 2017
+palette.ultraViolet // Pantone 18-3838, #5F4B8B, Color of the year 2018
+palette.livingCoral // Pantone 16-1546, #FF6F61, Color of the year 2019
+```
+
+#### <a name="signal-encodings"></a> Signal Encodings 📡
+``` swift
+UIColor.SignalEncoding.rec601 // ITU-R BT.601 (standard-definition television)
+UIColor.SignalEncoding.rec709 // ITU-R BT.709 (high-definition television)
 ```
 
 ## License
