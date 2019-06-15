@@ -10,7 +10,7 @@
   * [Gradients](#gradients)
   * [Harmonies](#harmonies)
   * [Hue Adjustment](#hue-adjustment)
-  * [Inverted](#inversion)
+  * [Inversion](#inversion)
   * [Lighter / Darker](#lightness)
   * [Luminance Values](#luminance)
   * [Mixing](#mixing)
@@ -158,7 +158,7 @@ color.isCool // Returns true if the color falls on the cool side of the color wh
 color.isWarm // Returns true if the color falls on the warm side of the color wheel
 ```
 
-#### <a name="inversion"></a> Inverted
+#### <a name="inversion"></a> Inversion
 ``` swift
 let color = UIColor.red
 color.inverted // The negative of the color, produced by inverting the RGB values
