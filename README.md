@@ -4,22 +4,22 @@
 ## Usage
 
 ### Index
-  * [Accessibility Compliance](#accessibility)
-  * [Components](#components)
-  * [Contrast Ratio](#contrast)
-  * [Gradients](#gradients)
-  * [Harmonies](#harmonies)
-  * [Hue Adjustment](#hue-adjustment)
-  * [Inversion](#inversion)
-  * [Lighter / Darker](#lightness)
-  * [Luminance Values](#luminance)
-  * [Mixing](#mixing)
-  * [Models](#models)
-  * [Randomization](#randomization)
-  * [Saturated / Desaturated / Grayscale](#saturation)
-  * [Shades / Tints / Tones](#shades-tints-tones)
+  * [🌎 Accessibility Compliance](#accessibility)
+  * [⚛️ Components](#components)
+  * [🔲 Contrast Ratio](#contrast)
+  * [🌈 Gradients](#gradients)
+  * [🎶 Harmonies](#harmonies)
+  * [🚥 Hue Adjustment](#hue-adjustment)
+  * [🙃 Inversion](#inversion)
+  * [🌓 Lighter / Darker](#lightness)
+  * [☀️ Luminance Values](#luminance)
+  * [🎨 Mixing](#mixing)
+  * [👩‍🔬 Models](#models)
+  * [🔀 Randomization](#randomization)
+  * [🖤 Saturated / Desaturated / Grayscale](#saturation)
+  * [👥 Shades / Tints / Tones](#shades-tints-tones)
 
-#### <a name="models"></a> Models
+#### <a name="models"></a> Models 👩‍🔬
 ``` swift
 let color = UIColor.red
 color.hex // The hexadecimal integer value in the RGB format (RRGGBB) e.g. 0xff0000
@@ -80,7 +80,7 @@ color.yuv(.rec601)
 color.yiq(.rec601)
 ```
 
-#### <a name="components"></a> Components
+#### <a name="components"></a> Components ⚛️
 ``` swift
 // RGB components [0, 1]
 let color = UIColor.red
@@ -106,7 +106,7 @@ let color = UIColor.red
 color.whiteComponent // The white component of the color
 ```
 
-#### <a name="mixing"></a> Mixing
+#### <a name="mixing"></a> Mixing 🎨
 ``` swift
 // Returns a mixture of two colors with a given weight
 UIColor.mixing(.red, with: .blue)
@@ -119,7 +119,7 @@ let rose = (UIColor.magenta * 0.5) + (UIColor.red * 0.5)
 let chartreuse = (UIColor.yellow * 0.5) + (UIColor.green * 0.5)
 ```
 
-#### <a name="shades-tints-tones"></a> Shades / Tints / Tones
+#### <a name="shades-tints-tones"></a> Shades / Tints / Tones 👥
 ``` swift
 let color = UIColor.red
 color.shade() // Returns a mixture of the color with black, decreasing lightness
@@ -130,7 +130,7 @@ color.tone() // Returns a mixture of the color with gray, decreasing saturation
 //color.tone(percent: 0.1)
 ```
 
-#### <a name="saturation"></a> Saturated / Desaturated / Grayscaled
+#### <a name="saturation"></a> Saturated / Desaturated / Grayscaled 🖤
 ``` swift
 let color = UIColor.red
 color.saturated() // Returns a new instance of the color with increased saturation
@@ -140,7 +140,7 @@ color.desaturated() // Returns a new instance of the color with decreased satura
 color.grayscaled() // Returns a new instance of the color with 0% saturation
 ```
 
-#### <a name="lightness"></a> Lighter / Darker
+#### <a name="lightness"></a> Lighter / Darker 🌓
 ``` swift
 let color = UIColor.red
 color.lighter() // Returns a new instance of the color with increased lightness
@@ -149,7 +149,7 @@ color.darker() // Returns a new instance of the color with decreased lightness
 //color.darker(percent: 0.1)
 ```
 
-#### <a name="hue-adjustment"></a> Hue Adjustment
+#### <a name="hue-adjustment"></a> Hue Adjustment 🚥
 ``` swift
 let color = UIColor.red
 color.adjustingHue(by: 180.0) // Returns a new instance of the color with an adjusted hue
@@ -158,13 +158,13 @@ color.isCool // Returns true if the color falls on the cool side of the color wh
 color.isWarm // Returns true if the color falls on the warm side of the color wheel
 ```
 
-#### <a name="inversion"></a> Inversion
+#### <a name="inversion"></a> Inversion 🙃
 ``` swift
 let color = UIColor.red
 color.inverted // The negative of the color, produced by inverting the RGB values
 ```
 
-#### <a name="harmonies"></a> Harmonies
+#### <a name="harmonies"></a> Harmonies 🎶
 ``` swift
 let color = UIColor.red
 let harmonies = color.harmonies
@@ -177,7 +177,7 @@ harmonies.tetradic // Two complementary pairs in a rectangular pattern on the co
 harmonies.square // Two evenly spaced complementary pairs on the color wheel
 ```
 
-#### <a name="gradients"></a> Gradients
+#### <a name="gradients"></a> Gradients 🌈
 ``` swift
 // Generates an array of colors between a start and end color
 UIColor.gradient(between: .orange, and: .purple)
@@ -185,13 +185,13 @@ UIColor.gradient(between: .orange, and: .purple, stops: 5)
 UIColor.gradient(between: .orange, and: .purple, customStops: [0.0, 0.1, 0.5, 0.9, 1.0])
 ```
 
-#### <a name="randomization"></a> Randomization
+#### <a name="randomization"></a> Randomization 🔀
 ``` swift
 UIColor.random() // Returns a color with random component values
 UIColor.randomSet(of: 5) // Returns a set of unique colors with random component values
 ```
 
-#### <a name="contrast"></a> Contrast Ratio
+#### <a name="contrast"></a> Contrast Ratio 🔲
 ``` swift
 // Returns the contrast ratio between two colors based on their luminance values
 UIColor.contrastRatio(between: .black, and: .white)
@@ -208,7 +208,7 @@ UIColor.red.lowerContrastingColor(between: .black, and: .white)
 UIColor.white.lowestContrastingColor(between: [.red, .green, .blue])
 ```
 
-#### <a name="accessibility"></a> Accessibility Compliance
+#### <a name="accessibility"></a> Accessibility Compliance 🌎
 ``` swift
 // The visual presentation of text has a contrast ratio of at least 4.5:1 (Level AA)
 UIColor.isCompliant(with: .minimum, testing: .black, against: .white)
@@ -220,7 +220,7 @@ UIColor.isCompliant(with: .enhanced, testing: .black, against: .white)
 UIColor.isCompliant(with: .enhancedLargeText, testing: .black, against: .white)
 ```
 
-#### <a name="luminance"></a> Luminance Values
+#### <a name="luminance"></a> Luminance Values ☀️
 ``` swift
 let color = UIColor.red
 color.relativeLuminance // The relative luminance of the color, measured according to the HSL color model
