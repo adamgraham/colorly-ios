@@ -16,6 +16,7 @@
   * [Lighter / Darker](#lightness)
   * [Luminance Values](#luminance)
   * [Mixing](#mixing)
+  * [Mixing Models](#mixing-models)
   * [Models](#models)
   * [Randomization](#randomization)
   * [Saturated / Desaturated / Grayscale](#saturation)
@@ -244,6 +245,18 @@ let color = UIColor.random()
 color.webSafe // The nearest web safe color to the current color
 ```
 
+#### <a name="mixing-models"></a> Mixing Models 🖌️
+``` swift
+let mixingModel = UIColor.MixingModel.additive
+//let mixingModel = UIColor.MixingModel.subtractive
+//let mixingModel = UIColor.MixingModel.traditional
+
+mixingModel.primaryColors // The primary colors of the mixing model
+mixingModel.secondaryColors // The secondary colors of the mixing model
+mixingModel.tertiaryColors // The tertiary colors of the mixing model
+mixingModel.colorWheel // The primary, secondary, and tertiary colors of the mixing model
+```
+
 #### <a name="color-wheel"></a> Color Wheel 🎡
 ``` swift
 UIColor.azure // A color object whose RGB values are 0.0, 0.5, and 1.0 and whose alpha value is 1.0
@@ -254,42 +267,48 @@ UIColor.chartreuse // A color object whose RGB values are 0.5, 1.0, and 0.0 and 
 UIColor.springGreen // A color object whose RGB values are 0.0, 1.0, and 0.5 and whose alpha value is 1.0
 ```
 ``` swift
-UIColor.ColorWheel.RGB.white // #ffffff, rgb(255,255,255)
-UIColor.ColorWheel.RGB.black // #000000, rgb(0,0,0)
+// The colors that define the RGB color wheel
+let colorWheel = UIColor.ColorWheel.RGB
+// grayscale
+colorWheel.white // #ffffff, rgb(255,255,255)
+colorWheel.black // #000000, rgb(0,0,0)
 // primary
-UIColor.ColorWheel.RGB.red // #ff0000, rgb(255,0,0)
-UIColor.ColorWheel.RGB.green // #00ff00, rgb(0,255,0)
-UIColor.ColorWheel.RGB.blue // #0000ff, rgb(0,0,255)
+colorWheel.red // #ff0000, rgb(255,0,0)
+colorWheel.green // #00ff00, rgb(0,255,0)
+colorWheel.blue // #0000ff, rgb(0,0,255)
 // secondary
-UIColor.ColorWheel.RGB.cyan // #00ffff, rgb(0,255,255)
-UIColor.ColorWheel.RGB.magenta // #ff00ff, rgb(255,0,255)
-UIColor.ColorWheel.RGB.yellow // #ffff00, gb(255,255,0)
+colorWheel.cyan // #00ffff, rgb(0,255,255)
+colorWheel.magenta // #ff00ff, rgb(255,0,255)
+colorWheel.yellow // #ffff00, gb(255,255,0)
 // tertiary
-UIColor.ColorWheel.RGB.azure // #0080ff, rgb(0,128,255)
-UIColor.ColorWheel.RGB.violet // #8000ff, rgb(128,0,255)
-UIColor.ColorWheel.RGB.rose // #ff0080, rgb(255,0,128)
-UIColor.ColorWheel.RGB.orange // #ff8000, rgb(255,128,0)
-UIColor.ColorWheel.RGB.chartreuse // #80ff00, rgb(128,255,0)
-UIColor.ColorWheel.RGB.springGreen // #00ff80, rgb(0,255,128)
+colorWheel.azure // #0080ff, rgb(0,128,255)
+colorWheel.violet // #8000ff, rgb(128,0,255)
+colorWheel.rose // #ff0080, rgb(255,0,128)
+colorWheel.orange // #ff8000, rgb(255,128,0)
+colorWheel.chartreuse // #80ff00, rgb(128,255,0)
+colorWheel.springGreen // #00ff80, rgb(0,255,128)
 ```
 ``` swift
-UIColor.ColorWheel.RYB.white // #ffffff, ryb(255,255,255)
-UIColor.ColorWheel.RYB.black // #000000, ryb(0,0,0)
+// The colors that define the RYB color wheel
+let colorWheel = UIColor.ColorWheel.RYB
+// grayscale
+colorWheel.white // #ffffff, ryb(255,255,255)
+colorWheel.black // #000000, ryb(0,0,0)
 // primary
-UIColor.ColorWheel.RYB.red // #ff0000, ryb(255,0,0)
-UIColor.ColorWheel.RYB.yellow // #00ff00, ryb(0,255,0)
-UIColor.ColorWheel.RYB.blue // #0000ff, ryb(0,0,255)
+colorWheel.red // #ff0000, ryb(255,0,0)
+colorWheel.yellow // #00ff00, ryb(0,255,0)
+colorWheel.blue // #0000ff, ryb(0,0,255)
 // secondary
-UIColor.ColorWheel.RYB.green // #00ffff, ryb(0,255,255)
-UIColor.ColorWheel.RYB.purple // #ff00ff, ryb(255,0,255)
-UIColor.ColorWheel.RYB.orange // #ffff00, ryb(255,255,0)
+colorWheel.green // #00ffff, ryb(0,255,255)
+colorWheel.purple // #ff00ff, ryb(255,0,255)
+colorWheel.orange // #ffff00, ryb(255,255,0)
 // tertiary
-UIColor.ColorWheel.RYB.vermilion // #ff8000, ryb(255,128,0)
-UIColor.ColorWheel.RYB.amber // #80ff00, ryb(128,255,0)
-UIColor.ColorWheel.RYB.chartreuse // #00ff80, ryb(0,255,128)
-UIColor.ColorWheel.RYB.teal // #0080ff, ryb(0,128,255)
-UIColor.ColorWheel.RYB.violet // #8000ff, ryb(128,0,255)
-UIColor.ColorWheel.RYB.magenta // #ff0080, ryb(255,0,128)
+colorWheel.vermilion // #ff8000, ryb(255,128,0)
+colorWheel.amber // #80ff00, ryb(128,255,0)
+colorWheel.chartreuse // #00ff80, ryb(0,255,128)
+colorWheel.teal // #0080ff, ryb(0,128,255)
+colorWheel.violet // #8000ff, ryb(128,0,255)
+colorWheel.magenta // #ff0080, ryb(255,0,128)
 ```
 
 ## License
