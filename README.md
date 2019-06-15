@@ -12,6 +12,7 @@
   * [Gradients](#gradients)
   * [Harmonies](#harmonies)
   * [Hue Adjustment](#hue-adjustment)
+  * [Illuminants](#illuminants)
   * [Inversion](#inversion)
   * [Lighter / Darker](#lightness)
   * [Luminance Values](#luminance)
@@ -337,6 +338,39 @@ palette.serenity // Pantone 15-3913, #92A8D1, Color of the year 2016
 palette.greenery // Pantone 15-0343, #88B04B, Color of the year 2017
 palette.ultraViolet // Pantone 18-3838, #5F4B8B, Color of the year 2018
 palette.livingCoral // Pantone 16-1546, #FF6F61, Color of the year 2019
+```
+
+#### <a name="illuminants"></a> Illuminants 💡
+``` swift
+UIColor.Illuminant.a // Incandescent/Tungsten
+UIColor.Illuminant.b // Old Direct Sunlight at Noon
+UIColor.Illuminant.c // Old Daylight
+UIColor.Illuminant.d50 // ICC Profile PCS
+UIColor.Illuminant.d55 // Mid-morning Daylight
+UIColor.Illuminant.d65 // Daylight, sRGB, Adobe-RGB
+UIColor.Illuminant.d75 // North Sky Daylight
+UIColor.Illuminant.e // Equal Energy
+UIColor.Illuminant.f1 // Daylight Fluorescent
+UIColor.Illuminant.f2 // Cool Fluorescent
+UIColor.Illuminant.f3 // White Fluorescent
+UIColor.Illuminant.f4 // Warm White Fluorescent
+UIColor.Illuminant.f5 // Daylight Fluorescent
+UIColor.Illuminant.f6 // Lite White Fluorescent
+UIColor.Illuminant.f7 // Daylight Fluorescent, D65 Simulator
+UIColor.Illuminant.f8 // Sylvania F40, D50 Simulator
+UIColor.Illuminant.f9 // Cool White Fluorescent
+UIColor.Illuminant.f10 // Ultralume 50, Philips TL85
+UIColor.Illuminant.f11 // Ultralume 40, Philips TL84
+UIColor.Illuminant.f12 // Ultralume 30, Philips TL83
+```
+``` swift
+UIColor.StandardObserver.two // CIE 1931 2° Standard Observer
+UIColor.StandardObserver.ten // CIE 1964 10° Standard Observer
+```
+``` swift
+let illuminant = UIColor.Illuminant.d65 
+illuminant.whitePoint // The XYZ tristimulus values of the white point
+//illuminant.whitePoint(for: .two, scale: 100.0)
 ```
 
 #### <a name="signal-encodings"></a> Signal Encodings 📡
