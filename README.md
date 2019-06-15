@@ -3,6 +3,29 @@
 
 ## Usage
 
+#### Components
+``` swift
+let color = UIColor.white
+
+// RGB components, in the range [0, 1]
+color.redComponent // The red component of the color.
+color.greenComponent // The green component of the color.
+color.blueComponent // The blue component of the color.
+color.alphaComponent // The alpha component of the color.
+color.rgbComponents // The red, green, and blue components of the color.
+color.rgbaComponents // The red, green, blue, and alpha components of the color.
+color.argbComponents // The alpha, red, green, and blue components of the color.
+
+// HSB components, in the range [0, 1]
+color.hueComponent // The hue component of the color.
+color.saturationComponent // The saturation component of the color.
+color.brightnessComponent // The brightness component of the color.
+color.hsbComponents // The hue, saturation, and brightness components of the color.
+
+// Grayscale components, in the range [0, 1]
+color.whiteComponent // The white component of the color.
+```
+
 #### Mixing
 ``` swift
 // Returns a mixture of two colors with a given weight.
