@@ -262,12 +262,12 @@ mixingModel.colorWheel // The primary, secondary, and tertiary colors of the mix
 
 #### <a name="color-wheel"></a> Color Wheel 🎡
 ``` swift
-UIColor.azure // A color object whose RGB values are 0.0, 0.5, and 1.0 and whose alpha value is 1.0
-UIColor.violet // A color object whose RGB values are 0.5, 0.0, and 1.0 and whose alpha value is 1.0
-UIColor.rose // A color object whose RGB values are 1.0, 0.0, and 0.5 and whose alpha value is 1.0
-UIColor.orange // A color object whose RGB values are 1.0, 0.5, and 0.0 and whose alpha value is 1.0
-UIColor.chartreuse // A color object whose RGB values are 0.5, 1.0, and 0.0 and whose alpha value is 1.0
-UIColor.springGreen // A color object whose RGB values are 0.0, 1.0, and 0.5 and whose alpha value is 1.0
+UIColor.azure // A color whose RGB values are 0.0, 0.5, and 1.0 and whose alpha value is 1.0
+UIColor.violet // A color whose RGB values are 0.5, 0.0, and 1.0 and whose alpha value is 1.0
+UIColor.rose // A color whose RGB values are 1.0, 0.0, and 0.5 and whose alpha value is 1.0
+UIColor.orange // A color whose RGB values are 1.0, 0.5, and 0.0 and whose alpha value is 1.0
+UIColor.chartreuse // A color whose RGB values are 0.5, 1.0, and 0.0 and whose alpha value is 1.0
+UIColor.springGreen // A color whose RGB values are 0.0, 1.0, and 0.5 and whose alpha value is 1.0
 ```
 ``` swift
 // The colors that define the RGB color wheel
