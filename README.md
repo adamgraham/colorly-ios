@@ -1,6 +1,12 @@
 # Colorly
 > An iOS utility framework for working with colors.
 
+## Requirements
+
+- iOS 10.0+
+- Swift 5.0+
+- Xcode 10.2+
+
 ## Usage
 
 ### Index
