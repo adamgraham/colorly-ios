@@ -19,6 +19,14 @@ public extension UIColor {
         /// The v-axis chromaticity coordinate of the color, in the range [0, 1].
         public var v: CGFloat
 
+        /// Initializes the CIE 1960 UCS components of a color - (u,v) chromaticity coordinates.
+        /// - parameter u: The u-axis chromaticity coordinate of the color, in the range [0, 1].
+        /// - parameter v: The v-axis chromaticity coordinate of the color, in the range [0, 1].
+        public init(u: CGFloat, v: CGFloat) {
+            self.u = u
+            self.v = v
+        }
+
     }
 
     /// The CIE 1960 UCS components of the color.

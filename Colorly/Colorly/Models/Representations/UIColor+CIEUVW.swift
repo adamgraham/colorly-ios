@@ -21,6 +21,16 @@ public extension UIColor {
         /// The lightness component of the color, in the range [0, 100] (darkest to brightest).
         public var W: CGFloat
 
+        /// Initializes the CIE 1964 UVW components of a color - chromaticity (U,V) and lightness (W).
+        /// - parameter U: The U chromaticity component of the color, typically in the range [-100, 100].
+        /// - parameter V: The V chromaticity component of the color, typically in the range [-100, 100].
+        /// - parameter W: The lightness component of the color, in the range [0, 100] (darkest to brightest).
+        public init(U: CGFloat, V: CGFloat, W: CGFloat) {
+            self.U = U
+            self.V = V
+            self.W = W
+        }
+
     }
 
     /// Constant values used to convert to and from CIE 1964 UVW colors.

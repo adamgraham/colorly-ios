@@ -20,6 +20,16 @@ public extension UIColor {
         public var U: CGFloat
         /// The red-difference chroma component of the color, in the range [-0.615, 0.615].
         public var V: CGFloat
+        
+        /// Initializes the Y′UV components of a color - luma (Y′) and chroma (U,V).
+        /// - parameter Y: The luma component of the color, in the range [0, 1] (black to white).
+        /// - parameter U: The blue-difference chroma component of the color, in the range [-0.436, 0.436].
+        /// - parameter V: The red-difference chroma component of the color, in the range [-0.615, 0.615].
+        public init(Y: CGFloat, U: CGFloat, V: CGFloat) {
+            self.Y = Y
+            self.U = U
+            self.V = V
+        }
 
     }
 

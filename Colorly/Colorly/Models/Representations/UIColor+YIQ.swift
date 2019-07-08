@@ -21,6 +21,16 @@ public extension UIColor {
         /// The purple-green chroma component of the color, in the range [-0.523, 0.523].
         public var Q: CGFloat
 
+        /// Initializes the Y′IQ components of a color - luma (Y′) and chroma (I,Q).
+        /// - parameter Y: The luma component of the color, in the range [0, 1] (black to white).
+        /// - parameter I: The orange-blue chroma component of the color, in the range [-0.596, 0.596].
+        /// - parameter Q: The purple-green chroma component of the color, in the range [-0.523, 0.523].
+        public init(Y: CGFloat, I: CGFloat, Q: CGFloat) {
+            self.Y = Y
+            self.I = I
+            self.Q = Q
+        }
+
     }
 
     /// Constant values used to convert to and from Y′IQ colors.

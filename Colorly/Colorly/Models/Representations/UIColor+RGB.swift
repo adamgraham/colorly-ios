@@ -21,6 +21,16 @@ public extension UIColor {
         /// The blue component of the color, in the range [0, 255].
         public var blue: Int
 
+        /// Initializes the RGB (red, green, blue) components of a color.
+        /// - parameter red: The red component of the color, in the range [0, 255].
+        /// - parameter green: The green component of the color, in the range [0, 255].
+        /// - parameter blue: The blue component of the color, in the range [0, 255].
+        public init(red: Int, green: Int, blue: Int) {
+            self.red = red
+            self.green = green
+            self.blue = blue
+        }
+
     }
 
     /// The RGB (red, green, blue) components of the color, in the range [0, 255].

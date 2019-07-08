@@ -21,6 +21,16 @@ public extension UIColor {
         /// The blue-yellow chromaticity component of the color, typically in the range [-128, 128].
         public var b: CGFloat
 
+        /// Initializes the CIELAB components of a color - lightness (L) and chromaticity (a,b).
+        /// - parameter L: The lightness component of the color, in the range [0, 100] (darkest to brightest).
+        /// - parameter a: The green-red chromaticity component of the color, typically in the range [-128, 128].
+        /// - parameter b: The blue-yellow chromaticity component of the color, typically in the range [-128, 128].
+        public init(L: CGFloat, a: CGFloat, b: CGFloat) {
+            self.L = L
+            self.a = a
+            self.b = b
+        }
+
     }
 
     /// Constant values used to convert to and from CIELAB colors.

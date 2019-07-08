@@ -23,6 +23,18 @@ public extension UIColor {
         /// The blue component of the color, in the range [0, 255].
         public var blue: Int
 
+        /// Initializes the ARGB (alpha, red, green, blue) components of a color.
+        /// - parameter alpha: The alpha component of the color, in the range [0, 255].
+        /// - parameter red: The red component of the color, in the range [0, 255].
+        /// - parameter green: The green component of the color, in the range [0, 255].
+        /// - parameter blue: The blue component of the color, in the range [0, 255].
+        public init(alpha: Int, red: Int, green: Int, blue: Int) {
+            self.alpha = alpha
+            self.red = red
+            self.green = green
+            self.blue = blue
+        }
+
     }
 
     /// The ARGB (alpha, red, green, blue) components of the color, in the range [0, 255].

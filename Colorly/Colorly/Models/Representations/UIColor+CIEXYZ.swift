@@ -22,6 +22,16 @@ public extension UIColor {
         /// Somewhat equal to blue, or the "S" cone response, in the range [0, 108.883].
         public var Z: CGFloat
 
+        /// Initializes the CIE 1931 XYZ components of a color - luminance (Y) and chromaticity (X,Z).
+        /// - parameter X: A mix of cone response curves chosen to be orthogonal to luminance and non-negative, in the range [0, 95.047].
+        /// - parameter Y: The luminance component of the color, in the range [0, 100].
+        /// - parameter Z: Somewhat equal to blue, or the "S" cone response, in the range [0, 108.883].
+        public init(X: CGFloat, Y: CGFloat, Z: CGFloat) {
+            self.X = X
+            self.Y = Y
+            self.Z = Z
+        }
+
     }
 
     /// The CIE 1931 XYZ components of the color.

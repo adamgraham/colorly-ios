@@ -21,6 +21,16 @@ public extension UIColor {
         /// The brightness component of the color, in the range [0, 100%].
         public var brightness: CGFloat
 
+        /// Initializes the HSB (hue, saturation, brightness) components of a color.
+        /// - parameter hue: The hue component of the color, in the range [0, 360°].
+        /// - parameter saturation: The saturation component of the color, in the range [0, 100%].
+        /// - parameter brightness: The brightness component of the color, in the range [0, 100%].
+        public init(hue: CGFloat, saturation: CGFloat, brightness: CGFloat) {
+            self.hue = hue
+            self.saturation = saturation
+            self.brightness = brightness
+        }
+
     }
 
     /// The HSB (hue, saturation, brightness) components of the color.

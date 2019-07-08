@@ -23,6 +23,18 @@ public extension UIColor {
         /// The black component of the color, in the range [0, 100%].
         public var black: CGFloat
 
+        /// Initializes the CMYK (cyan, magenta, yellow, black) components of a color, in the range [0, 100%].
+        /// - parameter cyan: The cyan component of the color, in the range [0, 100%].
+        /// - parameter magenta: The magenta component of the color, in the range [0, 100%].
+        /// - parameter yellow: The yellow component of the color, in the range [0, 100%].
+        /// - parameter black: The black component of the color, in the range [0, 100%].
+        public init(cyan: CGFloat, magenta: CGFloat, yellow: CGFloat, black: CGFloat) {
+            self.cyan = cyan
+            self.magenta = magenta
+            self.yellow = yellow
+            self.black = black
+        }
+
     }
 
     /// The CMYK (cyan, magenta, yellow, black) components of the color, in the range [0, 100%].

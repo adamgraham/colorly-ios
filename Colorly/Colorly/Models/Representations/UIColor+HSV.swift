@@ -21,6 +21,16 @@ public extension UIColor {
         /// The value component of the color, in the range [0, 100%].
         public var value: CGFloat
 
+        /// Initializes the HSV (hue, saturation, value) components of a color.
+        /// - parameter hue: The hue component of the color, in the range [0, 360°].
+        /// - parameter saturation: The saturation component of the color, in the range [0, 100%].
+        /// - parameter value: The value component of the color, in the range [0, 100%].
+        public init(hue: CGFloat, saturation: CGFloat, value: CGFloat) {
+            self.hue = hue
+            self.saturation = saturation
+            self.value = value
+        }
+
     }
 
     /// The HSV (hue, saturation, value) components of the color.

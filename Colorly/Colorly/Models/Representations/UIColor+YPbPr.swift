@@ -11,7 +11,7 @@ import UIKit
 /// An extension to provide conversion to and from Y′PbPr colors.
 public extension UIColor {
 
-    /// The Y′PbPr components of a color - luma (Y′) and chroma (Cb,Cr).
+    /// The Y′PbPr components of a color - luma (Y′) and chroma (Pb,Pr).
     struct YPbPr: Hashable {
 
         /// The luma component of the color, in the range [0, 1] (black to white).
@@ -20,6 +20,16 @@ public extension UIColor {
         public var Pb: CGFloat
         /// The red-difference chroma component of the color, in the range [-0.5, 0.5].
         public var Pr: CGFloat
+
+        /// Initializes the Y′PbPr components of a color - luma (Y′) and chroma (Pb,Pr).
+        /// - parameter Y: The luma component of the color, in the range [0, 1] (black to white).
+        /// - parameter Pb: The blue-difference chroma component of the color, in the range [-0.5, 0.5].
+        /// - parameter Pr: The red-difference chroma component of the color, in the range [-0.5, 0.5].
+        public init(Y: CGFloat, Pb: CGFloat, Pr: CGFloat) {
+            self.Y = Y
+            self.Pb = Pb
+            self.Pr = Pr
+        }
 
     }
 

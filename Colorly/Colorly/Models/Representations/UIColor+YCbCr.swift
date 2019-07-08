@@ -21,6 +21,16 @@ public extension UIColor {
         /// The red-difference chroma component of the color, in the full range [0, 255].
         public var Cr: CGFloat
 
+        /// Initializes the Y′CbCr components of a color - luma (Y′) and chroma (Cb,Cr).
+        /// - parameter Y: The luma component of the color, in the full range [0, 255] (black to white).
+        /// - parameter Cb: The blue-difference chroma component of the color, in the full range [0, 255].
+        /// - parameter Cr: The red-difference chroma component of the color, in the full range [0, 255].
+        public init(Y: CGFloat, Cb: CGFloat, Cr: CGFloat) {
+            self.Y = Y
+            self.Cb = Cb
+            self.Cr = Cr
+        }
+
     }
 
     /// The Y′CbCr components of the color using Rec.601 (standard-definition) encoding.

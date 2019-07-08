@@ -21,6 +21,16 @@ public extension UIColor {
         /// The hue component of the color, in the range [0, 360°].
         public var h: CGFloat
 
+        /// Initializes the CIELCh° components of a color - lightness (L), chroma (C), and hue (h).
+        /// - parameter L: The lightness component of the color, in the range [0, 100] (darkest to brightest).
+        /// - parameter C: The chroma component of the color.
+        /// - parameter h: The hue component of the color, in the range [0, 360°].
+        public init(L: CGFloat, C: CGFloat, h: CGFloat) {
+            self.L = L
+            self.C = C
+            self.h = h
+        }
+
     }
 
     /**

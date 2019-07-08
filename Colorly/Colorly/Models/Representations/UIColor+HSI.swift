@@ -21,6 +21,16 @@ public extension UIColor {
         /// The intensity component of the color, in the range [0, 100%].
         public var intensity: CGFloat
 
+        /// Initializes the HSI (hue, saturation, intensity) components of a color.
+        /// - parameter hue: The hue component of the color, in the range [0, 360°].
+        /// - parameter saturation: The saturation component of the color, in the range [0, 100%].
+        /// - parameter intensity: The intensity component of the color, in the range [0, 100%].
+        public init(hue: CGFloat, saturation: CGFloat, intensity: CGFloat) {
+            self.hue = hue
+            self.saturation = saturation
+            self.intensity = intensity
+        }
+
     }
 
     /// The HSI (hue, saturation, intensity) components of the color.

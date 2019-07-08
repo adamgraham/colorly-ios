@@ -21,6 +21,16 @@ public extension UIColor {
         /// The blue-yellow chromaticity component of the color.
         public var b: CGFloat
 
+        /// Initializes the Hunter Lab components of a color - lightness (L) and chromaticity (a,b).
+        /// - parameter L: The lightness component of the color, in the range [0, 100] (darkest to brightest).
+        /// - parameter a: The green-red chromaticity component of the color.
+        /// - parameter b: The blue-yellow chromaticity component of the color.
+        public init(L: CGFloat, a: CGFloat, b: CGFloat) {
+            self.L = L
+            self.a = a
+            self.b = b
+        }
+
     }
 
     /// The Hunter Lab components of the color using a d65 illuminant and 2° standard observer.

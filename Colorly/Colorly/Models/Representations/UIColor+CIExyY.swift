@@ -21,6 +21,16 @@ public extension UIColor {
         /// The luminance component of the color, in the range [0, 100].
         public var Y: CGFloat
 
+        /// Initializes the CIE xyY components of a color - luminance (Y) and chromaticity (x,y).
+        /// - parameter x: The x-axis chromaticity coordinate of the color, in the range [0, 1].
+        /// - parameter y: The y-axis chromaticity coordinate of the color, in the range [0, 1].
+        /// - parameter Y: The luminance component of the color, in the range [0, 100].
+        public init(x: CGFloat, y: CGFloat, Y: CGFloat) {
+            self.x = x
+            self.y = y
+            self.Y = Y
+        }
+
     }
 
     /// The CIE xyY components of the color.

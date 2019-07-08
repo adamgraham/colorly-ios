@@ -21,6 +21,16 @@ public extension UIColor {
         /// The blue-yellow chromaticity component of the color, typically in the range [-100, 100].
         public var v: CGFloat
 
+        /// Initializes the CIELUV components of a color - lightness (L) and chromaticity (u,v).
+        /// - parameter L: The lightness component of the color, in the range [0, 100] (darkest to brightest).
+        /// - parameter u: The green-red chromaticity component of the color, typically in the range [-100, 100].
+        /// - parameter v: blue-yellow chromaticity component of the color, typically in the range [-100, 100].
+        public init(L: CGFloat, u: CGFloat, v: CGFloat) {
+            self.L = L
+            self.u = u
+            self.v = v
+        }
+
     }
 
     /// Constant values used to convert to and from CIELUV colors.

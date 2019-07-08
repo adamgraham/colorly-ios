@@ -21,6 +21,16 @@ public extension UIColor {
         /// The lightness component of the color, in the range [0, 100%].
         public var lightness: CGFloat
 
+        /// Initializes the HSL (hue, saturation, lightness) components of a color.
+        /// - parameter hue: The hue component of the color, in the range [0, 360°].
+        /// - parameter saturation: The saturation component of the color, in the range [0, 100%].
+        /// - parameter lightness: The lightness component of the color, in the range [0, 100%].
+        public init(hue: CGFloat, saturation: CGFloat, lightness: CGFloat) {
+            self.hue = hue
+            self.saturation = saturation
+            self.lightness = lightness
+        }
+
     }
 
     /// The HSL (hue, saturation, lightness) components of the color.

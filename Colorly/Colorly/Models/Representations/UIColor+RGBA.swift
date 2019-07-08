@@ -23,6 +23,18 @@ public extension UIColor {
         /// The alpha component of the color, in the range [0, 255].
         public var alpha: Int
 
+        /// Initializes the RGBA (red, green, blue, alpha) components of a color.
+        /// - parameter red: The red component of the color, in the range [0, 255].
+        /// - parameter green: The green component of the color, in the range [0, 255].
+        /// - parameter blue: The blue component of the color, in the range [0, 255].
+        /// - parameter alpha: The alpha component of the color, in the range [0, 255].
+        public init(red: Int, green: Int, blue: Int, alpha: Int) {
+            self.red = red
+            self.green = green
+            self.blue = blue
+            self.alpha = alpha
+        }
+
     }
 
     /// The RGBA (red, green, blue, alpha) components of a color, in the range [0, 255].
