@@ -11,6 +11,8 @@ import UIKit
 /// An extension to describe various color spaces.
 public extension UIColor {
 
+    // MARK: Color Space
+
     /// A color space is a specific organization of colors. In combination with physical device
     /// profiling, it allows for reproducible representations of color, in both analog and digital
     /// representations. Adding a specific mapping function between a color model and a

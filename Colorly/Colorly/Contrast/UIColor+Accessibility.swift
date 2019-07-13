@@ -11,6 +11,8 @@ import UIKit
 /// An extension to test if colors meet standard accessibility contrast requirements.
 public extension UIColor {
 
+    // MARK: Accessibility Compliance
+
     /// A requirement defining how the visual presentation of text achieves a minimum contrast
     /// ratio to pass the accessibility specification -
     /// https://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast-contrast

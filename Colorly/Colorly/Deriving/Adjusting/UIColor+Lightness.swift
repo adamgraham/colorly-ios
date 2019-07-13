@@ -11,6 +11,8 @@ import UIKit
 /// An extension to increase and decrease the lightness of a color.
 public extension UIColor {
 
+    // MARK: Lightness
+
     /// Returns a new instance of the color with increased lightness.
     /// - parameter percent: The amount to lighten the color, in the range [0, 1].
     /// - returns: The lighter color.

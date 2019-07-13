@@ -11,6 +11,8 @@ import UIKit
 /// An extension to provide conversion to and from CIE 1964 UVW colors.
 public extension UIColor {
 
+    // MARK: CIE 1964 UVW
+
     /// The CIE 1964 UVW components of a color - chromaticity (U,V) and lightness (W).
     struct CIEUVW: Hashable {
 

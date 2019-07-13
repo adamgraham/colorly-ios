@@ -11,6 +11,8 @@ import UIKit
 /// An extension to provide conversion to and from CIE 1931 XYZ colors.
 public extension UIColor {
 
+    // MARK: CIE 1931 XYZ
+
     /// The CIE 1931 XYZ components of a color - luminance (Y) and chromaticity (X,Z).
     struct CIEXYZ: Hashable {
 

@@ -11,6 +11,8 @@ import UIKit
 /// An extension to derive web safe colors.
 public extension UIColor {
 
+    // MARK: Web Safe
+
     /// The nearest web safe color to the current color. All web safe colors have RGB
     /// component values of 0, 51, 102, 153, 204, or 255 (20% intervals).
     var webSafe: UIColor {

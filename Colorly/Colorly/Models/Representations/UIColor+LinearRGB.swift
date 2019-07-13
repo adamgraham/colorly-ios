@@ -11,6 +11,8 @@ import UIKit
 /// An extension to provide conversion to and from linear RGB colors.
 public extension UIColor {
 
+    // MARK: Linear RGB
+
     /// A set of non-gamma corrected linear RGB values, in the range [0, 1].
     typealias LinearRGB = (r: CGFloat, g: CGFloat, b: CGFloat)
 

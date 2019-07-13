@@ -11,6 +11,8 @@ import UIKit
 /// An extension to provide conversion to and from CIELAB colors.
 public extension UIColor {
 
+    // MARK: CIELAB
+
     /// The CIELAB components of a color - lightness (L) and chromaticity (a,b).
     struct CIELAB: Hashable {
 

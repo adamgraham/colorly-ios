@@ -11,6 +11,8 @@ import UIKit
 /// An extension to provide conversion to and from RGB (red, green, blue) colors.
 public extension UIColor {
 
+    // MARK: RGB
+
     /// The RGB (red, green, blue) components of a color, in the range [0, 255].
     struct RGB: Hashable {
 

@@ -11,6 +11,8 @@ import UIKit
 /// An extension to retrieve contrast ratio values between colors.
 public extension UIColor {
 
+    // MARK: Contrast Ratio
+
     /**
      Returns the contrast ratio between two colors based on their luminance values.
 

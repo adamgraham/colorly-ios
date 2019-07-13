@@ -11,6 +11,8 @@ import UIKit
 /// An extension to provide conversion to and from HSI (hue, saturation, intensity) colors.
 public extension UIColor {
 
+    // MARK: HSI
+
     /// The HSI (hue, saturation, intensity) components of a color.
     struct HSI: Hashable {
 

@@ -11,6 +11,8 @@ import UIKit
 /// An extension to increase and decrease the saturation of a color.
 public extension UIColor {
 
+    // MARK: Saturation
+
     /// Returns a new instance of the color with increased saturation.
     /// - parameter percent: The amount to saturate the color, in the range [0, 1].
     /// - returns: The saturated color.

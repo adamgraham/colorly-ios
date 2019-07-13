@@ -11,6 +11,8 @@ import UIKit
 /// An extension to provide conversion to and from Y′IQ colors.
 public extension UIColor {
 
+    // MARK: Y′IQ
+
     /// The Y′IQ components of a color - luma (Y′) and chroma (I,Q).
     struct YIQ: Hashable {
 

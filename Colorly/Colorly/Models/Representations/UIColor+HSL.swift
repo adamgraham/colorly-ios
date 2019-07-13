@@ -11,6 +11,8 @@ import UIKit
 /// An extension to provide conversion to and from HSL (hue, saturation, lightness) colors.
 public extension UIColor {
 
+    // MARK: HSL
+
     /// The HSL (hue, saturation, lightness) components of a color.
     struct HSL: Hashable {
 

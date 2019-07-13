@@ -11,6 +11,8 @@ import UIKit
 /// An extension to provide conversion to and from HSV (hue, saturation, value) colors.
 public extension UIColor {
 
+    // MARK: HSV
+
     /// The HSV (hue, saturation, value) components of a color.
     struct HSV: Hashable {
 

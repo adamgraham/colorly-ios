@@ -11,6 +11,8 @@ import UIKit
 /// An extension to calculate color averages.
 public extension UIColor {
 
+    // MARK: Averaging
+
     /**
      Returns the average color of an array of colors.
 

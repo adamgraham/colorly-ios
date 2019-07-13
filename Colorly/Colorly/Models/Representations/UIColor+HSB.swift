@@ -11,6 +11,8 @@ import UIKit
 /// An extension to provide conversion to and from HSB (hue, saturation, brightness) colors.
 public extension UIColor {
 
+    // MARK: HSB
+
     /// The HSB (hue, saturation, brightness) components of a color.
     struct HSB: Hashable {
 

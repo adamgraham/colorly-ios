@@ -11,6 +11,8 @@ import UIKit
 /// An extension to produce the inverse of a color.
 public extension UIColor {
 
+    // MARK: Inversion
+
     /// The negative of the color, produced by inverting the RGB values.
     var inverted: UIColor {
         var rgba = self.rgbaComponents

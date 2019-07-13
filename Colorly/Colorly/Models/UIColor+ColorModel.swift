@@ -11,6 +11,8 @@ import UIKit
 /// An extension to describe various color models.
 public extension UIColor {
 
+    // MARK: Color Model
+
     /// A color model is an abstract mathematical model describing the ways colors can be
     /// represented as tuples of numbers, typically as three or four values or color
     /// components.

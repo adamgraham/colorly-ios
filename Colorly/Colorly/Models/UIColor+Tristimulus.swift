@@ -11,6 +11,8 @@ import UIKit
 /// An extension to declare the tristimulus system.
 public extension UIColor {
 
+    // MARK: Tristimulus
+
     /// Tristimulus system, a system for visually matching a color under standardized
     /// conditions against the three primary colors — red, green, and blue; the three results
     /// are expressed as X, Y, and Z, respectively, and are called tristimulus values.

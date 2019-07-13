@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pantone Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../../js/jquery.min.js" defer></script>
+    <script src="../../js/jazzy.js" defer></script>
+    
+    <script src="../../js/lunr.min.js" defer></script>
+    <script src="../../js/typeahead.jquery.js" defer></script>
+    <script src="../../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Struct/Pantone" class="dashAnchor"></a>
+
+    <a title="Pantone Structure Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../../index.html">
+          Colorly
+        </a>
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/adamgraham/colorly">
+            <img class="header-icon" src="../../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../../index.html"> Reference</a>
+      <img class="carat" src="../../img/carat.png" />
+      Pantone Structure Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor.html">UIColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/AccessibilityRequirement.html">– AccessibilityRequirement</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/Harmony.html">– Harmony</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/ColorWheel.html">– ColorWheel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/MixingModel.html">– MixingModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/ARGB.html">– ARGB</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/CIELAB.html">– CIELAB</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/CIELCh.html">– CIELCh</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/CIELUV.html">– CIELUV</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/CIEUCS.html">– CIEUCS</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/CIEUVW.html">– CIEUVW</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/CIEXYZ.html">– CIEXYZ</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/CIExyY.html">– CIExyY</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/CMYK.html">– CMYK</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/HSB.html">– HSB</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/HSI.html">– HSI</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/HSL.html">– HSL</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/HSV.html">– HSV</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/HunterLab.html">– HunterLab</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/RGB.html">– RGB</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/RGBA.html">– RGBA</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/YCbCr.html">– YCbCr</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/YIQ.html">– YIQ</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/YPbPr.html">– YPbPr</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/YUV.html">– YUV</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/ColorModel.html">– ColorModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/ColorSpace.html">– ColorSpace</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/Illuminant.html">– Illuminant</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/StandardObserver.html">– StandardObserver</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/Pantone.html">– Pantone</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/SignalEncoding.html">– SignalEncoding</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Functions.html#/s:7Colorly1moiySo7UIColorCAD_12CoreGraphics7CGFloatVtF">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Functions.html#/s:7Colorly1poiySo7UIColorCAD_ADtF">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Functions.html#/s:7Colorly1soiySo7UIColorCAD_ADtF">-(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Functions.html#/s:7Colorly1doiySo7UIColorCAD_12CoreGraphics7CGFloatVtF">/(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>Pantone</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">Pantone</span></code></pre>
+
+                </div>
+              </div>
+            <p>The Pantone colors of the year color palette.</p>
+
+<p>Pantone is a limited liability company best known for its Pantone Matching System
+(PMS), a proprietary color space used in a variety of industries, notably printing, and
+some manufacturing of colored paint, fabric, and plastics.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE7PantoneV8ceruleanABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/cerulean" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE7PantoneV8ceruleanABvpZ">cerulean</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Pantone 15-4020, #9BB7D4, Color of the year 2000</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">cerulean</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE7PantoneV11fuchsiaRoseABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/fuchsiaRose" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE7PantoneV11fuchsiaRoseABvpZ">fuchsiaRose</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Pantone 17-2031, #C74375, Color of the year 2001</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">fuchsiaRose</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE7PantoneV7trueRedABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/trueRed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE7PantoneV7trueRedABvpZ">trueRed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Pantone 19-1664, #BF1932, Color of the year 2002</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">trueRed</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE7PantoneV7aquaSkyABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/aquaSky" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE7PantoneV7aquaSkyABvpZ">aquaSky</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Pantone 14-4811, #7BC4C4, Color of the year 2003</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">aquaSky</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE7PantoneV9tigerlilyABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/tigerlily" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE7PantoneV9tigerlilyABvpZ">tigerlily</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Pantone 17-1456, #E2583E, Color of the year 2004</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">tigerlily</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE7PantoneV13blueTurquoiseABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/blueTurquoise" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE7PantoneV13blueTurquoiseABvpZ">blueTurquoise</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Pantone 15-5217, #53B0AE, Color of the year 2005</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">blueTurquoise</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE7PantoneV10sandDollarABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/sandDollar" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE7PantoneV10sandDollarABvpZ">sandDollar</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Pantone 13-1106, #DECDBE, Color of the year 2006</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">sandDollar</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE7PantoneV11chiliPepperABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/chiliPepper" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE7PantoneV11chiliPepperABvpZ">chiliPepper</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Pantone 19-1557, #9B1B30, Color of the year 2007</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">chiliPepper</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE7PantoneV8blueIrisABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/blueIris" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE7PantoneV8blueIrisABvpZ">blueIris</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Pantone 18-3943, #5A5B9F, Color of the year 2008</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">blueIris</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE7PantoneV6mimosaABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/mimosa" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE7PantoneV6mimosaABvpZ">mimosa</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Pantone 14-0848, #F0C05A, Color of the year 2009</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">mimosa</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE7PantoneV9turquoiseABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/turquoise" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE7PantoneV9turquoiseABvpZ">turquoise</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Pantone 15-5519, #45B5AA, Color of the year 2010</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">turquoise</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE7PantoneV11honeysuckleABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/honeysuckle" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE7PantoneV11honeysuckleABvpZ">honeysuckle</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Pantone 18-2120, #D94F70, Color of the year 2011</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">honeysuckle</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE7PantoneV14tangerineTangoABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/tangerineTango" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE7PantoneV14tangerineTangoABvpZ">tangerineTango</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Pantone 17-1463, #DD4124, Color of the year 2012</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">tangerineTango</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE7PantoneV7emeraldABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/emerald" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE7PantoneV7emeraldABvpZ">emerald</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Pantone 17-5641, #009473, Color of the year 2013</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">emerald</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE7PantoneV13radiantOrchidABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/radiantOrchid" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE7PantoneV13radiantOrchidABvpZ">radiantOrchid</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Pantone 18-3224, #B163A3, Color of the year 2014</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">radiantOrchid</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE7PantoneV7marsalaABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/marsala" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE7PantoneV7marsalaABvpZ">marsala</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Pantone 18-1438, #955251, Color of the year 2015</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">marsala</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE7PantoneV10roseQuartzABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/roseQuartz" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE7PantoneV10roseQuartzABvpZ">roseQuartz</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Pantone 13-1520, #F7CAC9, Color of the year 2016</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">roseQuartz</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE7PantoneV8serenityABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/serenity" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE7PantoneV8serenityABvpZ">serenity</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Pantone 15-3913, #92A8D1, Color of the year 2016</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">serenity</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE7PantoneV8greeneryABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/greenery" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE7PantoneV8greeneryABvpZ">greenery</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Pantone 15-0343, #88B04B, Color of the year 2017</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">greenery</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE7PantoneV11ultraVioletABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/ultraViolet" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE7PantoneV11ultraVioletABvpZ">ultraViolet</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Pantone 18-3838, #5F4B8B, Color of the year 2018</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">ultraViolet</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE7PantoneV11livingCoralABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/livingCoral" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE7PantoneV11livingCoralABvpZ">livingCoral</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Pantone 16-1546, #FF6F61, Color of the year 2019</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">livingCoral</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>Copyright (c) 2019 Adam Graham</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

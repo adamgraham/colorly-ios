@@ -11,6 +11,8 @@ import UIKit
 /// An extension to instantiate and represent RGB colors as hexadecimal values.
 public extension UIColor {
 
+    // MARK: Hex
+
     /// Initializes a color from a hexadecimal integer in the RGB format (RRGGBB), e.g., 0xffff00.
     /// - parameter hex: The hexadecimal value of the color.
     /// - parameter alpha: The alpha value of the color.
@@ -50,6 +52,8 @@ public extension UIColor {
 /// An extension to instantiate and represent ARGB colors as hexadecimal values.
 public extension UIColor {
 
+    // MARK: Hex (ARGB)
+
     /// Initializes a color from a hexadecimal integer in the ARGB format (AARRGGBB), e.g., 0x80ffff00.
     /// - parameter hex: The hexadecimal value of the color.
     convenience init(hex_ARGB hex: Int) {
@@ -88,6 +92,8 @@ public extension UIColor {
 
 /// An extension to instantiate and represent RGBA colors as hexadecimal values.
 public extension UIColor {
+
+    // MARK: Hex (RGBA)
 
     /// Initializes a color from a hexadecimal integer in the RGBA format (RRGGBBAA), e.g., 0xffff0080.
     /// - parameter hex: The hexadecimal value of the color.

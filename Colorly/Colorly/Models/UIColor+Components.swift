@@ -11,6 +11,8 @@ import UIKit
 /// An extension to retrieve the RGBA (red, green, blue, alpha) components of a color.
 public extension UIColor {
 
+    // MARK: RGBA Components
+
     /// The red component of the color, in the range [0, 1].
     var redComponent: CGFloat {
         var r = CGFloat()
@@ -86,6 +88,8 @@ public extension UIColor {
 /// An extension to retrieve the HSB (hue, saturation, brightness) components of a color.
 public extension UIColor {
 
+    // MARK: HSB Components
+
     /// The hue component of the color, in the range [0, 1].
     var hueComponent: CGFloat {
         var h = CGFloat()
@@ -125,6 +129,8 @@ public extension UIColor {
 
 /// An extension to retrieve the grayscale components of a color.
 public extension UIColor {
+
+    // MARK: Grayscale Components
 
     /// The white component of the color, in the range [0, 1].
     var whiteComponent: CGFloat {

@@ -11,6 +11,8 @@ import UIKit
 /// An extension to adjust the hue of a color.
 public extension UIColor {
 
+    // MARK: Hue Adjustment
+
     /// Returns a new instance of the color with an adjusted hue.
     /// - parameter degrees: The amount to adjust the hue, in the range [-360°, 360°].
     /// - returns: The hue adjusted color.

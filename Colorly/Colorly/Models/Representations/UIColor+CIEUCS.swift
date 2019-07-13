@@ -11,6 +11,8 @@ import UIKit
 /// An extension to provide conversion to and from CIE 1960 UCS colors.
 public extension UIColor {
 
+    // MARK: CIE 1960 UCS
+
     /// The CIE 1960 UCS components of a color - (u,v) chromaticity coordinates.
     struct CIEUCS: Hashable {
 

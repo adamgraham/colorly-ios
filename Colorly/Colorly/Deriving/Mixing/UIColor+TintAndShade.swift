@@ -11,6 +11,8 @@ import UIKit
 /// An extension to mix colors with black (shade), white (tint), and gray (tone).
 public extension UIColor {
 
+    // MARK: Shade, Tint, Tone
+
     /**
      Returns a mixture of the color with black, decreasing lightness.
 

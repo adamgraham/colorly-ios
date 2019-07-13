@@ -11,6 +11,8 @@ import UIKit
 /// An extension to provide conversion to and from Y′PbPr colors.
 public extension UIColor {
 
+    // MARK: Y′PbPr
+
     /// The Y′PbPr components of a color - luma (Y′) and chroma (Pb,Pr).
     struct YPbPr: Hashable {
 

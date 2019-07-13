@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RYB Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../../../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../../../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../../../js/jquery.min.js" defer></script>
+    <script src="../../../js/jazzy.js" defer></script>
+    
+    <script src="../../../js/lunr.min.js" defer></script>
+    <script src="../../../js/typeahead.jquery.js" defer></script>
+    <script src="../../../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Struct/RYB" class="dashAnchor"></a>
+
+    <a title="RYB Structure Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../../../index.html">
+          Colorly
+        </a>
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../../../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/adamgraham/colorly">
+            <img class="header-icon" src="../../../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../../../index.html"> Reference</a>
+      <img class="carat" src="../../../img/carat.png" />
+      RYB Structure Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../../../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../../Extensions/UIColor.html">UIColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../../Extensions/UIColor/AccessibilityRequirement.html">– AccessibilityRequirement</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../../Extensions/UIColor/Harmony.html">– Harmony</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../../Extensions/UIColor/ColorWheel.html">– ColorWheel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../../Extensions/UIColor/MixingModel.html">– MixingModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../../Extensions/UIColor/ARGB.html">– ARGB</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../../Extensions/UIColor/CIELAB.html">– CIELAB</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../../Extensions/UIColor/CIELCh.html">– CIELCh</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../../Extensions/UIColor/CIELUV.html">– CIELUV</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../../Extensions/UIColor/CIEUCS.html">– CIEUCS</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../../Extensions/UIColor/CIEUVW.html">– CIEUVW</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../../Extensions/UIColor/CIEXYZ.html">– CIEXYZ</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../../Extensions/UIColor/CIExyY.html">– CIExyY</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../../Extensions/UIColor/CMYK.html">– CMYK</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../../Extensions/UIColor/HSB.html">– HSB</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../../Extensions/UIColor/HSI.html">– HSI</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../../Extensions/UIColor/HSL.html">– HSL</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../../Extensions/UIColor/HSV.html">– HSV</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../../Extensions/UIColor/HunterLab.html">– HunterLab</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../../Extensions/UIColor/RGB.html">– RGB</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../../Extensions/UIColor/RGBA.html">– RGBA</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../../Extensions/UIColor/YCbCr.html">– YCbCr</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../../Extensions/UIColor/YIQ.html">– YIQ</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../../Extensions/UIColor/YPbPr.html">– YPbPr</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../../Extensions/UIColor/YUV.html">– YUV</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../../Extensions/UIColor/ColorModel.html">– ColorModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../../Extensions/UIColor/ColorSpace.html">– ColorSpace</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../../Extensions/UIColor/Illuminant.html">– Illuminant</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../../Extensions/UIColor/StandardObserver.html">– StandardObserver</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../../Extensions/UIColor/Pantone.html">– Pantone</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../../Extensions/UIColor/SignalEncoding.html">– SignalEncoding</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../../../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../../Functions.html#/s:7Colorly1moiySo7UIColorCAD_12CoreGraphics7CGFloatVtF">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../../Functions.html#/s:7Colorly1poiySo7UIColorCAD_ADtF">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../../Functions.html#/s:7Colorly1soiySo7UIColorCAD_ADtF">-(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../../Functions.html#/s:7Colorly1doiySo7UIColorCAD_12CoreGraphics7CGFloatVtF">/(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>RYB</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RYB</span></code></pre>
+
+                </div>
+              </div>
+            <p>The colors that define the RYB color wheel.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE10ColorWheelV3RYBV5whiteABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/white" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE10ColorWheelV3RYBV5whiteABvpZ">white</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>#ffffff</code>, <code>ryb(255,255,255)</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">white</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE10ColorWheelV3RYBV5blackABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/black" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE10ColorWheelV3RYBV5blackABvpZ">black</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>#000000</code>, <code>ryb(0,0,0)</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">black</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE10ColorWheelV3RYBV3redABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/red" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE10ColorWheelV3RYBV3redABvpZ">red</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>#ff0000</code>, <code>ryb(255,0,0)</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">red</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE10ColorWheelV3RYBV6yellowABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/yellow" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE10ColorWheelV3RYBV6yellowABvpZ">yellow</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>#00ff00</code>, <code>ryb(0,255,0)</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">yellow</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE10ColorWheelV3RYBV4blueABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/blue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE10ColorWheelV3RYBV4blueABvpZ">blue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>#0000ff</code>, <code>ryb(0,0,255)</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">blue</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE10ColorWheelV3RYBV5greenABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/green" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE10ColorWheelV3RYBV5greenABvpZ">green</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>#00ffff</code>, <code>ryb(0,255,255)</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">green</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE10ColorWheelV3RYBV6purpleABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/purple" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE10ColorWheelV3RYBV6purpleABvpZ">purple</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>#ff00ff</code>, <code>ryb(255,0,255)</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">purple</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE10ColorWheelV3RYBV6orangeABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/orange" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE10ColorWheelV3RYBV6orangeABvpZ">orange</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>#ffff00</code>, <code>ryb(255,255,0)</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">orange</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE10ColorWheelV3RYBV9vermilionABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/vermilion" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE10ColorWheelV3RYBV9vermilionABvpZ">vermilion</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>#ff8000</code>, <code>ryb(255,128,0)</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">vermilion</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE10ColorWheelV3RYBV5amberABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/amber" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE10ColorWheelV3RYBV5amberABvpZ">amber</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>#80ff00</code>, <code>ryb(128,255,0)</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">amber</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE10ColorWheelV3RYBV10chartreuseABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/chartreuse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE10ColorWheelV3RYBV10chartreuseABvpZ">chartreuse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>#00ff80</code>, <code>ryb(0,255,128)</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">chartreuse</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE10ColorWheelV3RYBV4tealABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/teal" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE10ColorWheelV3RYBV4tealABvpZ">teal</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>#0080ff</code>, <code>ryb(0,128,255)</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">teal</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE10ColorWheelV3RYBV6violetABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/violet" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE10ColorWheelV3RYBV6violetABvpZ">violet</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>#8000ff</code>, <code>ryb(128,0,255)</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">violet</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE10ColorWheelV3RYBV7magentaABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/magenta" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE10ColorWheelV3RYBV7magentaABvpZ">magenta</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>#ff0080</code>, <code>ryb(255,0,128)</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">magenta</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>Copyright (c) 2019 Adam Graham</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

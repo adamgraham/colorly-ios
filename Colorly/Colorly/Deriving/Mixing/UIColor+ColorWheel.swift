@@ -11,6 +11,8 @@ import UIKit
 /// An extension to declare common tertiary colors.
 extension UIColor {
 
+    // MARK: Tertiary Colors
+
     /// A color object whose RGB values are 0.0, 0.5, and 1.0 and whose alpha value is 1.0.
     open class var azure: UIColor { return (cyan * 0.5) + (blue * 0.5) }
     /// A color object whose RGB values are 0.5, 0.0, and 1.0 and whose alpha value is 1.0.
@@ -28,6 +30,8 @@ extension UIColor {
 
 /// An extension to declare the colors of the color wheel.
 public extension UIColor {
+
+    // MARK: Color Wheel
 
     /// The colors that define the color wheel.
     struct ColorWheel {

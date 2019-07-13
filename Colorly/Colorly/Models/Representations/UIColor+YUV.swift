@@ -11,6 +11,8 @@ import UIKit
 /// An extension to provide conversion to and from Y′UV colors.
 public extension UIColor {
 
+    // MARK: Y′UV
+
     /// The Y′UV components of a color - luma (Y′) and chroma (U,V).
     struct YUV: Hashable {
 

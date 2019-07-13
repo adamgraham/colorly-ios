@@ -11,6 +11,8 @@ import UIKit
 /// An extension to generate color gradients.
 public extension UIColor {
 
+    // MARK: Gradients
+
     /**
      Generates an array of colors between a start and end color. The colors are produced by
      mixing the start color with the end color with evenly distributed stops.

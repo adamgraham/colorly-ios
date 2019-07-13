@@ -11,6 +11,8 @@ import UIKit
 /// An extension to provide conversion to and from RGBA (red, green, blue, alpha) colors.
 public extension UIColor {
 
+    // MARK: RGBA
+
     /// The RGBA (red, green, blue, alpha) components of a color, in the range [0, 255].
     struct RGBA: Hashable {
 

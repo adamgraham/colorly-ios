@@ -11,6 +11,8 @@ import UIKit
 /// An extension to generate random colors.
 public extension UIColor {
 
+    // MARK: Randomization
+
     /**
      Returns a color with random component values.
 

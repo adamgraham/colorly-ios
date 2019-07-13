@@ -11,6 +11,8 @@ import UIKit
 /// An extension to mix colors together.
 public extension UIColor {
 
+    // MARK: Mixing
+
     /**
      Returns a mixture of two colors with a given weight.
 

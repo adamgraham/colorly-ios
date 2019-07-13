@@ -11,6 +11,8 @@ import UIKit
 /// An extension to describe standard illuminants.
 public extension UIColor {
 
+    // MARK: Illuminant
+
     /// A standard illuminant defined by the International Commission on Illumination (CIE)
     /// which provides a basis for comparing images or colors recorded under different
     /// lighting.
@@ -63,6 +65,8 @@ public extension UIColor {
 
 /// An extension to describe CIE color-mapping functions called standard observers.
 public extension UIColor {
+
+    // MARK: Standard Observer
 
     /// A CIE color-mapping function called the standard observer which represents an
     /// average human's chromatic response while observing an object under an illuminant.

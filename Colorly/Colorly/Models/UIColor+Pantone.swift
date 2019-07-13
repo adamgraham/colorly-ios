@@ -11,6 +11,8 @@ import UIKit
 /// An extension to declare Pantone colors.
 public extension UIColor {
 
+    // MARK: Pantone
+
     /// The Pantone colors of the year color palette.
     ///
     /// Pantone is a limited liability company best known for its Pantone Matching System

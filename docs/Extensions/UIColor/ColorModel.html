@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ColorModel Enumeration Reference</title>
+    <link rel="stylesheet" type="text/css" href="../../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../../js/jquery.min.js" defer></script>
+    <script src="../../js/jazzy.js" defer></script>
+    
+    <script src="../../js/lunr.min.js" defer></script>
+    <script src="../../js/typeahead.jquery.js" defer></script>
+    <script src="../../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Enum/ColorModel" class="dashAnchor"></a>
+
+    <a title="ColorModel Enumeration Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../../index.html">
+          Colorly
+        </a>
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/adamgraham/colorly">
+            <img class="header-icon" src="../../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../../index.html"> Reference</a>
+      <img class="carat" src="../../img/carat.png" />
+      ColorModel Enumeration Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor.html">UIColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/AccessibilityRequirement.html">– AccessibilityRequirement</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/Harmony.html">– Harmony</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/ColorWheel.html">– ColorWheel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/MixingModel.html">– MixingModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/ARGB.html">– ARGB</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/CIELAB.html">– CIELAB</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/CIELCh.html">– CIELCh</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/CIELUV.html">– CIELUV</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/CIEUCS.html">– CIEUCS</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/CIEUVW.html">– CIEUVW</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/CIEXYZ.html">– CIEXYZ</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/CIExyY.html">– CIExyY</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/CMYK.html">– CMYK</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/HSB.html">– HSB</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/HSI.html">– HSI</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/HSL.html">– HSL</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/HSV.html">– HSV</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/HunterLab.html">– HunterLab</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/RGB.html">– RGB</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/RGBA.html">– RGBA</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/YCbCr.html">– YCbCr</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/YIQ.html">– YIQ</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/YPbPr.html">– YPbPr</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/YUV.html">– YUV</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/ColorModel.html">– ColorModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/ColorSpace.html">– ColorSpace</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/Illuminant.html">– Illuminant</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/StandardObserver.html">– StandardObserver</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/Pantone.html">– Pantone</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Extensions/UIColor/SignalEncoding.html">– SignalEncoding</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Functions.html#/s:7Colorly1moiySo7UIColorCAD_12CoreGraphics7CGFloatVtF">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Functions.html#/s:7Colorly1poiySo7UIColorCAD_ADtF">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Functions.html#/s:7Colorly1soiySo7UIColorCAD_ADtF">-(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../../Functions.html#/s:7Colorly1doiySo7UIColorCAD_12CoreGraphics7CGFloatVtF">/(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>ColorModel</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">ColorModel</span></code></pre>
+
+                </div>
+              </div>
+            <p>A color model is an abstract mathematical model describing the ways colors can be
+represented as tuples of numbers, typically as three or four values or color
+components.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE10ColorModelO3HexyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/Hex" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE10ColorModelO3HexyA2EmF">Hex</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A representation of the RGB color model using hexadecimal numbers, i.e., <code>#0080ff</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">Hex</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE10ColorModelO3RGByA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/RGB" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE10ColorModelO3RGByA2EmF">RGB</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The RGB (red, green, blue) color model, an additive color mixing, device-dependent
+model used mainly for the representation and display of images in digital formats.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">RGB</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE10ColorModelO3RYByA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/RYB" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE10ColorModelO3RYByA2EmF">RYB</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The RYB (red, yellow, blue) color model, a traditional model used in a standard artist&rsquo;s
+color wheel, particularly in painting.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">RYB</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE10ColorModelO4CMYKyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/CMYK" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE10ColorModelO4CMYKyA2EmF">CMYK</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The CMYK (cyan, magenta, yellow, black) color model, a subtractive color mixing model
+used in color printing.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">CMYK</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE10ColorModelO3HSByA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/HSB" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE10ColorModelO3HSByA2EmF">HSB</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The HSB (hue, saturation, brightness) color model is an alternative representation to
+the RGB color model designed to more closely align with the way human vision
+perceives color-making attributes. HSB is the same as HSV.</p>
+
+<p>The HSB representation models the way paints of different colors mix together, with the
+saturation dimension resembling various shades of brightly colored paint, and the
+brightness dimension resembling the mixture of those paints with varying amounts of
+black or white paint</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">HSB</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE10ColorModelO3HSVyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/HSV" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE10ColorModelO3HSVyA2EmF">HSV</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The HSV (hue, saturation, value) color model is an alternative representation to the
+RGB color model designed to more closely align with the way human vision perceives
+color-making attributes. HSV is the same as HSB.</p>
+
+<p>The HSV representation models the way paints of different colors mix together, with the
+saturation dimension resembling various shades of brightly colored paint, and the
+value dimension resembling the mixture of those paints with varying amounts of
+black or white paint</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">HSV</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE10ColorModelO3HSLyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/HSL" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE10ColorModelO3HSLyA2EmF">HSL</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The HSL (hue, saturation, lightness) color model is an alternative representation to the
+RGB color model designed to more closely align with the way human vision perceives
+color-making attributes.</p>
+
+<p>The HSL model attempts to resemble more perceptual color models such as the natural
+color system (NCS) or Munsell color system, placing fully saturated colors around a
+circle at a lightness value of ​½, where a lightness value of 0 or 1 is fully black or white,
+respectively.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">HSL</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE10ColorModelO3HSIyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/HSI" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE10ColorModelO3HSIyA2EmF">HSI</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The HSI (hue, saturation, intensity) color model is an alternative representation to the
+RGB color model designed to more closely align with the way human vision perceives
+color-making attributes.</p>
+
+<p>The HSI model commonly used for computer vision, which takes H as a hue dimension
+and the component average I (<q>intensity</q>) as a lightness dimension, does not attempt
+to <q>fill</q> a cylinder by its definition of saturation. Instead of presenting color choice or
+modification interfaces to end users, the goal of HSI is to facilitate separation of shapes
+in an image.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">HSI</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE10ColorModelO3CIEyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/CIE" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE10ColorModelO3CIEyA2EmF">CIE</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The CIE color spaces were the first defined quantitative links between distributions of
+wavelengths in the electromagnetic visible spectrum, and physiologically perceived
+colors in human color vision. The mathematical relationships that define these color
+spaces are essential tools for color management.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">CIE</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE10ColorModelO5YCbCryA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/YCbCr" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE10ColorModelO5YCbCryA2EmF">YCbCr</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The YCbCr color model used as a part of the color image pipeline in video and digital
+photography systems. Y is the luminance (luma) component and Cb and Cr are the
+blue-difference and red-difference chrominance (chroma) components, respectively.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">YCbCr</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE10ColorModelO5YPbPryA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/YPbPr" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE10ColorModelO5YPbPryA2EmF">YPbPr</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>YPbPr is the analog version of the YCbCr color space; the two are numerically
+equivalent but YPbPr is designed for use in analog systems while YCbCr is intended for
+digital video.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">YPbPr</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE10ColorModelO3YUVyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/YUV" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE10ColorModelO3YUVyA2EmF">YUV</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>YUV is a color encoding system typically used as part of a color image pipeline. It
+encodes a color image or video taking human perception into account, allowing
+reduced bandwidth for chroma components, thereby typically enabling transmission
+errors or compression artifacts to be more efficiently masked by human perception
+than using a <q>direct</q> RGB-representation.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">YUV</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7UIColorC7ColorlyE10ColorModelO3YIQyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/YIQ" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7UIColorC7ColorlyE10ColorModelO3YIQyA2EmF">YIQ</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>YIQ is the color model used by the NTSC color TV system, intended to take advantage
+of human color-response characteristics. The chroma component I stands for <em>in-phase</em>,
+while chroma component Q stands for <em>quadrature</em>, referring to the used in
+quadrature amplitude modulation.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">YIQ</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>Copyright (c) 2019 Adam Graham</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

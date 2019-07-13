@@ -11,6 +11,8 @@ import UIKit
 /// An extension to provide conversion to and from CMYK (cyan, magenta, yellow, black) colors.
 public extension UIColor {
 
+    // MARK: CMYK
+
     /// The CMYK (cyan, magenta, yellow, black) components of a color, in the range [0, 100%].
     struct CMYK: Hashable {
 

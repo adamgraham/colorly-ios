@@ -11,6 +11,8 @@ import UIKit
 /// An extension to provide conversion to and from CIELUV colors.
 public extension UIColor {
 
+    // MARK: CIELUV
+
     /// The CIELUV components of a color - lightness (L) and chromaticity (u,v).
     struct CIELUV: Hashable {
 

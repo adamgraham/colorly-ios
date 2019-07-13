@@ -11,6 +11,8 @@ import UIKit
 /// An extension to describe ITU-R Recommendation signal encodings.
 public extension UIColor {
 
+    // MARK: Signal Encoding
+
     /// A standard ITU-R Recommendation signal encoding.
     ///
     /// ITU-R Recommendations are the names given to the set of international technical

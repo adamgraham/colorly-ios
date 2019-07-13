@@ -11,6 +11,8 @@ import UIKit
 /// An extension to provide conversion to and from CIELCh° colors.
 public extension UIColor {
 
+    // MARK: CIELCh°
+
     /// The CIELCh° components of a color - lightness (L), chroma (C), and hue (h).
     struct CIELCh: Hashable {
 

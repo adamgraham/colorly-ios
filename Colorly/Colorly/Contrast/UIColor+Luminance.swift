@@ -11,6 +11,8 @@ import UIKit
 /// An extension to retieve relative luminance and perceived brightness values of a color.
 public extension UIColor {
 
+    // MARK: Luminance
+
     /// The relative luminance of the color, measured according to the HSL color model.
     var relativeLuminance: CGFloat {
         let rgb = self.linearRGB

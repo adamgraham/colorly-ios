@@ -11,6 +11,8 @@ import UIKit
 /// An extension to provide conversion to and from CIE xyY colors.
 public extension UIColor {
 
+    // MARK: CIE xyY
+
     /// The CIE xyY components of a color - luminance (Y) and chromaticity (x,y).
     struct CIExyY: Hashable {
 

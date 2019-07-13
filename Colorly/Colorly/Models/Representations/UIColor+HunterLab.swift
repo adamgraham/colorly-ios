@@ -11,6 +11,8 @@ import UIKit
 /// An extension to provide conversion to and from Hunter Lab colors.
 public extension UIColor {
 
+    // MARK: Hunter Lab
+
     /// The Hunter Lab components of a color - lightness (L) and chromaticity (a,b).
     struct HunterLab: Hashable {
 

@@ -11,6 +11,8 @@ import UIKit
 /// An extension to provide conversion to and from Y′CbCr colors.
 public extension UIColor {
 
+    // MARK: Y′CbCr
+
     /// The Y′CbCr components of a color - luma (Y′) and chroma (Cb,Cr).
     struct YCbCr: Hashable {
 

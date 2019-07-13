@@ -11,6 +11,8 @@ import UIKit
 /// An extension to generate harmonized color schemes.
 public extension UIColor {
 
+    // MARK: Harmonies
+
     /// A set of harmonized color schemes created from a base color.
     struct Harmony {
 
